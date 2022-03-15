@@ -1,4 +1,4 @@
-package egovframework.com.main.web;
+package egovframework.main.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
