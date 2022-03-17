@@ -14,16 +14,22 @@ import egovframework.main.service.mainService;
 public class mainServiceImpl implements mainService {
 
 	@Autowired
-	mainMapper mmapper;
+	private mainMapper mmapper;
 	
 	@Override
 	public String insertLCALS(LCALSVO vo) {
-		vo.setLCALS_LOG_DIVISION("ins");
-		vo.setLCALS_LOG_PERFORMER("");
 		// 트라이 캐치 처리
-		mmapper.insertLCALS(vo);
-		mmapper.insertLACLSLOG(vo);
-		return null;
+		try {
+			mmapper.insertLCALS(vo);
+			vo.setLCALS_ID(mmapper.getLCALSID());
+			vo.setLCALS_LOG_DIVISION("ins");
+			vo.setLCALS_LOG_PERFORMER("admin");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally{
+			mmapper.insertLACLSLOG(vo);
+		}
+		return "success";
 	}
 
 	@Override
@@ -48,7 +54,17 @@ public class mainServiceImpl implements mainService {
 
 	@Override
 	public String insertMD(MenuDetailVO vo) {
-		return null;
+		try {
+			mmapper.insertMenuDetail(vo);
+			vo.setMENU_ID(mmapper.getMenuDetailID());
+			vo.setMENU_LOG_DIVISION("ins");
+			vo.setMENU_LOG_PERFORMER("admin");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			mmapper.insertMenuDetailLOG(vo);
+		}
+		return "success";
 	}
 
 	@Override
