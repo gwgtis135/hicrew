@@ -7,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form enctype="multipart/form-data" action="uploadImage.php" method="post">
-    <div><input name="userfile" type="file"/></div>
-    <div><input type="submit" value="Submit"/></div>
-</form>
-
+	<a href="insertLCALS.do"><button>대분류추가</button></a>
+	<a href="insertMenu.do"><button>상세메뉴추가</button></a>
+	<a href="main2.do"><button>인덱스 테스트페이지</button></a>
 </body>
 </html>
