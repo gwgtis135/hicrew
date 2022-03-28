@@ -3,6 +3,7 @@ package egovframework.com.login.web;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,7 +21,7 @@ public class LoginController {
 	EgovLoginConfig egovLoginConfig;
 	
 	/** EgovLoginService */
-	@Resource(name = "loginService")
+	@Autowired
 	private LoginService loginService;
 	
 	/**

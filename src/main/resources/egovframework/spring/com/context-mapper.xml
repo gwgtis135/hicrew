@@ -14,6 +14,7 @@
 			<list>
 				<value>classpath:/egovframework/mapper/com/**/*_${Globals.DbType}.xml</value>
 				<value>classpath:/egovframework/main/service/*.xml</value>
+				<value>classpath:/egovframework/*/*/service/*.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -32,6 +33,7 @@
 			<list>
 				<value>classpath:/egovframework/mapper/com/**/*_${Globals.DbType}.xml</value>
 				<value>classpath:/egovframework/main/service/*.xml</value>
+				<value>classpath:/egovframework/*/*/service/*.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -48,6 +50,10 @@
 	<bean
 		class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
 		<property name="basePackage" value="egovframework.*.service" />
+	</bean>
+	<bean
+		class="egovframework.rte.psl.dataaccess.mapper.MapperConfigurer">
+		<property name="basePackage" value="egovframework.*.*.service" />
 	</bean>
 	
 </beans>
