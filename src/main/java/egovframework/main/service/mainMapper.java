@@ -16,6 +16,7 @@ public interface mainMapper {
 	public List<LCALSVO> selectALLLCALSLOG();
 	public LCALSVO selectLCALS(LCALSVO vo);
 	public LCALSVO selectLCALSLOG(LCALSVO vo);
+	public List<LCALSVO> selectnavLCALS(LCALSVO vo); 
 
 	public int getLCALSID();
 	

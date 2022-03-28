@@ -1,78 +1,77 @@
 package egovframework.main.service;
 
 public class LCALSVO {
-	int LCALS_LOG_ID;
-	int LCALS_ID;
-	String LCALS_NAME;
-	String LCALS_INTRCN;
-	int LCALS_LEVEL;
-	String LCALS_YN;
-	String LCALS_LOG_DIVISION;
-	String LCALS_LOG_PERFORMER;
-	String LCALS_LOG_DATE;
-	
-	public int getLCALS_ID() {
-		return LCALS_ID;
+	// <!-- 전통적인 데이터베이스 컬럼명 형태인 A_COLUMN을 CamelCase형태의 자바 프로퍼티명 형태인 aColumn으로 자동으로
+	// 매핑하도록 함 -->
+	int lcalsLogId;
+	int lcalsId;
+	String lcalsName;
+	String lcalsIntrcn;
+	int lcalsLevel;
+	String lcalsYn;
+	String lcalsLogPerforMer;
+	String lcalsLogDivision;
+	String LcalsLogDate;
+	public int getLcalsLogId() {
+		return lcalsLogId;
 	}
-	public void setLCALS_ID(int lCALS_ID) {
-		LCALS_ID = lCALS_ID;
+	public void setLcalsLogId(int lcalsLogId) {
+		this.lcalsLogId = lcalsLogId;
 	}
-	public String getLCALS_NAME() {
-		return LCALS_NAME;
+	public int getLcalsId() {
+		return lcalsId;
 	}
-	public void setLCALS_NAME(String lCALS_NAME) {
-		LCALS_NAME = lCALS_NAME;
+	public void setLcalsId(int lcalsId) {
+		this.lcalsId = lcalsId;
 	}
-	public String getLCALS_INTRCN() {
-		return LCALS_INTRCN;
+	public String getLcalsName() {
+		return lcalsName;
 	}
-	public void setLCALS_INTRCN(String lCALS_INTRCN) {
-		LCALS_INTRCN = lCALS_INTRCN;
+	public void setLcalsName(String lcalsName) {
+		this.lcalsName = lcalsName;
 	}
-	public int getLCALS_LEVEL() {
-		return LCALS_LEVEL;
+	public String getLcalsIntrcn() {
+		return lcalsIntrcn;
 	}
-	public void setLCALS_LEVEL(int lCALS_LEVEL) {
-		LCALS_LEVEL = lCALS_LEVEL;
+	public void setLcalsIntrcn(String lcalsIntrcn) {
+		this.lcalsIntrcn = lcalsIntrcn;
 	}
-	public String getLCALS_YN() {
-		return LCALS_YN;
+	public int getLcalsLevel() {
+		return lcalsLevel;
 	}
-	public void setLCALS_YN(String lCALS_YN) {
-		LCALS_YN = lCALS_YN;
+	public void setLcalsLevel(int lcals_level) {
+		this.lcalsLevel = lcals_level;
 	}
-	public int getLCALS_LOG_ID() {
-		return LCALS_LOG_ID;
+	public String getLcalsYn() {
+		return lcalsYn;
 	}
-	public void setLCALS_LOG_ID(int lCALS_LOG_ID) {
-		LCALS_LOG_ID = lCALS_LOG_ID;
+	public void setLcalsYn(String lcals_yn) {
+		this.lcalsYn = lcals_yn;
 	}
-	public String getLCALS_LOG_DIVISION() {
-		return LCALS_LOG_DIVISION;
+	public String getLcalsLogPerforMer() {
+		return lcalsLogPerforMer;
 	}
-	public void setLCALS_LOG_DIVISION(String lCALS_LOG_DIVISION) {
-		LCALS_LOG_DIVISION = lCALS_LOG_DIVISION;
+	public void setLcalsLogPerforMer(String lcalsLogPerforMer) {
+		this.lcalsLogPerforMer = lcalsLogPerforMer;
 	}
-	public String getLCALS_LOG_PERFORMER() {
-		return LCALS_LOG_PERFORMER;
+	public String getLcalsLogDivision() {
+		return lcalsLogDivision;
 	}
-	public void setLCALS_LOG_PERFORMER(String lCALS_LOG_PERFORMER) {
-		LCALS_LOG_PERFORMER = lCALS_LOG_PERFORMER;
+	public void setLcalsLogDivision(String lcalsLogDivision) {
+		this.lcalsLogDivision = lcalsLogDivision;
 	}
-	public String getLCALS_LOG_DATE() {
-		return LCALS_LOG_DATE;
+	public String getLcalsLogDate() {
+		return LcalsLogDate;
 	}
-	public void setLCALS_LOG_DATE(String lCALS_LOG_DATE) {
-		LCALS_LOG_DATE = lCALS_LOG_DATE;
+	public void setLcalsLogDate(String lcalsLogDate) {
+		LcalsLogDate = lcalsLogDate;
 	}
 	@Override
 	public String toString() {
-		return "LCALSVO [LCALS_LOG_ID=" + LCALS_LOG_ID + ", LCALS_ID=" + LCALS_ID + ", LCALS_NAME=" + LCALS_NAME
-				+ ", LCALS_INTRCN=" + LCALS_INTRCN + ", LCALS_LEVEL=" + LCALS_LEVEL + ", LCALS_YN=" + LCALS_YN
-				+ ", LCALS_LOG_DIVISION=" + LCALS_LOG_DIVISION + ", LCALS_LOG_PERFORMER=" + LCALS_LOG_PERFORMER
-				+ ", LCALS_LOG_DATE=" + LCALS_LOG_DATE + "]";
+		return "LCALSVO [lcalsLogId=" + lcalsLogId + ", lcalsId=" + lcalsId + ", lcalsName=" + lcalsName
+				+ ", lcalsIntrcn=" + lcalsIntrcn + ", lcalsLevel=" + lcalsLevel + ", lcalsYn=" + lcalsYn
+				+ ", lcalsLogPerforMer=" + lcalsLogPerforMer + ", lcalsLogDivision=" + lcalsLogDivision
+				+ ", LcalsLogDate=" + LcalsLogDate + "]";
 	}
-	
-	
 	
 }

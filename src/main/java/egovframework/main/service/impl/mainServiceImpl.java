@@ -21,9 +21,9 @@ public class mainServiceImpl implements mainService {
 		// 트라이 캐치 처리
 		try {
 			mmapper.insertLCALS(vo);
-			vo.setLCALS_ID(mmapper.getLCALSID());
-			vo.setLCALS_LOG_DIVISION("ins");
-			vo.setLCALS_LOG_PERFORMER("admin");
+			vo.setLcalsId(mmapper.getLCALSID());
+			vo.setLcalsLogDivision("ins");
+			vo.setLcalsLogPerforMer("admin");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally{
@@ -51,14 +51,22 @@ public class mainServiceImpl implements mainService {
 	public LCALSVO selectLCALS(LCALSVO vo) {
 		return null;
 	}
+	
+	@Override
+	public List<LCALSVO> selectnavLCALS(LCALSVO vo) {
+		System.out.println("impl : ");
+		List<LCALSVO> listvo = mmapper.selectnavLCALS(vo);
+		System.out.println("impl : "+listvo);
+		return listvo;
+	}
 
 	@Override
 	public String insertMD(MenuDetailVO vo) {
 		try {
 			mmapper.insertMenuDetail(vo);
-			vo.setMENU_ID(mmapper.getMenuDetailID());
-			vo.setMENU_LOG_DIVISION("ins");
-			vo.setMENU_LOG_PERFORMER("admin");
+			vo.setMenuId(mmapper.getMenuDetailID());
+			vo.setMenuLogDivision("ins");
+			vo.setMenuLogPerformer("admin");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {

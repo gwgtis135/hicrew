@@ -3,98 +3,96 @@ package egovframework.main.service;
 import java.util.Arrays;
 
 public class MenuDetailVO {
-	int MENU_LOG_ID;
-	int MENU_ID;
-	int LCALS_ID;
-	String MENU_NAME;
-	byte[] MENU_FILE;
-	String MENU_EVENTN;
-	String MENU_LINK;
-	String MENU_CONTENT;
-	String MENU_YN;	
-	String MENU_LOG_PERFORMER;						
-	String MENU_LOG_DIVISION;						
-	String MENU_LOG_DATE;
-	
-	public int getMENU_LOG_ID() {
-		return MENU_LOG_ID;
+	int menuLogId;
+	int menuId;
+	int lcalsId;
+	String menuName;
+	byte[] menuFile;
+	String menuEventn;
+	String menuLink;
+	String menuContent;
+	String menuYn;
+	String menuLogPerformer;
+	String menuLogDivision;
+	String menuLogDate;
+	public int getMenuLogId() {
+		return menuLogId;
 	}
-	public void setMENU_LOG_ID(int mENU_LOG_ID) {
-		MENU_LOG_ID = mENU_LOG_ID;
+	public void setMenuLogId(int menuLogId) {
+		this.menuLogId = menuLogId;
 	}
-	public int getMENU_ID() {
-		return MENU_ID;
+	public int getMenuId() {
+		return menuId;
 	}
-	public void setMENU_ID(int mENU_ID) {
-		MENU_ID = mENU_ID;
+	public void setMenuId(int menuId) {
+		this.menuId = menuId;
 	}
-	public int getLCALS_ID() {
-		return LCALS_ID;
+	public int getLcalsId() {
+		return lcalsId;
 	}
-	public void setLCALS_ID(int lCALS_ID) {
-		LCALS_ID = lCALS_ID;
+	public void setLcalsId(int lcalsId) {
+		this.lcalsId = lcalsId;
 	}
-	public String getMENU_NAME() {
-		return MENU_NAME;
+	public String getMenuName() {
+		return menuName;
 	}
-	public void setMENU_NAME(String mENU_NAME) {
-		MENU_NAME = mENU_NAME;
+	public void setMenuName(String menuName) {
+		this.menuName = menuName;
 	}
-	public byte[] getMENU_FILE() {
-		return MENU_FILE;
+	public byte[] getMenuFile() {
+		return menuFile;
 	}
-	public void setMENU_FILE(byte[] mENU_FILE) {
-		MENU_FILE = mENU_FILE;
+	public void setMenuFile(byte[] menuFile) {
+		this.menuFile = menuFile;
 	}
-	public String getMENU_EVENTN() {
-		return MENU_EVENTN;
+	public String getMenuEventn() {
+		return menuEventn;
 	}
-	public void setMENU_EVENTN(String mENU_EVENTN) {
-		MENU_EVENTN = mENU_EVENTN;
+	public void setMenuEventn(String menuEventn) {
+		this.menuEventn = menuEventn;
 	}
-	public String getMENU_LINK() {
-		return MENU_LINK;
+	public String getMenuLink() {
+		return menuLink;
 	}
-	public void setMENU_LINK(String mENU_LINK) {
-		MENU_LINK = mENU_LINK;
+	public void setMenuLink(String menuLink) {
+		this.menuLink = menuLink;
 	}
-	public String getMENU_CONTENT() {
-		return MENU_CONTENT;
+	public String getMenuContent() {
+		return menuContent;
 	}
-	public void setMENU_CONTENT(String mENU_CONTENT) {
-		MENU_CONTENT = mENU_CONTENT;
+	public void setMenuContent(String menuContent) {
+		this.menuContent = menuContent;
 	}
-	public String getMENU_YN() {
-		return MENU_YN;
+	public String getMenuYn() {
+		return menuYn;
 	}
-	public void setMENU_YN(String mENU_YN) {
-		MENU_YN = mENU_YN;
+	public void setMenuYn(String menuYn) {
+		this.menuYn = menuYn;
 	}
-	public String getMENU_LOG_PERFORMER() {
-		return MENU_LOG_PERFORMER;
+	public String getMenuLogPerformer() {
+		return menuLogPerformer;
 	}
-	public void setMENU_LOG_PERFORMER(String mENU_LOG_PERFORMER) {
-		MENU_LOG_PERFORMER = mENU_LOG_PERFORMER;
+	public void setMenuLogPerformer(String menuLogPerformer) {
+		this.menuLogPerformer = menuLogPerformer;
 	}
-	public String getMENU_LOG_DIVISION() {
-		return MENU_LOG_DIVISION;
+	public String getMenuLogDivision() {
+		return menuLogDivision;
 	}
-	public void setMENU_LOG_DIVISION(String mENU_LOG_DIVISION) {
-		MENU_LOG_DIVISION = mENU_LOG_DIVISION;
+	public void setMenuLogDivision(String menuLogDivision) {
+		this.menuLogDivision = menuLogDivision;
 	}
-	public String getMENU_LOG_DATE() {
-		return MENU_LOG_DATE;
+	public String getMenuLogDate() {
+		return menuLogDate;
 	}
-	public void setMENU_LOG_DATE(String mENU_LOG_DATE) {
-		MENU_LOG_DATE = mENU_LOG_DATE;
+	public void setMenuLogDate(String menuLogDate) {
+		this.menuLogDate = menuLogDate;
 	}
 	@Override
 	public String toString() {
-		return "MenuDetailVO [MENU_LOG_ID=" + MENU_LOG_ID + ", MENU_ID=" + MENU_ID + ", LCALS_ID=" + LCALS_ID
-				+ ", MENU_NAME=" + MENU_NAME + ", MENU_FILE=" + Arrays.toString(MENU_FILE) + ", MENU_EVENTN="
-				+ MENU_EVENTN + ", MENU_LINK=" + MENU_LINK + ", MENU_CONTENT=" + MENU_CONTENT + ", MENU_YN=" + MENU_YN
-				+ ", MENU_LOG_PERFORMER=" + MENU_LOG_PERFORMER + ", MENU_LOG_DIVISION=" + MENU_LOG_DIVISION
-				+ ", MENU_LOG_DATE=" + MENU_LOG_DATE + "]";
+		return "MenuDetailVO [menuLogId=" + menuLogId + ", menuId=" + menuId + ", lcalsId=" + lcalsId + ", menuName="
+				+ menuName + ", menuFile=" + Arrays.toString(menuFile) + ", menuEventn=" + menuEventn + ", menuLink="
+				+ menuLink + ", menuContent=" + menuContent + ", menuYn=" + menuYn + ", menuLogPerformer="
+				+ menuLogPerformer + ", menuLogDivision=" + menuLogDivision + ", menuLogDate=" + menuLogDate + "]";
 	}
 	
 }
