@@ -3,11 +3,14 @@ package egovframework.com.login.service.impl;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import egovframework.com.login.service.LoginMapper;
 import egovframework.com.login.service.LoginService;
 import egovframework.com.login.service.LoginVO;
 import egovframework.com.utl.sim.service.EgovFileScrty;
 
+@Service
 public class LoginServiceImpl implements LoginService {
 
 	@Autowired
