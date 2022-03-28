@@ -8,6 +8,7 @@ public interface mainService {
 	public String updateLCALS(LCALSVO vo);
 	public List<LCALSVO> selectALLLCALS();
 	public LCALSVO selectLCALS(LCALSVO vo);
+	public List<LCALSVO> selectnavLCALS(LCALSVO vo);
 	
 	public String insertMD(MenuDetailVO vo);
 	public String deleteMD(MenuDetailVO vo);

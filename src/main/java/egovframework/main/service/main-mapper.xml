@@ -5,7 +5,7 @@
 		parameterType="egovframework.main.service.LCALSVO">
 		insert into
 		largeclassification(lcals_name,lcals_intrcn,lcals_level)
-		values(#{LCALS_NAME},#{LCALS_INTRCN},#{LCALS_LEVEL});
+		values(#{lcalsName},#{lcalsIntrcn},#{lcalsLevel});
 	</insert>
 
 	<insert id="insertLACLSLOG"
@@ -18,8 +18,8 @@
 		lcals_log_date
 		)
 		values(
-		#{LCALS_ID},#{LCALS_NAME},#{LCALS_INTRCN},#{LCALS_LEVEL},
-		#{LCALS_LOG_DIVISION},#{LCALS_LOG_PERFORMER},now()
+		#{lcalsId},#{lcalsName},#{lcalsIntrcn},#{lcalsLevel},
+		#{lcalsLogDivision},#{lcalsLogPerformer},now()
 		);
 	</insert>
 
@@ -27,25 +27,25 @@
 		parameterType="egovframework.main.service.LCALSVO">
 		delete from largeclassification
 		where lcals_id =
-		#{LCALS_ID}
+		#{lcalsId}
 	</delete>
 
 	<update id="updateLCALS"
 		parameterType="egovframework.main.service.LCALSVO">
 		update largeclassification set LCALS_ID=LCALS_ID
 		<if test="lcals_name != null">
-			, lcals_name = #{LCALS_NAME}
+			, lcals_name = #{lcalsName}
 		</if>
 		<if test="lcals_intrcn != null">
-			, lcals_intrcn = #{LCALS_INTRCN}
+			, lcals_intrcn = #{lcalsIntrcn}
 		</if>
 		<if test="lcals_level != null">
-			, lcals_level = #{LACLS_LEVEL}
+			, lcals_level = #{lcalsLevel}
 		</if>
 		<if test="lcals_yn != null">
-			, lcals_yn = #{LCALS_YN}
+			, lcals_yn = #{lcalsYn}
 		</if>
-		where lcals_id = #{ID}
+		where lcals_id = #{lcalsId}
 	</update>
 
 	<select id="selectALLLCALS">
@@ -64,7 +64,7 @@
 	<select id="selectLCALS"
 		parameterType="egovframework.main.service.LCALSVO">
 		select lcals_id, lcals_name, lcals_intrcn, lcals_level
-		from largeclassification where lcals_id = #{LCALS_ID}
+		from largeclassification where lcals_id = #{lcalsId}
 	</select>
 
 	<select id="selectLCALSLOG"
@@ -76,11 +76,21 @@
 		largeclassificationLog
 		where 1=1
 		<if test="lcals_log_id != null">
-			lcals_log_id = #{LCALS_LOG_ID}
+			lcals_log_id = #{lcalsLogId}
 		</if>
 		<if test="lcals_id != null">
-			lcals_id = #{LCALS_ID}
+			lcals_id = #{lcalsId}
 		</if>
+	</select>
+	
+	<select id="selectnavLCALS" parameterType="egovframework.main.service.LCALSVO" resultType="egovframework.main.service.LCALSVO">
+		select 
+		lcals_id as "LCALS_ID", 
+		LCALS_NAME as "LCALS_NAME", 
+		lcals_intrcn as "LCALS_INTRCN", 
+		lcals_level as "LCALS_LEVEL" 
+		from largeclassification 
+		where lcals_level = #{lcalsLevel}
 	</select>
 
 	<select id="getLCALSID" resultType="int">
@@ -93,7 +103,7 @@
 		insert into
 		MenuDetail(lcals_id,menu_name,menu_file,menu_eventn,menu_link,menu_content)
 		value(
-		#{LCALS_ID},#{MENU_NAME},#{MENU_FILE},#{MENU_EVENTN},#{MENU_LINK},#{MENU_CONTENT}
+		#{lcalsId},#{menuName},#{menuFile},#{menuEventn},#{menuLink},#{menuContent}
 		)
 	</insert>
 
@@ -103,30 +113,30 @@
 		MenuDetailLog(menu_id, lcals_id, menu_name, menu_file, menu_eventn, menu_link, menu_content,
 		menu_log_performer, menu_log_division, menu_log_date)
 		value(
-			#{MENU_ID},#{LCALS_ID},#{MENU_NAME},#{MENU_FILE},#{MENU_EVENTN},#{MENU_LINK},#{MENU_CONTENT},
-			#{MENU_LOG_PERFORMER},#{MENU_LOG_DIVISION},now()
+			#{menuId},#{LCALS_ID},#{menuName},#{menuFile},#{menuEventn},#{menuLink},#{menuContent},
+			#{menuLogPerformer},#{menuLogDivision},now()
 		)
 	</insert>
 
 	<delete id="deleteMenuDetail"
 		parameterType="egovframework.main.service.MenuDetailVO">
-		delete from menudetail where menu_id = #{MENU_ID}
+		delete from menudetail where menu_id = #{menuId}
 	</delete>
 
 	<update id="updateMenuDetail"
 		parameterType="egovframework.main.service.MenuDetailVO">
 		update MenuDetail set menu_id = menu_id
 		<if test="menu_name != null">
-			, menu_name = #{MENU_NAME}
+			, menu_name = #{menuName}
 		</if>
 		<if test="menu_link != null">
-			, menu_link = #{MENU_LINK}
+			, menu_link = #{menuLink}
 		</if>
 		<if test="menu_content != null">
-			, menu_content = #{MENU_CONTENT}
+			, menu_content = #{menuContent}
 		</if>
 		<if test="menu_yn != null">
-			, menu_yn = #{MENU_YN}
+			, menu_yn = #{menuYn}
 		</if>
 	</update>
 
@@ -139,7 +149,7 @@
 		parameterType="egovframework.main.service.MenuDetailVO">
 		select menu_id, lcals_id, menu_name, menu_file, menu_eventn, menu_link, menu_content, menu_yn
 		from MenuDetail
-		where menu_id = #{MENU_ID}
+		where menu_id = #{menuId}
 	</select>
 
 	<select id="selectALLMenuDetailLOG">
@@ -151,7 +161,7 @@
 		parameterType="egovframework.main.service.MenuDetailVO">
 		select menu_id, lcals_id, menu_name, menu_file, menu_eventn, menu_link, menu_content, menu_yn
 		from MenuDetaillog
-		where menu_log_id = #{MENU_LOG_ID}
+		where menu_log_id = #{menuLogId}
 	</select>
 
 	<select id="getMenuDetailID" resultType="int">
