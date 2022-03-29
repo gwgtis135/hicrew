@@ -3070,3 +3070,55 @@ header .allmenu_lst_box {
   width: 1170px;
   margin: 0 auto; 
   }
+  /* end */
+  
+  /*에스지에이 검색창 스타일  */
+.search_box_wrap {
+  background-color: #f3f3f3;
+  padding: 30px 0;
+  margin-bottom: 40px;
+  text-align: center; }
+.search_box_wrap .search_box {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0; }
+.search_box_wrap .search_box .sel_box {
+	display: inline-block;
+	width: 180px;
+	height: 45px; }
+.search_box_wrap .search_box .sel_box + .sel_box {
+	padding-left: 4px; }
+.search_box_wrap .search_box .ipt_box {
+	display: inline-block;
+	padding-left: 4px; }
+.search_box_wrap .search_box .ipt_box input {
+	width: 350px;
+	height: 45px;
+	display: inline-block;
+	vertical-align: middle; }
+.search_box_wrap .search_box .ipt_box label {
+	width: 45px;
+	height: 45px;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	text-indent: -9999em;
+	cursor: pointer; }
+.search_box_wrap .search_box .ipt_box label:hover {
+	opacity: .8; }
+.search_box_wrap .search_box .ipt_box label:before {
+	background: url(../images/spr_global_icon.png) no-repeat;
+	background-position: -171px -9px;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	display: block;
+	content: ""; 
+  }
+/* end */
+  
