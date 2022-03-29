@@ -90,6 +90,11 @@ public class mainController {
 		return "main/upendmenu";
 	}
 	
+	@RequestMapping("menudetail.do")
+	public String menudeatil() {
+		return "main/menudetail";
+	}
+	
 	@RequestMapping("loadNav.do")
 	public String loadnav(Model model,HttpServletRequest req) {
 		LCALSVO vo = new LCALSVO();

@@ -2680,6 +2680,9 @@ form label {
 	text-align: center;
 	vertical-align: top;
 }
+p > a.btn_type1, a.btn_type2{
+	color:white;
+}
 .btn_type3 {
 	display: inline-block;
 	min-width: 56px;
