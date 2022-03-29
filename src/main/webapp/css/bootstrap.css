@@ -6443,5 +6443,8 @@ button.close {
 		display: none !important;
 	}
 }
+#scolumn{
+	font-size:revert;
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
