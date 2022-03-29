@@ -59,43 +59,20 @@
 </head>
 <body>
 
-	<div id="solutmodal" class="modal">
+	<div id="modal" class="modal">
 		<div class="modal-window">
-			<div class="close-area">X</div>
 			<div class="modal-title">
-				<h2>세부 항목 관리</h2>
+				<h2>모달</h2>
 			</div>
+			<div class="close-area">X</div>
 			<div class="modal-body">
-				<p>항목 이름<input type="text" /></p>
-				<p>항목 링크<input type="text" /></p>
-				<p>이미지 <input type="file" /></p>
-				<p>항목 상세<input type="text" /></p>
+				<p>가나다라마바사 아자차카타파하</p>
+				<p>가나다라마바사 아자차카타파하</p>
+				<p>가나다라마바사 아자차카타파하</p>
+				<p>가나다라마바사 아자차카타파하</p>
 			</div>
 			<div class="modal-footer">
-				<p>
-					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a>
-					<a id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a>
-					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">닫기</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div id="photomodal" class="modal">
-		<div class="modal-window">
-			<div class="close-area">X</div>
-			<div class="modal-title">
-				<h2>이미지 관리</h2>
-			</div>
-			<div class="modal-body">
-				<p>이미지 이름<input type="text" /></p>
-				<p>이미지 <input type="file" /></p>
-			</div>
-			<div class="modal-footer">
-				<p>
-					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a>
-					<a id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a>
-					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">닫기</a>
-				</p>
+				<p>modal footer</p>
 			</div>
 		</div>
 	</div>
@@ -112,11 +89,11 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1 main-nav">
 						<ul>
-							<li><a href="#" data-nav-section="home">Home</a></li>
+							<li class="active"><a href="#" data-nav-section="home">Home</a></li>
 							<li><a href="#" data-nav-section="services">회사소개</a></li>
 							<li><a href="#" data-nav-section="CI">주요사업</a></li>
 							<li><a href="#" data-nav-section="portfolio">그룹웨어</a></li>
-							<li class="active"><a href="http://gw.hicrew.kr" class="external">페이지
+							<li><a href="http://gw.hicrew.kr" class="external">페이지
 									관리</a></li>
 						</ul>
 					</div>
@@ -154,7 +131,7 @@
 									<option value="">주요 연혁</option>
 									<option value="">조직도</option>
 									<option value="">오시는길</option>
-									<option value="photo">포토 스토리</option>
+									<option value="">포토 스토리</option>
 								</select> <select name="selectmainbsns" id="selectmainbsns" class="hide">
 									<option value="">상세 메뉴 선택</option>
 									<option value="pdfsolut">PDF 솔루션</option>
@@ -295,7 +272,7 @@
 										<col style="width: auto">
 									</colgroup>
 									<tbody>
-										<tr class="notice" onclick="solutmodalopen()">
+										<tr class="notice" onclick="modalopen()">
 											<td class="num"><input type="checkbox"></td>
 											<td>학생 수강 신청</td>
 										</tr>
@@ -329,10 +306,6 @@
 										</tr>
 									</tbody>
 								</table>
-								
-								<div class="hide" id="tblphoto">
-									
-								</div>
 							</div>
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
@@ -399,9 +372,9 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script>
-	function solutmodalopen(){
-		console.log("solutmodalopen!");
-		const modal = document.getElementById("solutmodal");
+	function modalopen(){
+		console.log("modalopen!");
+		const modal = document.getElementById("modal");
 		modal.style.display = "flex";
 		const closeBtn = modal.querySelector(".close-area");
 		closeBtn.addEventListener("click", e => {
@@ -416,13 +389,12 @@
 	}
 		$(document).ready(function() {
 			document.getElementById('LCALS').onchange = function() {
+				var ta = this.value;
 				var tasel = "select"+this.value;
 				var selectlist = document.querySelectorAll(".tbl_top > select:not(:first-child)");
 				for(selecttag of selectlist){
 					selecttag.classList.add("hide");
-					selecttag.selectedIndex=0;
 					selecttag.onchange=function(){
-						var ta = this.value;
 						var tatbl = "tbl"+this.value;
 						var tbllist = document.querySelectorAll(".board > table");
 						for(tbl of tbllist){
