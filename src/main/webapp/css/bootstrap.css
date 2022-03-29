@@ -6181,6 +6181,10 @@ button.close {
 	display: none !important;
 }
 
+.hide2 {
+	display: none !important;
+}
+
 .show {
 	display: block !important;
 }
