@@ -37,8 +37,8 @@
 <link rel="stylesheet" href="css/icomoon.css">
 <!-- Themify Icons-->
 <link rel="stylesheet" href="css/themify-icons.css">
-<!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<!-- Bootstrap  
+<link rel="stylesheet" href="css/bootstrap.css">-->
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="css/magnific-popup.css">
 <!-- Owl Carousel  -->
@@ -49,13 +49,13 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 
+
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
 </head>
 <body>
 
@@ -113,30 +113,9 @@
 	</div>
 	<div class="gtco-loader"></div>
 
-	<div id="page">
-		<nav class="gtco-nav" role="navigation">
-			<div class="gtco-container">
-				<div class="row">
-					<div class="col-sm-2 col-xs-12">
-						<div id="gtco-logo">
-							<img src="images/logo.png" alt="(주)하이크루" />
-						</div>
-					</div>
-					<div class="col-xs-10 text-right menu-1 main-nav">
-						<ul>
-							<li><a href="#" data-nav-section="home">Home</a></li>
-							<li><a href="#" data-nav-section="services">회사소개</a></li>
-							<li><a href="#" data-nav-section="CI">주요사업</a></li>
-							<li><a href="#" data-nav-section="portfolio">그룹웨어</a></li>
-							<li class="active"><a href="http://gw.hicrew.kr"
-								class="external">페이지 관리</a></li>
-						</ul>
-					</div>
-				</div>
-
-			</div>
-		</nav>
-	</div>
+	<jsp:include page="nav.jsp" >
+		<jsp:param name="#" value="#"/>
+	</jsp:include>
 	<div class="gtco-section-overflow">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
@@ -163,7 +142,7 @@
 									<option value="">상세 메뉴 선택</option>
 									<option value="cmpnyinfo">회사 정보</option>
 									<option value="ciintrcn">CI 소개</option>
-									<option value="">주요 연혁</option>
+									<option value="cmpnyhist">회사 연혁</option>
 									<option value="">조직도</option>
 									<option value="">오시는길</option>
 									<option value="photo">포토 스토리</option>
@@ -186,6 +165,76 @@
 							<textarea id="intrcnment" class="hide" rows="5" cols="118"
 								style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
 							<div class="tbl board">
+               
+								<!--주요연혁 -->
+								<div class="hide table" id="tblcmpnyhist">
+								<div class="search_box_wrap">
+						            <div class="search_box">
+						                <div class="sel_box">
+						                    <select name="scolumn" id="scolumn">
+						                        <option value="">전체</option>
+						                        <option value="title">제목</option>
+						                        <option value="contents">내용</option>
+						                    </select>
+						                </div>
+						                <div class="ipt_box">
+						                    <input id="searchIpt" name="skeyword" onKeyDown="onKeyDown();" value=""  type="text" placeholder="검색어를 입력하세요">
+						                    <label for="searchIpt" id= "search_btn">검색하기</label>
+						                </div>
+						            </div>
+						        </div>
+						        <table>
+									<colgroup>
+										<col style="width: 95px">
+										<col style="width: auto">
+										<col style="width: 350px">
+										<col style="width: 50px">
+									</colgroup>
+									<tbody>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="(주)하이크루"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="High-Technology CREW System"></td>
+											<td>항목 순서 <input type="text" size="5" value="1"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜<input type="date" size="50" value="설립일"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="2018년 3월 13일"></td>
+											<td>항목 순서 <input type="text" size="5" value="2"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="대표이사"></td>
+											<td>연혁 내용 <input type="text" size="50" value="이영석"></td>
+											<td>항목 순서 <input type="text" size="5" value="3"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="본사주소"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
+											<td>항목 순서 <input type="text" size="5" value="4"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="전화번호"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="070-8772-1612"></td>
+											<td>항목 순서 <input type="text" size="5" value="5"
+												style="text-align: center;"></td>
+										</tr>
+										
+									</tbody>
+								</table>
+						        
+								</div>
 								<div class="hide table" id="tblcmpnyinfo">
 									<table>
 										<colgroup>

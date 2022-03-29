@@ -64,7 +64,7 @@
         <div class="header_cont">
             <div class="logo">
                 <a href="/main">
-                    <img src="images/logo.png" alt="(주)하이크루">
+                    <img style="width: 80%;" src="images/logo.png" alt="(주)하이크루">
                 </a>
             </div>
             <nav class="gnb" id="Gnb">
@@ -97,14 +97,31 @@
                 	<span class="depth1_arrow"></span>
                 	<div class="depth_wrap">
                 		<ul>
-                			<li><a href="#" data-nav-section="portfolio">PDF솔루션</a></li>
-				<li><a href="#" data-nav-section="blog">IT솔루션</a></li>
+                			<li><a href="#">PDF솔루션</a></li>
+							<li><a href="#" >IT솔루션</a></li>
                 		</ul>
                 	</div>
                 </li>
+				<li>
+					<a href="http://gw.hicrew.kr" class="external">
+						<span>그룹웨어</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>페이지 관리</span>
+					</a>
+					<span class="depth1_arrow"></span>
+					<div class="depth_wrap">
+						<ul>
+							<li><a href="upendmenu.do">상단 메뉴 관리</a>
+							<li><a href="menudetail.do">상세 메뉴 관리</a>
+						</ul>
+					</div>
 					
-				<li><a href="http://gw.hicrew.kr" class="external">그룹웨어</a></li>
+				</li>
             </nav>
+            
         </div>
     </div>
 </header>
