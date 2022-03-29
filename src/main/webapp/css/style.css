@@ -51,7 +51,7 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-a:hover, a:active, a:focus {
+a:hover, a:active, a:focus, span:active {
   color: #FF5126;
   outline: none;
   text-decoration: none;
@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #ff6540;
   color: #fff;
 }
-.gtco-nav ul li.active > a {
+.gtco-nav ul li.active > a > span {
   color: #FF5126 !important;
 }
 
@@ -2695,6 +2695,8 @@ form label {
 .btn_type1 + .btn_type1 {
 	margin-left: 1px;
 }
+
+
 /*상단메뉴 스타일 종현*/
 
 .depth1_arrow {
@@ -2767,12 +2769,12 @@ ul:after, ol:after {
             height: 100%;
             text-transform: uppercase;
             color: #333333;
-            font-size: 1.125rem;
+            font-size: 2rem;
             font-weight: 700; }
             header .header_cont .gnb > ul > li > a > span {
               position: relative; }
               header .header_cont .gnb > ul > li > a > span:before {
-                background-color: #0071bd;
+                background-color: #ff8000;
                 bottom: -17px;
                 left: 0;
                 right: 0;
@@ -2818,29 +2820,30 @@ ul:after, ol:after {
             color: #333;
             font-size: 1rem;
             font-weight: 500; }
-            header .header_cont .gnb .depth_wrap .depth_box > a:hover {
-              text-decoration: underline; }
-            header .header_cont .gnb .depth_wrap .depth_box > a.no_link {
-              cursor: default; }
-              header .header_cont .gnb .depth_wrap .depth_box > a.no_link:hover {
-                text-decoration: none; }
-          header .header_cont .gnb .depth_wrap .depth_box + .depth_box {
-            margin-left: 110px; }
-          header .header_cont .gnb .depth_wrap .depth_box dl {
-            display: block; }
-            header .header_cont .gnb .depth_wrap .depth_box dl + dl {
-              margin-left: 0;
-              margin-top: 20px; }
-            header .header_cont .gnb .depth_wrap .depth_box dl dt {
-              margin-bottom: 15px; }
-            header .header_cont .gnb .depth_wrap .depth_box dl dd {
-              line-height: 20px; }
-              header .header_cont .gnb .depth_wrap .depth_box dl dd a {
-                font-size: 0.9375rem; }
-        header .header_cont .gnb .depth_wrap dl {
-          display: inline-block;
-          vertical-align: top;
-          text-align: center; }
+header .header_cont .gnb .depth_wrap .depth_box > a:hover {
+  /*text-decoration: underline;*/ 
+  }
+header .header_cont .gnb .depth_wrap .depth_box > a.no_link {
+  cursor: default; }
+header .header_cont .gnb .depth_wrap .depth_box > a.no_link:hover {
+  text-decoration: none; }
+header .header_cont .gnb .depth_wrap .depth_box + .depth_box {
+  margin-left: 110px; }
+header .header_cont .gnb .depth_wrap .depth_box dl {
+  display: block; }
+header .header_cont .gnb .depth_wrap .depth_box dl + dl {
+  margin-left: 0;
+  margin-top: 20px; }
+header .header_cont .gnb .depth_wrap .depth_box dl dt {
+  margin-bottom: 15px; }
+header .header_cont .gnb .depth_wrap .depth_box dl dd {
+  line-height: 20px; }
+  header .header_cont .gnb .depth_wrap .depth_box dl dd a {
+    font-size: 0.9375rem; }
+header .header_cont .gnb .depth_wrap dl {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center; }
           header .header_cont .gnb .depth_wrap dl + dl {
             margin-left: 100px; }
           header .header_cont .gnb .depth_wrap dl dt {
@@ -2855,28 +2858,29 @@ ul:after, ol:after {
               color: #333;
               font-size: 0.9375rem;
               font-weight: 400; }
-              header .header_cont .gnb .depth_wrap dl dt a:hover {
-                text-decoration: underline; }
-          header .header_cont .gnb .depth_wrap dl dd {
-            line-height: 28px;
-            text-align: left; }
-            header .header_cont .gnb .depth_wrap dl dd a {
-              padding-left: 10px;
-              position: relative;
-              color: #666;
-              font-size: 0.875rem;
-              font-weight: 300; }
-              header .header_cont .gnb .depth_wrap dl dd a:before {
-                width: 4px;
-                height: 1px;
-                background-color: #666;
-                position: absolute;
-                left: 0;
-                top: 12px;
-                display: block;
-                content: ""; }
-              header .header_cont .gnb .depth_wrap dl dd a:hover {
-                text-decoration: underline; }
+header .header_cont .gnb .depth_wrap dl dt a:hover {
+  /*text-decoration: underline;*/ 
+  }
+        header .header_cont .gnb .depth_wrap dl dd {
+          line-height: 28px;
+          text-align: left; }
+       header .header_cont .gnb .depth_wrap dl dd a {
+         padding-left: 10px;
+         position: relative;
+         color: #666;
+         font-size: 0.875rem;
+         font-weight: 300; }
+        header .header_cont .gnb .depth_wrap dl dd a:before {
+          width: 4px;
+          height: 1px;
+          background-color: #666;
+          position: absolute;
+          left: 0;
+          top: 12px;
+          display: block;
+          content: ""; }
+        header .header_cont .gnb .depth_wrap dl dd a:hover {
+          /* text-decoration: underline; */ }
         header .header_cont .gnb .depth_wrap ul {
           line-height: normal;
           display: inline-block;
@@ -2886,152 +2890,178 @@ ul:after, ol:after {
             display: inline-block; }
             header .header_cont .gnb .depth_wrap ul li + li {
               margin-left: 60px; }
-            header .header_cont .gnb .depth_wrap ul li a {
-              color: #666;
-              font-size: 1rem;
-              font-weight: 400; }
-              header .header_cont .gnb .depth_wrap ul li a:hover {
-                text-decoration: underline; }
-      header .header_cont .gnb .btn_m_menu_close {
-        display: none; }
-    header .header_cont .header_btn {
-      margin-top: 13px;
-      float: right; }
-      header .header_cont .header_btn .btn_contact {
-        display: inline-block;
-        vertical-align: middle;
-        height: 34px;
-        line-height: 34px;
-        border-radius: 17px;
-        padding: 0 15px;
-        margin-right: 40px;
-        color: #fff;
-        font-size: 0.9375rem;
-        font-weight: 300;
-        background: -webkit-gradient(linear, right top, left top, from(#0d6bae), to(#f45a4c));
-        background: -o-linear-gradient(right, #0d6bae 0%, #f45a4c 100%);
-        background: linear-gradient(-90deg, #0d6bae 0%, #f45a4c 100%); }
-        header .header_cont .header_btn .btn_contact:hover {
-          text-decoration: underline; }
-      header .header_cont .header_btn .btn_allmenu, header .header_cont .header_btn .m_header_btn {
-        vertical-align: middle;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        z-index: 100; }
-        header .header_cont .header_btn .btn_allmenu span, header .header_cont .header_btn .m_header_btn span {
-          display: block;
-          text-indent: -9999em; }
-      header .header_cont .header_btn .m_header_btn {
-        display: none; }
-  header .allmenu {
-    display: none;
-    height: 750px;
-    background-color: #fff; }
-    header .allmenu_title {
-      width: 100%;
-      left: 0;
-      right: 0;
-      top: 0;
-      position: fixed;
-      z-index: 20;
-      height: 60px;
-      background-color: #0071bd;
-      *zoom: 1; }
-      header .allmenu_title:after {
+
+              
+/* 하단 메뉴 */    
+header .header_cont .gnb .depth_wrap ul li a {
+  color: #666;
+  font-size: 2rem;
+  font-weight: 400; 
+}
+/* 하단 메뉴 hover */ 
+header .header_cont .gnb .depth_wrap ul li a:hover {
+  text-decoration: underline; 
+}
+
+header .header_cont .gnb .btn_m_menu_close {
+  display: none; 
+}
+  
+header .header_cont .header_btn {
+  margin-top: 13px;
+  float: right; 
+}
+  
+header .header_cont .header_btn .btn_contact {
+  display: inline-block;
+  vertical-align: middle;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 17px;
+  padding: 0 15px;
+  margin-right: 40px;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  background: -webkit-gradient(linear, right top, left top, from(#0d6bae), to(#f45a4c));
+  background: -o-linear-gradient(right, #0d6bae 0%, #f45a4c 100%);
+  background: linear-gradient(-90deg, #0d6bae 0%, #f45a4c 100%); 
+}
+  
+header .header_cont .header_btn .btn_contact:hover {
+  /* text-decoration: underline; */ 
+}
+
+header .header_cont .header_btn .btn_allmenu, header .header_cont .header_btn .m_header_btn {
+  vertical-align: middle;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  z-index: 100; 
+}
+header .header_cont .header_btn .btn_allmenu span, header .header_cont .header_btn .m_header_btn span {
+  display: block;
+  text-indent: -9999em; 
+}
+header .header_cont .header_btn .m_header_btn {
+  display: none; 
+}
+header .allmenu {
+  display: none;
+  height: 750px;
+  background-color: #fff; 
+}
+header .allmenu_title {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 20;
+  height: 60px;
+  background-color: #0071bd;
+  *zoom: 1; 
+}
+header .allmenu_title:after {
+  display: block;
+  clear: both;
+  content: ""; 
+}
+header .allmenu_title span {
+  line-height: 60px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500; 
+}
+header .allmenu_lst {
+  height: 100%;
+  *zoom: 1; 
+}
+header .allmenu_lst:after {
+  display: block;
+  clear: both;
+  content: ""; 
+}
+header .allmenu_lst .inner {
+  height: 100%; 
+}
+header .allmenu_lst_box {
+  padding: 30px 30px;
+  height: 100%;
+  float: left;
+  width: 325px; 
+}
+      header .allmenu_lst_box + .allmenu_lst_box {
+        border-left: 1px solid #e3e3e3; }
+      header .allmenu_lst_box:first-child {
+        border-left: 1px solid #e3e3e3;
+        width: 520px; }
+      header .allmenu_lst_box:last-child {
+        border-right: 1px solid #e3e3e3; }
+    header .allmenu_lst .depth_wrap {
+      min-height: 250px; }
+      header .allmenu_lst .depth_wrap.product .depth_title {
+        padding-bottom: 28px; }
+      header .allmenu_lst .depth_wrap.product .depth1 > li > a {
         display: block;
-        clear: both;
-        content: ""; }
-      header .allmenu_title span {
-        line-height: 60px;
-        color: #fff;
-        font-size: 1.25rem;
-        font-weight: 500; }
-    header .allmenu_lst {
-      height: 100%;
-      *zoom: 1; }
-      header .allmenu_lst:after {
-        display: block;
-        clear: both;
-        content: ""; }
-      header .allmenu_lst .inner {
-        height: 100%; }
-      header .allmenu_lst_box {
-        padding: 30px 30px;
-        height: 100%;
-        float: left;
-        width: 325px; }
-        header .allmenu_lst_box + .allmenu_lst_box {
-          border-left: 1px solid #e3e3e3; }
-        header .allmenu_lst_box:first-child {
-          border-left: 1px solid #e3e3e3;
-          width: 520px; }
-        header .allmenu_lst_box:last-child {
-          border-right: 1px solid #e3e3e3; }
-      header .allmenu_lst .depth_wrap {
-        min-height: 250px; }
-        header .allmenu_lst .depth_wrap.product .depth_title {
-          padding-bottom: 28px; }
-        header .allmenu_lst .depth_wrap.product .depth1 > li > a {
-          display: block;
-          color: #333333;
-          font-size: 1rem;
-          font-weight: 400; }
-        header .allmenu_lst .depth_wrap.product .depth2 li {
-          line-height: 26px; }
-          header .allmenu_lst .depth_wrap.product .depth2 li > a {
-            color: #666;
-            font-size: 0.9375rem;
-            font-weight: 300; }
-        header .allmenu_lst .depth_wrap + .depth_wrap {
-          margin-top: 35px; }
-      header .allmenu_lst .depth_title {
-        color: #333333;
-        font-size: 1.063rem;
-        font-weight: 700;
-        padding-bottom: 25px; }
-      header .allmenu_lst .depth_cont_title {
-        white-space: nowrap;
-        display: inline-block;
-        padding-bottom: 20px;
         color: #333333;
         font-size: 1rem;
-        font-weight: 500; }
-      header .allmenu_lst .depth_cont + .depth_cont {
-        margin-top: 40px; }
-      header .allmenu_lst .depth_cont a.no_link {
-        cursor: default; }
-        header .allmenu_lst .depth_cont a.no_link:hover {
-          text-decoration: none; }
-      header .allmenu_lst .depth_cont a:hover {
-        text-decoration: underline; }
-      header .allmenu_lst .depth_cont a.m_depth1_btn {
-        display: inline-block;
-        width: 20px;
-        height: 20px; }
-        header .allmenu_lst .depth_cont a.m_depth1_btn:before {
-          display: inline-block;
-          color: #242424;
-          font-size: 25px;
-          font-weight: 900;
-          content: "+"; }
-      header .allmenu_lst .depth_cont ul li {
-        line-height: 28px;
-        *zoom: 1; }
-        header .allmenu_lst .depth_cont ul li:after {
-          display: block;
-          clear: both;
-          content: ""; }
-        header .allmenu_lst .depth_cont ul li.half {
-          float: left;
-          width: 50%; }
-        header .allmenu_lst .depth_cont ul li a {
+        font-weight: 400; }
+      header .allmenu_lst .depth_wrap.product .depth2 li {
+        line-height: 26px; }
+        header .allmenu_lst .depth_wrap.product .depth2 li > a {
           color: #666;
-          font-size: 1rem;
+          font-size: 0.9375rem;
           font-weight: 300; }
-    header .allmenu.open {
-      -webkit-box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.1);
-              box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.1); }
+      header .allmenu_lst .depth_wrap + .depth_wrap {
+        margin-top: 35px; }
+    header .allmenu_lst .depth_title {
+      color: #333333;
+      font-size: 1.063rem;
+      font-weight: 700;
+      padding-bottom: 25px; }
+    header .allmenu_lst .depth_cont_title {
+      white-space: nowrap;
+      display: inline-block;
+      padding-bottom: 20px;
+      color: #333333;
+      font-size: 1rem;
+      font-weight: 500; }
+    header .allmenu_lst .depth_cont + .depth_cont {
+      margin-top: 40px; }
+    header .allmenu_lst .depth_cont a.no_link {
+      cursor: default; }
+      header .allmenu_lst .depth_cont a.no_link:hover {
+        text-decoration: none; }
+    header .allmenu_lst .depth_cont a:hover {
+      /* text-decoration: underline; */ }
+    header .allmenu_lst .depth_cont a.m_depth1_btn {
+      display: inline-block;
+      width: 20px;
+      height: 20px; }
+      header .allmenu_lst .depth_cont a.m_depth1_btn:before {
+        display: inline-block;
+        color: #242424;
+        font-size: 25px;
+        font-weight: 900;
+        content: "+"; }
+    header .allmenu_lst .depth_cont ul li {
+      line-height: 28px;
+      *zoom: 1; }
+      header .allmenu_lst .depth_cont ul li:after {
+        display: block;
+        clear: both;
+        content: ""; }
+      header .allmenu_lst .depth_cont ul li.half {
+        float: left;
+        width: 50%; }
+      header .allmenu_lst .depth_cont ul li a {
+        color: #666;
+        font-size: 1rem;
+        font-weight: 300; }
+  header .allmenu.open {
+    -webkit-box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.1); }
               
 .inner {
   width: 1170px;

@@ -9,34 +9,26 @@
 <link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/com/uat/uia/login.css' />">
 <script type="text/javascript" src="<c:url value='/js/egovframework/com/cmm/showModalDialog.js'/>" ></script>
 <script type="text/javascript" src="<c:url value='/js/egovframework/com/cmm/jquery.js'/>" ></script>
-<script type="text/javaScript" language="javascript">
-function checkLogin(userSe) {
-	//일반회원
-	if (userSe == "GNR") {
-        document.loginForm.rdoSlctUsr[0].checked = true;
-        document.loginForm.rdoSlctUsr[1].checked = false;
-        document.loginForm.rdoSlctUsr[2].checked = false;
-        document.loginForm.userSe.value = "GNR";
-	}
-}
-
-function actionLogin(){
-	if (document.loginForm.id.value == ""){
-		alert("<spring:message code="comUatUia.validate,idCheck" />"); <%--아이디를 입력하세요 --%>
-	} else if(document.loginForm.password.value ==""){
-		alert("<spring:message code="comUatUia.validate.passCheck" />"); <%-- 비밀번호를 입력하세요 --%>
-	} else {
-		document.loginForm.action="<c:url value '/login/actionLogin.do'/>";
-		document.loginForm.submit();
-	}
-}
-function actionCrtFctLogin(){
-	docum,ent
-}
-
-</script>
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<jsp:include page="../main/nav.jsp" >
+	<jsp:param name="#" value="#"/>
+</jsp:include>
+                            <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 </body>
+
 </html>

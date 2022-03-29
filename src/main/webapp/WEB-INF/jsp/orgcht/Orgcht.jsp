@@ -63,10 +63,12 @@
 
 .tree ul {
 	padding-top: 20px; position: relative;
-	
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
+}
+.TreeFirstLi:nth-child(1){
+	padding-left: 37%;
 }
 
 .tree li {
@@ -190,39 +192,10 @@ a.just-line + ul:before {
 
 </head>
 <body onload="initialize()">
-	<div class="gtco-loader"></div>
-	
-	<div id="page">
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-sm-2 col-xs-12">
-					<div id="gtco-logo"><img src="images/logo.png" alt="(주)하이크루"/></div>
-				</div>
-				<div class="col-xs-10 text-right menu-1 main-nav">
-					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li class = "menu"><a href="#" data-nav-section="services">회사소개</a>
-							<ul class = "hide">
-								<li><a href="#" onclick="movePage('ch.do')" data-nav-section="#companyHistory">연혁</a>
-								<li><a href="#" >연혁 관리</a>
-								<li><a href="#" onclick="movePage('orgcht.do')">조직도</a>
-								<li><a href="#" >조직도 관리</a>
-							</ul>
-						</li>
-						<li><a href="#" onclick="movePage('main.do?data'+'=CI')" data-nav-section="CI">CI소개</a></li>
-						<li><a href="#" onclick="movePage('main.do?data'+'=portfolio')" data-nav-section="portfolio">PDF솔루션</a></li>
-						<li><a href="#" onclick="movePage('main.do?data'+'=blog')" data-nav-section="blog">IT솔루션</a></li>
-						<li><a href="#" onclick="movePage('main.do?data'+'=products')" data-nav-section="products">포토스토리</a></li>
-						<li><a href="#" onclick="movePage('main.do?data'+'=contact')" data-nav-section="contact">오시는길</a></li>
-						<li><a href="http://gw.hicrew.kr" class="external">그룹웨어</a></li> 
-					</ul>
-				</div>
-			</div>
-			
-		</div>
-	</nav>
-	
+
+	<jsp:include page="../main/nav.jsp" >
+	<jsp:param name="#" value="#"/>
+	</jsp:include>
 		<div class="gtco-section-overflow">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
@@ -235,7 +208,7 @@ a.just-line + ul:before {
 				<div class="row">
 						<div class="tree">
 	<ul>
-		<li>
+		<li class="TreeFirstLi">
 			
             <a href="#"><img alt="" src="images/logo.png"><br/>President Director <br/>Tetsuo Nakai</a>
             
@@ -288,6 +261,9 @@ a.just-line + ul:before {
 		</div>
 
 </div>
+<jsp:include page="../main/footer.jsp" >
+	<jsp:param name="#" value="#"/>
+</jsp:include>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

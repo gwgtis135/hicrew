@@ -1,7 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<script>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<!-- Theme style  -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- <script>
 	$(document).ready(function() {
 		$.ajax({
 			url : 'loadNav.do',
@@ -48,5 +57,57 @@
 			</div>
 		</div>
 
-	</div>
-</nav>
+	</div> 
+	-->
+	<header>
+    <div class="inner">
+        <div class="header_cont">
+            <div class="logo">
+                <a href="/main">
+                    <img src="images/logo.png" alt="(주)하이크루">
+                </a>
+            </div>
+            <nav class="gnb" id="Gnb">
+                <ul>
+                <li class="active">
+                	<a href="#" data-nav-section="home">
+                		<span>Home</span>
+                	</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>회사소개</span>
+                    </a>
+                    <span class="depth1_arrow"></span>
+                    <div class="depth_wrap">
+                        <ul>
+                            <li><a href="">회사정보</a></li>
+                            <li><a href="">CI소개</a></li>
+                            <li><a href="ch.do">주요 연혁</a></li>
+                            <li><a href="orgcht.do">조직도</a></li>
+                            <li><a href="/introduce/recruitment">오시는길</a></li>
+                            <li><a href="/introduce/customer">포토스토리</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                	<a href="#">
+                		<span>주요사업</span>
+                	</a>
+                	<span class="depth1_arrow"></span>
+                	<div class="depth_wrap">
+                		<ul>
+                			<li><a href="#" data-nav-section="portfolio">PDF솔루션</a></li>
+				<li><a href="#" data-nav-section="blog">IT솔루션</a></li>
+                		</ul>
+                	</div>
+                </li>
+					
+				<li><a href="http://gw.hicrew.kr" class="external">그룹웨어</a></li>
+            </nav>
+        </div>
+    </div>
+</header>
+	
+</body>
+</html>
