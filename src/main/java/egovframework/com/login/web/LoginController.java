@@ -15,6 +15,12 @@ import egovframework.com.login.service.LoginService;
 
 @Controller
 public class LoginController {
+	
+	@RequestMapping(value="login.do")
+	public String goLogin() {
+		System.out.println("로그인 페이지 호출");
+		return "login/Login";
+	}
 
 	
 	@Resource(name = "egovLoginConfig")	 //사용자 인증수행제한에 대한 설정을 관리하는 클래스  
