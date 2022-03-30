@@ -269,57 +269,57 @@ a {
 				</div>
 				<div class="row">
 						<div id="history">
-							<h2>2019</h2>
+							<h2>2022</h2>
 							<div class="list_right">
 								<span></span>
 								<div>
 									<ul>
 										<li>
 											<dl>
-												<dt>11.24</dt>
-												<dd>on sunday 티스토리 블로그 개설</dd>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
 											</dl>
 											<dl>
-												<dt>11.24</dt>
-												<dd>첫 포스팅 시작함</dd>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
 											</dl>
 										</li>
 										<li>
 											<dl>
-												<dt>11.25</dt>
-												<dd>on sunday 바람개비마을 포스팅</dd>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
 											</dl>
 											<dl>
-												<dt>11.26</dt>
-												<dd>서촌 준수방키친 포스팅</dd>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
 											</dl>
 										</li>
 									</ul>
 								</div>
 							</div>
 							<!--list_right-->
-							<h2>2019</h2>
+							<h2>2021</h2>
 							<div class="list_left">
 								<div>
 									<ul>
 										<li>
 											<dl>
-												<dd>on sunday 티스토리 블로그 개설</dd>
-												<dt>11.24</dt>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
 											</dl>
 											<dl>
-												<dd>첫 포스팅 시작함</dd>
-												<dt>11.24</dt>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
 											</dl>
 										</li>
 										<li>
 											<dl>
-												<dd>on sunday 바람개비마을 포스팅</dd>
-												<dt>11.25</dt>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
 											</dl>
 											<dl>
-												<dd>서촌 준수방키친 포스팅</dd>
-												<dt>11.26</dt>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
 											</dl>
 										</li>
 									</ul>

@@ -209,51 +209,44 @@ a.just-line + ul:before {
 						<div class="tree">
 	<ul>
 		<li class="TreeFirstLi">
-			
-            <a href="#"><img alt="" src="images/logo.png"><br/>President Director <br/>Tetsuo Nakai</a>
-            
+            <a style="margin-right: 109px;" href="#"><img alt="" src="images/sample2.png"><br/>이영석 <br/>대표님<br/>세종(4세대 나이스 구축 사업)</a>
 			<ul>
 				<li>
 					<a href="#">
-                        HR &amp; Administration<br/>
-                        Heli Neo<br/>Manager</a>
+                    	<img alt="" src="images/sample2.png"><br/>이장수<br/>부장<br/>대구(2022 나이스 유지보수)</a>
 					<ul>
 						<li>
-                            <a href="#">IT Administrator <br/>Ericson Ginting<br/>Assistant Manager</a>
-							
-							<ul>
-								<li>
-                                    <a href="#">IT Engineer <br/>I Wayan Purushottama<br/>Engineer</a>
-									
-									<ul>
+                            <a href="#"><img alt="" src="images/sample2.png"><br/>김동업<br/>차장<br/>세종(4세대 나이스 구축 사업)</a>
+                            <li>
+                            	<a href="#"><img alt="" src="images/sample2.png"><br/>이상현<br/>차장<br/>세종(4세대 나이스 구축 사업)</a>
+                    </ul>
+             </ul>
+      
+						<ul>
+							<li>
+                            	<a href="#"><img alt="" src="images/sample2.png"><br/>이름<br/>과장 <br/>I Wayan Purushottama<br/>Engineer</a>
 									<li>
-                                        <a href="#">IT Support<br/>Juanda F Butar Butar<br/>Assistant Engineer</a>
-									</li>
-									</ul>
-								</li>
-								
-								<li>
-                                    <a href="#" class="just-line"><br/><br/><br/></a>
-								<ul>
-								<li>
-                                    <a href="#">IT Support<br/>David Alwis<br/>Assistant Engineer</a>
-									
-									<ul>
-									<li>
-                                        <a href="#">IT Support<br/>Nico Simanjuntak<br/>Technician</a>
-									</li>
-									</ul>
-								</li>
-								</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				
-			</ul>
-		</li>
+                                   		<a href="#"><img alt="" src="images/sample2.png"><br/>이름<br/>과장 <br/>Assistant Engineer</a>
+	                                   	<li>
+	                                   		<a href="#"><img alt="" src="images/sample2.png"><br/>이름<br/>과장 <br/>Assistant Engineer</a>
+						</ul>
+						<ul>
+							<li>
+                   				<a href="#">사원1<br/>Nico Simanjuntak<br/>Technician</a>
+                   				<li>
+                   					<a href="#">사원2<br/>Nico Simanjuntak<br/>Technician</a>
+                   					<li>
+                   					<a href="#">사원3<br/>Nico Simanjuntak<br/>Technician</a>
+                   					<li>
+                   					<a href="#">사원4<br/>Nico Simanjuntak<br/>Technician</a>
+                   				
+							</li>
+						</ul>
+			
+		
 	</ul>
+	
+				
 </div>
 
 					</div>
