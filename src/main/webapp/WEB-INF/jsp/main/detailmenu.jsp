@@ -49,12 +49,7 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+
 
 </head>
 <body>
@@ -128,7 +123,7 @@
 									<option value="">상세 메뉴 선택</option>
 									<option value="cmpnyinfo">회사 정보</option>
 									<option value="ciintrcn">CI 소개</option>
-									<option value="">주요 연혁</option>
+									<option value="cmpnyhist">주요 연혁</option>
 									<option value="">조직도</option>
 									<option value="">오시는길</option>
 									<option value="">포토 스토리</option>
@@ -265,6 +260,61 @@
 										</tr>
 									</tbody>
 								</table>
+								<!--주요연혁 -->
+								<div class="hide table" id="tblcmpnyhist">
+								
+						        <table>
+									<colgroup>
+										<col style="width: 95px">
+										<col style="width: auto">
+										<col style="width: 350px">
+										<col style="width: 50px">
+									</colgroup>
+									<tbody>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="(주)하이크루"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="High-Technology CREW System"></td>
+											<td>항목 순서 <input type="text" size="5" value="1"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜<input type="date" size="50" value="설립일"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="2018년 3월 13일"></td>
+											<td>항목 순서 <input type="text" size="5" value="2"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="대표이사"></td>
+											<td>연혁 내용 <input type="text" size="50" value="이영석"></td>
+											<td>항목 순서 <input type="text" size="5" value="3"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="본사주소"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
+											<td>항목 순서 <input type="text" size="5" value="4"
+												style="text-align: center;"></td>
+										</tr>
+										<tr class="notice">
+											<td class="num"><input type="checkbox"></td>
+											<td>날짜 <input type="date" size="50" value="전화번호"></td>
+											<td>연혁 내용 <input type="text" size="50"
+												value="070-8772-1612"></td>
+											<td>항목 순서 <input type="text" size="5" value="5"
+												style="text-align: center;"></td>
+										</tr>
+										
+									</tbody>
+								</table>
+						        
+								</div>
 
 								<table class="hide" id="tblitsolut">
 									<colgroup>
@@ -371,6 +421,14 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+	
+	
 	<script>
 	function modalopen(){
 		console.log("modalopen!");
@@ -412,4 +470,3 @@
 	</script>
 </body>
 </html>
-
