@@ -187,7 +187,7 @@
 									<option value="gw.hicrew.kr">그룹웨어</option>
 									<option value="adminpage">페이지 관리</option>
 								</select> <select name="selectcmpnyintrcn" id="selectcmpnyintrcn"
-									class="hide">
+									class="">
 									<option value="">상세 메뉴 선택</option>
 									<option value="cmpnyinfo">회사 정보</option>
 									<option value="ciintrcn">CI 소개</option>
@@ -211,7 +211,7 @@
                 </span>
                  -->
 							</div>
-							<textarea id="intrcnment" class="hide" rows="5" cols="118"
+							<textarea id="intrcnment" class="" rows="5" cols="118"
 								style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
 							<div class="tbl board">
                
@@ -337,7 +337,7 @@
 								</div>
 								
 								
-								<div class="hide table" id="tblcmpnyinfo">
+								<div class="table" id="tblcmpnyinfo">
 									<table>
 										<colgroup>
 											<col style="width: 95px">
@@ -692,6 +692,9 @@
 				}
 				document.getElementById(tasel).classList.toggle("hide");
 			}
+			document.getElementById('LCALS').selectedIndex = 2;
+			document.getElementById('selectcmpnyintrcn').selectedIndex = 1;
+			document.getElementById("intrcnment").value="cmpnyinfo";
 		});
 		
 		var slideIndex = 1;
