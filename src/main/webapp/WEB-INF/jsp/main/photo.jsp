@@ -74,70 +74,80 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 </head>
 <body>
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
-		<div id="gtco-hero" class="js-fullheight" data-section="home">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-					<li style="background-image: url(images/img_bg_1.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>E</em>ducational <em>I</em>nformation <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="http://twitter.com/gettempaltesco" target="_blank" class="btn btn-primary btn-lg">Follow @gettemplatesco</a></p>
-		   					-->
-								</div>
-							</div>
+		<div class="gtco-section" id="gtco-products" data-section="products">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2>포토스토리</h2>
+						<p>Crew들의 발자취....</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="owl-carousel owl-carousel-carousel">
+						<div class="item">
+							<img src="images/Crews/story4_1.jpg" witdh="345px" height="460px"
+								alt="2019 종무식, 영덕">
 						</div>
-
-					</li>
-					<li style="background-image: url(images/img_bg_2.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>S</em>olution <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
-		   					-->
-								</div>
-							</div>
+						<div class="item">
+							<img src="images/Crews/story1_1.jpg" witdh="345px" height="460px"
+								alt="거제, 바람의 언덕">
 						</div>
-
-					</li>
-					<li style="background-image: url(images/img_bg_3.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>T</em>echnical <em>S</em>upport <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
-		   					-->
-								</div>
-							</div>
+						<div class="item">
+							<img src="images/Crews/story2_1.jpg" witdh="345px" height="460px"
+								alt="팔공, 동화사">
 						</div>
-					</li>
-				</ul>
+						<div class="item">
+							<img src="images/Crews/story3_1.jpg" witdh="345px" height="460px"
+								alt="지리산, 화엄사">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		<!--
+	<div id="gtco-subscribe">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2>Subscribe</h2>
+					<p>Be the first to know about the new templates.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<form class="form-inline">
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Your Email">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="name" class="sr-only">Name</label>
+								<input type="text" class="form-control" id="name" placeholder="Your Name">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<button type="submit" class="btn btn-danger btn-block">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
 		<footer id="gtco-footer" role="contentinfo">
 			<div class="gtco-container">
 
@@ -163,6 +173,10 @@
 
 			</div>
 		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 </body>
 </html>
