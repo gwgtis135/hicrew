@@ -37,8 +37,8 @@
 <link rel="stylesheet" href="css/icomoon.css">
 <!-- Themify Icons-->
 <link rel="stylesheet" href="css/themify-icons.css">
-<!-- Bootstrap  
-<link rel="stylesheet" href="css/bootstrap.css">-->
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.css">
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="css/magnific-popup.css">
 <!-- Owl Carousel  -->
@@ -49,8 +49,6 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/nice-select.css">
-
-
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->

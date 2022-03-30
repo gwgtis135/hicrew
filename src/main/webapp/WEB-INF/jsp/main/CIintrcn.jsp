@@ -74,68 +74,47 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 </head>
-<body>
+<body onload="initialize()">
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
-		<div id="gtco-hero" class="js-fullheight" data-section="home">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-					<li style="background-image: url(images/img_bg_1.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>E</em>ducational <em>I</em>nformation <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="http://twitter.com/gettempaltesco" target="_blank" class="btn btn-primary btn-lg">Follow @gettemplatesco</a></p>
-		   					-->
-								</div>
-							</div>
-						</div>
-
-					</li>
-					<li style="background-image: url(images/img_bg_2.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>S</em>olution <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
-		   					-->
-								</div>
-							</div>
-						</div>
-
-					</li>
-					<li style="background-image: url(images/img_bg_3.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>T</em>echnical <em>S</em>upport <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
-		   					-->
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
+		<div class="gtco-section" id="gtco-portfolio" data-section="CI소개">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2>CI소개</h2>
+						<p>
+							<em>Hi</em>gh-Technology <em>CREW</em> System은, 4차산업시대에 맞춰 각분야의
+							최고 엔지니어들의 집합체로써, 소통과 협력에 있어서 스마트한 느낌을 강조하고자 심볼마크를 영문으로 하고
+							<red>레드컬러</red>
+							와
+							<grey>그레이컬러</grey>
+							의 조합은 IT의 기술력,현대적이고 세련화된 직원들의 열정을 상징합니다
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<img src="images/CI1.png" alt="Image"
+							class="img-responsive img-board">
+					</div>
+					<div class="col-md-6">
+						<img src="images/CI2.png" alt="Image"
+							class="img-responsive img-board">
+					</div>
+				</div>
+				<div class="row2">
+					<a href="images/CI_PNG.zip"> <img src="images/btn_img_down.png"
+						alt="PNG 다운로드" class="">
+					</a>
+				</div>
 			</div>
 		</div>
 		<footer id="gtco-footer" role="contentinfo">
@@ -164,5 +143,10 @@
 			</div>
 		</footer>
 	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 </body>
 </html>
+

@@ -912,11 +912,6 @@ form label {
 	}
 }
 
-#gtco-products {
-	padding-top: 10em;
-	margin-top: -10em;
-}
-
 #gtco-products .item img {
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
 	-moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
@@ -934,11 +929,10 @@ form label {
 	position: absolute;
 	z-index: -1;
 	width: 100%;
-	height: 180%;
+	height: 80%;
 	top: 0;
 	-webkit-transform: skewY(-12deg);
 	-moz-transform: skewY(-12deg);
-	transform: skewY(-12deg);
 	background: #efefef;
 }
 
@@ -3170,7 +3164,8 @@ form label {
 	vertical-align: top;
 }
 
-div.modal > div > >div p>a.btn_type1, a.btn_type2 {
+div.modal > div > div > p > a.btn_type1, 
+div.modal > div > div > p > a.btn_type2 {
 	color: white;
 }
 
@@ -3239,7 +3234,6 @@ div#tblphoto {
 
 /*상단메뉴 스타일 종현*/
 .depth1_arrow {
-	background: url("../images/ico_m_menu_fold.png") no-repeat;
 	background-size: 19px 19px;
 }
 

@@ -85,6 +85,36 @@ public class mainController {
 		return "main/Temp";
 	}
 	
+	@RequestMapping("cmpnyinfo.do")
+	public String cmpnyinfo() {
+		return "main/cmpnyinfo";
+	}
+	
+	@RequestMapping("CIintrcn.do")
+	public String CIintrcn() {
+		return "main/CIintrcn";
+	}
+	
+	@RequestMapping("recruitment.do")
+	public String recruitment() {
+		return "main/recruitment";
+	}
+	
+	@RequestMapping("photo.do")
+	public String photo() {
+		return "main/photo";
+	}
+	
+	@RequestMapping("pdfsolut.do")
+	public String pdfsolut() {
+		return "main/pdfsolut";
+	}
+	
+	@RequestMapping("itsolut.do")
+	public String itsolut() {
+		return "main/itsolut";
+	}
+	
 	@RequestMapping("upendmenu.do")
 	public String upendmenu() {
 		return "main/upendmenu";

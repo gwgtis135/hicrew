@@ -55,7 +55,27 @@
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="js/jquery.countTo.js"></script>
+<!-- Flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="js/main.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 </head>
 <body onload="initialize()">
 
@@ -65,87 +85,24 @@
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
-		<div class="gtco-section" id="gtco-services" data-section="services">
+		<div class="gtco-section" id="gtco-contact" data-section="contact">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2>상단 메뉴 관리</h2>
+						<h2>오시는길</h2>
+						<p>
+							<em>하이크루</em>는 항상 여러분의 방문을 환영합니다.
+						</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="row">
 
-						<div class="row" style="margin-left: 100px; margin-right: 100px;">
-							<div class="tbl_top">
-								<span class="total"> 총 5 건 </span>
-								<!-- 
-                <span>
-                    <b id="noticePage"></b> / <b id="noticePageCnt"></b>
-                </span>
-                 -->
-							</div>
-							<div class="tbl board" id="noticeGrid">
-								<table>
-									<colgroup>
-										<col style="width: 95px">
-										<col style="width: auto">
-										<col style="width: 350px">
-										<col style="width: 50px">
-									</colgroup>
-									<tbody>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="Home"></td>
-											<td>메뉴 링크 <input type="text" size="50" value="home"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="1"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="회사 소개"></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="cmpnyintrcn"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="2"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="주요 사업"></td>
-											<td>메뉴 링크 <input type="text" size="50" value="mainbsns"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="3"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="그룹웨어"></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="gw.hicrew.kr"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="4"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="페이지 관리"></td>
-											<td>메뉴 링크 <input type="text" size="50" value="adminPage"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="5"
-												style="text-align: center;"></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="tbl_bottom" style="float: right;">
-								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">삭제</a>
-								<a id="a_remove" href="#" class="btn_type3 _rosRestrict">미리보기</a>
-							</div>
-						</div>
-
-					</div>
+					<div id="map_view" class="col-md-12"
+						style="width: 100%; height: 350px;"></div>
 				</div>
 			</div>
 		</div>
+
 
 		<footer id="gtco-footer" role="contentinfo">
 			<div class="gtco-container">
@@ -178,27 +135,7 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
+
 	<script>
 		var stockholm = new google.maps.LatLng(35.878816, 128.730657);
 		var parliament = new google.maps.LatLng(35.878816, 128.730657);

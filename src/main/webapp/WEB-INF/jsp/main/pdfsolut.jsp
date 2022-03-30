@@ -74,70 +74,66 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 </head>
-<body>
+<body onload="initialize()">
+
 	<div class="gtco-loader"></div>
 
 	<div id="page">
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
-		<div id="gtco-hero" class="js-fullheight" data-section="home">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-					<li style="background-image: url(images/img_bg_1.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>E</em>ducational <em>I</em>nformation <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="http://twitter.com/gettempaltesco" target="_blank" class="btn btn-primary btn-lg">Follow @gettemplatesco</a></p>
-		   					-->
+		<div class="gtco-section" id="gtco-portfolio" data-section="portfolio">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+						<h2>PDF솔루션</h2>
+						<p>
+							<em>하이크루</em>는 고객의 요구에 부합하는 최상의 시스템을 구축하기 위하여, 해당 분야의 핵심기술과 최고의
+							성능 및 기능을 보유한 최적의 솔루션을 제공합니다.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<a href="images/img_01.JPG" class="gtco-card-item image-popup"
+							title="<a href='http://www.ezpdf.co.kr/webviewer/main.do'>ezPDF Reader</a>">
+							<figure>
+								<div class="overlay">
+									<i class="ti-plus"></i>
 								</div>
-							</div>
-						</div>
-
-					</li>
-					<li style="background-image: url(images/img_bg_2.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>S</em>olution <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
-		   					-->
+								<img src="images/img_01.JPG" alt="Image" class="img-responsive">
+							</figure>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="images/img_02.JPG" class="gtco-card-item image-popup"
+							title="<a href='http://www.ezpdf.co.kr/workflow/main.do'>ezPDF Workflow</a>">
+							<figure>
+								<div class="overlay">
+									<i class="ti-plus"></i>
 								</div>
-							</div>
-						</div>
-
-					</li>
-					<li style="background-image: url(images/img_bg_3.jpg);">
-						<div class="overlay"></div>
-						<div class="container">
-							<div class="col-md-10 text-center js-fullheight slider-text">
-								<!-- col-md-offset-1 -->
-								<div class="slider-text-inner">
-									<h2>
-										<em>T</em>echnical <em>S</em>upport <em>S</em>ervices
-									</h2>
-									<!-- 
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
-		   					-->
+								<img src="images/img_02.JPG" alt="Image" class="img-responsive">
+							</figure>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="images/img_03.JPG" class="gtco-card-item image-popup"
+							title="<a href='http://www.ezpdf.co.kr/workflow/main.do'>ezPDF Workflow(For web)</a>">
+							<figure>
+								<div class="overlay">
+									<i class="ti-plus"></i>
 								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
+								<img src="images/img_03.JPG" alt="Image" class="img-responsive">
+							</figure>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
+
 		<footer id="gtco-footer" role="contentinfo">
 			<div class="gtco-container">
 
@@ -164,5 +160,10 @@
 			</div>
 		</footer>
 	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 </body>
 </html>
+
