@@ -5,6 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class OrgchtController {
+	
+	@RequestMapping("orgtest.do")
+	public String goOrgchtTest() {
+		System.out.println("조직도 관리 컨트롤러 호출");
+		return "orgcht/orgtest";
+	}
 
 	@RequestMapping("orgcht.do")
 	public String goOrgcht() {

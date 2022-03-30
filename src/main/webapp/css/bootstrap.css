@@ -1788,7 +1788,15 @@ input[type="radio"], input[type="checkbox"] {
 input[type="file"] {
 	display: block;
 }
-
+/* 조직도 모달 이미지 span  */
+.orgcht_modal_span{
+	display: inline-flex;
+}
+.orgcht_modal_img{
+    width: 100px;
+    height: 100px;
+    margin-left: 28px;
+}
 input[type="range"] {
 	display: block;
 	width: 100%;
@@ -5568,6 +5576,7 @@ button.close {
 .modal-body {
 	position: relative;
 	padding: 15px;
+	color: black;
 }
 
 .modal-footer {
@@ -6448,7 +6457,10 @@ button.close {
 	}
 }
 #scolumn{
-	font-size:revert;
+    font-size: revert;
+    width: 62px;
+    height: 34px;
+    margin-top: 4px;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

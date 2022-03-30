@@ -48,6 +48,7 @@
 <link rel="stylesheet" href="css/flexslider.css">
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/nice-select.css">
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
@@ -86,6 +87,56 @@
 			</div>
 		</div>
 	</div>
+	<!-- 모달 -->
+	<button id="testBtn" class="btn">모달 테스트</button>
+	<div class="modal fade" id="orgchtmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</button>
+					<h3 class="modal-title" id="exampleModalLabel">모달테스트</h5>
+				</div>
+				<div class="modal-body">
+					<p>
+					<label>이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<input type="text" />
+				</p>
+				<p>
+					<label>직급&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+					<select name="org_clsf" id ="org_clsf">
+							<option value="대표">대표</option>
+							<option value="부장">부장</option>
+							<option value="차장">차장</option>
+							<option value="과장">과장</option>
+							<option value="사원">사원</option>
+						</select>
+				</p>
+				<p>
+					<label>사업부서&nbsp;&nbsp;</label>
+					<input type="text" />
+				</p>
+				<p>
+					프로필<img class="orgcht_modal_img" alt="" src="">
+				</p>
+				<p>
+					<span class=orgcht_modal_span>
+						<label>&nbsp;&nbsp;</label>
+						<input type="file" />
+					</span>
+				</p>
+				
+				</div>
+				<div class="modal-footer">
+					<a id="modalY" href="#" class="btn_type1 _rosRestrict">저장</a> 
+					<a id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a>
+					<button class="btn" type="button" data-dismiss="modal">닫기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 모달 end -->
 	<div id="photomodal" class="modal">
 		<div class="modal-window">
 			<div class="close-area">X</div>
@@ -141,7 +192,7 @@
 									<option value="cmpnyinfo">회사 정보</option>
 									<option value="ciintrcn">CI 소개</option>
 									<option value="cmpnyhist">회사 연혁</option>
-									<option value="">조직도</option>
+									<option value="orgcht">조직도</option>
 									<option value="">오시는길</option>
 									<option value="photo">포토 스토리</option>
 								</select> <select name="selectmainbsns" id="selectmainbsns" class="hide">
@@ -166,73 +217,126 @@
                
 								<!--주요연혁 -->
 								<div class="hide table" id="tblcmpnyhist">
-								<div class="search_box_wrap">
-						            <div class="search_box">
-						                <div class="sel_box">
-						                    <select name="scolumn" id="scolumn">
-						                        <option value="">전체</option>
-						                        <option value="title">제목</option>
-						                        <option value="contents">내용</option>
-						                    </select>
-						                </div>
-						                <div class="ipt_box">
-						                    <input id="searchIpt" name="skeyword" onKeyDown="onKeyDown();" value=""  type="text" placeholder="검색어를 입력하세요">
-						                    <label for="searchIpt" id= "search_btn">검색하기</label>
-						                </div>
-						            </div>
-						        </div>
-						        <table>
-									<colgroup>
-										<col style="width: 95px">
-										<col style="width: auto">
-										<col style="width: 350px">
-										<col style="width: 50px">
-									</colgroup>
-									<tbody>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>날짜 <input type="date" size="50" value="(주)하이크루"></td>
-											<td>연혁 내용 <input type="text" size="50"
-												value="High-Technology CREW System"></td>
-											<td>항목 순서 <input type="text" size="5" value="1"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>날짜<input type="date" size="50" value="설립일"></td>
-											<td>연혁 내용 <input type="text" size="50"
-												value="2018년 3월 13일"></td>
-											<td>항목 순서 <input type="text" size="5" value="2"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>날짜 <input type="date" size="50" value="대표이사"></td>
-											<td>연혁 내용 <input type="text" size="50" value="이영석"></td>
-											<td>항목 순서 <input type="text" size="5" value="3"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>날짜 <input type="date" size="50" value="본사주소"></td>
-											<td>연혁 내용 <input type="text" size="50"
-												value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-											<td>항목 순서 <input type="text" size="5" value="4"
-												style="text-align: center;"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>날짜 <input type="date" size="50" value="전화번호"></td>
-											<td>연혁 내용 <input type="text" size="50"
-												value="070-8772-1612"></td>
-											<td>항목 순서 <input type="text" size="5" value="5"
-												style="text-align: center;"></td>
-										</tr>
+									<div class="search_box_wrap">
+										<div class="search_box_margin">
 										
-									</tbody>
-								</table>
-						        
+										<input type="date"> 
+										~ 
+										<input type="date"> 
+								            <div class="search_box" id="search_box">
+								                <div class="sel_box">
+								                    <select name="scolumn" id="scolumn">
+								                        <option value="">전체</option>
+								                        <option value="title">제목</option>
+								                        <option value="contents">내용</option>
+								                    </select>
+								                </div>
+								                <div class="ipt_box">
+								                    <input id="searchIpt" name="skeyword" onKeyDown="onKeyDown();" value=""  type="text" placeholder="검색어를 입력하세요">
+								                    <label for="searchIpt" id= "search_btn">검색하기</label>
+								                </div>
+						            		</div>
+						            	</div>
+						        	</div>
+							        <table>
+										<colgroup>
+											<col style="width: 95px">
+											<col style="width: auto">
+											<col style="width: 350px">
+											<col style="width: 50px">
+										</colgroup>
+										<tbody>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>날짜 <input type="date" size="50" value="2021-10-01"></td>
+												<td>연혁 내용 <input type="text" size="50"
+													value="세종(4세대 ))"></td>
+												<td>항목 순서 <input type="text" size="5" value="1"
+													style="text-align: center;"></td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>날짜<input type="date" size="50" value="2020-01-01"></td>
+												<td>연혁 내용 <input type="text" size="50"
+													value="2018년 3월 13일"></td>
+												<td>항목 순서 <input type="text" size="5" value="2"
+													style="text-align: center;"></td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>날짜 <input type="date" size="50" value="2019-05-01"></td>
+												<td>연혁 내용 <input type="text" size="50" value="이영석"></td>
+												<td>항목 순서 <input type="text" size="5" value="3"
+													style="text-align: center;"></td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>날짜 <input type="date" size="50" value="2019-01-01"></td>
+												<td>연혁 내용 <input type="text" size="50"
+													value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
+												<td>항목 순서 <input type="text" size="5" value="4"
+													style="text-align: center;"></td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>날짜 <input type="date" size="50" value="2018-01-02"></td>
+												<td>연혁 내용 <input type="text" size="50"
+													value="070-8772-1612"></td>
+												<td>항목 순서 <input type="text" size="5" value="5"
+													style="text-align: center;"></td>
+											</tr>
+											
+										</tbody>
+									</table>
 								</div>
+								<div class="hide table" id="tblorgcht">
+									<table>
+										<colgroup>
+											<col style="width: 95px">
+											<col style="width: auto">
+										</colgroup>
+											<tr>
+												<th>&nbsp&nbsp&nbsp&nbsp</th>
+												<th>이름</th>
+												<th>직급</th>
+												<th>사업부서</th>
+											</tr>
+										<tbody>
+											<tr class="notice" onclick="orgchtmodal(event)">
+												<td class="num"><input type="checkbox"></td>
+												<td>이영석</td>
+												<td>대표 </td>
+												<td>세종(4세대 나이스 구축사업)</td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>이장수</td>
+												<td>부장</td>
+												<td>대구(2022 나이스 유지보수)</td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>김동업</td>
+												<td>차장</td>
+												<td>세종(4세대 나이스 구축사업)</td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>이상현</td>
+												<td>차장</td>
+												<td>세종(4세대 나이스 구축사업)</td>
+											</tr>
+											<tr class="notice">
+												<td class="num"><input type="checkbox"></td>
+												<td>이호진</td>
+												<td>과장</td>
+												<td>대구(2022 정보공시사업)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								
 								<div class="hide table" id="tblcmpnyinfo">
 									<table>
 										<colgroup>
@@ -516,10 +620,27 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script src="js/jquery.nice-select.js"></script>
 	<script>
 		function solutmodalopen(){
 			console.log("solutmodalopen!");
 			const modal = document.getElementById("solutmodal");
+			modal.style.display = "flex";
+			const closeBtn = modal.querySelector(".close-area");
+			closeBtn.addEventListener("click", e => {
+			    modal.style.display = "none";
+			})
+			modal.addEventListener("click", e => {
+			    const evTarget = e.target;
+			    if(evTarget.classList.contains("modal")) {
+			        modal.style.display = "none";
+			    }
+			})
+		}
+		//조직도 모달 함수
+		function orghtmodalopen(){
+			console.log("orgchtmodalopen!");
+			const modal = document.getElementById("orgchtmodal");
 			modal.style.display = "flex";
 			const closeBtn = modal.querySelector(".close-area");
 			closeBtn.addEventListener("click", e => {
@@ -615,6 +736,13 @@
 			}
 			
 		}
+		
+		//모달 이벤트
+		function orgchtmodal(e){
+			console.log('orgchtmadal open!!!')
+			e.preventDefault();
+			$('#orgchtmodal').modal("show");
+		};
 	</script>
 </body>
 </html>

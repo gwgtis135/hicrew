@@ -41,7 +41,6 @@
 							</div></li>
 						<li><a href="http://gw.hicrew.kr" class="external"> <span>그룹웨어</span>
 						</a></li>
-						<!--  
 						<li><a href="#"> <span>페이지 관리</span>
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
@@ -50,7 +49,6 @@
 									<li><a href="menudetail.do">상세 메뉴 관리</a>
 								</ul>
 							</div></li>
-							-->
 					</ul>
 				</nav>
 
