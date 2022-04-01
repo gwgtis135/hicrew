@@ -48,6 +48,7 @@
 <link rel="stylesheet" href="css/flexslider.css">
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/category.css">
 
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
@@ -55,7 +56,16 @@
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style>
+dl, dt {
+	margin: 0;
+}
 
+dd {
+	margin: 0;
+	display: inline;
+}
+</style>
 </head>
 <body onload="initialize()">
 
@@ -87,7 +97,96 @@
 							<div class="tbl board" id="noticeGrid">
 								<table>
 									<colgroup>
+										<col style="width: 300px">
+										<col style="width: 700px">
+									</colgroup>
+									<tr>
+										<td>
+											<div class="list_btn">
+												<a href="#"><img width="87" height="20" alt="카테고리 추가"
+													src="https://blogimgs.pstatic.net/nblog/admin50/btn_add_category.gif"
+													class="_addCategoryView"></a>
+												<a href="#" id="deleteBtn"><img width="44" height="20"
+													class="_deleteCategoryView _nclk(edt_blog.delete)" alt="삭제"
+													src="https://blogimgs.pstatic.net/nblog/admin50/btn_del_category.gif"></a>
+											</div>
+											<ul>
+												<li>Home</li>
+												<li>
+													<div class="drag-label list tree-has-child" tabindex="0">
+														<label><span>회사 소개</span></label>
+													</div>
+													<ul>
+														<li class="tree-node tree-selected">
+															<div class="list drag-label tree-div-selected" tabindex="0">
+																<label><span>회사 개요</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>CI 소개</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>주요 연혁</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>조직도</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>오시는 길</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>포토스토리</span></label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>주요 사업</li>
+												<li>그룹 웨어</li>
+												<li>페이지 관리</li>
+											</ul>
+										</td>
+										<td class="n_admin">
+											<div class="category_add">
+												<dl>
+													<dt class="category_name">항목 명</dt>
+													<dd class="category_name">
+														<div>
+															<input type="text">
+														</div>
+													</dd>
+													<dt class="category_link">항목 주소</dt>
+													<dd class="category_link">
+														<div>
+															<input type="text">
+														</div>
+													</dd>
+													<dt class="category_name">항목 스타일</dt>
+													<dd class="category_name">
+														<div>
+															<input type="text">
+														</div>
+													</dd>
+												</dl>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="tbl board" id="noticeGrid">
+								<table>
+									<colgroup>
 										<col style="width: 95px">
+										<col style="width: auto">
+										<col style="width: auto">
 										<col style="width: auto">
 										<col style="width: 350px">
 										<col style="width: 50px">
@@ -95,40 +194,107 @@
 									<tbody>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="Home"></td>
+											<td>메뉴 이름 <input type="text" size="20" value="Home"></td>
+											<td></td>
 											<td>메뉴 링크 <input type="text" size="50" value="home"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="1"
-												style="text-align: center;"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="1"></td>
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="회사 소개"></td>
+											<td>메뉴 이름 <input type="text" size="20" value="회사 소개"></td>
+											<td></td>
 											<td>메뉴 링크 <input type="text" size="50"
 												value="cmpnyintrcn"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="2"
-												style="text-align: center;"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="2"></td>
+										</tr>
+										<tr>
+											<td class="num"><input type="checkbox"></td>
+											<td>├</td>
+											<td>항목 이름<input type="text" value="회사 개요"></td>
+											<td>메뉴 링크 <input type="text" size="50"
+												value="cmpnyinfo.do"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="1"></td>
+										</tr>
+										<tr>
+											<td class="num"><input type="checkbox"></td>
+											<td>├</td>
+											<td>항목 이름<input type="text" value="CI 소개"></td>
+											<td>메뉴 링크 <input type="text" size="50"
+												value="CIintrcn.do"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="2"></td>
+										</tr>
+										<tr>
+											<td class="num"><input type="checkbox"></td>
+											<td>├</td>
+											<td>항목 이름<input type="text" value="주요 연혁"></td>
+											<td>메뉴 링크 <input type="text" size="50" value="ch.do"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="3"></td>
+										</tr>
+										<tr>
+											<td class="num"><input type="checkbox"></td>
+											<td>├</td>
+											<td>항목 이름<input type="text" value="조직도"></td>
+											<td>메뉴 링크 <input type="text" size="50" value="orgcht.do"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="4"></td>
+										</tr>
+										<tr>
+											<td class="num"><input type="checkbox"></td>
+											<td>├</td>
+											<td>항목 이름<input type="text" value="오시는길"></td>
+											<td>메뉴 링크 <input type="text" size="50"
+												value="recruitment.do"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="5"></td>
+										</tr>
+										<tr>
+											<td class="num"><input type="checkbox"></td>
+											<td>└</td>
+											<td>항목 이름<input type="text" value="포토스토리"></td>
+											<td>메뉴 링크 <input type="text" size="50" value="photo.do"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="6"></td>
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="주요 사업"></td>
+											<td>메뉴 이름 <input type="text" size="20" value="주요 사업"></td>
+											<td></td>
 											<td>메뉴 링크 <input type="text" size="50" value="mainbsns"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="3"
-												style="text-align: center;"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="3"></td>
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="그룹웨어"></td>
+											<td>메뉴 이름 <input type="text" size="20" value="그룹웨어"></td>
+											<td></td>
 											<td>메뉴 링크 <input type="text" size="50"
 												value="gw.hicrew.kr"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="4"
-												style="text-align: center;"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="4"></td>
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="50" value="페이지 관리"></td>
+											<td>메뉴 이름 <input type="text" size="20" value="페이지 관리"></td>
+											<td></td>
 											<td>메뉴 링크 <input type="text" size="50" value="adminPage"></td>
-											<td>메뉴 순서 <input type="text" size="5" value="5"
-												style="text-align: center;"></td>
+											<td></td>
+											<td class="num">메뉴 순서 <input type="number"
+												style="text-align: center; width: 50px;" value="5"></td>
 										</tr>
 									</tbody>
 								</table>
