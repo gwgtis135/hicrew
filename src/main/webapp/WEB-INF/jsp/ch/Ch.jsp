@@ -40,7 +40,9 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
+	<!-- Banner style  -->
+	<link rel="stylesheet" href="css/event_style.css">
+	
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -253,14 +255,20 @@ a {
 	</script>
 </head>
 <body onload="initialize()">
-<jsp:include page="../main/nav.jsp" >
-	<jsp:param name="#" value="#"/>
-</jsp:include>
-	
-		<div class="gtco-section-overflow">
 
-		<div class="gtco-section" id="gtco-services" data-section="services">
-			<div class="gtco-container">
+
+		<div class="gtco-section-overflow">
+		<jsp:include page="../main/nav.jsp" >
+			<jsp:param name="#" value="#"/>
+		</jsp:include>
+
+		<jsp:include page="../main/Tap.jsp">
+			<jsp:param name="#" value="#" />
+		</jsp:include>
+
+
+
+		<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 							<h2>회사 연혁</h2>
@@ -332,7 +340,6 @@ a {
 
 					</div>
 			</div>
-		</div>
 
 </div>
 <jsp:include page="../main/footer.jsp" >
@@ -359,6 +366,8 @@ a {
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
 	<script>
 
 	var stockholm = new google.maps.LatLng(35.878816, 128.730657);

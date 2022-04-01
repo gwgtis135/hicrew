@@ -40,7 +40,9 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
+	<!-- Banner style  -->
+	<link rel="stylesheet" href="css/event_style.css">
+	
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -50,130 +52,189 @@
 	
 	
 	<style type="text/css">
-	/*Now the CSS*/
-* {margin: 0; padding: 0;}
-
-.tree
-{
-	width: auto;
-
-	margin-left: auto;
-	margin-right: auto;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.tree ul {
-	padding-top: 20px; position: relative;
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-}
-.TreeFirstLi:nth-child(1){
-	padding-left: 37%;
+ul, li {
+	list-style: none;
 }
 
-.tree li {
-	float: left; text-align: center;
-	list-style-type: none;
+a {
+	text-decoration: none
+}
+
+#history {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#history h2 {
+	text-align: center;
+	font-size: 24px;
+	color: #444;
+	line-height: 1;
+	margin-top: 30px;
+}
+
+.list_right {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.list_right span {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.list_right div {
 	position: relative;
-	padding: 20px 5px 0 5px;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+	display: table-cell;
+	vertical-align: top;
 }
 
-/*We will use ::before and ::after to draw the connectors*/
-
-.tree li::before, .tree li::after{
-	content: '';
-	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #ccc;
-	width: 50%; height: 20px;
-}
-.tree li:after{
-	right: auto; left: 50%;
-	border-left: 1px solid #ccc;
+.list_right div:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 1px;
+	height: 100%;
+	background: #dfdfdf;
 }
 
-/*We need to remove left-right connectors from elements without 
-any siblings*/
-.tree li:only-child::after, .tree li:only-child::before {
-	display: none;
+.list_right div ul {
+	margin-top: 20px;
 }
 
-/*Remove space from the top of single children*/
-.tree li:only-child{ padding-top: 0;}
-
-/*Remove left connector from first child and 
-right connector from last child*/
-.tree li:first-child::before, .tree li:last-child::after{
-	border: 0 none;
-}
-/*Adding back the vertical connector to the last nodes*/
-.tree li:last-child::before{
-	border-right: 1px solid #ccc;
-	border-radius: 0 5px 0 0;
-	-webkit-border-radius: 0 5px 0 0;
-	-moz-border-radius: 0 5px 0 0;
-}
-.tree li:first-child::after{
-	border-radius: 5px 0 0 0;
-	-webkit-border-radius: 5px 0 0 0;
-	-moz-border-radius: 5px 0 0 0;
+.list_right div ul li {
+	display: table;
+	position: relative;
+	width: 100%;
+	padding-left: 20px;
 }
 
-/*Time to add downward connectors from parents*/
-.tree ul ul::before{
-	content: '';
-	position: absolute; top: 0; left: 50%;
-	border-left: 1px solid #ccc;
-	width: 0; height: 20px;
-    margin-left: -1px;
+.list_right div ul li+li {
+	margin-top: 20px;
 }
 
-.tree li a{
-	border: 1px solid #ccc;
-	padding: 5px 10px;
-	text-decoration: none;
-	color: #666;
-	font-family: arial, verdana, tahoma;
-	font-size: 11px;
-	display: inline-block;
-	
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+.list_right div ul li:before {
+	content: "";
+	position: absolute;
+	left: -8px;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	border: 3px solid #0a4a9f;
+	border-radius: 50%;
 }
 
-/*Time for some hover effects*/
-/*We will apply the hover effect the the lineage of the element also*/
-.tree li a:hover, .tree li a:hover+ul li a {
-	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
-}
-/*Connector styles on hover*/
-.tree li a:hover+ul li::after, 
-.tree li a:hover+ul li::before, 
-.tree li a:hover+ul::before, 
-.tree li a:hover+ul ul::before{
-	border-color:  #94a0b4;
+.list_right dl {
+	text-align: left;
+	display: table;
+	width: 100%;
 }
 
-li a.just-line {
-    display: none;
+.list_right dl dt {
+	width: 10%;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #444;
+	font-weight: bold;
+	text-align: left;
 }
-a.just-line + ul {
-	padding-top: 74px;
+
+.list_right dl dd {
+	width: 90px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #444;
+	text-align: left;
 }
-a.just-line + ul:before {
-	height: 74px;
+
+.list_left {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.list_left span {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.list_left div {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.list_left div:before {
+	content: "";
+	position: absolute;
+	right: -1px;
+	width: 1px;
+	height: 100%;
+	background: #dfdfdf;
+}
+
+.list_left div ul {
+	margin-top: 20px;
+}
+
+.list_left div ul li {
+	display: table;
+	position: relative;
+	width: 100%;
+	padding-left: 20px;
+}
+
+.list_left div ul li+li {
+	margin-top: 20px;
+}
+
+.list_left div ul li:before {
+	content: "";
+	position: absolute;
+	right: -10px;
+	top: 7px;
+	width: 12px;
+	height: 12px;
+	border: 3px solid #0a4a9f;
+	border-radius: 50%;
+}
+
+.list_left dl {
+	text-align: right;
+	display: table;
+	width: 100%;
+	padding-right: 20px;
+}
+
+.list_left dl dt {
+	width: 10%;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #444;
+	font-weight: bold;
+	text-align: right;
+}
+
+.list_left dl dd {
+	width: 90px;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #444;
+	text-align: right;
 }
 </style>
-
-	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script>
 		$(document).ready(function(){
 		    $(".menu>a").click(function(){
@@ -182,78 +243,105 @@ a.just-line + ul:before {
 		        $(this).next("ul").toggleClass("hide");
 		        $(this).next("ul").toggleClass("show");
 		    });
+		    
+		
 		});
 	
 	function movePage(url){
 		console.log('a태그 함수 실행완료')
+		console.log(url)
 		location.href=url;
 	}
 	</script>
-
 </head>
-<body onload="initialize()">
-
-	<jsp:include page="../main/nav.jsp" >
-	<jsp:param name="#" value="#"/>
+<body>
+	<div class="gtco-loader"></div>
+	
+		<jsp:include page="../main/nav.jsp" >
+		<jsp:param name="#" value="#"/>
 	</jsp:include>
-		<div class="gtco-section-overflow">
+	
+	<jsp:include page="../main/Tap.jsp" >
+		<jsp:param name="#" value="#"/>
+	</jsp:include>
 
-		<div class="gtco-section" id="gtco-services" data-section="services">
-			<div class="gtco-container">
+		
+	
+
+
+		<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-							<h2>조직도</h2>
+							<h2>회사 연혁</h2>
+							<p>교육정보화시스템 구축 및 운영 전문 기업 하이크루의 도전 </p>
 					</div>
 				</div>
 				<div class="row">
-						<div class="tree">
-	<ul>
-		<li class="TreeFirstLi">
-            <a style="margin-right: 109px;" href="#"><img alt="" src="images/sample2.png"><br/>이영석 <br/>대표님<br/>세종(4세대 나이스 구축 사업)</a>
-			<ul>
-				<li>
-					<a href="#">
-                    	<img alt="" src="images/sample2.png"><br/>이장수<br/>부장<br/>대구(2022 나이스 유지보수)</a>
-					<ul>
-						<li>
-                            <a href="#"><img alt="" src="images/sample2.png"><br/>김동업<br/>차장<br/>세종(4세대 나이스 구축 사업)</a>
-                            <li>
-                            	<a href="#"><img alt="" src="images/sample2.png"><br/>이상현<br/>차장<br/>세종(4세대 나이스 구축 사업)</a>
-                    </ul>
-             </ul>
-      
-						<ul>
-							<li>
-                            	<a href="#"><img alt="" src="images/sample2.png"><br/>이름<br/>과장 <br/>I Wayan Purushottama<br/>Engineer</a>
-									<li>
-                                   		<a href="#"><img alt="" src="images/sample2.png"><br/>이름<br/>과장 <br/>Assistant Engineer</a>
-	                                   	<li>
-	                                   		<a href="#"><img alt="" src="images/sample2.png"><br/>이름<br/>과장 <br/>Assistant Engineer</a>
-						</ul>
-						<ul>
-							<li>
-                   				<a href="#">사원1<br/>Nico Simanjuntak<br/>Technician</a>
-                   				<li>
-                   					<a href="#">사원2<br/>Nico Simanjuntak<br/>Technician</a>
-                   					<li>
-                   					<a href="#">사원3<br/>Nico Simanjuntak<br/>Technician</a>
-                   					<li>
-                   					<a href="#">사원4<br/>Nico Simanjuntak<br/>Technician</a>
-                   				
-							</li>
-						</ul>
-			
-		
-	</ul>
-	
-				
-</div>
+						<div id="history">
+							<h2>2022</h2>
+							<div class="list_right">
+								<span></span>
+								<div>
+									<ul>
+										<li>
+											<dl>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
+											</dl>
+											<dl>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
+											</dl>
+											<dl>
+												<dt>1.01</dt>
+												<dd>대구 (2022 나이스 유지보수)</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--list_right-->
+							<h2>2021</h2>
+							<div class="list_left">
+								<div>
+									<ul>
+										<li>
+											<dl>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
+											</dl>
+											<dl>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
+											</dl>
+											<dl>
+												<dd>세종(4세대 나이스 구축 사업)</dd>
+												<dt>10.01</dt>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<span></span>
+							</div>
+							<!--list_right-->
+						</div>
+						<!--history-->
 
 					</div>
 			</div>
-		</div>
 
-</div>
 <jsp:include page="../main/footer.jsp" >
 	<jsp:param name="#" value="#"/>
 </jsp:include>
@@ -278,40 +366,7 @@ a.just-line + ul:before {
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
-	<script>
-
-	var stockholm = new google.maps.LatLng(35.878816, 128.730657);
-	var parliament = new google.maps.LatLng(35.878816, 128.730657);
-	var marker;
-	var map;
-
-	function initialize() {
-	  var mapOptions = {
-	    zoom: 15,
-	    mapTypeId: google.maps.MapTypeId.ROADMAP,
-	    center: stockholm
-	  };
-
-	  map = new google.maps.Map(document.getElementById("map_view"),
-	      mapOptions);
-
-	  marker = new google.maps.Marker({
-	    map:map,
-	    draggable:true,
-	    animation: google.maps.Animation.DROP,
-	    position: parliament
-	  });
-	  google.maps.event.addListener(marker, 'click', toggleBounce);
-	}
-
-	function toggleBounce() {
-
-	  if (marker.getAnimation() != null) {
-	    marker.setAnimation(null);
-	  } else {
-	    marker.setAnimation(google.maps.Animation.BOUNCE);
-	  }
-	}	
- </script>
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
 </body>
 </html>

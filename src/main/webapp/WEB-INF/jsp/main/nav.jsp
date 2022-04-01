@@ -25,7 +25,7 @@
 								<ul>
 									<li><a href="cmpnyinfo.do">회사정보</a></li>
 									<li><a href="CIintrcn.do">CI소개</a></li>
-									<li><a href="ch.do">주요 연혁</a></li>
+									<li><a href="ch.do">회사연혁</a></li>
 									<li><a href="orgcht.do">조직도</a></li>
 									<li><a href="recruitment.do">오시는길</a></li>
 									<li><a href="photo.do">포토스토리</a></li>
@@ -39,7 +39,7 @@
 									<li><a href="itsolut.do">IT솔루션</a></li>
 								</ul>
 							</div></li>
-						<li><a href="http://gw.hicrew.kr" class="external"> <span>그룹웨어</span>
+						<li><a href="#"  onClick="groupwareClick('http://gw.hicrew.kr')" class="external"> <span>그룹웨어</span>
 						</a></li>
 						<li><a href="#"> <span>페이지 관리</span>
 						</a> <span class="depth1_arrow"></span>
@@ -55,6 +55,13 @@
 			</div>
 		</div>
 	</header>
+	<!-- 그룹웨어 새창 띄우기 -->
+	<script type="text/javascript">
+		function groupwareClick(url){
+			console.log('그룹 웨어 이벤트 ')
+			window.open(url);
+		}
+	</script>
 
 </body>
 </html>

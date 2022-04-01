@@ -95,9 +95,9 @@ public class mainController {
 		return "main/CIintrcn";
 	}
 	
-	@RequestMapping("recruitment.do")
+	@RequestMapping("directions.do")
 	public String recruitment() {
-		return "main/recruitment";
+		return "main/directions";
 	}
 	
 	@RequestMapping("photo.do")
