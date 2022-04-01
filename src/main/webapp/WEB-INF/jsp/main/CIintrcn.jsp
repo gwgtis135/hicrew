@@ -48,8 +48,11 @@
 <link rel="stylesheet" href="css/flexslider.css">
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
+<!-- Banner style  -->
+<link rel="stylesheet" href="css/event_style.css">
 
 <!-- Modernizr JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
@@ -74,17 +77,23 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/Tapcommon.js"></script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 </head>
-<body onload="initialize()">
+<body>
 
 	<div class="gtco-loader"></div>
+	<jsp:include page="nav.jsp">
+		<jsp:param name="#" value="#" />
+	</jsp:include>
+	
+	<jsp:include page="../main/Tap.jsp" >
+		<jsp:param name="#" value="#"/>
+	</jsp:include>
 
 	<div id="page">
-		<jsp:include page="nav.jsp">
-			<jsp:param name="#" value="#" />
-		</jsp:include>
 		<div class="gtco-section" id="gtco-portfolio" data-section="CI소개">
 			<div class="gtco-container">
 				<div class="row">

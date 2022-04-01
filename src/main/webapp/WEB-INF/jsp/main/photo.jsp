@@ -85,6 +85,8 @@
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
+		
+		
 		<div class="gtco-section" id="gtco-products" data-section="products">
 			<div class="gtco-container">
 				<div class="row">

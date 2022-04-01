@@ -3973,6 +3973,7 @@ header.on.product:before {
 	background-color: #f5f5f5;
 }
 
+
 /* 모바일 css  */
 @media all and (max-width: 768px) {
 	textarea {
@@ -3981,7 +3982,8 @@ header.on.product:before {
 	input[type=date] {
 		
 	}
-	.description {
+	
+  {
 		height: auto;
 	}
 	.solid_box dl dd.bg_visual {
@@ -5948,3 +5950,4 @@ header.on.product:before {
 		margin-top: 5px;
 	}
 }
+
