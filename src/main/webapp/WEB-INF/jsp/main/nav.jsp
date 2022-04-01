@@ -23,7 +23,7 @@
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul>
-									<li><a href="cmpnyinfo.do">회사정보</a></li>
+									<li><a href="cmpnyinfo.do">회사개요</a></li>
 									<li><a href="CIintrcn.do">CI소개</a></li>
 									<li><a href="ch.do">회사연혁</a></li>
 									<li><a href="orgcht.do">조직도</a></li>
@@ -41,14 +41,22 @@
 							</div></li>
 						<li><a href="#"  onClick="groupwareClick('http://gw.hicrew.kr')" class="external"> <span>그룹웨어</span>
 						</a></li>
-						<li><a href="#"> <span>페이지 관리</span>
-						</a> <span class="depth1_arrow"></span>
+						<li>
+							<a href="#"> 
+								<span>페이지 관리</span>
+							</a> 
+							<span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul>
-									<li><a href="upendmenu.do">상단 메뉴 관리</a>
-									<li><a href="menudetail.do">상세 메뉴 관리</a>
+									<li>
+										<a href="upendmenu.do">상단 메뉴 관리</a>
+									</li>
+									<li>
+										<a href="menudetail.do">상세 메뉴 관리</a>
+									</li>
 								</ul>
-							</div></li>
+							</div>
+						</li>
 					</ul>
 				</nav>
 
