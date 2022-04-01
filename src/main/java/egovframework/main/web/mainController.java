@@ -84,10 +84,14 @@ public class mainController {
 	public String admin() {
 		return "main/Temp";
 	}
-	
+
 	@RequestMapping("cmpnyinfo.do")
 	public String cmpnyinfo() {
 		return "main/cmpnyinfo";
+	}
+	@RequestMapping("move.do(target)")
+	public String move() {
+		return "main/";
 	}
 	
 	@RequestMapping("CIintrcn.do")
