@@ -19,7 +19,7 @@
 						<li class="active"><a href="main.do" data-nav-section="home">
 								<span>Home</span>
 						</a></li>
-						<li><a href="#"> <span>회사소개</span>
+						<li><a href="cmpnyinfo.do"> <span>회사소개</span>
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul>
@@ -27,11 +27,11 @@
 									<li><a href="CIintrcn.do">CI소개</a></li>
 									<li><a href="ch.do">회사연혁</a></li>
 									<li><a href="orgcht.do">조직도</a></li>
-									<li><a href="recruitment.do">오시는길</a></li>
+									<li><a href="directions.do">오시는길</a></li>
 									<li><a href="photo.do">포토스토리</a></li>
 								</ul>
 							</div></li>
-						<li><a href="#"> <span>주요사업</span>
+						<li><a href="pdfsolut.do"> <span>주요사업</span>
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul>
@@ -42,7 +42,7 @@
 						<li><a href="#"  onClick="groupwareClick('http://gw.hicrew.kr')" class="external"> <span>그룹웨어</span>
 						</a></li>
 						<li>
-							<a href="#"> 
+							<a href="upendmenu.do"> 
 								<span>페이지 관리</span>
 							</a> 
 							<span class="depth1_arrow"></span>

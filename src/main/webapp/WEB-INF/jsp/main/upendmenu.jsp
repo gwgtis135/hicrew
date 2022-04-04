@@ -57,14 +57,8 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 <style>
-dl, dt {
-	margin: 0;
-}
-
-dd {
-	margin: 0;
-	display: inline;
-}
+dl, dt { margin:0; }
+dd { margin:0; display:inline; }
 </style>
 </head>
 <body onload="initialize()">
@@ -159,21 +153,22 @@ dd {
 												<dl>
 													<dt class="category_name">항목 명</dt>
 													<dd class="category_name">
-														<div>
 															<input type="text">
-														</div>
 													</dd>
 													<dt class="category_link">항목 주소</dt>
 													<dd class="category_link">
-														<div>
 															<input type="text">
-														</div>
 													</dd>
 													<dt class="category_name">항목 스타일</dt>
 													<dd class="category_name">
-														<div>
-															<input type="text">
-														</div>
+															<div>
+																<img src="asd" alt="1번">
+																<img src="asd" alt="2번">
+																<img src="asd" alt="3번">
+																<img src="asd" alt="4번">
+																<img src="asd" alt="5번">
+																<img src="asd" alt="6번">
+															</div>
 													</dd>
 												</dl>
 											</div>

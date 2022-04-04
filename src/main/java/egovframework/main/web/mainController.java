@@ -89,7 +89,7 @@ public class mainController {
 	public String cmpnyinfo() {
 		return "main/cmpnyinfo";
 	}
-	@RequestMapping("move.do(target)")
+	@RequestMapping("move.do()")
 	public String move() {
 		return "main/";
 	}
