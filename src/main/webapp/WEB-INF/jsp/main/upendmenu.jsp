@@ -49,6 +49,7 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
+<link rel="stylesheet" href="css/HJ_style.css">
 
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
@@ -57,11 +58,39 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 <style>
-dl, dt { margin:0; }
-dd { margin:0; display:inline; }
+dl, dt {
+	margin: 0;
+}
+
+dd {
+	margin: 0;
+}
+
+dd.category_sample {
+	display: inline;
+}
+
+.tbl.board tbody td {
+	height: 40px;
+	padding: 10px 0;
+	color: #333333;
+	/*font-size: 1rem;*/
+	font-weight: 400;
+	vertical-align: top;
+}
+label{
+	font-weight:normal;
+}
+.tree-selected div label{
+	font-weight:bold;
+}
+.tree-div-selected{
+	color:orange;
+	background:gray;
+}
 </style>
 </head>
-<body onload="initialize()">
+<body>
 
 	<div class="gtco-loader"></div>
 
@@ -69,6 +98,7 @@ dd { margin:0; display:inline; }
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
+
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
 				<div class="row">
@@ -91,28 +121,25 @@ dd { margin:0; display:inline; }
 							<div class="tbl board" id="noticeGrid">
 								<table>
 									<colgroup>
-										<col style="width: 300px">
-										<col style="width: 700px">
+										<col style="width: 220px">
+										<col style="width: 750px">
 									</colgroup>
 									<tr>
-										<td>
+										<td style="vertical-align: top;">
 											<div class="list_btn">
-												<a href="#"><img width="87" height="20" alt="카테고리 추가"
-													src="https://blogimgs.pstatic.net/nblog/admin50/btn_add_category.gif"
-													class="_addCategoryView"></a>
-												<a href="#" id="deleteBtn"><img width="44" height="20"
-													class="_deleteCategoryView _nclk(edt_blog.delete)" alt="삭제"
-													src="https://blogimgs.pstatic.net/nblog/admin50/btn_del_category.gif"></a>
+												<a href="#" class="btn_type1">추가</a> 
+												<a href="#" class="btn_type1">삭제</a>
 											</div>
 											<ul>
-												<li>Home</li>
+												<li><label><span>HOME</span></label></li>
 												<li>
 													<div class="drag-label list tree-has-child" tabindex="0">
 														<label><span>회사 소개</span></label>
 													</div>
 													<ul>
 														<li class="tree-node tree-selected">
-															<div class="list drag-label tree-div-selected" tabindex="0">
+															<div class="list drag-label tree-div-selected"
+																tabindex="0">
 																<label><span>회사 개요</span></label>
 															</div>
 														</li>
@@ -136,16 +163,15 @@ dd { margin:0; display:inline; }
 																<label><span>오시는 길</span></label>
 															</div>
 														</li>
-														<li class="tree-node">
+														<li class="">
 															<div class="list drag-label" tabindex="0">
 																<label><span>포토스토리</span></label>
 															</div>
 														</li>
 													</ul>
 												</li>
-												<li>주요 사업</li>
-												<li>그룹 웨어</li>
-												<li>페이지 관리</li>
+												<li><label><span>주요사업</span></label></li>
+												<li><label><span>그룹웨어</span></label></li>
 											</ul>
 										</td>
 										<td class="n_admin">
@@ -153,22 +179,41 @@ dd { margin:0; display:inline; }
 												<dl>
 													<dt class="category_name">항목 명</dt>
 													<dd class="category_name">
-															<input type="text">
+														<input type="text">
 													</dd>
 													<dt class="category_link">항목 주소</dt>
 													<dd class="category_link">
-															<input type="text">
+														<input type="text">
 													</dd>
-													<dt class="category_name">항목 스타일</dt>
-													<dd class="category_name">
-															<div>
-																<img src="asd" alt="1번">
-																<img src="asd" alt="2번">
-																<img src="asd" alt="3번">
-																<img src="asd" alt="4번">
-																<img src="asd" alt="5번">
-																<img src="asd" alt="6번">
-															</div>
+													<dt class="category_sample">항목 스타일</dt>
+													<dd class="category_sample">
+														<div>
+															<input type="radio" id="type1" name="pagetype"
+																value="type1"> <label for="type1"> <img
+																src="images/sample/sample1.png" alt="1번"
+																style="width: 200px">
+															</label> <input type="radio" id="type2" name="pagetype"
+																value="type2"> <label for="type2"> <img
+																src="images/sample/sample2.png" alt="2번"
+																style="width: 200px">
+															</label> <input type="radio" id="type3" name="pagetype"
+																value="type3"> <label for="type3"> <img
+																src="images/sample/sample3.png" alt="3번"
+																style="width: 200px">
+															</label> <br> <input type="radio" id="type4" name="pagetype"
+																value="type4"> <label for="type4"> <img
+																src="images/sample/sample3.png" alt="4번"
+																style="width: 200px">
+															</label> <input type="radio" id="type5" name="pagetype"
+																value="type5"> <label for="type5"> <img
+																src="images/sample/sample5.png" alt="5번"
+																style="width: 200px">
+															</label> <input type="radio" id="type6" name="pagetype"
+																value="type6"> <label for="type6"> <img
+																src="images/sample/sample6.png" alt="6번"
+																style="width: 200px">
+															</label>
+														</div>
 													</dd>
 												</dl>
 											</div>
@@ -176,6 +221,7 @@ dd { margin:0; display:inline; }
 									</tr>
 								</table>
 							</div>
+							<!-- 
 							<div class="tbl board" id="noticeGrid">
 								<table>
 									<colgroup>
@@ -294,6 +340,7 @@ dd { margin:0; display:inline; }
 									</tbody>
 								</table>
 							</div>
+ -->
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
 								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a>
@@ -302,7 +349,6 @@ dd { margin:0; display:inline; }
 								<a id="a_remove" href="#" class="btn_type3 _rosRestrict">미리보기</a>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -360,40 +406,6 @@ dd { margin:0; display:inline; }
 	<script src="js/main.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
-	<script>
-		var stockholm = new google.maps.LatLng(35.878816, 128.730657);
-		var parliament = new google.maps.LatLng(35.878816, 128.730657);
-		var marker;
-		var map;
-
-		function initialize() {
-			var mapOptions = {
-				zoom : 15,
-				mapTypeId : google.maps.MapTypeId.ROADMAP,
-				center : stockholm
-			};
-
-			map = new google.maps.Map(document.getElementById("map_view"),
-					mapOptions);
-
-			marker = new google.maps.Marker({
-				map : map,
-				draggable : true,
-				animation : google.maps.Animation.DROP,
-				position : parliament
-			});
-			google.maps.event.addListener(marker, 'click', toggleBounce);
-		}
-
-		function toggleBounce() {
-
-			if (marker.getAnimation() != null) {
-				marker.setAnimation(null);
-			} else {
-				marker.setAnimation(google.maps.Animation.BOUNCE);
-			}
-		}
-	</script>
 </body>
 </html>
 

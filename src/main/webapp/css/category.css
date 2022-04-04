@@ -39,10 +39,9 @@
 .category_add *{margin:0;padding:0}
 .category_add select{border:1px solid #c2c3bd}
 .category_add dl{display:block;z-index:1;zoom:1}
-.category_add dt{width:95px;height:18px;padding:0;padding-top:3px;font-weight:700}
-.category_add dd{margin-top:-21px;padding:0 0 9px 100px;height:26px}
+.category_add dt{width:95px;height:25px;padding:0;padding-top:3px;font-weight:700}
+.category_add dd{margin-top:-21px;padding:0 0 0 100px;height:20px}
 .category_add dd.cbox{padding-top:3px;height:22px;position:relative;zoom:1}
-.category_add dd.category_name{height:50px}
 .category_add dd.category_name .info{padding:8px 0 0;font-size:12px;letter-spacing:-1px;color:#424242;vertical-align:middle}
 .category_add dd.category_name .info .checkbox{margin:0 4px 3px 0;vertical-align:middle}
 .category_add dd.category_name .info select{height:20px;margin-left:7px;color:#666;font-size:12px;color:#424242}
@@ -72,5 +71,6 @@
 .category_add dd .checkbox{margin:0 2px 3px 0;width:13px;height:13px;vertical-align:middle}
 .category_add dd .checkbox1{margin:0 2px 3px 0}
 .category_add dd .checkbox2{margin-right:0}
+.category_add dd input{height:20px;}
 .category_add dt .btn_ques{display:inline-block;position:relative;z-index:10;overflow:hidden;width:14px;height:14px;margin:2px 0 -2px;background:url(https://blogimgs.pstatic.net/nblog/admin/stat/ico_ques.gif) no-repeat;font-size:0;line-height:0;color:transparent}
 .btn_confirm{text-align:center}
