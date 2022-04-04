@@ -48,6 +48,8 @@
 <link rel="stylesheet" href="css/flexslider.css">
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
+<!-- Banner style  -->
+<link rel="stylesheet" href="css/event_style.css">
 
 <!-- Modernizr JS -->
 
@@ -76,8 +78,7 @@
 <!-- Main -->
 <script src="js/main.js"></script>
 <script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
-	<script src="js/scripts.js"></script>
-	<script src="js/Tapcommon.js"></script>
+
 	
 <!-- Modernizr JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
