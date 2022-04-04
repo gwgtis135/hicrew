@@ -46,8 +46,10 @@
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <!-- Flexslider -->
 <link rel="stylesheet" href="css/flexslider.css">
-<!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Banner style  -->
+	<link rel="stylesheet" href="css/event_style.css">
 
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
@@ -74,17 +76,23 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
-<script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
+<script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
+<script src="js/scripts.js"></script>
+<script src="js/Tapcommon.js"></script>
 </head>
 <body>
 
 	<div class="gtco-loader"></div>
+	<jsp:include page="../main/nav.jsp" >
+		<jsp:param name="#" value="#"/>
+	</jsp:include>
+
+	<jsp:include page="../main/Tap.jsp">
+		<jsp:param name="#" value="#" />
+	</jsp:include>
 
 	<div id="page">
-		<jsp:include page="nav.jsp">
-			<jsp:param name="#" value="#" />
-		</jsp:include>
+		
 		
 		
 		<div class="gtco-section" id="gtco-products" data-section="products">

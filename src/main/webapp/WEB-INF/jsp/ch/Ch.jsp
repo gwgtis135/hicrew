@@ -256,8 +256,8 @@ a {
 </head>
 <body onload="initialize()">
 
+		<div class="gtco-loader"></div>
 
-		<div class="gtco-section-overflow">
 		<jsp:include page="../main/nav.jsp" >
 			<jsp:param name="#" value="#"/>
 		</jsp:include>
@@ -341,7 +341,6 @@ a {
 					</div>
 			</div>
 
-</div>
 <jsp:include page="../main/footer.jsp" >
 	<jsp:param name="#" value="#"/>
 </jsp:include>
