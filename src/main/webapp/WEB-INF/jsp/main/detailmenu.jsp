@@ -156,7 +156,7 @@
 									<tbody>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>항목 이름 <input type="text" size="50" value="(주)하이크루"></td>
+											<td>항목 이름 <input type="text" size="30" value="(주)하이크루"></td>
 											<td>항목 내용 <input type="text" size="50"
 												value="High-Technology CREW System"></td>
 											<td>항목 순서 <input type="text" size="5" value="1"
@@ -164,7 +164,7 @@
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>항목 이름 <input type="text" size="50" value="설립일"></td>
+											<td>항목 이름 <input type="text" size="30" value="설립일"></td>
 											<td>항목 내용 <input type="text" size="50"
 												value="2018년 3월 13일"></td>
 											<td>항목 순서 <input type="text" size="5" value="2"
@@ -172,14 +172,14 @@
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>항목 이름 <input type="text" size="50" value="대표이사"></td>
+											<td>항목 이름 <input type="text" size="30" value="대표이사"></td>
 											<td>항목 내용 <input type="text" size="50" value="이영석"></td>
 											<td>항목 순서 <input type="text" size="5" value="3"
 												style="text-align: center;"></td>
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>항목 이름 <input type="text" size="50" value="본사주소"></td>
+											<td>항목 이름 <input type="text" size="30" value="본사주소"></td>
 											<td>항목 내용 <input type="text" size="50"
 												value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
 											<td>항목 순서 <input type="text" size="5" value="4"
@@ -187,7 +187,7 @@
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>항목 이름 <input type="text" size="50" value="전화번호"></td>
+											<td>항목 이름 <input type="text" size="30" value="전화번호"></td>
 											<td>항목 내용 <input type="text" size="50"
 												value="070-8772-1612"></td>
 											<td>항목 순서 <input type="text" size="5" value="5"
@@ -195,7 +195,7 @@
 										</tr>
 										<tr class="notice">
 											<td class="num"><input type="checkbox"></td>
-											<td>항목 이름 <input type="text" size="50" value="사업분야"></td>
+											<td>항목 이름 <input type="text" size="30" value="사업분야"></td>
 											<td>항목 내용 <input type="text" size="50"
 												value="System Integration(시스템 통합구축)"></td>
 											<td>항목 순서 <input type="text" size="5" value="6"

@@ -76,11 +76,11 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
+<script src="js/Tapcommon.js"></script>
 <script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 <script src="js/scripts.js"></script>
-<script src="js/Tapcommon.js"></script>
 </head>
-<body>
+<body onload="initialize()">
 
 		<div class="gtco-loader"></div>
 
@@ -93,9 +93,6 @@
 		</jsp:include>
 
 	<div id="page">
-		<jsp:include page="nav.jsp">
-			<jsp:param name="#" value="#" />
-		</jsp:include>
 		<div class="gtco-section" id="gtco-contact" data-section="contact">
 			<div class="gtco-container">
 				<div class="row">
