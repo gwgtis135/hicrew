@@ -114,14 +114,6 @@ label{
 					<div class="row">
 
 						<div class="row" style="margin-left: 100px; margin-right: 100px;">
-							<div class="tbl_top">
-								<span class="total"> 총 5 건 </span>
-								<!-- 
-                <span>
-                    <b id="noticePage"></b> / <b id="noticePageCnt"></b>
-                </span>
-                 -->
-							</div>
 							<div class="tbl board" id="noticeGrid">
 								<table>
 									<colgroup>

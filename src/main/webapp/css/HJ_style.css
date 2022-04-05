@@ -163,6 +163,7 @@ header.on.product:before {
 
 .header_cont .gnb>ul>li:hover a span:before {
 	display: block;
+	background-color:red;
 }
 
 .header_cont .gnb>ul>li.on a span:before {
