@@ -49,7 +49,9 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
+<link rel="stylesheet" href="css/jonghyeon_style.css">
 <link rel="stylesheet" href="css/nice-select.css">
+
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
@@ -169,6 +171,7 @@
 	<jsp:include page="nav.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
+	
 	<div class="gtco-section-overflow">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
@@ -184,7 +187,7 @@
 						<div class="row" style="margin-left: 100px; margin-right: 100px;">
 							<div class="tbl_top">
 								<div class="inner">
-									<div class="header_cont">
+									<div class="header_cont paddingLeft">
 										<nav class="gnb" id="Gnb">
 											<ul>
 												<li class="active"><a href=""> <span>Home</span>
@@ -209,8 +212,6 @@
 															<li><a href="">IT솔루션</a></li>
 														</ul>
 													</div></li>
-												<li><a href="" class="external"> <span>그룹웨어</span>
-												</a></li>
 											</ul>
 										</nav>
 
@@ -511,56 +512,128 @@
 									<table class="hide2" id="phototable">
 										<colgroup>
 											<col style="width: 50px">
+											<col style="width: 250px">
 											<col style="width: auto">
-											<col style="width: 55px">
+											<col style="width: auto">
+											<col style="width: 250px">
 										</colgroup>
 										<tbody>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
 												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="1"
 													style="text-align: center;"></td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
-												<td>팔공, 동화사</td>
+												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="2"
 													style="text-align: center;"></td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
-												<td>지리산, 화엄사</td>
+												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="3"
 													style="text-align: center;"></td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
-												<td>종무식, 영덕</td>
+												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="4"
 													style="text-align: center;"></td>
 											</tr>
 										</tbody>
 									</table>
 									<div class="slideshow-container hide2" id="photoimage">
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story1_1.jpg"
-												onclick="photomodalopen()">
-											<div class="text">거제, 바람의 언덕</div>
+										<div class="photorow g-5">
+											<div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/Crews/story1_1.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4">
+															<div class="d-flex align-items-center">
+																<img class="rounded-circle me-2" src="img/user.jpg" width="35" height="35" alt=""> <span>John Doe</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+															</div>
+														</div>
+														<h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+														<a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/Crews/story1_1.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4">
+															<div class="d-flex align-items-center">
+																<img class="rounded-circle me-2" src="img/user.jpg" width="35" height="35" alt=""> <span>John Doe</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+															</div>
+														</div>
+														<h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+														<a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
+													</div>
+												</div>
+											</div><div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/Crews/story1_1.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4">
+															<div class="d-flex align-items-center">
+																<img class="rounded-circle me-2" src="img/user.jpg" width="35" height="35" alt=""> <span>John Doe</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+															</div>
+														</div>
+														<h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+														<a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
+													</div>
+												</div>
+											</div><div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/Crews/story1_1.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4">
+															<div class="d-flex align-items-center">
+																<img class="rounded-circle me-2" src="img/user.jpg" width="35" height="35" alt=""> <span>John Doe</span>
+															</div>
+															<div class="d-flex align-items-center">
+																<span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</span>
+															</div>
+														</div>
+														<h4 class="text-uppercase mb-3">Rebum diam clita lorem erat magna est erat</h4>
+														<a class="text-uppercase fw-bold" href="">Read More <i class="bi bi-arrow-right"></i></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-12">
+												<nav aria-label="Page navigation">
+													<ul class="pagination pagination-lg justify-content-center m-0">
+														<li class="page-item disabled"><a class="page-link rounded-0" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
+														</a></li>
+														<li class="page-item active"><a class="page-link" href="#">1</a></li>
+														<li class="page-item"><a class="page-link" href="#">2</a></li>
+														<li class="page-item"><a class="page-link" href="#">3</a></li>
+														<li class="page-item"><a class="page-link rounded-0" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
+														</a></li>
+													</ul>
+												</nav>
+											</div>
 										</div>
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story2_1.jpg">
-											<div class="text">팔공, 동화사</div>
-										</div>
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story3_1.jpg">
-											<div class="text">지리산, 화엄사</div>
-										</div>
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story4_1.jpg">
-											<div class="text">종무식, 영덕</div>
-										</div>
-										<a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next"
-											onclick="plusSlides(1)">❯</a>
 									</div>
 								</div>
 							</div>

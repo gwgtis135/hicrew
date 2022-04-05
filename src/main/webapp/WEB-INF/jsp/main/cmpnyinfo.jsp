@@ -119,10 +119,10 @@
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
-	<div id="page">
 			<jsp:include page="Tap.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
+	<div id="page">
 		<div class="gtco-section-overflow">
 			<div class="gtco-section" id="gtco-services" data-section="services">
 				<div class="gtco-container">

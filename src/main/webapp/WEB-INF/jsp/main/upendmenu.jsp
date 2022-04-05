@@ -49,6 +49,7 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
+<link rel="stylesheet" href="css/jonghyeon_style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
 	<script src="js/scripts.js"></script>
 	<script src="js/Tapcommon.js"></script>
@@ -94,14 +95,14 @@ label{
 <body>
 
 	<div class="gtco-loader"></div>
-
-	<div id="page">
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
 		<jsp:include page="adminTap.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
+
+	<div id="page">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
