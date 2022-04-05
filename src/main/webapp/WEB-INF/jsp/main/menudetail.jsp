@@ -50,8 +50,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
 <link rel="stylesheet" href="css/nice-select.css">
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+<link rel="stylesheet" href="css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -169,15 +168,21 @@
 	<jsp:include page="nav.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
+		<jsp:include page="adminTap.jsp">
+			<jsp:param name="#" value="#" />
+		</jsp:include>
 	<div class="gtco-section-overflow">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
+			<!-- 
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>상세 메뉴 관리</h2>
 					</div>
 				</div>
+				
+				 -->
 				<div class="row">
 					<div class="row">
 
@@ -191,7 +196,7 @@
 												</a></li>
 												<li><a href="#"> <span>회사소개</span>
 												</a> <span class="depth1_arrow"></span>
-													<div class="depth_wrap">
+													<div class="depth_wrap2">
 														<ul>
 															<li><a onclick="switchtable('cmpnyinfo')">회사개요</a></li>
 															<li><a onclick="switchtable('ciintrcn')">CI소개</a></li>
@@ -203,7 +208,7 @@
 													</div></li>
 												<li><a href="#"> <span>주요사업</span>
 												</a> <span class="depth1_arrow"></span>
-													<div class="depth_wrap">
+													<div class="depth_wrap2">
 														<ul>
 															<li><a onclick="switchtable('itsolut')">PDF솔루션</a></li>
 															<li><a href="">IT솔루션</a></li>
@@ -629,6 +634,10 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/jquery.nice-select.js"></script>
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
 	<script>
 		function solutmodalopen(){
 			console.log("solutmodalopen!");

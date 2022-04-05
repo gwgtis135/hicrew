@@ -50,10 +50,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
 <link rel="stylesheet" href="css/HJ_style.css">
-	<script src="js/scripts.js"></script>
-	<script src="js/Tapcommon.js"></script>
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+<link rel="stylesheet" href="css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -102,14 +99,17 @@ label{
 		<jsp:include page="adminTap.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
-
+<input type="hidden" id="selectedmenu">
+<input type="hidden" id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
+			<!-- 
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>상단 메뉴 관리</h2>
 					</div>
 				</div>
+			-->
 				<div class="row">
 					<div class="row">
 
@@ -131,8 +131,8 @@ label{
 									<tr>
 										<td style="vertical-align: top;">
 											<div class="list_btn">
-												<a href="#" class="btn_type1">추가</a> 
-												<a href="#" class="btn_type1">삭제</a>
+												<a href="#" class="btn_type1" id="btn_addcategory">추가</a> 
+												<a href="#" class="btn_type1" id="btn_delcategory">삭제</a>
 											</div>
 											<ul>
 												<li><label><span>HOME</span></label></li>
@@ -140,9 +140,9 @@ label{
 													<div class="drag-label list tree-has-child" tabindex="0">
 														<label><span>회사 소개</span></label>
 													</div>
-													<ul>
-														<li class="tree-node tree-selected">
-															<div class="list drag-label tree-div-selected"
+													<ul class="hide">
+														<li class="tree-node">
+															<div class="list drag-label"
 																tabindex="0">
 																<label><span>회사 개요</span></label>
 															</div>
@@ -174,7 +174,23 @@ label{
 														</li>
 													</ul>
 												</li>
-												<li><label><span>주요사업</span></label></li>
+												<li>
+													<div class="drag-label list tree-has-child" tabindex="0">
+														<label><span>주요 사업</span></label>
+													</div>
+													<ul class="hide">
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>pdf 솔루션</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label" tabindex="0">
+																<label><span>it 솔루션</span></label>
+															</div>
+														</li>
+													</ul>
+												</li>
 												<li><label><span>그룹웨어</span></label></li>
 											</ul>
 										</td>
@@ -189,8 +205,22 @@ label{
 													<dd class="category_link">
 														<input type="text">
 													</dd>
-													<dt class="category_sample">항목 스타일</dt>
-													<dd class="category_sample">
+													<dt class="category_sample hide">항목 샘플</dt>
+													<dd class="category_sample hide">
+														<div>
+															<input type="radio" id="type1" name="pagetype"
+																value="type1"> <label for="type1"> <img
+																src="images/sample/sample1.png" alt="1번"
+																style="width: 200px">
+															</label> <input type="radio" id="type2" name="pagetype"
+																value="type2"> <label for="type2"> <img
+																src="images/sample/sample2.png" alt="2번"
+																style="width: 200px">
+															</label> 
+														</div>
+													</dd>
+													<dt class="category_style hide">항목 샘플</dt>
+													<dd class="category_style hide">
 														<div>
 															<input type="radio" id="type1" name="pagetype"
 																value="type1"> <label for="type1"> <img
@@ -388,7 +418,29 @@ label{
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-
+	<script>
+		var thclist = document.getElementsByClassName("tree-has-child");
+		for(thc in thclist){
+			thclist[thc].onclick=function(e){
+				document.getElementById("selectedmenu").value=this.children[0].children[0].innerHTML;
+				document.getElementById("selecteddetail").value="";
+				for(var i =0;i<thclist.length;i++){
+					thclist[i].classList.remove("tree-div-selected");
+					thclist[i].parentElement.children[1].classList.add("hide");
+				}
+				this.parentElement.children[1].classList.remove("hide");
+				this.classList.add("tree-div-selected");
+			}
+		}
+		document.getElementById("btn_addcategory").onclick=function(e){
+		    console.log(e);
+		}
+		document.getElementById("btn_delcategory").onclick=function(e){
+		    console.log("asd");
+		    console.log(e);
+		}
+	
+	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -410,6 +462,10 @@ label{
 	<script src="js/main.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
 </body>
 </html>
 

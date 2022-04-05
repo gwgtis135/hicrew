@@ -23,8 +23,8 @@ ul, li {
 
 				<ul class="sub_menu_lst">
 
-					<li class=""><a href="menudetail.do">회사개요</a></li>
-					<li><a href="upendmenu.do">CI소개</a></li>
+					<li><a href="upendmenu.do">상단 메뉴 관리</a></li>
+					<li class=""><a href="menudetail.do">항목 관리</a></li>
 				</ul>
 			</div>
 		</div>
