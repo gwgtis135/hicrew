@@ -5,7 +5,7 @@ window.onload = function(){
 	
 	var submenulist = document.querySelectorAll(".sub_menu_lst > li");
 	console.log(submenulist)
-	for(i in submenulist){
+	for(var i=0;i<submenulist.length;i++){
 		console.log(submenulist[i])
 		var hreflink = submenulist[i].children[0].getAttribute("href");
 		console.log(hreflink);
