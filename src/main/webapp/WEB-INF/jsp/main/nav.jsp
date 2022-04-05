@@ -34,7 +34,7 @@
 						<li><a href="pdfsolut.do"> <span>주요사업</span>
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
-								<ul>
+								<ul class='ul_solut'>
 									<li><a href="pdfsolut.do">PDF솔루션</a></li>
 									<li><a href="itsolut.do">IT솔루션</a></li>
 								</ul>
@@ -47,7 +47,7 @@
 							</a> 
 							<span class="depth1_arrow"></span>
 							<div class="depth_wrap">
-								<ul>
+								<ul class="ul_upendmenu">
 									<li>
 										<a href="upendmenu.do">상단 메뉴 관리</a>
 									</li>

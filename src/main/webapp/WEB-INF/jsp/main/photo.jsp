@@ -48,6 +48,8 @@
 <link rel="stylesheet" href="css/flexslider.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/jonghyeon_style.css">
 	<!-- Banner style  -->
 	<link rel="stylesheet" href="css/event_style.css">
 
