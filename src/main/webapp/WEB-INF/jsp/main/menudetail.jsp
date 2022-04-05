@@ -52,135 +52,35 @@
 <link rel="stylesheet" href="css/jonghyeon_style.css">
 <link rel="stylesheet" href="css/nice-select.css">
 
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+<link rel="stylesheet" href="css/event_style.css">
+
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 </head>
 <body>
-
-	<div id="solutmodal" class="modal">
-		<div class="modal-window">
-			<div class="close-area">X</div>
-			<div class="modal-title">
-				<h2>세부 항목 관리</h2>
-			</div>
-			<div class="modal-body">
-				<p>
-					항목 이름<input type="text" />
-				</p>
-				<p>
-					항목 링크<input type="text" />
-				</p>
-				<p>
-					이미지 <input type="file" />
-				</p>
-				<p>
-					항목 상세<input type="text" />
-				</p>
-			</div>
-			<div class="modal-footer">
-				<p>
-					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
-						id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a> <a
-						id="a_remove" href="#" class="btn_type1 _rosRestrict">닫기</a>
-				</p>
-			</div>
-		</div>
-	</div>
-	<!-- 모달 -->
-	<button id="testBtn" class="btn">모달 테스트</button>
-	<div class="modal fade" id="orgchtmodal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button class="close" type="button" data-dismiss="modal"
-						aria-label="Close">
-						<button type="button" class="close" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</button>
-					<h3 class="modal-title" id="exampleModalLabel">
-						모달테스트
-						</h5>
-				</div>
-				<div class="modal-body">
-					<p>
-						<label>이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						<input type="text" />
-					</p>
-					<p>
-						<label>직급&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						<select name="org_clsf" id="org_clsf">
-							<option value="대표">대표</option>
-							<option value="부장">부장</option>
-							<option value="차장">차장</option>
-							<option value="과장">과장</option>
-							<option value="사원">사원</option>
-						</select>
-					</p>
-					<p>
-						<label>사업부서&nbsp;&nbsp;</label> <input type="text" />
-					</p>
-					<p>
-						프로필<img class="orgcht_modal_img" alt="" src="">
-					</p>
-					<p>
-						<span class=orgcht_modal_span> <label>&nbsp;&nbsp;</label>
-							<input type="file" />
-						</span>
-					</p>
-
-				</div>
-				<div class="modal-footer">
-					<a id="modalY" href="#" class="btn_type1 _rosRestrict">저장</a> <a
-						id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a>
-					<button class="btn" type="button" data-dismiss="modal">닫기</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- 모달 end -->
-	<div id="photomodal" class="modal">
-		<div class="modal-window">
-			<div class="close-area">X</div>
-			<div class="modal-title">
-				<h2>이미지 관리</h2>
-			</div>
-			<div class="modal-body">
-				<p>
-					이미지 이름<input type="text" />
-				</p>
-				<p>
-					이미지 <input type="file" />
-				</p>
-			</div>
-			<div class="modal-footer">
-				<p>
-					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
-						id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a> <a
-						id="a_remove" href="#" class="btn_type1 _rosRestrict">닫기</a>
-				</p>
-			</div>
-		</div>
-	</div>
 	<div class="gtco-loader"></div>
 	<jsp:include page="nav.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
-	
+
+		<jsp:include page="adminTap.jsp">
+			<jsp:param name="#" value="#" />
+		</jsp:include>
+
 	<div class="gtco-section-overflow">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
+			<!-- 
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>상세 메뉴 관리</h2>
 					</div>
 				</div>
+				
+				 -->
 				<div class="row">
 					<div class="row">
 
@@ -194,7 +94,7 @@
 												</a></li>
 												<li><a href="#"> <span>회사소개</span>
 												</a> <span class="depth1_arrow"></span>
-													<div class="depth_wrap">
+													<div class="depth_wrap2">
 														<ul>
 															<li><a onclick="switchtable('cmpnyinfo')">회사개요</a></li>
 															<li><a onclick="switchtable('ciintrcn')">CI소개</a></li>
@@ -206,7 +106,7 @@
 													</div></li>
 												<li><a href="#"> <span>주요사업</span>
 												</a> <span class="depth1_arrow"></span>
-													<div class="depth_wrap">
+													<div class="depth_wrap2">
 														<ul>
 															<li><a onclick="switchtable('itsolut')">PDF솔루션</a></li>
 															<li><a href="">IT솔루션</a></li>
@@ -682,6 +582,112 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
+	<div id="solutmodal" class="modal">
+		<div class="modal-window">
+			<div class="close-area">X</div>
+			<div class="modal-title">
+				<h2>세부 항목 관리</h2>
+			</div>
+			<div class="modal-body">
+				<p>
+					항목 이름<input type="text" />
+				</p>
+				<p>
+					항목 링크<input type="text" />
+				</p>
+				<p>
+					이미지 <input type="file" />
+				</p>
+				<p>
+					항목 상세<input type="text" />
+				</p>
+			</div>
+			<div class="modal-footer">
+				<p>
+					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
+						id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a> <a
+						id="a_remove" href="#" class="btn_type1 _rosRestrict">닫기</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- 모달 -->
+	<button id="testBtn" class="btn">모달 테스트</button>
+	<div class="modal fade" id="orgchtmodal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" type="button" data-dismiss="modal"
+						aria-label="Close">
+						<button type="button" class="close" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</button>
+					<h3 class="modal-title" id="exampleModalLabel">
+						모달테스트
+						</h5>
+				</div>
+				<div class="modal-body">
+					<p>
+						<label>이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input type="text" />
+					</p>
+					<p>
+						<label>직급&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<select name="org_clsf" id="org_clsf">
+							<option value="대표">대표</option>
+							<option value="부장">부장</option>
+							<option value="차장">차장</option>
+							<option value="과장">과장</option>
+							<option value="사원">사원</option>
+						</select>
+					</p>
+					<p>
+						<label>사업부서&nbsp;&nbsp;</label> <input type="text" />
+					</p>
+					<p>
+						프로필<img class="orgcht_modal_img" alt="" src="">
+					</p>
+					<p>
+						<span class=orgcht_modal_span> <label>&nbsp;&nbsp;</label>
+							<input type="file" />
+						</span>
+					</p>
+
+				</div>
+				<div class="modal-footer">
+					<a id="modalY" href="#" class="btn_type1 _rosRestrict">저장</a> <a
+						id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a>
+					<button class="btn" type="button" data-dismiss="modal">닫기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 모달 end -->
+	<div id="photomodal" class="modal">
+		<div class="modal-window">
+			<div class="close-area">X</div>
+			<div class="modal-title">
+				<h2>이미지 관리</h2>
+			</div>
+			<div class="modal-body">
+				<p>
+					이미지 이름<input type="text" />
+				</p>
+				<p>
+					이미지 <input type="file" />
+				</p>
+			</div>
+			<div class="modal-footer">
+				<p>
+					<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
+						id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a> <a
+						id="a_remove" href="#" class="btn_type1 _rosRestrict">닫기</a>
+				</p>
+			</div>
+		</div>
+	</div>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -702,6 +708,10 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/jquery.nice-select.js"></script>
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
 	<script>
 		function solutmodalopen(){
 			console.log("solutmodalopen!");
