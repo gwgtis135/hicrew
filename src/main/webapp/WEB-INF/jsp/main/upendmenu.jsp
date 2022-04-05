@@ -49,9 +49,8 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
+	<link rel="stylesheet" href="css/jonghyeon_style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
-<!-- Theme style  -->
-<link rel="stylesheet" href="css/jonghyeon_style.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
 <!-- FOR IE9 below -->
@@ -102,21 +101,26 @@ label{
 		</jsp:include>
 
 	<div id="page">
-<input type="hidden" id="selectedmenu">
-<input type="hidden" id="selecteddetail">
+
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
-			<!-- 
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>상단 메뉴 관리</h2>
 					</div>
 				</div>
-			-->
 				<div class="row">
 					<div class="row">
 
 						<div class="row" style="margin-left: 100px; margin-right: 100px;">
+							<div class="tbl_top">
+								<span class="total"> 총 5 건 </span>
+								<!-- 
+                <span>
+                    <b id="noticePage"></b> / <b id="noticePageCnt"></b>
+                </span>
+                 -->
+							</div>
 							<div class="tbl board" id="noticeGrid">
 								<table>
 									<colgroup>
@@ -126,8 +130,8 @@ label{
 									<tr>
 										<td style="vertical-align: top;">
 											<div class="list_btn">
-												<a href="#" class="btn_type1" id="btn_addcategory">추가</a> 
-												<a href="#" class="btn_type1" id="btn_delcategory">삭제</a>
+												<a href="#" class="btn_type1">추가</a> 
+												<a href="#" class="btn_type1">삭제</a>
 											</div>
 											<ul>
 												<li><label><span>HOME</span></label></li>
@@ -135,57 +139,41 @@ label{
 													<div class="drag-label list tree-has-child" tabindex="0">
 														<label><span>회사 소개</span></label>
 													</div>
-													<ul class="hide">
-														<li class="tree-node">
-															<div class="list drag-label"
+													<ul>
+														<li class="tree-node tree-selected">
+															<div class="list drag-label tree-div-selected"
 																tabindex="0">
-																<label><span data-link="cmpnyinfo.do">회사 개요</span></label>
+																<label><span>회사 개요</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span data-link="CIintrcn.do">CI 소개</span></label>
+																<label><span>CI 소개</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span data-link="ch.do">주요 연혁</span></label>
+																<label><span>주요 연혁</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span data-link="orgcht.do">조직도</span></label>
+																<label><span>조직도</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span data-link="directions.do">오시는 길</span></label>
+																<label><span>오시는 길</span></label>
 															</div>
 														</li>
-														<li class="tree-node">
+														<li class="">
 															<div class="list drag-label" tabindex="0">
-																<label><span data-link="photo.do">포토스토리</span></label>
+																<label><span>포토스토리</span></label>
 															</div>
 														</li>
 													</ul>
 												</li>
-												<li>
-													<div class="drag-label list tree-has-child" tabindex="0">
-														<label><span>주요 사업</span></label>
-													</div>
-													<ul class="hide">
-														<li class="tree-node">
-															<div class="list drag-label" tabindex="0">
-																<label><span data-link="pdfsolut.do">pdf 솔루션</span></label>
-															</div>
-														</li>
-														<li class="tree-node">
-															<div class="list drag-label" tabindex="0">
-																<label><span data-link="itsolut.do">it 솔루션</span></label>
-															</div>
-														</li>
-													</ul>
-												</li>
+												<li><label><span>주요사업</span></label></li>
 												<li><label><span>그룹웨어</span></label></li>
 											</ul>
 										</td>
@@ -194,7 +182,7 @@ label{
 												<dl>
 													<dt class="category_name">항목 명</dt>
 													<dd class="category_name">
-														<input type="text" id="inptcategory_name">
+														<input type="text">
 													</dd>
 													<dt class="category_link">항목 주소</dt>
 													<dd class="category_link">
@@ -214,8 +202,8 @@ label{
 															</label> 
 														</div>
 													</dd>
-													<dt class="category_style hide">항목 샘플</dt>
-													<dd class="category_style hide">
+													<dt class="category_sample">항목 스타일</dt>
+													<dd class="category_sample">
 														<div>
 															<input type="radio" id="type1" name="pagetype"
 																value="type1"> <label for="type1"> <img
@@ -474,12 +462,9 @@ label{
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/Tapcommon.js"></script>
-</body>
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
 </html>
 
