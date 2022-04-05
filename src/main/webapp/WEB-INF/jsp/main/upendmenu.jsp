@@ -50,6 +50,9 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
 <link rel="stylesheet" href="css/HJ_style.css">
+<!-- Theme style  -->
+<link rel="stylesheet" href="css/jonghyeon_style.css">
+<!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
@@ -198,7 +201,7 @@ label{
 														<input type="text" id="inptcategory_link">
 													</dd>
 													<dt class="category_sample hide">항목 샘플</dt>
-													<dd class="category_sample hide">
+													<dd class="category_sample hide" id="category_sample">
 														<div>
 															<input type="radio" id="type1" name="pagetype"
 																value="type1"> <label for="type1"> <img
@@ -427,8 +430,20 @@ label{
 		var tnlist = document.getElementsByClassName("tree-node");
 		for(var k=0;k<tnlist.length;k++){
 			tnlist[k].onclick=function(){
+				for(var i =0;i<tnlist.length;i++){
+					tnlist[i].classList.remove("tree-div-selected");
+					var ctgrystyle = document.getElementsByClassName("category_style");
+					for(var j = 0;j<ctgrystyle.length;j++){
+						ctgrystyle[j].classList.add("hide");
+					}
+					var ctgrysample = document.getElementsByClassName("category_sample");
+					for(var j = 0;j<ctgrysample.length;j++){
+						ctgrysample[j].classList.remove("hide");
+					}
+				}
 				document.getElementById("inptcategory_name").value=this.querySelector("div label span").innerHTML;
 				document.getElementById("inptcategory_link").value=this.querySelector("div label span").getAttribute("data-link");
+				this.classList.add("tree-div-selected")
 			}
 		}
 		document.getElementById("btn_addcategory").onclick=function(e){

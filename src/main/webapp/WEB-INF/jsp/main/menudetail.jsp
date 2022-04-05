@@ -50,6 +50,9 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
 <link rel="stylesheet" href="css/nice-select.css">
+<!-- Theme style  -->
+<link rel="stylesheet" href="css/jonghyeon_style.css">
+<!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
@@ -537,7 +540,7 @@
 		</div>
 	</div>
 	<!-- 모달 -->
-	<button id="testBtn" class="btn">모달 테스트</button>
+	<!-- <button id="testBtn" class="btn">모달 테스트</button> -->
 	<div class="modal fade" id="orgchtmodal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -739,7 +742,7 @@
 			
 		}
 
-        var xOffset = 10;
+/*         var xOffset = 10;
         var yOffset = 30;
 		$(document).on("mouseover",".thumnail",function(e){
             //var image_data = $(this).data("image");
@@ -763,7 +766,7 @@
         //마우스 아웃시 preview 제거
         $(document).on("mouseout",".thumnail",function(){
             //$("#preview").remove();
-        });
+        }); */
 		
 		//모달 이벤트
 		function orgchtmodal(e){

@@ -230,7 +230,7 @@ function gnb(){
         });
 
         gnbLi.on('mouseover focusin', function() {
-            $('header').addClass('on');
+            //$('header').addClass('on');
         });
 
         gnbLi.eq(0).on('mouseover focusin', function() {
