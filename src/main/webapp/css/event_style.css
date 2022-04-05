@@ -51,10 +51,7 @@
   background: url("../images/bg_sub_title_06.png") no-repeat;
   background-position: center; }
 
-.sub_top {
-  background-color: #f3f4f5;
-  height: 270px;
-  position: relative; }
+
   .sub_top_title {
     padding-top: 120px;
     width: 100%; }

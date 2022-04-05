@@ -9,7 +9,7 @@ public class OrgchtController {
 	@RequestMapping("orgtest.do")
 	public String goOrgchtTest() {
 		System.out.println("조직도 관리 컨트롤러 호출");
-		return "orgcht/orgtest";
+		return "orgcht/OrgchtTest";
 	}
 
 	@RequestMapping("orgcht.do")

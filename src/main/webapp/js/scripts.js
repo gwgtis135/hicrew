@@ -23,6 +23,7 @@ console.log('스크립트.js 실행 완료')
     }
 
     if($('.sel_box').length){
+		console.log('.sel_box 실행 됨 ? ')
         $('.sel_box select').niceSelect();
     }
 
@@ -286,7 +287,7 @@ function tabSelectEvt(){
 
     $tabButtonItem.first().addClass(activeClass);
     $tabContents.not(':first').hide();
-    $tabSelect.niceSelect();
+    //$tabSelect.niceSelect();
 
     $tabButtonItem.find('a').on('click', function(e) {
         var target = $(this).attr('href');
@@ -1029,7 +1030,7 @@ function skyBannerEvt(){
         $('.sky_banner').removeClass('show').fadeOut(250);
     });
 
-    var swiper = new Swiper('.sky_banner .swiper-container', {
+    /*var swiper = new Swiper('.sky_banner .swiper-container', {
         loop: true,
         effect: 'fade',
         autoplay: {
@@ -1037,7 +1038,7 @@ function skyBannerEvt(){
             disableOnInteraction: false,
         },
         speed: 800,
-    });
+    });*/
 }
 
 function visualHeight(){
