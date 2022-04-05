@@ -50,7 +50,8 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
 <link rel="stylesheet" href="css/HJ_style.css">
-
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
@@ -96,6 +97,9 @@ label{
 
 	<div id="page">
 		<jsp:include page="nav.jsp">
+			<jsp:param name="#" value="#" />
+		</jsp:include>
+		<jsp:include page="adminTap.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
 
