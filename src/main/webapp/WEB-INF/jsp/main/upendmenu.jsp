@@ -51,10 +51,8 @@
 <link rel="stylesheet" href="css/category.css">
 	<link rel="stylesheet" href="css/jonghyeon_style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
-	<script src="js/scripts.js"></script>
-	<script src="js/Tapcommon.js"></script>
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+<!-- Banner style  -->
+<link rel="stylesheet" href="css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -188,7 +186,21 @@ label{
 													</dd>
 													<dt class="category_link">항목 주소</dt>
 													<dd class="category_link">
-														<input type="text">
+														<input type="text" id="inptcategory_link">
+													</dd>
+													<dt class="category_sample hide">항목 샘플</dt>
+													<dd class="category_sample hide" id="category_sample">
+														<div>
+															<input type="radio" id="type1" name="pagetype"
+																value="type1"> <label for="type1"> <img
+																src="images/sample/sample1.png" alt="1번"
+																style="width: 200px">
+															</label> <input type="radio" id="type2" name="pagetype"
+																value="type2"> <label for="type2"> <img
+																src="images/sample/sample2.png" alt="2번"
+																style="width: 200px">
+															</label> 
+														</div>
 													</dd>
 													<dt class="category_sample">항목 스타일</dt>
 													<dd class="category_sample">
@@ -389,7 +401,48 @@ label{
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-
+	<script>
+		var thclist = document.getElementsByClassName("tree-has-child");
+		for(var j = 0; j<thclist.length;j++){
+			thclist[j].onclick=function(e){
+				document.getElementById("selectedmenu").value=this.children[0].children[0].innerHTML;
+				document.getElementById("selecteddetail").value="";
+				for(var i =0;i<thclist.length;i++){
+					thclist[i].classList.remove("tree-div-selected");
+					thclist[i].parentElement.children[1].classList.add("hide");
+				}
+				this.parentElement.children[1].classList.remove("hide");
+				this.classList.add("tree-div-selected");
+			}
+		}
+		var tnlist = document.getElementsByClassName("tree-node");
+		for(var k=0;k<tnlist.length;k++){
+			tnlist[k].onclick=function(){
+				for(var i =0;i<tnlist.length;i++){
+					tnlist[i].classList.remove("tree-div-selected");
+					var ctgrystyle = document.getElementsByClassName("category_style");
+					for(var j = 0;j<ctgrystyle.length;j++){
+						ctgrystyle[j].classList.add("hide");
+					}
+					var ctgrysample = document.getElementsByClassName("category_sample");
+					for(var j = 0;j<ctgrysample.length;j++){
+						ctgrysample[j].classList.remove("hide");
+					}
+				}
+				document.getElementById("inptcategory_name").value=this.querySelector("div label span").innerHTML;
+				document.getElementById("inptcategory_link").value=this.querySelector("div label span").getAttribute("data-link");
+				this.classList.add("tree-div-selected")
+			}
+		}
+		document.getElementById("btn_addcategory").onclick=function(e){
+		    console.log(e);
+		}
+		document.getElementById("btn_delcategory").onclick=function(e){
+		    console.log("asd");
+		    console.log(e);
+		}
+	
+	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -409,8 +462,9 @@ label{
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
-</body>
+	<script src="js/scripts.js"></script>
+	<script src="js/Tapcommon.js"></script>
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
 </html>
 
