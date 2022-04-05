@@ -91,14 +91,14 @@ label{
 <body>
 
 	<div class="gtco-loader"></div>
-
-	<div id="page">
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
 		<jsp:include page="adminTap.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
+
+	<div id="page">
 <input type="hidden" id="selectedmenu">
 <input type="hidden" id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
@@ -136,32 +136,32 @@ label{
 														<li class="tree-node">
 															<div class="list drag-label"
 																tabindex="0">
-																<label><span>회사 개요</span></label>
+																<label><span data-link="cmpnyinfo.do">회사 개요</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>CI 소개</span></label>
+																<label><span data-link="CIintrcn.do">CI 소개</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>주요 연혁</span></label>
+																<label><span data-link="ch.do">주요 연혁</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>조직도</span></label>
+																<label><span data-link="orgcht.do">조직도</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>오시는 길</span></label>
+																<label><span data-link="directions.do">오시는 길</span></label>
 															</div>
 														</li>
-														<li class="">
+														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>포토스토리</span></label>
+																<label><span data-link="photo.do">포토스토리</span></label>
 															</div>
 														</li>
 													</ul>
@@ -173,12 +173,12 @@ label{
 													<ul class="hide">
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>pdf 솔루션</span></label>
+																<label><span data-link="pdfsolut.do">pdf 솔루션</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
 															<div class="list drag-label" tabindex="0">
-																<label><span>it 솔루션</span></label>
+																<label><span data-link="itsolut.do">it 솔루션</span></label>
 															</div>
 														</li>
 													</ul>
@@ -191,11 +191,11 @@ label{
 												<dl>
 													<dt class="category_name">항목 명</dt>
 													<dd class="category_name">
-														<input type="text">
+														<input type="text" id="inptcategory_name">
 													</dd>
 													<dt class="category_link">항목 주소</dt>
 													<dd class="category_link">
-														<input type="text">
+														<input type="text" id="inptcategory_link">
 													</dd>
 													<dt class="category_sample hide">항목 샘플</dt>
 													<dd class="category_sample hide">
@@ -412,8 +412,8 @@ label{
 	</div>
 	<script>
 		var thclist = document.getElementsByClassName("tree-has-child");
-		for(thc in thclist){
-			thclist[thc].onclick=function(e){
+		for(var j = 0; j<thclist.length;j++){
+			thclist[j].onclick=function(e){
 				document.getElementById("selectedmenu").value=this.children[0].children[0].innerHTML;
 				document.getElementById("selecteddetail").value="";
 				for(var i =0;i<thclist.length;i++){
@@ -422,6 +422,13 @@ label{
 				}
 				this.parentElement.children[1].classList.remove("hide");
 				this.classList.add("tree-div-selected");
+			}
+		}
+		var tnlist = document.getElementsByClassName("tree-node");
+		for(var k=0;k<tnlist.length;k++){
+			tnlist[k].onclick=function(){
+				document.getElementById("inptcategory_name").value=this.querySelector("div label span").innerHTML;
+				document.getElementById("inptcategory_link").value=this.querySelector("div label span").getAttribute("data-link");
 			}
 		}
 		document.getElementById("btn_addcategory").onclick=function(e){
