@@ -138,9 +138,9 @@ section.sub .sub_menu_lst li a {
           color: #333; }
         .history_box ul li dl dd {
           color: #666;
-          font-size: 2rem;
+          font-size: 17px;
           line-height: 1.9375rem;
-          font-weight: 500;
+          font-weight: 700;
           width: 100%;
           display: inline-block;
           vertical-align: super; }
@@ -154,4 +154,48 @@ section.sub .sub_menu_lst li a {
             height: 2px;
             display: inline-block;
             content: ""; }
-  
+  .paddingLeft{
+  	padding-left: 96px;
+  }
+/* 포토스토리 이미지 게시판 css 부트스트랩*/
+.g-5, .gy-5 { -
+	-bs-gutter-y: 3rem
+}
+.g-5, .gx-5 { -
+	-bs-gutter-x: 3rem
+}
+.photorow { -
+	-bs-gutter-x: 1.5rem; -
+	-bs-gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(var(- -bs-gutter-y)* -1);
+	margin-right: calc(var(- -bs-gutter-x)/-2);
+	margin-left: calc(var(- -bs-gutter-x)/-2)
+}
+.m-0 {
+	margin: 0 !important
+}
+.justify-content-center {
+	justify-content: center !important
+}
+.pagination {
+	display: flex;
+	padding-left: 0;
+	list-style: none
+}
+.col-12 {
+	flex: 0 0 auto;
+	width: 100%
+}
+.photoimg-fluid {
+	max-width: 100%;
+	height: auto
+}
+.photoimg{
+	max-width: 50%;
+}
+/* 관리자 페이지 tap 위치 css */
+.marginLeft{
+	margin-left: 95px;
+}

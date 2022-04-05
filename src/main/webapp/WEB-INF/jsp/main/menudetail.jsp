@@ -51,6 +51,7 @@
 <link rel="stylesheet" href="css/HJ_style.css">
 <link rel="stylesheet" href="css/nice-select.css">
 <link rel="stylesheet" href="css/event_style.css">
+<link rel="stylesheet" href="css/jonghyeon_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -82,7 +83,7 @@
 						<div class="row" style="margin-left: 100px; margin-right: 100px;">
 							<div class="tbl_top">
 								<div class="inner">
-									<div class="header_cont">
+									<div class="header_cont marginLeft">
 										<nav class="gnb" id="Gnb">
 											<ul>
 												<li class="active"><a href=""> <span>Home</span>
@@ -107,8 +108,6 @@
 															<li><a href="">IT솔루션</a></li>
 														</ul>
 													</div></li>
-												<li><a href="" class="external"> <span>그룹웨어</span>
-												</a></li>
 											</ul>
 										</nav>
 
@@ -402,43 +401,56 @@
 									</table>
 								</div>
 								<div class="hide table" id="tblphoto">
+									<!-- 
 									<a id="a_remove" href="#" class="btn_type2 _rosRestrict"
 										onclick="imgswitch('phototable')">게시판</a> <a id="a_remove"
 										href="#" class="btn_type2 _rosRestrict"
 										onclick="imgswitch('photoimage')">이미지</a>
-									<table class="hide2" id="phototable">
+										 -->
+									<table id="phototable">
 										<colgroup>
 											<col style="width: 50px">
-											<col style="width: auto">
-											<col style="width: 55px">
+											<col style="width: 250px">
+											<col style="width: 250px">
+											<col style="width: 250px">
+											<col style="width: 250px">
 										</colgroup>
 										<tbody>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
 												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="1"
 													style="text-align: center;"></td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
-												<td>팔공, 동화사</td>
+												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story2_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="2"
 													style="text-align: center;"></td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
-												<td>지리산, 화엄사</td>
+												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story3_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="3"
 													style="text-align: center;"></td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
-												<td>종무식, 영덕</td>
+												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story4_1.jpg" alt="거제, 바람의언덕"></td>
+												<td><input type = "file"></td>
 												<td>이미지 순서 <input type="text" size="5" value="4"
 													style="text-align: center;"></td>
 											</tr>
 										</tbody>
 									</table>
+									<!-- 
 									<div class="slideshow-container hide2" id="photoimage">
 										<div class="mySlides fade2">
 											<img class="main_slideImg" src="images/Crews/story1_1.jpg"
@@ -461,6 +473,7 @@
 											onclick="plusSlides(1)">❯</a>
 									</div>
 								</div>
+								 -->
 							</div>
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>

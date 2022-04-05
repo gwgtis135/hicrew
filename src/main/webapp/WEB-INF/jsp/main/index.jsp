@@ -48,6 +48,10 @@
 <link rel="stylesheet" href="css/flexslider.css">
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
+<!-- Theme style  -->
+<link rel="stylesheet" href="css/jonghyeon_style.css">
+<!-- Banner style  -->
+<link rel="stylesheet" href="css/event_style.css">
 
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
@@ -74,14 +78,16 @@
 <script src="js/magnific-popup-options.js"></script>
 <!-- Main -->
 <script src="js/main.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/Tapcommon.js"></script>
 </head>
 <body>
 	<div class="gtco-loader"></div>
-
-	<div id="page">
 		<jsp:include page="nav.jsp">
 			<jsp:param name="#" value="#" />
 		</jsp:include>
+
+	<div id="page">
 		<div id="gtco-hero" class="js-fullheight" data-section="home">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">

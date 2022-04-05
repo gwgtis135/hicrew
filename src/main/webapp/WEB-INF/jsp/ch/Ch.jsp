@@ -282,106 +282,29 @@ a {
 						<div class="cont_box">
                 <div class="history">
                     <div class="history_box">
-                        <h4><span class="roboto">2010 ~</span> 현재</h4>
+                        <h4><span class="roboto">2018 ~</span> 현재</h4>
                         <ul>
                             <li class="this_year">
                             <dl>
                             <dt class="roboto">2020</dt>
-                            <dd>사옥 이전 : 서울특별시 송파구 정의로8길 4, 케이디빌딩 1004호</dd>
+                            <dd>세종(나이스 구축 사업)</dd>
+                            <dd>대구(나이스 나이스 유지보수 사업)</dd>
                             </dl>
                             </li>
                             <li class="">
                                 <dl>
                                     <dt class="roboto">2019</dt>
-                                    <dd>에스지에이벤처스㈜ 신설 설립</dd>
+                                    <dd>세종(나이스 구축 사업)</dd>
+                            		<dd>대구(나이스 나이스 유지보수 사업)</dd>
                                 </dl>
                             </li>
                             <li>
                                 <dl>
                                     <dt class="roboto">2018</dt>
-                                    <dd>에스지에이블록체인㈜ 신설 설립</dd>
-                                    <dd>보이스아이㈜ 인수</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2017</dt>
-                                    <dd>에스지에이시스템즈㈜ 합병</dd>
-                                    <dd>사옥이전 문정동 에이치비지니스파크</dd>
-                                    <dd>에스지에이임베디드㈜ 코넥스 상장</dd>
-                                    <dd>자산 양수 (문정동 에이치비지니스파크 A동 일부)</dd>
-                                    <dd>㈜알엔에이솔루션 인수</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2016</dt>
-                                    <dd>연 매출 1000억원 돌파</dd>
-                                    <dd>㈜액시스인베스트먼트 설립</dd>
-                                    <dd>㈜세원인포테크 인수</dd>
-                                    <dd>㈜바이러스체이서 인수</dd>
-                                    <dd>㈜넷인프라 인수</dd>
-                                    <dd>에스지에이시스템즈㈜ 코넥스시장 상장</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2015</dt>
-                                    <dd>에스지에이솔루션즈㈜ 코스닥상장 (구, ㈜레드비씨)</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2014</dt>
-                                    <dd>정보보호 산업 유공자 포상 표창 수상</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2013</dt>
-                                    <dd>연 매출 500억 돌파</dd>
-                                    <dd>㈜강원시스템 인수</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2012</dt>
-                                    <dd>레드게이트,비씨큐어 합병 - ㈜레드비씨</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt class="roboto">2010</dt>
-                                    <dd>사옥이전 양재동 오상빌딩</dd>
-                                    <dd>상호변경 에스지에이㈜</dd>
+                                    <dd>하이크루 설립</dd>
                                 </dl>
                             </li>
                         </ul>
-                    </div>
-                    <div class="history_box">
-                        <h4><span class="roboto">2003 ~ 2009</span></h4>
-                            <ul>
-                                <li>
-                                    <dl>
-                                        <dt class="roboto">2009</dt>
-                                        <dd>㈜센트리솔루션 인수</dd>
-                                        <dd>㈜비씨큐어 인수</dd>
-                                        <dd>㈜레드게이트 인수</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt class="roboto">2008</dt>
-                                        <dd>코스닥 시장 진출</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt class="roboto">2003</dt>
-                                        <dd>법인 설립 (구, ㈜스캐니글로벌)</dd>
-                                    </dl>
-                                </li>
-                            </ul>
                     </div>
                 </div>
             </div>
