@@ -14,7 +14,7 @@ ul, li {
 		<div class="sub_top">
 			<div class="inner">
 				<div class="sub_top_title">
-					<h2>페이지 관리</h2>
+					<h2>관리자 페이지</h2>
 				</div>
 			</div>
 		</div>
@@ -23,8 +23,8 @@ ul, li {
 
 				<ul class="sub_menu_lst">
 
-					<li><a href="upendmenu.do">상단 메뉴 관리</a></li>
-					<li class=""><a href="menudetail.do">항목 관리</a></li>
+					<li><a href="upendmenu.do">메뉴 관리</a></li>
+					<li class=""><a href="menudetail.do">페이지 관리</a></li>
 				</ul>
 			</div>
 		</div>
