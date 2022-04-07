@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="ckeditor" uri="http://ckeditor.com" %>
+
 <!DOCTYPE html>
 <!--
 	Asymmetry by gettemplates.co
@@ -117,8 +121,8 @@
 									</div>
 								</div>
 							</div>
-							<textarea id="intrcnment" class="" rows="5" cols="118"
-								style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
+							<textarea id="intrcnment" name="nttCn" class="" rows="5" cols="118" style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
+							<ckeditor:replace replace="nttCn" basePath="${pageContext.request.contextPath}/html/egovframework/com/cmm/utl/ckeditor/" />
 							<div class="tbl board">
 
 								<!--주요연혁 -->
@@ -653,6 +657,8 @@
 <script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/Tapcommon.js"></script>
+	<!--  ck 에디터 적용 -->
+	<script type="text/javascript" src="<c:url value='/html/egovframework/com/cmm/utl/ckeditor/ckeditor.js'/>"></script>
 	<script>
 		function solutmodalopen(){
 			console.log("solutmodalopen!");

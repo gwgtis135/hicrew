@@ -49,7 +49,7 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/category.css">
-	<link rel="stylesheet" href="css/jonghyeon_style.css">
+<link rel="stylesheet" href="css/jonghyeon_style.css">
 <link rel="stylesheet" href="css/HJ_style.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
@@ -74,53 +74,56 @@ dd.category_sample {
 	height: 40px;
 	padding: 10px 0;
 	color: #333333;
-	/*font-size: 1rem;*/
 	font-weight: 400;
 	vertical-align: top;
 }
-label{
-	font-weight:normal;
+
+label {
+	font-weight: normal;
 }
-.tree-selected div label{
-	font-weight:bold;
+
+ul#tree li div:hover, ul.innerul li div:hover {
+	color: #007FFF;
+	text-decoration: underline;
 }
-.tree-div-selected{
-	color:orange;
-	background:gray;
+
+.tree-selected div label {
+	font-weight: bold;
+}
+
+.tree-div-selected {
+	color: orange;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	color: #697a8d;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #d9dee3;
+	appearance: none;
+	border-radius: 0.375rem;
 }
 </style>
 </head>
 <body>
 
 	<div class="gtco-loader"></div>
-		<jsp:include page="nav.jsp">
-			<jsp:param name="#" value="#" />
-		</jsp:include>
-		<jsp:include page="adminTap.jsp">
-			<jsp:param name="#" value="#" />
-		</jsp:include>
+	<jsp:include page="nav.jsp">
+		<jsp:param name="#" value="#" />
+	</jsp:include>
+	<jsp:include page="adminTap.jsp">
+		<jsp:param name="#" value="#" />
+	</jsp:include>
 
 	<div id="page">
-
+		<input type="hidden" id="selectedmenu"> <input type="hidden"
+			id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-						<h2>상단 메뉴 관리</h2>
-					</div>
-				</div>
-				<div class="row">
 					<div class="row">
-
 						<div class="row" style="margin-left: 100px; margin-right: 100px;">
-							<div class="tbl_top">
-								<span class="total"> 총 5 건 </span>
-								<!-- 
-                <span>
-                    <b id="noticePage"></b> / <b id="noticePageCnt"></b>
-                </span>
-                 -->
-							</div>
 							<div class="tbl board" id="noticeGrid">
 								<table>
 									<colgroup>
@@ -130,51 +133,77 @@ label{
 									<tr>
 										<td style="vertical-align: top;">
 											<div class="list_btn">
-												<a href="#" class="btn_type1">추가</a> 
-												<a href="#" class="btn_type1">삭제</a>
+												<a href="#" class="btn_type1" id="btn_addcategory">추가</a> <a
+													href="#" class="btn_type1" id="btn_delcategory">삭제</a>
 											</div>
-											<ul>
-												<li><label><span>HOME</span></label></li>
+											<ul id="tree">
 												<li>
-													<div class="drag-label list tree-has-child" tabindex="0">
+													<div class="drag-label list tree-has-child depth1">
+														<label><span data-link="main.do">Home</span></label>
+													</div>
+												</li>
+												<li>
+													<div class="drag-label list tree-has-child depth1">
 														<label><span>회사 소개</span></label>
 													</div>
-													<ul>
-														<li class="tree-node tree-selected">
-															<div class="list drag-label tree-div-selected"
-																tabindex="0">
-																<label><span>회사 개요</span></label>
+													<ul class="innerul hide">
+														<li class="tree-node">
+															<div class="list drag-label depth2">
+																<label><span data-link="cmpnyinfo.do">회사
+																		개요</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
-															<div class="list drag-label" tabindex="0">
-																<label><span>CI 소개</span></label>
+															<div class="list drag-label depth2">
+																<label><span data-link="CIintrcn.do">CI
+																		소개</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
-															<div class="list drag-label" tabindex="0">
-																<label><span>주요 연혁</span></label>
+															<div class="list drag-label depth2">
+																<label><span data-link="ch.do">주요 연혁</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
-															<div class="list drag-label" tabindex="0">
-																<label><span>조직도</span></label>
+															<div class="list drag-label depth2">
+																<label><span data-link="orgcht.do">조직도</span></label>
 															</div>
 														</li>
 														<li class="tree-node">
-															<div class="list drag-label" tabindex="0">
-																<label><span>오시는 길</span></label>
+															<div class="list drag-label depth2">
+																<label><span data-link="directions.do">오시는
+																		길</span></label>
 															</div>
 														</li>
-														<li class="">
-															<div class="list drag-label" tabindex="0">
-																<label><span>포토스토리</span></label>
+														<li class="tree-node">
+															<div class="list drag-label depth2">
+																<label><span data-link="photo.do">포토스토리</span></label>
 															</div>
 														</li>
 													</ul>
 												</li>
-												<li><label><span>주요사업</span></label></li>
-												<li><label><span>그룹웨어</span></label></li>
+												<li>
+													<div class="drag-label list tree-has-child depth1">
+														<label><span>주요사업</span></label>
+													</div>
+													<ul class="innerul hide">
+														<li class="tree-node">
+															<div class="list drag-label depth2">
+																<label><span data-link="pdfsolut.do">pdf솔루션</span></label>
+															</div>
+														</li>
+														<li class="tree-node">
+															<div class="list drag-label depth2">
+																<label><span data-link="itsolut.do">it솔루션</span></label>
+															</div>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<div class="drag-label list tree-has-child depth1">
+														<label><span data-link="http://gw.hicrew.kr">그룹웨어</span></label>
+													</div>
+												</li>
 											</ul>
 										</td>
 										<td class="n_admin">
@@ -182,7 +211,7 @@ label{
 												<dl>
 													<dt class="category_name">항목 명</dt>
 													<dd class="category_name">
-														<input type="text">
+														<input type="text" id="inptcategory_name">
 													</dd>
 													<dt class="category_link">항목 주소</dt>
 													<dd class="category_link">
@@ -199,11 +228,11 @@ label{
 																value="type2"> <label for="type2"> <img
 																src="images/sample/sample2.png" alt="2번"
 																style="width: 200px">
-															</label> 
+															</label>
 														</div>
 													</dd>
-													<dt class="category_sample">항목 스타일</dt>
-													<dd class="category_sample">
+													<dt class="category_style hide">항목 스타일</dt>
+													<dd class="category_style hide">
 														<div>
 															<input type="radio" id="type1" name="pagetype"
 																value="type1"> <label for="type1"> <img
@@ -238,131 +267,9 @@ label{
 									</tr>
 								</table>
 							</div>
-							<!-- 
-							<div class="tbl board" id="noticeGrid">
-								<table>
-									<colgroup>
-										<col style="width: 95px">
-										<col style="width: auto">
-										<col style="width: auto">
-										<col style="width: auto">
-										<col style="width: 350px">
-										<col style="width: 50px">
-									</colgroup>
-									<tbody>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="20" value="Home"></td>
-											<td></td>
-											<td>메뉴 링크 <input type="text" size="50" value="home"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="1"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="20" value="회사 소개"></td>
-											<td></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="cmpnyintrcn"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="2"></td>
-										</tr>
-										<tr>
-											<td class="num"><input type="checkbox"></td>
-											<td>├</td>
-											<td>항목 이름<input type="text" value="회사 개요"></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="cmpnyinfo.do"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="1"></td>
-										</tr>
-										<tr>
-											<td class="num"><input type="checkbox"></td>
-											<td>├</td>
-											<td>항목 이름<input type="text" value="CI 소개"></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="CIintrcn.do"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="2"></td>
-										</tr>
-										<tr>
-											<td class="num"><input type="checkbox"></td>
-											<td>├</td>
-											<td>항목 이름<input type="text" value="주요 연혁"></td>
-											<td>메뉴 링크 <input type="text" size="50" value="ch.do"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="3"></td>
-										</tr>
-										<tr>
-											<td class="num"><input type="checkbox"></td>
-											<td>├</td>
-											<td>항목 이름<input type="text" value="조직도"></td>
-											<td>메뉴 링크 <input type="text" size="50" value="orgcht.do"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="4"></td>
-										</tr>
-										<tr>
-											<td class="num"><input type="checkbox"></td>
-											<td>├</td>
-											<td>항목 이름<input type="text" value="오시는길"></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="recruitment.do"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="5"></td>
-										</tr>
-										<tr>
-											<td class="num"><input type="checkbox"></td>
-											<td>└</td>
-											<td>항목 이름<input type="text" value="포토스토리"></td>
-											<td>메뉴 링크 <input type="text" size="50" value="photo.do"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="6"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="20" value="주요 사업"></td>
-											<td></td>
-											<td>메뉴 링크 <input type="text" size="50" value="mainbsns"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="3"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="20" value="그룹웨어"></td>
-											<td></td>
-											<td>메뉴 링크 <input type="text" size="50"
-												value="gw.hicrew.kr"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="4"></td>
-										</tr>
-										<tr class="notice">
-											<td class="num"><input type="checkbox"></td>
-											<td>메뉴 이름 <input type="text" size="20" value="페이지 관리"></td>
-											<td></td>
-											<td>메뉴 링크 <input type="text" size="50" value="adminPage"></td>
-											<td></td>
-											<td class="num">메뉴 순서 <input type="number"
-												style="text-align: center; width: 50px;" value="5"></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
- -->
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a>
 								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">삭제</a>
 								<a id="a_remove" href="#" class="btn_type3 _rosRestrict">미리보기</a>
 							</div>
 						</div>
@@ -381,16 +288,6 @@ label{
 								이노빌딩). 대표번호 : 070-8772-1612</small> <small class="block">COPYRIGHT©2018
 								BY HCSYSTEM. ALL RIGHTS RESERVED</small>
 						</p>
-						<!-- 
-					<p class="pull-right">
-						<ul class="gtco-social-icons pull-right">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-					 -->
 					</div>
 				</div>
 
@@ -402,46 +299,161 @@ label{
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	<script>
-		var thclist = document.getElementsByClassName("tree-has-child");
-		for(var j = 0; j<thclist.length;j++){
-			thclist[j].onclick=function(e){
-				document.getElementById("selectedmenu").value=this.children[0].children[0].innerHTML;
-				document.getElementById("selecteddetail").value="";
-				for(var i =0;i<thclist.length;i++){
-					thclist[i].classList.remove("tree-div-selected");
-					thclist[i].parentElement.children[1].classList.add("hide");
-				}
-				this.parentElement.children[1].classList.remove("hide");
-				this.classList.add("tree-div-selected");
+		var selmenu = document.querySelector("#selectedmenu");
+		var seldetail = document.querySelector("#selecteddetail");
+		var inptname = document.querySelector("#inptcategory_name");
+		var inptlink = document.querySelector("#inptcategory_link");
+		var ctgrystyle = document.getElementsByClassName("category_style");
+		var ctgrysample = document.getElementsByClassName("category_sample");
+
+		var nonedellist = [ "Home", "회사 소개", "주요사업", "그룹웨어" ];
+
+		var addhide = function() {
+			for (var j = 0; j < ctgrystyle.length; j++) {
+				ctgrystyle[j].classList.add("hide");
+			}
+			for (var j = 0; j < ctgrysample.length; j++) {
+				ctgrysample[j].classList.add("hide");
 			}
 		}
-		var tnlist = document.getElementsByClassName("tree-node");
-		for(var k=0;k<tnlist.length;k++){
-			tnlist[k].onclick=function(){
-				for(var i =0;i<tnlist.length;i++){
-					tnlist[i].classList.remove("tree-div-selected");
-					var ctgrystyle = document.getElementsByClassName("category_style");
-					for(var j = 0;j<ctgrystyle.length;j++){
-						ctgrystyle[j].classList.add("hide");
+
+		function removetds(target) {
+			for (var i = 0; i < target.length; i++) {
+				target[i].classList.remove("tree-div-selected");
+			}
+		}
+		function clicktree(event) {
+			var span = event.target.querySelector("span") ? event.target
+					.querySelector("span") : event.target;
+			var div = span.closest("div");
+			var depth1ul = document.getElementsByClassName("depth1");
+			var depth2ul = document.getElementsByClassName("depth2");
+			if (div.classList.contains("depth1")) {
+				// 첫번째 뎁스
+				seldetail.value = "";
+				var ul = div.parentElement.querySelector("ul");
+				console.log(ul);
+				removetds(depth1ul);
+				removetds(depth2ul);
+				var inneruls = document.getElementsByClassName("innerul");
+				for (var i = 0; i < inneruls.length; i++) {
+					// 첫뎁스 하위 ul 태그 가리기
+					inneruls[i].classList.add("hide");
+				}
+				if (ul != null) {
+					if (selmenu.value === span.innerHTML) {
+						// 이미 선택된 메뉴 클릭
+						selmenu.value = "";
+						addhide();
+						inptname.value = "";
+						inptlink.value = "";
+						console.log("1")
+					} else {
+						// 다른거 클릭
+						div.classList.add("tree-div-selected");
+						ul.classList.remove("hide");
+						inptname.value = "";
+						inptlink.value = "";
+						selmenu.value = span.innerHTML;
+						console.log("2")
 					}
-					var ctgrysample = document.getElementsByClassName("category_sample");
-					for(var j = 0;j<ctgrysample.length;j++){
+				} else {
+					if (selmenu.value === span.innerHTML) {
+						// 이미 선택된 메뉴 클릭
+						selmenu.value = "";
+						inptname.value = "";
+						inptlink.value = "";
+						addhide();
+						console.log("3")
+					} else {
+						// 다른거 클릭
+						div.classList.add("tree-div-selected");
+						selmenu.value = span.innerHTML;
+						inptname.value = span.innerHTML;
+						inptlink.value = span.getAttribute("data-link");
+						console.log("4")
+					}
+				}
+			}
+			if (div.classList.contains("depth2")) {
+				console.log(span.getAttribute("data-link"));
+				console.log(span);
+				removetds(depth2ul);
+				if (seldetail.value === span.innerHTML) {
+					// 이미 선택된 메뉴 클릭
+					seldetail.value = "";
+					inptname.value = "";
+					inptlink.value = "";
+					addhide();
+					console.log("5")
+				} else {
+					// 다른거 클릭
+					div.classList.add("tree-div-selected");
+					for (var j = 0; j < ctgrysample.length; j++) {
 						ctgrysample[j].classList.remove("hide");
 					}
+					console.log("asd");
+					seldetail.value = span.innerHTML;
+					inptname.value = span.innerHTML;
+					inptlink.value = span.getAttribute("data-link");
+					console.log("6")
 				}
-				document.getElementById("inptcategory_name").value=this.querySelector("div label span").innerHTML;
-				document.getElementById("inptcategory_link").value=this.querySelector("div label span").getAttribute("data-link");
-				this.classList.add("tree-div-selected")
 			}
 		}
-		document.getElementById("btn_addcategory").onclick=function(e){
-		    console.log(e);
+		document.querySelector("#tree").addEventListener("click", clicktree);
+		document.getElementById("btn_addcategory").onclick = function(e) {
+			console.log("add");
+			console.log("selmenu" + selmenu.value);
+			console.log("seldetail" + seldetail.value);
+			var span = document.createElement("span");
+			span.innerHTML = "새 메뉴";
+			var label = document.createElement("label");
+			label.append(span);
+			var div = document.createElement("div");
+			div.classList.add("drag-label");
+			div.classList.add("list");
+			console.log(li);
+			if (selmenu.value == "") {
+				//메뉴선택 안됨 메뉴 추가해야됨
+				div.classList.add("tree-has-child");
+				div.classList.add("depth1");
+				div.append(label);
+				var li = document.createElement("li");
+				li.append(div);
+				this.parentElement.parentElement.children[1].append(li);
+				console.log("메뉴선택 안됨 메뉴 추가해야됨")
+			} else {
+				// 메뉴 선택됨 세부 항목 추가하면됨
+				console.log("메뉴 선택됨 세부 항목 추가하면됨");
+				div.classList.add("tree-has-child");
+				div.classList.add("depth2");
+				div.append(label);
+				var li = document.createElement("li");
+				li.classList.add("tree-node");
+				li.append(div);
+				var ul = document.createElement("ul");
+				ul.classList.add("innerul")
+				ul.append(li);
+				document.querySelector(".tree-div-selected").parentElement
+						.append(ul);
+
+			}
 		}
-		document.getElementById("btn_delcategory").onclick=function(e){
-		    console.log("asd");
-		    console.log(e);
+		document.getElementById("btn_delcategory").onclick = function(e) {
+			document.querySelector(".tree-div-selected");
+			if (nonedellist.indexOf(seldetail.value) != -1
+					|| nonedellist.indexOf(selmenu.value) != -1) {
+				// 삭제 안되는거 선택
+				console.log("안되는거 선택");
+			} else if (seldetail.value == "" && setmenu.value == "") {
+				// 선택된게 없음
+				console.log("선택된거 없음");
+			} else {
+				// 삭제
+			}
+
+			console.log("del");
 		}
-	
 	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -464,7 +476,7 @@ label{
 	<script src="js/main.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/Tapcommon.js"></script>
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
 </html>
 

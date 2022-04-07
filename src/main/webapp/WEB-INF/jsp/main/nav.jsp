@@ -43,16 +43,16 @@
 						</a></li>
 						<li>
 							<a href="upendmenu.do"> 
-								<span>페이지 관리</span>
+								<span>관리자 페이지</span>
 							</a> 
 							<span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul class="ul_upendmenu">
 									<li>
-										<a href="upendmenu.do">상단 메뉴 관리</a>
+										<a href="upendmenu.do">메뉴 관리</a>
 									</li>
 									<li>
-										<a href="menudetail.do">상세 메뉴 관리</a>
+										<a href="menudetail.do">페이지 관리</a>
 									</li>
 								</ul>
 							</div>
