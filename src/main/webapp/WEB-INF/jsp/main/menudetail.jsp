@@ -54,7 +54,6 @@
 <link rel="stylesheet" href="css/jonghyeon_style.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
-<link rel="stylesheet" href="css/jonghyeon_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -89,8 +88,11 @@
 									<div class="header_cont marginLeft">
 										<nav class="gnb" id="Gnb">
 											<ul>
-												<li class="active"><a href=""> <span>Home</span>
-												</a></li>
+												<li class="active">
+													<a  onclick="switchtable('home1')" href="#">
+														<span>Home</span>
+													</a>
+												</li>
 												<li><a href="#"> <span>회사소개</span>
 												</a> <span class="depth1_arrow"></span>
 													<div class="depth_wrap2">
@@ -123,96 +125,102 @@
 
 								<!--주요연혁 -->
 								<div class="hide table" id="tblcmpnyhist">
-									<div class="search_box_wrap">
-										<div class="search_box_margin">
-
-											<input type="date"> ~ <input type="date">
-											<div class="search_box" id="search_box">
-												<div class="sel_box">
-													<select name="scolumn" id="scolumn">
-														<option value="">전체</option>
-														<option value="title">제목</option>
-														<option value="contents">내용</option>
-													</select>
-												</div>
-												<div class="ipt_box">
-													<input id="searchIpt" name="skeyword"
-														onKeyDown="onKeyDown();" value="" type="text"
-														placeholder="검색어를 입력하세요"> <label for="searchIpt"
-														id="search_btn">검색하기</label>
-												</div>
+									<div class="row">
+										<div class="col-md-2">
+											<div class="sel_box">
+												<select class="histselect form-select" name="scolumn" id="scolumn">
+													<option value="">전체기간</option>
+													<option value="2022">2022</option>
+													<option value="2021">2021</option>
+													<option value="2020">2020</option>
+													<option value="2019">2019</option>
+													<option value="2018">2018</option>
+												</select>
 											</div>
 										</div>
 									</div>
-									<table>
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: auto">
-											<col style="width: 520px">
-											<col style="width: 90px">
-										</colgroup>
-										<tbody>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>날짜 <input type="date" size="50" value="2021-10-01"></td>
-												<td>연혁 내용 <input type="text" size="50"
-													value="세종(4세대 ))"></td>
-												<td>순서<input type="number" value="1"
-													style="text-align: center; width:50px"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>날짜<input type="date" size="50" value="2020-01-01"></td>
-												<td>연혁 내용 <input type="text" size="50"
-													value="2018년 3월 13일"></td>
-												<td>순서<input type="number" value="2"
-													style="text-align: center; width:50px"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>날짜 <input type="date" size="50" value="2019-05-01"></td>
-												<td>연혁 내용 <input type="text" size="50" value="이영석"></td>
-												<td>순서<input type="number" value="3"
-													style="text-align: center; width:50px"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>날짜 <input type="date" size="50" value="2019-01-01"></td>
-												<td>연혁 내용 <input type="text" size="50"
-													value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-												<td>순서<input type="number" value="4"
-													style="text-align: center; width:50px"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>날짜 <input type="date" size="50" value="2018-01-02"></td>
-												<td>연혁 내용 <input type="text" size="50"
-													value="070-8772-1612"></td>
-												<td>순서<input type="number" value="5"
-													style="text-align: center; width:50px"></td>
-											</tr>
-
-										</tbody>
-									</table>
+									<div class="histTable">
+										<!-- Hoverable Table rows -->
+										<div class="card">
+											<div class="table-responsive text-nowrap">
+												<table class="table table-hover">
+													<colgroup>
+														<col style="width: 100px">
+														<col style="width: 150px">
+														<col style="width: 300px">
+													</colgroup>
+													<tbody class="table-border-bottom-0">
+														<tr>
+															<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
+															<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
+															<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
+														</tr>
+														<tr>
+															<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
+															<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
+															<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
+														</tr>
+														<tr>
+															<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
+															<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
+															<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!--/ Hoverable Table rows -->
+									</div>
 								</div>
+
 								<div class="hide table" id="tblorgcht">
-									<table>
+								<div class="row">
+										<div class="col-md-2">
+											<div class="orgcht-select">
+												<select class="histselect form-select " name="orgchtdeptcolumn" id="orgchtdeptcolumn">
+													<option value="">사업부서별</option>
+													<option value="세종나이스구축">세종 나이스 구축</option>
+													<option value="대구나이스정보공시">대구나이스 정보공시</option>
+													<option value="대구유지보수">대구 유지보수 </option>
+													<option value="대구본부">본부</option>
+												</select>
+												
+											</div>
+										</div>
+										<div class="col-md-1"></div>
+										<div class="col-md-2">
+											<select class="histselect form-select " name="orgchtclsfcolumn" id="orgchtclsfcolumn">
+												<option value="대표">대표</option>
+												<option value="부장">부장</option>
+												<option value="차장">차장</option>
+												<option value="과장">과장</option>
+												<option value="대리">대리</option>
+												<option value="사원">사원</option>
+											</select>
+										</div>
+										<div class = "col-md-2">
+										<label for="html5-text-input " class="col-form-label fontlabel">이름</label>
+											<input class="history-admin-input-text" name="orgchtnamecolumn" id="orgchtnamecolumn" type="text">
+										</div>
+										<div class="col-md-2">
+											<a href="#" id="btn_ok" class="btncommon btn_select">조회</a>
+										</div>
+									</div>
+									<div class="histTable">
+										<!-- Hoverable Table rows -->
+										<div class="card">
+											<div class="table-responsive text-nowrap">
+									<table class="table table-hover">
 										<colgroup>
 											<col style="width: 50px">
 											<col style="width: auto">
 										</colgroup>
-										<tr>
-											<th>&nbsp&nbsp&nbsp&nbsp</th>
-											<th>이름</th>
-											<th>직급</th>
-											<th>사업부서</th>
-										</tr>
 										<tbody>
-											<tr class="notice" onclick="orgchtmodal(event)">
+											<tr class="notice" >
 												<td class="num"><input type="checkbox"></td>
-												<td>이영석</td>
-												<td>대표</td>
-												<td>세종(4세대 나이스 구축사업)</td>
+												<td onclick="orgchtmodal(event)">이영석</td>
+												<td onclick="orgchtmodal(event)">대표</td>
+												<td onclick="orgchtmodal(event)">세종(4세대 나이스 구축사업)</td>
 											</tr>
 											<tr class="notice">
 												<td class="num"><input type="checkbox"></td>
@@ -239,9 +247,75 @@
 												<td>대구(2022 정보공시사업)</td>
 											</tr>
 										</tbody>
-									</table>
+										</table>
+											</div>
+										</div>
+										<!--/ Hoverable Table rows -->
+									</div>
 								</div>
-
+								
+								<div class="hide table" id="tblhome1">
+									<div class="slideshow-container" id="photoimage">
+										<div class="photorow g-5">
+										
+											<div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/img_bg_1.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4">
+															<div class="d-flex align-items-center">
+																<span>
+																	이미지 순서 <input type="text" size="5" value="1" style="text-align: center;">
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/img_bg_2.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4 homeImageRadio">
+															<div class="d-flex align-items-center">
+																<input type="radio" name="" value="">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-lg-4 col-md-6">
+												<div class="bg-light">
+													<img class="photoimg-fluid" src="images/img_bg_3.jpg" alt="">
+													<div class="p-4">
+														<div class="d-flex justify-content-between mb-4 homeImageRadio">
+															<div class="d-flex align-items-center">
+																<input class="homeImageRadio" type="radio" name="" value="">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-12">
+												<nav aria-label="Page navigation">
+													<ul class="pagination pagination-lg justify-content-center m-0">
+														<li class="page-item disabled"><a class="page-link rounded-0" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
+														</a></li>
+														<li class="page-item active"><a class="page-link" href="#">1</a></li>
+														<!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+														<li class="page-item"><a class="page-link" href="#">3</a></li>
+														 -->
+														<li class="page-item"><a class="page-link rounded-0" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
+														</a></li>
+													</ul>
+												</nav>
+											</div>
+										</div>
+									</div>
+								</div>
 
 								<div class="hide table" id="tblcmpnyinfo">
 									<table>
@@ -629,6 +703,8 @@
 			</div>
 		</div>
 	</div>
+	<input type="checkbox" >
+	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->

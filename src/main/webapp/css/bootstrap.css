@@ -1784,6 +1784,9 @@ input[type="radio"], input[type="checkbox"] {
 	margin-top: 1px \9;
 	line-height: normal;
 }
+input:checked[type="checkbox"]{
+	background-color:red;
+}
 
 input[type="file"] {
 	display: block;

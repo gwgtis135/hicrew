@@ -3,7 +3,7 @@
 /* content 부분  */
 #gtco-features, #gtco-features-2, #gtco-products, #gtco-subscribe,
 	#gtco-faq, .gtco-section {
-	padding: 5.02rem 0 0 0;
+	padding: 1.02rem 0 0 0;
 	clear: both;
 	position: relative;
 }
@@ -190,7 +190,7 @@ section.sub .sub_menu_lst li a {
 }
 .photoimg-fluid {
 	max-width: 100%;
-	height: auto
+	height: 200px
 }
 .photoimg{
 	max-width: 50%;
@@ -198,4 +198,308 @@ section.sub .sub_menu_lst li a {
 /* 관리자 페이지 tap 위치 css */
 .marginLeft{
 	margin-left: 95px;
+}
+
+.homeImageRadio{
+    text-align-last: center;
+}
+.homeadminpadding_top{
+	padding-top: 12px;
+}
+/* 연혁 select 태그 css */
+.histselect{
+    font-weight: 400;
+    color: #333333;
+    padding-left: 6%;
+    font-size: 2rem !important;
+	
+}
+
+.sel_box {
+    font-weight: 400;
+    color: #333333;
+    font-size: 1rem;
+}
+/* 관리자 페이지 검색창 css */
+.sel_box .nice-select {
+	font-family: "Noto Sans KR", sans-serif;
+	width: 92%;
+	height: 45px;
+	font-size: 1rem;
+	line-height: 45px;
+	font-weight: 400;
+	border-radius: 0;
+	position: relative;
+}
+
+/* 관리자 페이지 조직도 사업부서별 css */
+.orgcht-dept-select {
+	font-family: "Noto Sans KR", sans-serif;
+	width: 170%;
+	height: 45px;
+	font-size: 1rem;
+	line-height: 45px;
+	font-weight: 400;
+	border-radius: 0;
+	position: relative;	
+}
+.orgcht-dept-select {
+	font-family: "Noto Sans KR", sans-serif;
+	width: 170%;
+	height: 45px;
+	font-size: 1rem;
+	line-height: 45px;
+	font-weight: 400;
+	border-radius: 0;
+	position: relative;	
+}
+#orgchtdeptcolumn{
+    width: 230px;
+    height: 34px;
+    margin-top: 4px;
+}
+#orgchtclsfcolumn{
+    width: 109px;
+    height: 34px;
+    margin-top: 4px;
+}
+#orgchtnamecolumn{
+	margin-top: 4px;
+}
+.fontlabel{
+    font-weight: 500;
+    color: #697a8d;
+    font-size: 2rem;
+}
+
+/*.histTable td{
+	width: 120px;
+}*/
+.btn_select{
+    width: 121px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    border: 0;
+    color: #fff;
+    border-radius: 25px;
+    background: -webkit-gradient(linear, right top, left top, from(#ff512699), to(#ff5126));
+    background: -o-linear-gradient(right, #0071bd 0%, #178edd 100%);
+    background: linear-gradient(-90deg, #ff512699 0%, #ff6926f7 100%);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.btncommon{
+    display: inline-block;
+    min-width: 58px;
+    height: 37px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    padding: 7px 11px;
+    background-color: #fff;
+    color: #f5f5f5;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+/* 연혁 css */
+.table > :not(:first-child) {
+  border-top: 2px solid #d9dee3;
+}
+.table > tbody {
+    vertical-align: inherit;
+}
+thead, tbody, tfoot, tr, td, th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #697a8d;
+    --bs-table-striped-bg: #f9fafb;
+    --bs-table-active-color: #697a8d;
+    --bs-table-active-bg: rgba(67, 89, 113, 0.1);
+    --bs-table-hover-color: #697a8d;
+    --bs-table-hover-bg: rgba(67, 89, 113, 0.06);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #697a8d;
+    vertical-align: middle;
+    border-color: #d9dee3;
+}
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+
+/* select 박스 css*/
+.form-select {
+  background-clip: padding-box;
+}
+
+.form-select {
+  display: block;
+  width: 100%;
+  padding: 0.4375rem 1.875rem 0.4375rem 0.875rem;
+  -moz-padding-start: calc(0.875rem - 3px);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.53;
+  color: #697a8d;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%2867, 89, 113, 0.6%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 17px 12px;
+  border: 1px solid #d9dee3;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}.form-select:focus {
+  border-color: rgba(249, 249, 255, 0.54);
+  outline: 0;
+  box-shadow: 0 0 0.25rem 0.05rem rgba(105, 108, 255, 0.1);
+}
+.form-select[multiple], .form-select[size]:not([size="1"]) {
+  padding-right: 0.875rem;
+  background-image: none;
+}
+.form-select:disabled {
+  color: #697a8d;
+  background-color: #eceef1;
+}
+.form-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #697a8d;
+}
+
+.form-select-sm {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.625rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.form-select-lg {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* check 박스 css */
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  border-color: rgba(249, 249, 255, 0.54);
+  outline: 0;
+  box-shadow: 0 0 0.25rem 0.05rem rgba(105, 108, 255, 0.1);
+}
+.form-check-input:checked {
+  background-color: rgba(105, 108, 255, 0.08);
+  border-color: rgba(105, 108, 255, 0.08);
+}
+.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+.form-check-input[type=checkbox]:indeterminate {
+  background-color: rgba(105, 108, 255, 0.08);
+  border-color: rgba(105, 108, 255, 0.08);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10h8'/%3e%3c/svg%3e");
+}
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  opacity: 0.5;
+}
+
+.form-switch {
+  padding-left: 2.5em;
+}
+.form-switch .form-check-input {
+  width: 2em;
+  margin-left: -2.5em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%2867, 89, 113, 0.3%29'/%3e%3c/svg%3e");
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position 0.15s ease-in-out;
+}
+
+.form-check-input:checked{
+	background-color: #696cff;
+	border-color: #696cff;
+}
+.history-admin-input-checkbox {
+	box-shadow: none;
+	background: transparent;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	height: 80%;
+	width: 81%;
+	font-size: 16px;
+	font-weight: 300;
+    padding: 6px 21px;
+}
+.history-admin-input-text{
+	box-shadow: none;
+	background: transparent;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	height: 80%;
+	width: 65%;
+	font-size: 16px;
+	font-weight: 300;
+    padding: 6px 3px;
+}
+
+td.num{
+	text-align: -webkit-center;
+}
+
+
+
+
+/* 관리자 페이지 수정, 삭제, 버튼 css Hj_style.css에 있던 것 옮겼음 */
+.btn_type1 {
+	display: inline-block;
+	min-width: 56px;
+	height: 42px;
+	padding: 9px 12px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d3d3d3;
+	text-align: center;
+	vertical-align: top;
+	border-radius: 25px;
+    font-weight: 600;
+}
+.btn_type3 {
+	display: inline-block;
+	min-width: 56px;
+	height: 42px;
+	padding: 9px 12px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d3d3d3;
+	text-align: center;
+	vertical-align: top;
+	border-radius: 25px;
+    font-weight: 600;
 }
