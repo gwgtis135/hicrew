@@ -2,25 +2,25 @@
 /* 박종현*/
 /* content 부분  */
 #gtco-features, #gtco-features-2, #gtco-products, #gtco-subscribe,
-	#gtco-faq, .gtco-section {
-	padding: 1.02rem 0 0 0;
-	clear: both;
-	position: relative;
+   #gtco-faq, .gtco-section {
+   padding: 1.02rem 0 0 0;
+   clear: both;
+   position: relative;
 }
 
 section.sub .sub_menu_lst li a {
             margin: 0 auto;
-		    text-align: center;
-		    width: 70%;
-		    display: block;
-		    padding-top: 9px;
-		    padding-bottom: 7px;
-		    position: relative;
-		    overflow: hidden;
-		    border-bottom: 1px solid #dcdcdc;
-		    color: black;
-		    font-size: 18px;
-		    font-weight: 550;
+          text-align: center;
+          width: 70%;
+          display: block;
+          padding-top: 9px;
+          padding-bottom: 7px;
+          position: relative;
+          overflow: hidden;
+          border-bottom: 1px solid #dcdcdc;
+          color: black;
+          font-size: 18px;
+          font-weight: 550;
 }
 
 /* event.css에 있던 베너 css */
@@ -34,42 +34,42 @@ section.sub .sub_menu_lst li a {
 
 /* 하단 메뉴 */
 .header_cont .gnb .depth_wrap ul li a {
-	color: #808080;
-	font-size: 15px;
-	font-weight: 400;
-	
+   color: #808080;
+   font-size: 15px;
+   font-weight: 400;
+   
 }
 .ul_solut{
-	padding-left: 275px;
+   padding-left: 275px;
 }
 
 .ul_upendmenu{
-	padding-left: 835px; 
+   padding-left: 835px; 
 }
 /* 베너 밑 페이지 이름 언더라인 css */
 .gtco-heading h2:before {
-   	position: absolute;
+      position: absolute;
     bottom: 0;
     content: "";
     width: 145px;
     margin-left: -71px;
     height: 2px;
     left: 50%;
-    background: #FF5126;
+    background: #ff8040;
 }
 /* 상단메뉴 hover 시에 글씨 색깔 변경*/
 .header_cont .gnb>ul>li:hover a span{
-	color:#ff8040;
+   color:#ff8040;
 }
 /* 하단 메뉴 */
 .header_cont .gnb .depth_wrap ul li a {
-	color: #808080;
-	font-size: 15px;
-	font-weight: 400;
+   color: #808080;
+   font-size: 15px;
+   font-weight: 400;
 }
 /* 하단 메뉴 hover */
 .header_cont .gnb .depth_wrap ul li a:hover {
-	text-decoration: underline;
+   text-decoration: underline;
 }
 
 
@@ -155,64 +155,64 @@ section.sub .sub_menu_lst li a {
             display: inline-block;
             content: ""; }
   .paddingLeft{
-  	padding-left: 96px;
+     padding-left: 96px;
   }
 /* 포토스토리 이미지 게시판 css 부트스트랩*/
 .g-5, .gy-5 { -
-	-bs-gutter-y: 3rem
+   -bs-gutter-y: 3rem
 }
 .g-5, .gx-5 { -
-	-bs-gutter-x: 3rem
+   -bs-gutter-x: 3rem
 }
 .photorow { -
-	-bs-gutter-x: 1.5rem; -
-	-bs-gutter-y: 0;
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: calc(var(- -bs-gutter-y)* -1);
-	margin-right: calc(var(- -bs-gutter-x)/-2);
-	margin-left: calc(var(- -bs-gutter-x)/-2)
+   -bs-gutter-x: 1.5rem; -
+   -bs-gutter-y: 0;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: calc(var(- -bs-gutter-y)* -1);
+   margin-right: calc(var(- -bs-gutter-x)/-2);
+   margin-left: calc(var(- -bs-gutter-x)/-2)
 }
 .m-0 {
-	margin: 0 !important
+   margin: 0 !important
 }
 .justify-content-center {
-	justify-content: center !important
+   justify-content: center !important
 }
 .pagination {
-	display: flex;
-	padding-left: 0;
-	list-style: none
+   display: flex;
+   padding-left: 0;
+   list-style: none
 }
 .col-12 {
-	flex: 0 0 auto;
-	width: 100%
+   flex: 0 0 auto;
+   width: 100%
 }
 .photoimg-fluid {
-	max-width: 100%;
-	height: 200px
+   max-width: 100%;
+   height: 200px
 }
 .photoimg{
-	max-width: 50%;
+   max-width: 50%;
 }
 /* 관리자 페이지 tap 위치 css */
 .marginLeft{
-	margin-left: 95px;
+   margin-left: 95px;
 }
 
 .homeImageRadio{
     text-align-last: center;
 }
 .homeadminpadding_top{
-	padding-top: 12px;
+   padding-top: 12px;
 }
 /* 연혁 select 태그 css */
 .histselect{
     font-weight: 400;
     color: #333333;
     padding-left: 6%;
-    font-size: 2rem !important;
-	
+    font-size: 15px !important;
+   
 }
 
 .sel_box {
@@ -222,36 +222,36 @@ section.sub .sub_menu_lst li a {
 }
 /* 관리자 페이지 검색창 css */
 .sel_box .nice-select {
-	font-family: "Noto Sans KR", sans-serif;
-	width: 92%;
-	height: 45px;
-	font-size: 1rem;
-	line-height: 45px;
-	font-weight: 400;
-	border-radius: 0;
-	position: relative;
+   font-family: "Noto Sans KR", sans-serif;
+   width: 92%;
+   height: 45px;
+   font-size: 1rem;
+   line-height: 45px;
+   font-weight: 400;
+   border-radius: 0;
+   position: relative;
 }
 
 /* 관리자 페이지 조직도 사업부서별 css */
 .orgcht-dept-select {
-	font-family: "Noto Sans KR", sans-serif;
-	width: 170%;
-	height: 45px;
-	font-size: 1rem;
-	line-height: 45px;
-	font-weight: 400;
-	border-radius: 0;
-	position: relative;	
+   font-family: "Noto Sans KR", sans-serif;
+   width: 170%;
+   height: 45px;
+   font-size: 1rem;
+   line-height: 45px;
+   font-weight: 400;
+   border-radius: 0;
+   position: relative;   
 }
 .orgcht-dept-select {
-	font-family: "Noto Sans KR", sans-serif;
-	width: 170%;
-	height: 45px;
-	font-size: 1rem;
-	line-height: 45px;
-	font-weight: 400;
-	border-radius: 0;
-	position: relative;	
+   font-family: "Noto Sans KR", sans-serif;
+   width: 170%;
+   height: 45px;
+   font-size: 1rem;
+   line-height: 45px;
+   font-weight: 400;
+   border-radius: 0;
+   position: relative;   
 }
 #orgchtdeptcolumn{
     width: 230px;
@@ -264,7 +264,7 @@ section.sub .sub_menu_lst li a {
     margin-top: 4px;
 }
 #orgchtnamecolumn{
-	margin-top: 4px;
+   margin-top: 4px;
 }
 .fontlabel{
     font-weight: 500;
@@ -273,7 +273,7 @@ section.sub .sub_menu_lst li a {
 }
 
 /*.histTable td{
-	width: 120px;
+   width: 120px;
 }*/
 .btn_select{
     width: 121px;
@@ -445,32 +445,32 @@ table {
 }
 
 .form-check-input:checked{
-	background-color: #696cff;
-	border-color: #696cff;
+   background-color: #696cff;
+   border-color: #696cff;
 }
 .history-admin-input-checkbox {
-	box-shadow: none;
-	background: transparent;
-	border: 2px solid rgba(0, 0, 0, 0.1);
-	height: 80%;
-	width: 81%;
-	font-size: 16px;
-	font-weight: 300;
+   box-shadow: none;
+   background: transparent;
+   border: 2px solid rgba(0, 0, 0, 0.1);
+   height: 80%;
+   width: 81%;
+   font-size: 16px;
+   font-weight: 300;
     padding: 6px 21px;
 }
 .history-admin-input-text{
-	box-shadow: none;
-	background: transparent;
-	border: 2px solid rgba(0, 0, 0, 0.1);
-	height: 80%;
-	width: 65%;
-	font-size: 16px;
-	font-weight: 300;
+   box-shadow: none;
+   background: transparent;
+   border: 2px solid rgba(0, 0, 0, 0.1);
+   height: 80%;
+   width: 65%;
+   font-size: 16px;
+   font-weight: 300;
     padding: 6px 3px;
 }
 
 td.num{
-	text-align: -webkit-center;
+   text-align: -webkit-center;
 }
 
 
@@ -478,28 +478,259 @@ td.num{
 
 /* 관리자 페이지 수정, 삭제, 버튼 css Hj_style.css에 있던 것 옮겼음 */
 .btn_type1 {
-	display: inline-block;
-	min-width: 56px;
-	height: 42px;
-	padding: 9px 12px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-	vertical-align: top;
-	border-radius: 25px;
+   display: inline-block;
+   min-width: 56px;
+   height: 42px;
+   padding: 9px 12px;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   border: 1px solid #d3d3d3;
+   text-align: center;
+   vertical-align: top;
+   border-radius: 25px;
     font-weight: 600;
 }
 .btn_type3 {
-	display: inline-block;
-	min-width: 56px;
-	height: 42px;
-	padding: 9px 12px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-	vertical-align: top;
-	border-radius: 25px;
+   display: inline-block;
+   min-width: 56px;
+   height: 42px;
+   padding: 9px 12px;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   border: 1px solid #d3d3d3;
+   text-align: center;
+   vertical-align: top;
+   border-radius: 25px;
     font-weight: 600;
+}
+
+
+/* 포토스토리 card css */
+.g-4, .gx-4 { -
+   -bs-gutter-x: 1.5rem
+}
+
+.g-4, .gy-4 { -
+   -bs-gutter-y: 1.5rem
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+img, svg {
+   vertical-align: middle
+}
+.rounded {
+   border-radius: 2px !important
+}
+.shadow {
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important
+}
+.btn-imagedetail div:before{
+   content:"\f03e";
+   font-family:"FontAwesome";
+}
+.btn-imagefix div:before{
+   content:"\f013";
+   font-family:"FontAwesome";
+}
+.btn-imagesave div:before{
+   content:"\f0c7";
+   font-family:"FontAwesome";
+}
+.translate-middle {
+   /* transform: translate(-50%, 428%) !important; */
+}
+.photo-admin-row{
+    margin-left: -15px;
+    margin-right: 159px;
+}
+
+.photo-admin-card{
+    margin-top: 50px;
+}
+
+/* 포토스토리 카드 */
+.photo-admin-card-icon{
+   margin: 10px auto 0 auto !important;
+    font-size: 20px;
+    
+}
+.photo-admin-card-btn-primary {
+   color: #000;
+   background-color: #FEA116;
+   border-color: #FEA116
+}
+
+.photo-admin-btn {
+   display: inline-block;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #f1f8ff;
+   text-align: center;
+   vertical-align: middle;
+   cursor: pointer;
+   user-select: none;
+   background-color: #0f172ba3;
+   border: 1px solid transparent;
+   padding: .375rem .75rem;
+   font-size: 2rem;
+   border-radius: 15px;
+   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+}
+.photo-admin-i{
+   font-style:normal;
+}
+/* emphasis(강조) button*/
+.emphasisButton{
+   color: #FF5126;   
+}
+
+/* 연혁  css*/
+
+.main_color, .main_color div, .main_color header, .main_color main,
+   .main_color aside, .main_color footer, .main_color article, .main_color nav,
+   .main_color section, .main_color  span, .main_color  applet,
+   .main_color object, .main_color iframe, .main_color h1, .main_color h2,
+   .main_color h3, .main_color h4, .main_color h5, .main_color h6,
+   .main_color p, .main_color blockquote, .main_color pre, .main_color a,
+   .main_color abbr, .main_color acronym, .main_color address, .main_color big,
+   .main_color cite, .main_color code, .main_color del, .main_color dfn,
+   .main_color em, .main_color img, .main_color ins, .main_color kbd,
+   .main_color q, .main_color s, .main_color samp, .main_color small,
+   .main_color strike, .main_color strong, .main_color sub, .main_color sup,
+   .main_color tt, .main_color var, .main_color b, .main_color u,
+   .main_color i, .main_color center, .main_color dl, .main_color dt,
+   .main_color dd, .main_color ol, .main_color ul, .main_color li,
+   .main_color fieldset, .main_color form, .main_color label, .main_color legend,
+   .main_color table, .main_color caption, .main_color tbody, .main_color tfoot,
+   .main_color thead, .main_color tr, .main_color th, .main_color td,
+   .main_color article, .main_color aside, .main_color canvas, .main_color details,
+   .main_color embed, .main_color figure, .main_color fieldset,
+   .main_color figcaption, .main_color footer, .main_color header,
+   .main_color hgroup, .main_color menu, .main_color nav, .main_color output,
+   .main_color ruby, .main_color section, .main_color summary, .main_color time,
+   .main_color mark, .main_color audio, .main_color video, #top .main_color .pullquote_boxed,
+   .responsive #top .main_color .avia-testimonial, .responsive #top.avia-blank #main .main_color.container_wrap:first-child,
+   #top .main_color.fullsize .template-blog .post_delimiter, .main_color .related_posts.av-related-style-full a
+   {
+   border-color: #e1e1e1;
+}
+
+/*word break*/
+.container * {
+   /*word-break:keep-all;*/
+   word-wrap:break-word;
+}
+.togglecontainer{
+margin:30px 0;
+position: relative;
+clear: both;
+}
+/*all font*/
+/*h1, h2, h3, h4, h5, h6, div, span, ul, li, ol, table, tr, td, th, p, section {
+   letter-spacing:-0.05em; /*font-family:NanumGothic, 나눔고딕;*/
+}*/
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+   html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline; }
+      
+      
+.main_color .av-default-color, #top .main_color .av-force-default-color,
+   .main_color .av-catalogue-item, .main_color .wp-playlist-item .wp-playlist-caption,
+   .main_color .wp-playlist {
+   color: #55606e;
+}      
+article, aside, details, figcaption, figure, footer, header, hgroup,
+   main, menu, nav, section, summary {
+   display: block;
+}
+.togglecontainer .av_toggle_section div.single_toggle p.activeTitle {
+   background:#9cacbe;
+   color:#fff;
+}
+.togglecontainer .single_toggle:first-child .toggler, .togglecontainer .taglist + .single_toggle .toggler{
+border-top-left-radius:  2px;
+border-top-right-radius: 2px;
+}
+.js_active .toggler {
+cursor: pointer;
+display: block;
+margin:0;
+padding: 9px 3px 9px 35px;
+position: relative;
+top: 1px;
+border-style:solid;
+border-width:1px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.main_color, .main_color div, .main_color header, .main_color main, .main_color aside, .main_color footer, .main_color article, .main_color nav, .main_color section, .main_color span, .main_color applet, .main_color object, .main_color iframe, .main_color h1, .main_color h2, .main_color h3, .main_color h4, .main_color h5, .main_color h6, .main_color p, .main_color blockquote, .main_color pre, .main_color a, .main_color abbr, .main_color acronym, .main_color address, .main_color big, .main_color cite, .main_color code, .main_color del, .main_color dfn, .main_color em, .main_color img, .main_color ins, .main_color kbd, .main_color q, .main_color s, .main_color samp, .main_color small, .main_color strike, .main_color strong, .main_color sub, .main_color sup, .main_color tt, .main_color var, .main_color b, .main_color u, .main_color i, .main_color center, .main_color dl, .main_color dt, .main_color dd, .main_color ol, .main_color ul, .main_color li, .main_color fieldset, .main_color form, .main_color label, .main_color legend, .main_color table, .main_color caption, .main_color tbody, .main_color tfoot, .main_color thead, .main_color tr, .main_color th, .main_color td, .main_color article, .main_color aside, .main_color canvas, .main_color details, .main_color embed, .main_color figure, .main_color fieldset, .main_color figcaption, .main_color footer, .main_color header, .main_color hgroup, .main_color menu, .main_color nav, .main_color output, .main_color ruby, .main_color section, .main_color summary, .main_color time, .main_color mark, .main_color audio, .main_color video, #top .main_color .pullquote_boxed, .responsive #top .main_color .avia-testimonial, .responsive #top.avia-blank #main .main_color.container_wrap:first-child, #top .main_color.fullsize .template-blog .post_delimiter, .main_color .related_posts.av-related-style-full a {
+    border-color: #e1e1e1;
+}
+.container * {
+    /* word-break: keep-all; */
+    word-wrap: break-word;
+}
+/* + 드롭 css */
+.togglecontainer .av_toggle_section div.single_toggle p.activeTitle .toggle_icon:before { 
+    content: '\2d';
+    font-family: 'FontAwesome';
+    top: -20px !important;
+    margin-top: -5px !important;
+    display: block;
+}
+.togglecontainer .av_toggle_section div.single_toggle .toggle_icon:before {
+    content: '\2b';
+    font-family: 'FontAwesome';
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: -5px !important;
+    display: block;
+}
+.icon-plus3:before {
+    content: '\f068';
+    font-family: 'FontAwesome';
+}
+
+.toggle_icon .hor_icon {
+    border-top-style: solid;
+    border-top-width: 3px;
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    width: 11px;
+}
+
+.togglecontainer .av_toggle_section div.single_toggle p.activeTitle {
+    background: #9cacbe;
+    color: #fcfcfc;
+}
+
+p.toggler {
+    font-size: 13.5pt;
+}
+
+
+/* custom.css 연혁 스타일 */
+.togglecontainer .av_toggle_section div.single_toggle p:hover {
+ 	background:#ff8040; 
+	color:#fff;
+}
+
+.togglecontainer .av_toggle_section div.single_toggle p.activeTitle {
+	background:#ff8040;
+	color:#fff;
 }

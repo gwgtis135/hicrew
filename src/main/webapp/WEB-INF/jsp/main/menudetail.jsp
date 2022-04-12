@@ -58,6 +58,9 @@
 <link rel="stylesheet" href="css/jonghyeon_style.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
+<link rel="stylesheet" href="css/bootstrapcard.min.css">
+<!-- fontawesome  -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -83,7 +86,7 @@
 				</div>
 				
 				 -->
-				<div class="row">
+				<div class="row photo-admin-row">
 					<div class="row">
 
 						<div class="row" style="margin-left: 100px; margin-right: 100px;">
@@ -482,54 +485,184 @@
 									</table>
 								</div>
 								<div class="hide table" id="tblphoto">
-									<!-- 
-									<a id="a_remove" href="#" class="btn_type2 _rosRestrict"
-										onclick="imgswitch('phototable')">게시판</a> <a id="a_remove"
-										href="#" class="btn_type2 _rosRestrict"
-										onclick="imgswitch('photoimage')">이미지</a>
-										 -->
-									<table id="phototable">
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: 250px">
-											<col style="width: 250px">
-											<col style="width: 250px">
-											<col style="width: 250px">
-										</colgroup>
-										<tbody>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="1"
-													style="text-align: center;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story2_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="2"
-													style="text-align: center;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story3_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="3"
-													style="text-align: center;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story4_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="4"
-													style="text-align: center;"></td>
-											</tr>
-										</tbody>
+									<div class="row g-4 photo-admin-card">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                            	<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+                                <div class="translate-middle d-flex align-items-center">
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+                                    	<div class="fa-duotone"></div>
+                                    </a>
+                                    <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+                                    	<div></div>
+                                    </a>
+                                </div>
+                                <!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 									</table>
 									<!-- 
 									<div class="slideshow-container hide2" id="photoimage">
@@ -560,8 +693,8 @@
 								<div class="pagenation" id="pageControlMgmt"></div>
 								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a>
 								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">삭제</a>
-								<a id="a_remove" href="#" class="btn_type3 _rosRestrict">미리보기</a>
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict emphasisButton">삭제</a>
+								<a id="a_remove" href="#" class="btn_type3 _rosRestrict emphasisButton">미리보기</a>
 							</div>
 						</div>
 					</div>
