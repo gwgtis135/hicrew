@@ -11,4 +11,18 @@ CKEDITOR.editorConfig = function( config ) {
 	// endter / shiftEnter Mode
 	//config.enterMode = CKEDITOR.ENTER_BR;
 	//config.shiftEnterMode = CKEDITOR.ENTER_P;
+	config.autoGrow_minHeight=300;
+	config.autoGrow_maxHeight=300;
+	
+	config.toolbar = [
+        ['Font', 'FontSize'],
+        ['BGColor', 'TextColor' ],
+        ['Bold', 'Italic', 'Strike', 'Superscript', 'Subscript', 'Underline', 'RemoveFormat'],   
+        ['BidiLtr', 'BidiRtl'],
+        ['SpecialChar', 'Smiley'],
+        ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+        ['Blockquote', 'NumberedList', 'BulletedList'],
+        ['Link', 'Unlink'],
+        ['Undo', 'Redo']
+	];
 };

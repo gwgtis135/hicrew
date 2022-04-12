@@ -490,6 +490,19 @@ td.num{
    border-radius: 25px;
     font-weight: 600;
 }
+.btn_type2 {
+	display: inline-block;
+	min-width: 56px;
+	height: 42px;
+	padding: 9px 12px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d3d3d3;
+	text-align: center;
+	vertical-align: top;
+	border-radius: 25px;
+    font-weight: 600;
+}
 .btn_type3 {
    display: inline-block;
    min-width: 56px;
