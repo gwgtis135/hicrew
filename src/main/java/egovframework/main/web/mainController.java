@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
@@ -128,7 +129,7 @@ public class mainController {
 	public String menudeatil() {
 		return "main/menudetail";
 	}
-	
+		
 	@RequestMapping("loadNav.do")
 	public String loadnav(Model model,HttpServletRequest req) {
 		LCALSVO vo = new LCALSVO();

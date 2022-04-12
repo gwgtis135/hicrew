@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="ckeditor" uri="http://ckeditor.com" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <!--
@@ -64,18 +63,20 @@
 	<![endif]-->
 </head>
 <body>
+	<input type="hidden" id="selectedmenu">
+	<input type="hidden" id="selecteddetail">
 	<div class="gtco-loader"></div>
 	<jsp:include page="nav.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
-		<jsp:include page="adminTap.jsp">
-			<jsp:param name="#" value="#" />
-		</jsp:include>
+	<jsp:include page="adminTap.jsp">
+		<jsp:param name="#" value="#" />
+	</jsp:include>
 	<div class="gtco-section-overflow">
 
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
-			<!-- 
+				<!-- 
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>상세 메뉴 관리</h2>
@@ -85,453 +86,457 @@
 				 -->
 				<div class="row">
 					<div class="row">
+						<div class="tbl board">
 
-						<div class="row" style="margin-left: 100px; margin-right: 100px;">
-							<div class="tbl_top">
-								<div class="inner">
-									<div class="header_cont marginLeft">
-										<nav class="gnb" id="Gnb">
-											<ul>
-												<li class="active">
-													<a  onclick="switchtable('home1')" href="#">
-														<span>Home</span>
-													</a>
-												</li>
-												<li><a href="#"> <span>회사소개</span>
-												</a> <span class="depth1_arrow"></span>
-													<div class="depth_wrap2">
-														<ul>
-															<li><a onclick="switchtable('cmpnyinfo')">회사개요</a></li>
-															<li><a onclick="switchtable('ciintrcn')">CI소개</a></li>
-															<li><a onclick="switchtable('cmpnyhist')">주요 연혁</a></li>
-															<li><a onclick="switchtable('orgcht')">조직도</a></li>
-															<li><a onclick="switchtable('cmpnyinfo')">오시는길</a></li>
-															<li><a onclick="switchtable('photo')">포토스토리</a></li>
-														</ul>
-													</div></li>
-												<li><a href="#"> <span>주요사업</span>
-												</a> <span class="depth1_arrow"></span>
-													<div class="depth_wrap2">
-														<ul>
-															<li><a onclick="switchtable('itsolut')">PDF솔루션</a></li>
-															<li><a href="">IT솔루션</a></li>
-														</ul>
-													</div></li>
-											</ul>
-										</nav>
-
-									</div>
-								</div>
-							</div>
-							<textarea id="intrcnment" name="nttCn" class="" rows="5" cols="118" style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
-							<ckeditor:replace replace="nttCn" basePath="${pageContext.request.contextPath}/html/egovframework/com/cmm/utl/ckeditor/" />
-							<div class="tbl board">
-
-								<!--주요연혁 -->
-								<div class="hide table" id="tblcmpnyhist">
-									<div class="row">
-										<div class="col-md-2">
-											<div class="sel_box">
-												<select class="histselect form-select" name="scolumn" id="scolumn">
-													<option value="">전체기간</option>
-													<option value="2022">2022</option>
-													<option value="2021">2021</option>
-													<option value="2020">2020</option>
-													<option value="2019">2019</option>
-													<option value="2018">2018</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="histTable">
-										<!-- Hoverable Table rows -->
-										<div class="card">
-											<div class="table-responsive text-nowrap">
-												<table class="table table-hover">
-													<colgroup>
-														<col style="width: 100px">
-														<col style="width: 150px">
-														<col style="width: 300px">
-													</colgroup>
-													<tbody class="table-border-bottom-0">
-														<tr>
-															<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-															<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
-															<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
-														</tr>
-														<tr>
-															<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-															<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
-															<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
-														</tr>
-														<tr>
-															<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-															<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
-															<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-										<!--/ Hoverable Table rows -->
-									</div>
-								</div>
-
-								<div class="hide table" id="tblorgcht">
-								<div class="row">
-										<div class="col-md-2">
-											<div class="orgcht-select">
-												<select class="histselect form-select " name="orgchtdeptcolumn" id="orgchtdeptcolumn">
-													<option value="">사업부서별</option>
-													<option value="세종나이스구축">세종 나이스 구축</option>
-													<option value="대구나이스정보공시">대구나이스 정보공시</option>
-													<option value="대구유지보수">대구 유지보수 </option>
-													<option value="대구본부">본부</option>
-												</select>
-												
-											</div>
-										</div>
-										<div class="col-md-1"></div>
-										<div class="col-md-2">
-											<select class="histselect form-select " name="orgchtclsfcolumn" id="orgchtclsfcolumn">
-												<option value="대표">대표</option>
-												<option value="부장">부장</option>
-												<option value="차장">차장</option>
-												<option value="과장">과장</option>
-												<option value="대리">대리</option>
-												<option value="사원">사원</option>
-											</select>
-										</div>
-										<div class = "col-md-2">
-										<label for="html5-text-input " class="col-form-label fontlabel">이름</label>
-											<input class="history-admin-input-text" name="orgchtnamecolumn" id="orgchtnamecolumn" type="text">
-										</div>
-										<div class="col-md-2">
-											<a href="#" id="btn_ok" class="btncommon btn_select">조회</a>
-										</div>
-									</div>
-									<div class="histTable">
-										<!-- Hoverable Table rows -->
-										<div class="card">
-											<div class="table-responsive text-nowrap">
-									<table class="table table-hover">
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: auto">
-										</colgroup>
-										<tbody>
-											<tr class="notice" >
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="orgchtmodal(event)">이영석</td>
-												<td onclick="orgchtmodal(event)">대표</td>
-												<td onclick="orgchtmodal(event)">세종(4세대 나이스 구축사업)</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>이장수</td>
-												<td>부장</td>
-												<td>대구(2022 나이스 유지보수)</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>김동업</td>
-												<td>차장</td>
-												<td>세종(4세대 나이스 구축사업)</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>이상현</td>
-												<td>차장</td>
-												<td>세종(4세대 나이스 구축사업)</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>이호진</td>
-												<td>과장</td>
-												<td>대구(2022 정보공시사업)</td>
-											</tr>
-										</tbody>
-										</table>
-											</div>
-										</div>
-										<!--/ Hoverable Table rows -->
-									</div>
-								</div>
-								
-								<div class="hide table" id="tblhome1">
-									<div class="slideshow-container" id="photoimage">
-										<div class="photorow g-5">
-										
-											<div class="col-lg-4 col-md-6">
-												<div class="bg-light">
-													<img class="photoimg-fluid" src="images/img_bg_1.jpg" alt="">
-													<div class="p-4">
-														<div class="d-flex justify-content-between mb-4">
-															<div class="d-flex align-items-center">
-																<span>
-																	이미지 순서 <input type="text" size="5" value="1" style="text-align: center;">
-																</span>
-															</div>
-														</div>
+							<table>
+								<colgroup>
+									<col style="width: 220px">
+									<col style="width: auto">
+								</colgroup>
+								<tr>
+									<jsp:include page="lefttd.jsp">
+										<jsp:param name="#" value="#" />
+									</jsp:include>
+									<td class="n_admin">
+										<!--주요연혁 -->
+										<div class="hide table" id="tblch">
+											<div class="row">
+												<div class="col-md-2">
+													<div class="sel_box">
+														<select class="histselect form-select" name="scolumn"
+															id="scolumn">
+															<option value="">전체기간</option>
+															<option value="2022">2022</option>
+															<option value="2021">2021</option>
+															<option value="2020">2020</option>
+															<option value="2019">2019</option>
+															<option value="2018">2018</option>
+														</select>
 													</div>
 												</div>
 											</div>
-											
-											<div class="col-lg-4 col-md-6">
-												<div class="bg-light">
-													<img class="photoimg-fluid" src="images/img_bg_2.jpg" alt="">
-													<div class="p-4">
-														<div class="d-flex justify-content-between mb-4 homeImageRadio">
-															<div class="d-flex align-items-center">
-																<input type="radio" name="" value="">
+											<div class="histTable">
+												<!-- Hoverable Table rows -->
+												<div class="card">
+													<div class="table-responsive text-nowrap">
+														<table class="table-hover">
+															<colgroup>
+																<col style="width: 100px">
+																<col style="width: 150px">
+																<col style="width: 300px">
+															</colgroup>
+															<tbody class="table-border-bottom-0">
+																<tr>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox" value="" id="defaultCheck3" checked /></td>
+																	<td><input class="history-admin-input-checkbox"
+																		type="date" value="2020-01-01"></td>
+																	<td><input class="history-admin-input-text"
+																		type="text" value="세종(4세대 ))"></td>
+																</tr>
+																<tr>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox" value="" id="defaultCheck3" checked /></td>
+																	<td><input class="history-admin-input-checkbox"
+																		type="date" value="2020-01-01"></td>
+																	<td><input class="history-admin-input-text"
+																		type="text" value="세종(4세대 ))"></td>
+																</tr>
+																<tr>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox" value="" id="defaultCheck3" checked /></td>
+																	<td><input class="history-admin-input-checkbox"
+																		type="date" value="2020-01-01"></td>
+																	<td><input class="history-admin-input-text"
+																		type="text" value="세종(4세대 ))"></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!--/ Hoverable Table rows -->
+											</div>
+										</div>
+
+										<div class="hide table" id="tblorgcht">
+											<div class="row">
+												<div class="col-md-2">
+													<div class="orgcht-select">
+														<select class="histselect form-select "
+															name="orgchtdeptcolumn" id="orgchtdeptcolumn">
+															<option value="">사업부서별</option>
+															<option value="세종나이스구축">세종 나이스 구축</option>
+															<option value="대구나이스정보공시">대구나이스 정보공시</option>
+															<option value="대구유지보수">대구 유지보수</option>
+															<option value="대구본부">본부</option>
+														</select>
+
+													</div>
+												</div>
+												<div class="col-md-1"></div>
+												<div class="col-md-2">
+													<select class="histselect form-select "
+														name="orgchtclsfcolumn" id="orgchtclsfcolumn">
+														<option value="대표">대표</option>
+														<option value="부장">부장</option>
+														<option value="차장">차장</option>
+														<option value="과장">과장</option>
+														<option value="대리">대리</option>
+														<option value="사원">사원</option>
+													</select>
+												</div>
+												<div class="col-md-2">
+													<label for="html5-text-input "
+														class="col-form-label fontlabel">이름</label> <input
+														class="history-admin-input-text" name="orgchtnamecolumn"
+														id="orgchtnamecolumn" type="text">
+												</div>
+												<div class="col-md-2">
+													<a href="#" id="btn_ok" class="btncommon btn_select">조회</a>
+												</div>
+											</div>
+											<div class="histTable">
+												<!-- Hoverable Table rows -->
+												<div class="card">
+													<div class="table-responsive text-nowrap">
+														<table class="table-hover">
+															<colgroup>
+																<col style="width: 50px">
+																<col style="width: auto">
+															</colgroup>
+															<tbody>
+																<tr class="notice">
+																	<td class="num"><input type="checkbox"></td>
+																	<td onclick="orgchtmodal(event)">이영석</td>
+																	<td onclick="orgchtmodal(event)">대표</td>
+																	<td onclick="orgchtmodal(event)">세종(4세대 나이스 구축사업)</td>
+																</tr>
+																<tr class="notice">
+																	<td class="num"><input type="checkbox"></td>
+																	<td>이장수</td>
+																	<td>부장</td>
+																	<td>대구(2022 나이스 유지보수)</td>
+																</tr>
+																<tr class="notice">
+																	<td class="num"><input type="checkbox"></td>
+																	<td>김동업</td>
+																	<td>차장</td>
+																	<td>세종(4세대 나이스 구축사업)</td>
+																</tr>
+																<tr class="notice">
+																	<td class="num"><input type="checkbox"></td>
+																	<td>이상현</td>
+																	<td>차장</td>
+																	<td>세종(4세대 나이스 구축사업)</td>
+																</tr>
+																<tr class="notice">
+																	<td class="num"><input type="checkbox"></td>
+																	<td>이호진</td>
+																	<td>과장</td>
+																	<td>대구(2022 정보공시사업)</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!--/ Hoverable Table rows -->
+											</div>
+										</div>
+
+										<div class="hide table" id="tblhome1">
+											<div class="slideshow-container" id="photoimage">
+												<div class="photorow g-5">
+
+													<div class="col-lg-4 col-md-6">
+														<div class="bg-light">
+															<img class="photoimg-fluid" src="images/img_bg_1.jpg"
+																alt="">
+															<div class="p-4">
+																<div class="d-flex justify-content-between mb-4">
+																	<div class="d-flex align-items-center">
+																		<span> 이미지 순서 <input type="text" size="5"
+																			value="1" style="text-align: center;">
+																		</span>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-											</div>
-											
-											<div class="col-lg-4 col-md-6">
-												<div class="bg-light">
-													<img class="photoimg-fluid" src="images/img_bg_3.jpg" alt="">
-													<div class="p-4">
-														<div class="d-flex justify-content-between mb-4 homeImageRadio">
-															<div class="d-flex align-items-center">
-																<input class="homeImageRadio" type="radio" name="" value="">
+
+													<div class="col-lg-4 col-md-6">
+														<div class="bg-light">
+															<img class="photoimg-fluid" src="images/img_bg_2.jpg"
+																alt="">
+															<div class="p-4">
+																<div
+																	class="d-flex justify-content-between mb-4 homeImageRadio">
+																	<div class="d-flex align-items-center">
+																		<input type="radio" name="" value="">
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-											</div>
-											
-											<div class="col-12">
-												<nav aria-label="Page navigation">
-													<ul class="pagination pagination-lg justify-content-center m-0">
-														<li class="page-item disabled"><a class="page-link rounded-0" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
-														</a></li>
-														<li class="page-item active"><a class="page-link" href="#">1</a></li>
-														<!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+													<div class="col-lg-4 col-md-6">
+														<div class="bg-light">
+															<img class="photoimg-fluid" src="images/img_bg_3.jpg"
+																alt="">
+															<div class="p-4">
+																<div
+																	class="d-flex justify-content-between mb-4 homeImageRadio">
+																	<div class="d-flex align-items-center">
+																		<input class="homeImageRadio" type="radio" name=""
+																			value="">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-12">
+														<nav aria-label="Page navigation">
+															<ul
+																class="pagination pagination-lg justify-content-center m-0">
+																<li class="page-item disabled"><a
+																	class="page-link rounded-0" href="#"
+																	aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+																		<span class="sr-only">Previous</span>
+																</a></li>
+																<li class="page-item active"><a class="page-link"
+																	href="#">1</a></li>
+																<!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
 														<li class="page-item"><a class="page-link" href="#">3</a></li>
 														 -->
-														<li class="page-item"><a class="page-link rounded-0" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
-														</a></li>
-													</ul>
-												</nav>
+																<li class="page-item"><a
+																	class="page-link rounded-0" href="#" aria-label="Next">
+																		<span aria-hidden="true">&raquo;</span> <span
+																		class="sr-only">Next</span>
+																</a></li>
+															</ul>
+														</nav>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
 
-								<div class="hide table" id="tblcmpnyinfo">
-									<table>
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: auto">
-											<col style="width: 520px">
-											<col style="width: 90px">
-										</colgroup>
-										<tbody>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="(주)하이크루"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="High-Technology CREW System"></td>
-												<td>순서<input type="number" value="1"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="설립일"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="2018년 3월 13일"></td>
-												<td>순서<input type="number" value="2"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="대표이사"></td>
-												<td>항목 내용 <input type="text" size="50" value="이영석"></td>
-												<td>순서<input type="number" value="3"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="본사주소"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-												<td>순서<input type="number" value="4"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="전화번호"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="070-8772-1612"></td>
-												<td>순서<input type="number" value="5"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="사업분야"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="System Integration(시스템 통합구축)"></td>
-												<td>순서<input type="number" value="6"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="hide table" id="tblciintrcn">
-									<table>
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: auto">
-											<col style="width: 520px">
-											<col style="width: 90px">
-										</colgroup>
-										<tbody>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="(주)하이크루"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="High-Technology CREW System"></td>
-												<td>순서<input type="number" value="1"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="설립일"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="2018년 3월 13일"></td>
-												<td>순서<input type="number" value="2"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="대표이사"></td>
-												<td>항목 내용 <input type="text" size="50" value="이영석"></td>
-												<td>순서<input type="number" value="3"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="본사주소"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-												<td>순서<input type="number" value="4"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="전화번호"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="070-8772-1612"></td>
-												<td>순서<input type="number" value="5"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>항목 이름 <input type="text" size="20" value="사업분야"></td>
-												<td>항목 내용 <input type="text" size="50"
-													value="System Integration(시스템 통합구축)"></td>
-												<td>순서<input type="number" value="6"
-													style="text-align: center; width: 50px;"></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="hide table" id="tblitsolut">
-									<table>
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: auto">
-										</colgroup>
-										<tbody>
-											<tr class="notice" onclick="solutmodalopen()">
-												<td class="num"><input type="checkbox"></td>
-												<td class="thumnail" data-imgName="neis.jpg">학생 수강 신청</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>U-Sync</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>WithLearn</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>넥사크로 플랫폼 14</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>엑스플랫폼 9.2</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>마이 플랫폼</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>넥스업</td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td>넥사크로플랫폼 17</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="hide table" id="tblphoto">
-									<!-- 
+										<div class="hide table" id="tblcmpnyinfo">
+											<table>
+												<colgroup>
+													<col style="width: 50px">
+													<col style="width: auto">
+													<col style="width: 520px">
+													<col style="width: 90px">
+												</colgroup>
+												<tbody>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20"
+															value="(주)하이크루"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="High-Technology CREW System"></td>
+														<td>순서<input type="number" value="1"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="설립일"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="2018년 3월 13일"></td>
+														<td>순서<input type="number" value="2"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="대표이사"></td>
+														<td>항목 내용 <input type="text" size="50" value="이영석"></td>
+														<td>순서<input type="number" value="3"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="본사주소"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
+														<td>순서<input type="number" value="4"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="전화번호"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="070-8772-1612"></td>
+														<td>순서<input type="number" value="5"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="사업분야"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="System Integration(시스템 통합구축)"></td>
+														<td>순서<input type="number" value="6"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="hide table" id="tblCIintrcn">
+											<table>
+												<colgroup>
+													<col style="width: 50px">
+													<col style="width: auto">
+													<col style="width: 520px">
+													<col style="width: 90px">
+												</colgroup>
+												<tbody>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20"
+															value="(주)하이크루"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="High-Technology CREW System"></td>
+														<td>순서<input type="number" value="1"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="설립일"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="2018년 3월 13일"></td>
+														<td>순서<input type="number" value="2"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="대표이사"></td>
+														<td>항목 내용 <input type="text" size="50" value="이영석"></td>
+														<td>순서<input type="number" value="3"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="본사주소"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
+														<td>순서<input type="number" value="4"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="전화번호"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="070-8772-1612"></td>
+														<td>순서<input type="number" value="5"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>항목 이름 <input type="text" size="20" value="사업분야"></td>
+														<td>항목 내용 <input type="text" size="50"
+															value="System Integration(시스템 통합구축)"></td>
+														<td>순서<input type="number" value="6"
+															style="text-align: center; width: 50px;"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="hide table" id="tblitsolut">
+											<table>
+												<colgroup>
+													<col style="width: 50px">
+													<col style="width: auto">
+												</colgroup>
+												<tbody>
+													<tr class="notice" onclick="solutmodalopen()">
+														<td class="num"><input type="checkbox"></td>
+														<td class="thumnail" data-imgName="neis.jpg">학생 수강 신청</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>U-Sync</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>WithLearn</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>넥사크로 플랫폼 14</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>엑스플랫폼 9.2</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>마이 플랫폼</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>넥스업</td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td>넥사크로플랫폼 17</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="hide table" id="tblphoto">
+											<!-- 
 									<a id="a_remove" href="#" class="btn_type2 _rosRestrict"
 										onclick="imgswitch('phototable')">게시판</a> <a id="a_remove"
 										href="#" class="btn_type2 _rosRestrict"
 										onclick="imgswitch('photoimage')">이미지</a>
 										 -->
-									<table id="phototable">
-										<colgroup>
-											<col style="width: 50px">
-											<col style="width: 250px">
-											<col style="width: 250px">
-											<col style="width: 250px">
-											<col style="width: 250px">
-										</colgroup>
-										<tbody>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="1"
-													style="text-align: center;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story2_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="2"
-													style="text-align: center;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story3_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="3"
-													style="text-align: center;"></td>
-											</tr>
-											<tr class="notice">
-												<td class="num"><input type="checkbox"></td>
-												<td onclick="photomodalopen()">거제, 바람의 언덕</td>
-												<td><img class="photoimg" onclick="photomodalopen()" src="images/Crews/story4_1.jpg" alt="거제, 바람의언덕"></td>
-												<td><input type = "file"></td>
-												<td>이미지 순서 <input type="text" size="5" value="4"
-													style="text-align: center;"></td>
-											</tr>
-										</tbody>
-									</table>
-									<!-- 
+											<table id="phototable">
+												<colgroup>
+													<col style="width: 50px">
+													<col style="width: 250px">
+													<col style="width: 250px">
+													<col style="width: 250px">
+													<col style="width: 250px">
+												</colgroup>
+												<tbody>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+														<td><img class="photoimg" onclick="photomodalopen()"
+															src="images/Crews/story1_1.jpg" alt="거제, 바람의언덕"></td>
+														<td><input type="file"></td>
+														<td>이미지 순서 <input type="text" size="5" value="1"
+															style="text-align: center;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+														<td><img class="photoimg" onclick="photomodalopen()"
+															src="images/Crews/story2_1.jpg" alt="거제, 바람의언덕"></td>
+														<td><input type="file"></td>
+														<td>이미지 순서 <input type="text" size="5" value="2"
+															style="text-align: center;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+														<td><img class="photoimg" onclick="photomodalopen()"
+															src="images/Crews/story3_1.jpg" alt="거제, 바람의언덕"></td>
+														<td><input type="file"></td>
+														<td>이미지 순서 <input type="text" size="5" value="3"
+															style="text-align: center;"></td>
+													</tr>
+													<tr class="notice">
+														<td class="num"><input type="checkbox"></td>
+														<td onclick="photomodalopen()">거제, 바람의 언덕</td>
+														<td><img class="photoimg" onclick="photomodalopen()"
+															src="images/Crews/story4_1.jpg" alt="거제, 바람의언덕"></td>
+														<td><input type="file"></td>
+														<td>이미지 순서 <input type="text" size="5" value="4"
+															style="text-align: center;"></td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- 
 									<div class="slideshow-container hide2" id="photoimage">
 										<div class="mySlides fade2">
 											<img class="main_slideImg" src="images/Crews/story1_1.jpg"
@@ -555,7 +560,11 @@
 									</div>
 								</div>
 								 -->
-							</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
 								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a>
@@ -707,8 +716,8 @@
 			</div>
 		</div>
 	</div>
-	<input type="checkbox" >
-	
+	<input type="checkbox">
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -729,13 +738,19 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script src="js/jquery.nice-select.js"></script>
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/Tapcommon.js"></script>
-	<!--  ck 에디터 적용 -->
-	<script type="text/javascript" src="<c:url value='/html/egovframework/com/cmm/utl/ckeditor/ckeditor.js'/>"></script>
 	<script>
+	var selmenu = document.querySelector("#selectedmenu");
+	var seldetail = document.querySelector("#selecteddetail");
+
+	function removetds(target) {
+		for (var i = 0; i < target.length; i++) {
+			target[i].classList.remove("tree-div-selected");
+		}
+	}
 		function solutmodalopen(){
 			console.log("solutmodalopen!");
 			const modal = document.getElementById("solutmodal");
@@ -783,17 +798,89 @@
 			    }
 			})
 		}
+		
 		function switchtable(value){
 			var tatbl = "tbl"+value;
 			console.log(tatbl);
-			var tbllist = document.querySelectorAll(".board > .table");
-			for(tbl of tbllist){
-				tbl.classList.add("hide")
-			}
-			document.getElementById(tatbl).classList.toggle("hide");
+			document.getElementById(tatbl).classList.remove("hide");
 			document.getElementById("intrcnment").value=value;
 			console.log(tatbl);
 		}
+		
+		var tables = document.querySelectorAll(".table");
+		
+		function allhide() {
+				console.log(tables);
+			for(var i=0;i<tables.length;i++){
+				console.log(tables[i]);
+				tables[i].classList.add("hide");
+			}
+		}
+
+		function clicktree(event) {
+			var span = event.target.querySelector("span") ? event.target
+					.querySelector("span") : event.target;
+			var div = span.closest("div");
+			var depth1ul = document.getElementsByClassName("depth1");
+			var depth2ul = document.getElementsByClassName("depth2");
+			allhide();
+			if (div.classList.contains("depth1")) {
+				// 첫번째 뎁스
+				seldetail.value = "";
+				var ul = div.parentElement.querySelector("ul");
+				console.log(ul);
+				removetds(depth1ul);
+				removetds(depth2ul);
+				var inneruls = document.getElementsByClassName("innerul");
+				for (var i = 0; i < inneruls.length; i++) {
+					// 첫뎁스 하위 ul 태그 가리기
+					inneruls[i].classList.add("hide");
+				}
+				if (ul != null) {
+					if (selmenu.value === span.innerText) {
+						// 이미 선택된 메뉴 클릭
+						selmenu.value = "";
+						console.log("1")
+					} else {
+						// 다른거 클릭
+						div.classList.add("tree-div-selected");
+						ul.classList.remove("hide");
+						selmenu.value = span.innerText;
+						console.log("2")
+					}
+				} else {
+					if (selmenu.value === span.innerText) {
+						// 이미 선택된 메뉴 클릭
+						selmenu.value = "";
+						console.log("3")
+					} else {
+						// 다른거 클릭
+						div.classList.add("tree-div-selected");
+						switchtable(span.getAttribute("data-link").split(".")[0]);
+						selmenu.value = span.innerText;
+						console.log("4")
+					}
+				}
+			}
+			if (div.classList.contains("depth2")) {
+				console.log(span.getAttribute("data-link").split(".")[0]);
+				removetds(depth2ul);
+				if (seldetail.value === span.innerText) {
+					// 이미 선택된 메뉴 클릭
+					seldetail.value = "";
+					console.log("5")
+				}  else {
+					// 다른거 클릭
+					div.classList.add("tree-div-selected");
+					console.log("asd");
+					switchtable(span.getAttribute("data-link").split(".")[0])
+					seldetail.value = span.innerText;
+					console.log("7")
+				}
+			}
+		}
+		document.querySelector("#tree").addEventListener("click", clicktree);
+		
 		var slideIndex = 1;
 		showSlides(slideIndex);
 		function plusSlides(n) {

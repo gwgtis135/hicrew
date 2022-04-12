@@ -39,7 +39,7 @@
 									<li><a href="itsolut.do">IT솔루션</a></li>
 								</ul>
 							</div></li>
-						<li><a href="#"  onClick="groupwareClick('http://gw.hicrew.kr')" class="external"> <span>그룹웨어</span>
+						<li><a href="gw.do" class="external"> <span>그룹웨어</span>
 						</a></li>
 						<li>
 							<a href="upendmenu.do"> 
