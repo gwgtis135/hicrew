@@ -747,3 +747,15 @@ p.toggler {
 	background:#ff8040;
 	color:#fff;
 }
+
+/* 체크 박스 css*/
+.form-check-input:checked, .form-check-input[type=checkbox]:indeterminate {
+  background-color: #ff8040;
+  border-color: #ff8040;
+  box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
+}
+
+/* 포토스토리 체크박스 css   */
+.photo-admin-input-type-checkbox{
+	margin-top: 11px !important;
+}
