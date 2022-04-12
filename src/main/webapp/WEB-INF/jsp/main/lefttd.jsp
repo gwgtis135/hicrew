@@ -13,7 +13,8 @@ ul {
 	list-style-type: none;
 }
 
-ul li {
+ul#tree li,
+ul.innerul li {
 	border-bottom: 1px solid #efefef;
 }
 
