@@ -557,7 +557,7 @@ img, svg {
 }
 .photo-admin-row{
     margin-left: -15px;
-    margin-right: 159px;
+    margin-right: -15px;
 }
 
 .photo-admin-card{

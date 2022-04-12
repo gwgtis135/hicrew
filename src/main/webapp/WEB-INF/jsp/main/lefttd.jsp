@@ -9,11 +9,12 @@
 ul li div label {
 	font-weight: normal;
 }
+
 ul {
 	list-style-type: none;
 }
 
-ul li {
+ul#tree li, ul.innerul li {
 	border-bottom: 1px solid #efefef;
 }
 
@@ -33,21 +34,31 @@ ul#tree {
 	border: 1px solid #6f6f65;
 }
 
-
 div.tree-div-selected label span {
 	color: orange;
 	font-weight: bold !important;
 }
+
+.icon-fa-circle-plus:before {
+	content: '\f055';
+	font-family: 'FontAwesome';
+}
+
+.icon-fa-circle-plus:hover, .icon-fa-circle-minus:hover {
+	color: orange;
+}
+
+.icon-fa-circle-minus:before {
+	content: '\f056';
+	font-family: 'FontAwesome';
+}
 </style>
 <td style="vertical-align: top;">
 	<div class="list_btn">
-		<c:if test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
-		
-		 <a href="#" id="btn_addcategory"> <img
-			width="20px" alt="추가" src="images/add.svg">
-		</a> <a href="#" id="btn_delcategory"> <img width="20px" alt="삭제"
-			src="images/remove.svg">
-		</a>
+		<c:if
+			test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
+			<i class="icon-fa-circle-plus" id="btn_addcategory"></i>
+			<i class="icon-fa-circle-minus" id="btn_delcategory"></i>
 		</c:if>
 		<!-- <a href="#" class="btn_type1" id="btn_addcategory">추가</a> <a
 													href="#" class="btn_type1" id="btn_delcategory">삭제</a> -->
