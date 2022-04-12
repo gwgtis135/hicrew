@@ -1785,7 +1785,7 @@ input[type="radio"], input[type="checkbox"] {
 	line-height: normal;
 }
 input:checked[type="checkbox"]{
-	background-color:red;
+	/* background-color:red; */
 }
 
 input[type="file"] {
