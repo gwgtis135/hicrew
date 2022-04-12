@@ -67,7 +67,7 @@ dd {
 	margin: 0;
 }
 
-dd.category_sample, dd.category_style, dd.category_intrcn {
+dd.category_thema, dd.category_style, dd.category_intrcn {
 	display: inline;
 }
 
@@ -89,12 +89,9 @@ input[type="text"] {
 	border-radius: 0.375rem;
 }
 
-.imgsample {
-	width: 150px;
-}
-
+.imgsample ,
 .imgstyle {
-	width: 200px;
+	width: 420px;
 }
 </style>
 </head>
@@ -136,6 +133,14 @@ input[type="text"] {
 												<dd class="category_link">
 													<input type="text" id="inptcategory_link">
 												</dd>
+												<dt class="category_useyn">노출 여부</dt>
+												<dd class="category_useyn">
+													<select name="useyn" id="category_useyn">
+														<option value="">사용여부선택</option>
+														<option value="Y">사용</option>
+														<option value="N">미사용</option>
+													</select>
+												</dd>
 												<dt class="category_intrcn">페이지 문구</dt>
 												<dd class="category_intrcn">
 													<textarea id="intrcnment" name="nttCn" class="" rows="5"
@@ -143,8 +148,8 @@ input[type="text"] {
 													<ckeditor:replace replace="nttCn"
 														basePath="${pageContext.request.contextPath}/html/egovframework/com/cmm/utl/ckeditor/" />
 												</dd>
-												<dt class="category_sample hide">페이지 샘플</dt>
-												<dd class="category_sample hide">
+												<dt class="category_thema hide">페이지 테마</dt>
+												<dd class="category_thema hide">
 													<div>
 														<input type="radio" id="type1" name="pagetype"
 															value="type1"> <label for="type1"> <img
@@ -170,7 +175,7 @@ input[type="text"] {
 															value="type3"> <label for="type3"> <img
 															src="images/sample/sample3.png" alt="3번"
 															class="imgsample">
-														</label> <br> <input type="radio" id="type4" name="pagetype"
+														</label> <input type="radio" id="type4" name="pagetype"
 															value="type4"> <label for="type4"> <img
 															src="images/sample/sample3.png" alt="4번"
 															class="imgsample">
@@ -255,8 +260,9 @@ input[type="text"] {
 		var seldetail = document.querySelector("#selecteddetail");
 		var inptname = document.querySelector("#inptcategory_name");
 		var inptlink = document.querySelector("#inptcategory_link");
+		var inptuseyn = document.querySelector("#category_useyn");
 		var ctgrystyle = document.getElementsByClassName("category_style");
-		var ctgrysample = document.getElementsByClassName("category_sample");
+		var ctgrythema = document.getElementsByClassName("category_thema");
 		var ctgryintrcn = document.getElementsByClassName("category_intrcn");
 
 		var nonedellist = [ "Home", "회사 소개", "주요사업", "그룹웨어", "회사 개요", "CI 소개",
@@ -266,12 +272,15 @@ input[type="text"] {
 			for (var j = 0; j < ctgrystyle.length; j++) {
 				ctgrystyle[j].classList.add("hide");
 			}
-			for (var j = 0; j < ctgrysample.length; j++) {
-				ctgrysample[j].classList.add("hide");
+			for (var j = 0; j < ctgrythema.length; j++) {
+				ctgrythema[j].classList.add("hide");
 			}
 			for (var j = 0; j < ctgryintrcn.length; j++) {
-				ctgrysample[j].classList.add("hide");
+				ctgrythema[j].classList.add("hide");
 			}
+			inptname.value = "";
+			inptlink.value = "";
+			inptuseyn.selectedindex(0);
 		}
 
 		function removetds(target) {
@@ -299,8 +308,6 @@ input[type="text"] {
 				}
 				if (ul != null) {
 					addhide();
-					inptname.value = "";
-					inptlink.value = "";
 					if (selmenu.value === span.innerText) {
 						// 이미 선택된 메뉴 클릭
 						selmenu.value = "";
@@ -316,8 +323,6 @@ input[type="text"] {
 					if (selmenu.value === span.innerText) {
 						// 이미 선택된 메뉴 클릭
 						selmenu.value = "";
-						inptname.value = "";
-						inptlink.value = "";
 						addhide();
 						console.log("3")
 					} else {
@@ -339,8 +344,6 @@ input[type="text"] {
 				if (seldetail.value === span.innerText) {
 					// 이미 선택된 메뉴 클릭
 					seldetail.value = "";
-					inptname.value = "";
-					inptlink.value = "";
 					addhide();
 					console.log("5")
 				} else if (div.getAttribute("data-delable") == 0) {
@@ -357,8 +360,8 @@ input[type="text"] {
 				} else {
 					// 다른거 클릭
 					div.classList.add("tree-div-selected");
-					for (var j = 0; j < ctgrysample.length; j++) {
-						ctgrysample[j].classList.remove("hide");
+					for (var j = 0; j < ctgrythema.length; j++) {
+						ctgrythema[j].classList.remove("hide");
 					}
 					console.log("asd");
 					seldetail.value = span.innerText;
@@ -423,8 +426,6 @@ input[type="text"] {
 				} else {
 					console.log("메뉴 삭제하면 됨");
 					selmenu.value = "";
-					inptname.value = "";
-					inptlink.value = "";
 					addhide();
 					selected[0].remove();
 				}
@@ -436,8 +437,6 @@ input[type="text"] {
 				} else {
 					console.log("항목 삭제하면 됨");
 					selmenu.value = "";
-					inptname.value = "";
-					inptlink.value = "";
 					addhide();
 					selected[1].remove();
 				}
