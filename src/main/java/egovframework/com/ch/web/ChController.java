@@ -9,7 +9,7 @@ public class ChController {
 	@RequestMapping("ch.do")
 	public String goCh() {
 		System.out.println("연혁관리페이지 컨트롤러 호출");
-		return "ch/ChTest";
+		return "ch/Ch";
 	}
 	@RequestMapping("chManage.do")
 	public String goChManage() {

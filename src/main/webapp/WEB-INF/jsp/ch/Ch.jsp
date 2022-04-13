@@ -44,6 +44,9 @@
 	<link rel="stylesheet" href="css/jonghyeon_style.css">
 	<!-- Banner style  -->
 	<link rel="stylesheet" href="css/event_style.css">
+	<!-- fontawesome  -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+	
 	
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -284,23 +287,33 @@ a {
                     <div class="history_box">
                         <h4><span class="roboto">2018 ~</span> 현재</h4>
                         <ul>
-                            <li class="this_year">
+                            <li class="this_year toggler" onclick="chDrop(event)">
+                            
                             <dl>
-                            <dt class="roboto">2020</dt>
+                            <dt class="roboto">
+                             	<span class="toggle_icon icon-plus3"></span>
+                             	2020
+                             </dt>
                             <dd>세종(나이스 구축 사업)</dd>
                             <dd>대구(나이스 나이스 유지보수 사업)</dd>
                             </dl>
                             </li>
-                            <li class="">
+                            <li class=" toggler" onclick="chDrop(event)">
                                 <dl>
-                                    <dt class="roboto">2019</dt>
+                                    <dt class="roboto">
+       	                             	<span class="toggle_icon icon-plus3"></span>
+                                    	2019
+                                    </dt>
                                     <dd>세종(나이스 구축 사업)</dd>
                             		<dd>대구(나이스 나이스 유지보수 사업)</dd>
                                 </dl>
                             </li>
-                            <li>
+                            <li class="toggler" onclick="chDrop(event)">
                                 <dl>
-                                    <dt class="roboto">2018</dt>
+                                    <dt class="roboto">
+                                    	<span class="toggle_icon icon-plus3"></span>
+                                    	2018
+                                    </dt>
                                     <dd>하이크루 설립</dd>
                                 </dl>
                             </li>
@@ -374,6 +387,31 @@ a {
 	    marker.setAnimation(google.maps.Animation.BOUNCE);
 	  }
 	}	
+	
+	function chDrop(ev){
+		var li = ev.target.closest("li");
+		var dd = li.querySelectorAll('dd');
+		var ss = li.querySelectorAll('span');
+		console.log('span 출력');
+		console.log(ss);
+		
+		
+		console.log('d 출력');
+		console.log(li);
+		console.log(dd);
+		for(var i=0;i<dd.length;i++){
+			console.log(dd[i])
+			dd[i].classList.toggle('chdropdown');
+		}
+		for(var i=0;i<ss.length;i++){
+			console.log('span 출력')
+			console.log(ss[i].classList)
+			ss[i].classList.toggle('activeTitle');
+		}
+		
+		
+		
+	}
  </script>
 </body>
 </html>
