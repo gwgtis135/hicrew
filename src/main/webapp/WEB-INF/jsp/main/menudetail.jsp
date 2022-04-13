@@ -1217,6 +1217,7 @@
         temptag=et;
         et.appendChild(fromtag.querySelector("div"));
         fromtag.appendChild(temptag.querySelector("div"));
+        fromtag="";
         // 이미지 상위 오브젝트(class fadeInUp) 의 하위 div를 목적지에 추가
 /*         ev.target.appendChild(document.getElementById(fromid)); */
     }
