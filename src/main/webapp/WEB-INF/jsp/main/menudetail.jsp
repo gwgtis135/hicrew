@@ -57,9 +57,12 @@
 <link rel="stylesheet" href="css/jonghyeon_style.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="css/event_style.css">
+<!-- Banner style  -->
 <link rel="stylesheet" href="css/bootstrapcard.min.css">
 <!-- fontawesome  -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+	rel="stylesheet" />
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -209,31 +212,36 @@
 															</colgroup>
 															<tbody>
 																<tr class="notice">
-																	<td class="num"><input class="form-check-input" type="checkbox"></td>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox"></td>
 																	<td onclick="orgchtmodal(event)">이영석</td>
 																	<td onclick="orgchtmodal(event)">대표</td>
 																	<td onclick="orgchtmodal(event)">세종(4세대 나이스 구축사업)</td>
 																</tr>
 																<tr class="notice">
-																	<td class="num"><input class="form-check-input" type="checkbox"></td>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox"></td>
 																	<td>이장수</td>
 																	<td>부장</td>
 																	<td>대구(2022 나이스 유지보수)</td>
 																</tr>
 																<tr class="notice">
-																	<td class="num"><input class="form-check-input" type="checkbox"></td>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox"></td>
 																	<td>김동업</td>
 																	<td>차장</td>
 																	<td>세종(4세대 나이스 구축사업)</td>
 																</tr>
 																<tr class="notice">
-																	<td class="num"><input class="form-check-input" type="checkbox"></td>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox"></td>
 																	<td>이상현</td>
 																	<td>차장</td>
 																	<td>세종(4세대 나이스 구축사업)</td>
 																</tr>
 																<tr class="notice">
-																	<td class="num"><input class="form-check-input" type="checkbox"></td>
+																	<td class="num"><input class="form-check-input"
+																		type="checkbox"></td>
 																	<td>이호진</td>
 																	<td>과장</td>
 																	<td>대구(2022 정보공시사업)</td>
@@ -334,50 +342,53 @@
 												<tbody>
 													<tr class="notice">
 														<td class="num"><input type="checkbox"></td>
-														<td><input type="text" size="20"
-															value="(주)하이크루"></td>
+														<td><input type="text" size="20" value="(주)하이크루"></td>
 														<td><input type="text" size="50"
 															value="High-Technology CREW System"></td>
-														<td>순서<input type="number" value="1"
+														<td><input type="number" value="1"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="설립일"></td>
-														<td><input type="text" size="50"
-															value="2018년 3월 13일"></td>
-														<td>순서<input type="number" value="2"
+														<td><input type="text" size="50" value="2018년 3월 13일"></td>
+														<td><input type="number" value="2"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="대표이사"></td>
 														<td><input type="text" size="50" value="이영석"></td>
-														<td>순서<input type="number" value="3"
+														<td><input type="number" value="3"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="본사주소"></td>
 														<td><input type="text" size="50"
 															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-														<td>순서<input type="number" value="4"
+														<td><input type="number" value="4"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="전화번호"></td>
 														<td><input type="text" size="50"
 															value="070-8772-1612"></td>
-														<td>순서<input type="number" value="5"
+														<td><input type="number" value="5"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="사업분야"></td>
 														<td><input type="text" size="50"
 															value="System Integration(시스템 통합구축)"></td>
-														<td>순서<input type="number" value="6"
+														<td><input type="number" value="6"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 												</tbody>
@@ -393,51 +404,55 @@
 												</colgroup>
 												<tbody>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
-														<td><input type="text" size="20"
-															value="(주)하이크루"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
+														<td><input type="text" size="20" value="(주)하이크루"></td>
 														<td><input type="text" size="50"
 															value="High-Technology CREW System"></td>
-														<td>순서<input type="number" value="1"
+														<td><input type="number" value="1"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="설립일"></td>
-														<td><input type="text" size="50"
-															value="2018년 3월 13일"></td>
-														<td>순서<input type="number" value="2"
+														<td><input type="text" size="50" value="2018년 3월 13일"></td>
+														<td><input type="number" value="2"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="대표이사"></td>
 														<td><input type="text" size="50" value="이영석"></td>
-														<td>순서<input type="number" value="3"
+														<td><input type="number" value="3"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="본사주소"></td>
 														<td><input type="text" size="50"
 															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-														<td>순서<input type="number" value="4"
+														<td><input type="number" value="4"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="전화번호"></td>
 														<td><input type="text" size="50"
 															value="070-8772-1612"></td>
-														<td>순서<input type="number" value="5"
+														<td><input type="number" value="5"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td><input type="text" size="20" value="사업분야"></td>
 														<td><input type="text" size="50"
 															value="System Integration(시스템 통합구축)"></td>
-														<td>순서<input type="number" value="6"
+														<td><input type="number" value="6"
 															style="text-align: center; width: 50px;"></td>
 													</tr>
 												</tbody>
@@ -451,35 +466,43 @@
 												</colgroup>
 												<tbody>
 													<tr class="notice" onclick="solutmodalopen()">
-														<td class="num"><input  class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td class="thumnail" data-imgName="neis.jpg">학생 수강 신청</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>U-Sync</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>WithLearn</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>넥사크로 플랫폼 14</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>엑스플랫폼 9.2</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>마이 플랫폼</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>넥스업</td>
 													</tr>
 													<tr class="notice">
-														<td class="num"><input class="form-check-input" type="checkbox"></td>
+														<td class="num"><input class="form-check-input"
+															type="checkbox"></td>
 														<td>넥사크로플랫폼 17</td>
 													</tr>
 												</tbody>
@@ -487,177 +510,270 @@
 										</div>
 										<div class="hide table" id="tblphoto">
 											<div class="row g-4 photo-admin-card">
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" ondrop="drop(event)" ondragover="allowDrop(event)">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s" ondrop="drop(event)"
+													ondragover="allowDrop(event)">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img ondrag="drag(event)" class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+															<img ondrag="drag(event)" class="img-fluid"
+																src="images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="거제, 바람의 언덕">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" ondrop="drop(event)" ondragover="allowDrop(event)">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s" ondrop="drop(event)"
+													ondragover="allowDrop(event)">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img ondrag="drag(event)" class="img-fluid" src="images/Crews/resizestory2_1.png" alt="">
+															<img ondrag="drag(event)" class="img-fluid"
+																src="images/Crews/resizestory2_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="경주, 불국사">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="경주, 불국사">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" ondrop="drop(event)" ondragover="allowDrop(event)">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s" ondrop="drop(event)"
+													ondragover="allowDrop(event)">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img ondrag="drag(event)" class="img-fluid" src="images/Crews/resizestory3_1.png" alt="">
+															<img ondrag="drag(event)" class="img-fluid"
+																src="images/Crews/resizestory3_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="포항, 호미곷">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="포항, 호미곷">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" ondrop="drop(event)" ondragover="allowDrop(event)">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s" ondrop="drop(event)"
+													ondragover="allowDrop(event)">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img ondrag="drag(event)" class="img-fluid" src="images/Crews/resizestory4_1.png" alt="">
+															<img ondrag="drag(event)" class="img-fluid"
+																src="images/Crews/resizestory4_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="팔공산, 갓바위">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="팔공산, 갓바위">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+															<img class="img-fluid"
+																src="images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="거제, 바람의 언덕">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+															<img class="img-fluid"
+																src="images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="거제, 바람의 언덕">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+															<img class="img-fluid"
+																src="images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="거제, 바람의 언덕">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid" src="images/Crews/resizestory1_1.png" alt="">
+															<img class="img-fluid"
+																src="images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
-															<input class="fw-bold mb-0" type="text" size="10" value="거제, 바람의 언덕">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="거제, 바람의 언덕">
 															<div class="translate-middle d-flex align-items-center">
-																<a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon" href="#">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
 																	<div></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
 																	<div class="fa-duotone"></div>
-																</a> <a class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon" href="#">
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
 																	<div></div>
 																</a>
 															</div>
-															<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox" value="" id="defaultCheck3" checked />
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
 															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
 														</div>
 													</div>
 												</div>
 											</div>
-										</div></table>
-											<!-- 
+										</div>
+							</table>
+							<!-- 
 									<div class="slideshow-container hide2" id="photoimage">
 										<div class="mySlides fade2">
 											<img class="main_slideImg" src="images/Crews/story1_1.jpg"
@@ -681,24 +797,23 @@
 									</div>
 								</div>
 								 -->
-										</div>
-									</td>
-								</tr>
-							</table>
+						</div>
 
-							<div class="tbl_bottom" style="float: right;">
-								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict emphasisButton">삭제</a>
-								<a id="a_remove" href="#" class="btn_type3 _rosRestrict emphasisButton">미리보기</a>
-							</div>
+						<div class="tbl_bottom" style="float: right;">
+							<div class="pagenation" id="pageControlMgmt"></div>
+							<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a> <a
+								id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
+								id="a_remove" href="#"
+								class="btn_type1 _rosRestrict emphasisButton">삭제</a> <a
+								id="a_remove" href="#"
+								class="btn_type3 _rosRestrict emphasisButton">미리보기</a>
 						</div>
 					</div>
-
 				</div>
+
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<footer id="gtco-footer" role="contentinfo">
@@ -773,9 +888,7 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</button>
-					<h3 class="modal-title" id="exampleModalLabel">
-						모달테스트
-						</h5>
+					<h3 class="modal-title" id="exampleModalLabel">모달테스트</h3>
 				</div>
 				<div class="modal-body">
 					<p>
@@ -837,7 +950,8 @@
 			</div>
 		</div>
 	</div>
-	<input class="form-check-input photo-admin-input-type-checkbox" type="checkbox">
+	<input class="form-check-input photo-admin-input-type-checkbox"
+		type="checkbox">
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
