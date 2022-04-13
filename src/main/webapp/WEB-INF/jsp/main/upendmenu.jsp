@@ -280,7 +280,7 @@ input[type="text"] {
 			}
 			inptname.value = "";
 			inptlink.value = "";
-			//inptuseyn.selectedindex(0);
+			inptuseyn.selectedIndex=0;
 		}
 
 		function removetds(target) {
@@ -294,6 +294,7 @@ input[type="text"] {
 			var div = span.closest("div");
 			var depth1ul = document.getElementsByClassName("depth1");
 			var depth2ul = document.getElementsByClassName("depth2");
+			console.log("clicktree!")
 			if (div.classList.contains("depth1")) {
 				// 첫번째 뎁스
 				seldetail.value = "";
@@ -371,7 +372,12 @@ input[type="text"] {
 				}
 			}
 		}
+		
+		
 		document.querySelector("#tree").addEventListener("click", clicktree);
+		document.querySelector("#tree2").addEventListener("click", clicktree);
+		
+		
 		document.getElementById("btn_addcategory").onclick = function(e) {
 			console.log("add");
 			console.log("selmenu" + selmenu.value);
@@ -447,8 +453,8 @@ input[type="text"] {
 		// D&D
 		$("#tree").sortable();
 		$("#tree").disableSelection();
-		$(".innerul").sortable();
-		$(".innerul").disableSelection();
+		$(".menu-sub").sortable();
+		$(".menu-sub").disableSelection();
 	</script>
 </html>
 

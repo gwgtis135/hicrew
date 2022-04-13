@@ -5,7 +5,10 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
+<link rel="stylesheet" href="css/lefttd/theme-default.css">
+<link rel="stylesheet" href="css/lefttd/core.css">
 <style>
+/*
 ul li div label {
 	font-weight: normal;
 }
@@ -13,7 +16,7 @@ ul li div label {
 ul {
 	list-style-type: none;
 }
-
+*/
 ul#tree li, ul.innerul li {
 	border-bottom: 1px solid #efefef;
 }
@@ -24,6 +27,18 @@ ul.innerul li div:before {
 	margin-left: -1.0em;
 	margin-right: 0.5em;
 }
+.bg-menu-theme .menu-sub > .menu-item > .menu-link.tree-div-selected:not(.menu-toggle):before{
+    background-color: orange !important;
+    /*border: 3px solid #e7e7ff !important;*/
+}
+.bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
+    content: "";
+    position: absolute;
+    left: 1.4375rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+}
 
 ul#tree li div:hover, ul.innerul li div:hover {
 	color: #007FFF;
@@ -31,7 +46,7 @@ ul#tree li div:hover, ul.innerul li div:hover {
 
 ul#tree {
 	padding: 0px;
-	border: 1px solid #6f6f65;
+	/* border: 1px solid #6f6f65; */
 }
 
 div.tree-div-selected label span {
@@ -63,70 +78,147 @@ div.tree-div-selected label span {
 		<!-- <a href="#" class="btn_type1" id="btn_addcategory">추가</a> <a
 													href="#" class="btn_type1" id="btn_delcategory">삭제</a> -->
 	</div>
-	<ul id="tree">
-		<li>
-			<div class="drag-label list tree-has-child depth1" data-delable="1">
-				<label><span data-link="main.do">Home</span></label>
-			</div>
-		</li>
-		<li>
-			<div class="drag-label list tree-has-child depth1 menu-item open" data-delable="1">
-				<label><span>회사 소개</span></label>
-			</div>
-			<ul class="innerul hide menu-item">
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="cmpnyinfo.do">회사 개요</span></label>
+	<div id="layout-menu"
+		class="layout-menu menu-vertical menu bg-menu-theme">
+		<ul id="tree" class="menu-inner py-1 ps ps--active-y">
+			<li class="menu-item">
+				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+					<i class="menu-icon tf-icons bx bx-layout"></i>
+					<label><span data-link="main.do">Home</span></label>
+				</div>
+			</li>
+			<li class="menu-item">
+				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+					<i class="menu-icon tf-icons bx bx-layout"></i>
+					<label><span>회사 소개</span></label>
+				</div>
+				<ul class="menu-sub">
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="cmpnyinfo.do">회사 개요</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="CIintrcn.do">CI 소개</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="ch.do">주요 연혁</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="orgcht.do">조직도</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="directions.do">오시는 길</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="photo.do">포토스토리</span></label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+					<i class="menu-icon tf-icons bx bx-layout"></i>
+					<label><span>주요사업</span></label>
+				</div>
+				<ul class="menu-sub">
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="pdfsolut.do">pdf솔루션</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2" data-delable="2">
+							<label><span data-link="itsolut.do">it솔루션</span></label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<c:if
+				test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
+				<li class="menu-item">
+					<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+						<i class="menu-icon tf-icons bx bx-layout"></i>
+						<label><span data-link="http://gw.hicrew.kr">그룹웨어</span></label>
 					</div>
 				</li>
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="CIintrcn.do">CI 소개</span></label>
-					</div>
-				</li>
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="ch.do">주요 연혁</span></label>
-					</div>
-				</li>
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="orgcht.do">조직도</span></label>
-					</div>
-				</li>
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="directions.do">오시는 길</span></label>
-					</div>
-				</li>
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="photo.do">포토스토리</span></label>
-					</div>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<div class="drag-label list tree-has-child depth1" data-delable="1">
-				<label><span>주요사업</span></label>
-			</div>
-			<ul class="innerul hide">
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="pdfsolut.do">pdf솔루션</span></label>
-					</div>
-				</li>
-				<li class="tree-node">
-					<div class="list drag-label depth2" data-delable="2">
-						<label><span data-link="itsolut.do">it솔루션</span></label>
-					</div>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<div class="drag-label list tree-has-child depth1" data-delable="1">
-				<label><span data-link="http://gw.hicrew.kr">그룹웨어</span></label>
-			</div>
-		</li>
-	</ul>
+			</c:if>
+		</ul>
+	</div><!-- 
+	<div id="layout-menu"
+		class="layout-menu menu-vertical menu bg-menu-theme">
+		<ul id="tree2" class="menu-inner py-1 ps ps--active-y">
+			Layouts
+			<li class="menu-item" style="">
+				<div class="menu-link depth1 menu-toggle">
+					<i class="menu-icon tf-icons bx bx-layout"></i> <label><span>회사
+							소개</span></label>
+				</div>
+
+				<ul class="menu-sub">
+					<li class="menu-item active">
+						<div class="menu-link depth2">
+							<label><span data-link="">회사 개요</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">CI 소개</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">주요 연혁</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">조직도</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">오시는 길</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">포토 스토리</span></label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item" style="">
+				<div class="menu-link depth1 menu-toggle">
+					<i class="menu-icon tf-icons bx bx-layout"></i> <label><span>주요
+							사업</span></label>
+				</div>
+
+				<ul class="menu-sub">
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">pdf 솔루션</span></label>
+						</div>
+					</li>
+					<li class="menu-item">
+						<div class="menu-link depth2">
+							<label><span data-link="">it 솔루션</span></label>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div> -->
 </td>
+<script src="js/lefttd/helpers.js"></script>
+<script src="js/lefttd/menu.js"></script>
+<script src="js/lefttd/main.js"></script>
