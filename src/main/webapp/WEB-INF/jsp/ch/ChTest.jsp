@@ -204,6 +204,7 @@ var easy_fancybox_handler = function(){
 								<div class="togglecontainer toggle_close_all  avia-builder-el-11  el_after_av_hr  el_before_av_hr  ">
 									<section class="av_toggle_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 										<div class="single_toggle" data-tags="{All} ">
+											
 											<p data-fake-id="#toggle-id-1" class="toggler activeTitle" itemprop="headline">
 												2022<span class="toggle_icon icon-plus3"> <span class="vert_icon"></span><span class="hor_icon"></span></span>
 											</p>
@@ -234,7 +235,7 @@ var easy_fancybox_handler = function(){
 									<section class="av_toggle_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 										<div class="single_toggle" data-tags="{All} ">
 											<p data-fake-id="#toggle-id-3" class="toggler " itemprop="headline">
-												2020<span class="toggle_icon"> <span class="vert_icon"></span><span class="hor_icon"></span></span>
+<!-- 												2020<span class="toggle_icon"> <span class="vert_icon"></span><span class="hor_icon"></span></span> -->
 											</p>
 											<div id="toggle-id-3-container" class="toggle_wrap ">
 												<div class="toggle_content invers-color" itemprop="text">
@@ -325,7 +326,7 @@ var avia_framework_globals = avia_framework_globals || {};
 	<script type='text/javascript' src='http://www.forwiz.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
 	<script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/www.forwiz.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"\ubcf4\ub0b4\ub294 \uc911..."};
+// var _wpcf7 = {"loaderUrl":"http:\/\/www.forwiz.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"\ubcf4\ub0b4\ub294 \uc911..."};
 /* ]]> */
 </script>
 	<script type='text/javascript' src='http://www.forwiz.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.4.1'></script>
@@ -337,7 +338,7 @@ var sticky_anything_engage = {"element":"#smenu","topspace":"110","minscreenwidt
 </script>
 	<script type='text/javascript' src='http://www.forwiz.com/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/stickThis.js?ver=1.3.1'></script>
 	<script type='text/javascript' src='http://www.forwiz.com/wp-content/themes/enfold/js/avia.js?ver=3'></script>
-	<script type='text/javascript' src='http://www.forwiz.com/wp-content/themes/enfold/js/shortcodes.js?ver=3'></script>
+	<script src="js/ch/Ch.js"></script>
 	<script type='text/javascript' src='http://www.forwiz.com/wp-content/themes/enfold/js/aviapopup/jquery.magnific-popup.min.js?ver=2'></script>
 	<script type='text/javascript'>
 /* <![CDATA[ */

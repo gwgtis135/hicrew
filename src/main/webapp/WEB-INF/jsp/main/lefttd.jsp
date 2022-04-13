@@ -70,10 +70,10 @@ div.tree-div-selected label span {
 			</div>
 		</li>
 		<li>
-			<div class="drag-label list tree-has-child depth1" data-delable="1">
+			<div class="drag-label list tree-has-child depth1 menu-item open" data-delable="1">
 				<label><span>회사 소개</span></label>
 			</div>
-			<ul class="innerul hide">
+			<ul class="innerul hide menu-item">
 				<li class="tree-node">
 					<div class="list drag-label depth2" data-delable="2">
 						<label><span data-link="cmpnyinfo.do">회사 개요</span></label>

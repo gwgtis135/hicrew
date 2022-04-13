@@ -280,7 +280,7 @@ input[type="text"] {
 			}
 			inptname.value = "";
 			inptlink.value = "";
-			inptuseyn.selectedindex(0);
+			//inptuseyn.selectedindex(0);
 		}
 
 		function removetds(target) {

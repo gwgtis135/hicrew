@@ -54,6 +54,9 @@
 									<li>
 										<a href="menudetail.do">페이지 관리</a>
 									</li>
+									<li>
+										<a href="menudetail.do">공통 코드관리</a>
+									</li>
 								</ul>
 							</div>
 						</li>

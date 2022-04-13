@@ -15,7 +15,7 @@ public class OrgchtController {
 	@RequestMapping("orgcht.do")
 	public String goOrgcht() {
 		System.out.println("조직도 관리 컨트롤러 호출");
-		return "orgcht/Orgcht";
+		return "ch/ChTest";
 	}
 	@RequestMapping("orgchtManage.do")
 	public String goOrgchtManage() {
