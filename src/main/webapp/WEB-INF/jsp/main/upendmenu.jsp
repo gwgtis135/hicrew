@@ -375,8 +375,6 @@ input[type="text"] {
 		
 		
 		document.querySelector("#tree").addEventListener("click", clicktree);
-		document.querySelector("#tree2").addEventListener("click", clicktree);
-		
 		
 		document.getElementById("btn_addcategory").onclick = function(e) {
 			console.log("add");
@@ -387,32 +385,35 @@ input[type="text"] {
 			var label = document.createElement("label");
 			label.append(span);
 			var div = document.createElement("div");
-			div.classList.add("drag-label");
-			div.classList.add("list");
+			div.classList.add("menu-link");
 			console.log(li);
 			if (selmenu.value == "") {
 				//메뉴선택 안됨 메뉴 추가해야됨
-				div.classList.add("tree-has-child");
-				div.classList.add("depth1");
+				var i = document.createElement("i");
+				i.classList.add("menu-icon","tf-icons","bx","bx-layout");
+				div.append(i);
+				div.classList.add("menu-toggle","depth1");
 				div.setAttribute("data-delable", "0");
 				div.append(label);
 				var li = document.createElement("li");
+				li.classList.add("menu-item","ui-sortable-handle");
 				li.append(div);
-				this.parentElement.parentElement.children[1].append(li);
+				console.log(this.closest("td").querySelector("ul#tree").append(li));
+				console.log(this.closest("td"));
+				this.closest("td").querySelector("ul#tree").append(li);
 				console.log("메뉴선택 안됨 메뉴 추가해야됨")
 			} else {
 				// 메뉴 선택됨 세부 항목 추가하면됨
 				span.innerText = "새 페이지";
 				console.log("메뉴 선택됨 세부 항목 추가하면됨");
-				div.classList.add("tree-has-child");
-				div.classList.add("depth2");
+				div.classList.add("menu-link","depth2");
 				div.setAttribute("data-delable", "0");
 				div.append(label);
 				var li = document.createElement("li");
-				li.classList.add("tree-node");
+				li.classList.add("menu-item");
 				li.append(div);
 				var ul = document.createElement("ul");
-				ul.classList.add("innerul");
+				ul.classList.add("menu-sub");
 				ul.append(li);
 				document.querySelector(".tree-div-selected").parentElement
 						.append(ul);

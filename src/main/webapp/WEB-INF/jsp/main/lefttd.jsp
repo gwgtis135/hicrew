@@ -6,7 +6,7 @@
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
 <link rel="stylesheet" href="css/lefttd/theme-default.css">
-<link rel="stylesheet" href="css/lefttd/core.css">
+<link rel="stylesheet" href="css/lefttd/core2.css">
 <style>
 /*
 ul li div label {
@@ -88,7 +88,7 @@ div.tree-div-selected label span {
 				</div>
 			</li>
 			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+				<div class="menu-link depth1 menu-toggle" data-delable="1">
 					<i class="menu-icon tf-icons bx bx-layout"></i>
 					<label><span>회사 소개</span></label>
 				</div>
@@ -126,7 +126,7 @@ div.tree-div-selected label span {
 				</ul>
 			</li>
 			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+				<div class="menu-link depth1 menu-toggle" data-delable="1">
 					<i class="menu-icon tf-icons bx bx-layout"></i>
 					<label><span>주요사업</span></label>
 				</div>
