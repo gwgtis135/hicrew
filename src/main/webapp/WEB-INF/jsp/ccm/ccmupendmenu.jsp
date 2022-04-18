@@ -28,7 +28,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>${pageTitle}<spring:message code="title.list" /></title>
+<title>공통코드관리</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <%-- <link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/com/com.css' />"> --%>
 <link rel="stylesheet" href="css/cmmupendmenu/com.css">
@@ -158,11 +158,11 @@
 												<table class="board_list cmmTable" summary="">
 													<caption>사업부서 상세코드 목록</caption>
 													<colgroup>
-														<col style="width: 9%;">
-														<col style="width: 40%;">
-														<col style="width: 13%;">
-														<col style="width: 40%;">
-														<col style="width: 13%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
 													</colgroup>
 													<thead>
 														<!-- <tr>
@@ -180,41 +180,88 @@
 													</thead>
 													<tbody class="ov">
 														<tr>
-															<td>1</td>
-															<td> <input value="DEPT001" type="text"> </td>
-															<td> <input value="REGC01" type="text"></td>
-															<td>세종 (나이스 사업 구축)</td>
-															<td>Y</td>
+															<td class="cmmtd">1</td>
+															<td class="cmmtd">
+															   <select>
+																	<option value="DEPT001">DEPT001/사업부서</option>
+																	<option value="POSI001">POSI001/직급</option>
+																</select>
+															</td>
+															<td class="cmmtd"><input value="REGC01" type="text"></td>
+															<td class="cmmtd">세종 (나이스 사업 구축)</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
 														</tr>
 														<tr>
-															<td>2</td>
-															<td>POSI001</td>
-															<td>REGC01</td>
-															<td>단일 게시판 이용등록</td>
-															<td>Y</td>
+															<td class="cmmtd">2</td>
+															<td class="cmmtd"><select>
+																	<option value="DEPT001">DEPT001/사업부서</option>
+																	<option value="POSI001">POSI001/직급</option>
+																</select>
+															</td>
+															<td class="cmmtd"><input value="REGC01" type="text"></td>
+															<td class="cmmtd">대구 (정보공시 2020)</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
 														</tr>
 														<tr>
-															<td>3</td>
-															<td>POSI001</td>
-															<td>REGC01</td>
-															<td>단일 게시판 이용등록</td>
-															<td>Y</td>
+															<td class="cmmtd">3</td>
+															<td class="cmmtd"><select>
+																	<option value="DEPT001">DEPT001/사업부서</option>
+																	<option value="POSI001">POSI001/직급</option>
+																</select>
+															</td>
+															<td class="cmmtd"><input value="REGC01" type="text"></td>
+															<td class="cmmtd">대구 (나이스 유지보수)</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
 														</tr>
 														<tr>
-															<td>4</td>
-															<td>POSI001</td>
-															<td>REGC01</td>
-															<td>단일 게시판 이용등록</td>
-															<td>Y</td>
+															<td class="cmmtd">4</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="DEPT001">DEPT001/사업부서</option>
+																	<option value="POSI001">POSI001/직급</option>
+																</select>
+															</td>
+															<td class="cmmtd"><input value="REGC01" type="text"></td>
+															<td class="cmmtd">대구 본사</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
 														</tr>
 														<tr>
-															<td>5</td>
-															<td>POSI001</td>
-															<td>REGC01</td>
-															<td>단일 게시판 이용등록</td>
-															<td>Y</td>
+															<td class="cmmtd">5</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="DEPT001">DEPT001/사업부서</option>
+																	<option value="POSI001">POSI001/직급</option>
+																</select>
+															</td>
+															<td class="cmmtd"><input value="POSI01" type="text"></td>
+															<td class="cmmtd">대표</td>
+															<td class="cmmtd">
+																<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
 														</tr>
-
 													</tbody>
 												</table>
 
@@ -255,11 +302,10 @@
 												<table class="board_list cmmTable">
 												<caption>공통코드 목록</caption>
 													<colgroup>
-														<col style="width: 9%;">
-														<col style="width: 40%;">
-														<col style="width: 40%;">
-														<col style="width: 13%;">
-														<col style="width: 13%;">
+														<col style="width: 20%;">
+														<col style="width: 26%;">
+														<col style="width: 26%;">
+														<col style="width: 26%;">
 													</colgroup>
 													<tbody class="ov">
 														<tr>

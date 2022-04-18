@@ -560,7 +560,8 @@ a {
   color: #ff8040;
 }
 a:hover {
-  color: #ff5126;
+   /* color: #ffffff;
+   background: #ff8040; */
 }
 
 .fill-primary {
