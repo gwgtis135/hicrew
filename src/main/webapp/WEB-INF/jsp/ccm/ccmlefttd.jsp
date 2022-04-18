@@ -27,8 +27,8 @@ ul.innerul li div:before {
 	margin-left: -1.0em;
 	margin-right: 0.5em;
 }
-.bg-menu-theme .menu-sub > .menu-item > .menu-link.tree-div-selected:not(.menu-toggle):before{
-    background-color: orange !important;
+/* .bg-menu-theme .menu-sub > .menu-item > .menu-link.tree-div-selected:not(.menu-toggle):before{ */
+    background-color: #ff8040 !important;
     /*border: 3px solid #e7e7ff !important;*/
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
@@ -41,7 +41,7 @@ ul.innerul li div:before {
 }
 
 ul#tree li div:hover, ul.innerul li div:hover {
-	color: #007FFF;
+	color: #ff8040;
 }
 
 ul#tree {
@@ -49,8 +49,8 @@ ul#tree {
 	/* border: 1px solid #6f6f65; */
 }
 
-div.tree-div-selected label span {
-	color: orange;
+div.tree-div-selected label a {
+	color: #ff8040;
 	font-weight: bold !important;
 }
 
@@ -81,12 +81,18 @@ div.tree-div-selected label span {
 	<div id="layout-menu"
 		class="layout-menu menu-vertical menu bg-menu-theme">
 		<ul id="tree" class="menu-inner py-1 ps ps--active-y">
-			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
-					<i class="menu-icon tf-icons bx bx-layout"></i>
-					<label><span data-link="main.do">사업 부서 관리 </span></label>
-				</div>
-			</li>
+		<li class="menu-item">
+			<div class="menu-link depth1 menu-toggle depth1" data-delable="1" onclick="hideTbl(event)">
+				<i class="menu-icon tf-icons bx bx-layout"></i>
+				<label><a href="#" class="ccmlefta">공통코드관리</a></label>
+			</div>
+		</li>
+		<li class="menu-item">
+			<div class="menu-link depth1 menu-toggle depth1" data-delable="1" onclick="hideTbl(event)">
+				<i class="menu-icon tf-icons bx bx-layout"></i>
+				<label><a href="#" class="ccmlefta">상세코드관리 </a></label>
+			</div>
+		</li>
 			<c:if
 				test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
 				<li class="menu-item">
@@ -163,6 +169,3 @@ div.tree-div-selected label span {
 		</ul>
 	</div> -->
 </td>
-<script src="js/lefttd/helpers.js"></script>
-<script src="js/lefttd/menu.js"></script>
-<script src="js/lefttd/main.js"></script>

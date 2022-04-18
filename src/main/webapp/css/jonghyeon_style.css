@@ -802,3 +802,37 @@ p.toggler {
 .chdropdown{
 	display:none !important;
 }
+
+/* 사업코드 관리 페이지 테이블 css */
+.cmmTable{
+	width:919px;
+}
+
+.cmmrow{
+	margin-left: 13px !important;
+    margin-right:12px !important;
+}
+/* 공통관리 a태그 css */
+.cmmA{
+	color:#ff8040 !important;
+}
+/* 상세코드 행 높이 CSS */
+.cmmtd{
+	height:61px !important;
+}
+/* 공통관리 레프트 메뉴 a 태그 css*/
+.ccmlefta{
+	color:#697a8d;
+	font-family: "Droid Sans", Arial, sans-serif;
+/*     font-weight: 400; */
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    font-weight: bold;
+	
+}
+
+/* 공통관리 테이블 hide 클래스  css*/
+.hide{
+	display:none;
+}

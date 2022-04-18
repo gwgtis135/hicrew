@@ -860,10 +860,11 @@
 				<div class="modal-header">
 					<button class="close" type="button" data-dismiss="modal"
 						aria-label="Close">
-						<button type="button" class="close" aria-label="Close">
+						</button>
+					<button type="button" class="close" aria-label="Close"> 
 							<span aria-hidden="true">&times;</span>
 						</button>
-					</button>
+					
 					<h3 class="modal-title" id="exampleModalLabel">모달테스트</h3>
 				</div>
 				<div class="modal-body">
@@ -903,7 +904,8 @@
 		</div>
 	</div>
 	<!-- 모달 end -->
-	<div id="photomodal" class="modal">
+	
+<!-- 	<div id="photomodal" class="modal">
 		<div class="modal-window">
 			<div class="close-area">X</div>
 			<div class="modal-title">
@@ -925,7 +927,9 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
+	
+	
 	<input class="form-check-input photo-admin-input-type-checkbox"
 		type="checkbox">
 
@@ -1014,7 +1018,7 @@
 			var tatbl = "tbl"+value;
 			console.log(tatbl);
 			document.getElementById(tatbl).classList.remove("hide");
-			document.getElementById("intrcnment").value=value;
+			//document.getElementById("intrcnment").value=value;
 			console.log(tatbl);
 		}
 		
@@ -1109,6 +1113,7 @@
 		//모달 이벤트
 		function orgchtmodal(e){
 			console.log('orgchtmadal open!!!')
+			console.log(e)
 			e.preventDefault();
 			$('#orgchtmodal').modal("show");
 		};

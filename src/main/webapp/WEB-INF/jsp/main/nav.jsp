@@ -55,7 +55,7 @@
 										<a href="menudetail.do">페이지 관리</a>
 									</li>
 									<li>
-										<a href="ccmupendmenu.do">공통 코드관리</a>
+										<a href="ccmupendmenu.do">공통 코드 관리</a>
 									</li>
 								</ul>
 							</div>
