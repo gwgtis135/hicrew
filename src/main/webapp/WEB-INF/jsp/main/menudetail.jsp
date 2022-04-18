@@ -773,30 +773,6 @@
 											</div>
 										</div>
 							</table>
-							<!-- 
-									<div class="slideshow-container hide2" id="photoimage">
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story1_1.jpg"
-												onclick="photomodalopen()">
-											<div class="text">거제, 바람의 언덕</div>
-										</div>
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story2_1.jpg">
-											<div class="text">팔공, 동화사</div>
-										</div>
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story3_1.jpg">
-											<div class="text">지리산, 화엄사</div>
-										</div>
-										<div class="mySlides fade2">
-											<img class="main_slideImg" src="images/Crews/story4_1.jpg">
-											<div class="text">종무식, 영덕</div>
-										</div>
-										<a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next"
-											onclick="plusSlides(1)">❯</a>
-									</div>
-								</div>
-								 -->
 						</div>
 
 						<div class="tbl_bottom" style="float: right;">
@@ -1116,35 +1092,6 @@
 		}
 		document.querySelector("#tree").addEventListener("click", clicktree);
 		
-		var slideIndex = 1;
-		showSlides(slideIndex);
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		  var i;
-		  var slides = document.getElementsByClassName("mySlides");
-		  var dots = document.getElementsByClassName("dot");
-		  if (n > slides.length) {
-			  slideIndex = 1
-			  }
-		  if (n < 1) {
-			  slideIndex = slides.length
-			  }
-		  for (i = 0; i < slides.length; i++) {
-		      slides[i].style.display = "none";
-		  }
-		  for (i = 0; i < dots.length; i++) {
-		    //  dots[i].className = dots[i].className.replace(" active", "");
-		  }
-		  slides[slideIndex-1].style.display = "block";
-		  //dots[slideIndex-1].className += " active";
-		}
 
 		function imgswitch(ta){
 			var phototbl = document.getElementById("phototable");
@@ -1159,32 +1106,6 @@
 			
 		}
 
-/*         var xOffset = 10;
-        var yOffset = 30;
-		$(document).on("mouseover",".thumnail",function(e){
-            //var image_data = $(this).data("image");
-            //var add_caption = (image_data != undefined) ? "<br/>" + image_data : "" ;
-            console.log(e.target.getAttribute("data-imgName"))
-            console.log(e.pageY)
-            console.log(e.target.innerHTML)
-            $("body").append("<p id='preview'><img src='images/"+ e.target.getAttribute("data-imgName") +"' width='400px' />"+ "</p>");
-            console.log($("#preview"));
-            $("#preview")
-            .css("top",(e.pageY - xOffset) + "px")
-            .css("left",(e.pageX + yOffset) + "px")
-            .fadeIn("fast");
-        });
-        $(document).on("mousemove",".thumnail",function(e){
-            $("#preview")
-            .css("top",(e.pageY - xOffset) + "px")
-            .css("left",(e.pageX + yOffset) + "px");
-        });
-        
-        //마우스 아웃시 preview 제거
-        $(document).on("mouseout",".thumnail",function(){
-            //$("#preview").remove();
-        }); */
-		
 		//모달 이벤트
 		function orgchtmodal(e){
 			console.log('orgchtmadal open!!!')
@@ -1196,9 +1117,9 @@
 	function allowDrop(ev) {
         ev.preventDefault();
     }
- var fromid="";
- var fromtag; // 클릭한 이미지의 상위 div 객체 값 담을 장소
- var temptag;
+	 var fromid="";
+	 var fromtag; // 클릭한 이미지의 상위 div 객체 값 담을 장소
+	 var temptag;
     function drag(ev) {
     	fromtag=ev.target.closest(".fadeInUp");
     	// 이미지의 상위 오브젝트(class fadeInUp) 저장

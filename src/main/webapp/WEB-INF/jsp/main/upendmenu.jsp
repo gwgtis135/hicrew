@@ -71,6 +71,10 @@ dd.category_thema, dd.category_style, dd.category_intrcn {
 	display: inline;
 }
 
+dd.category_thema.all {
+	display: block;
+}
+
 .tbl.board tbody td {
 	height: 40px;
 	padding: 10px 0;
@@ -78,7 +82,6 @@ dd.category_thema, dd.category_style, dd.category_intrcn {
 	font-weight: 400;
 	vertical-align: top;
 }
-
 
 input[type="text"] {
 	color: #697a8d;
@@ -89,9 +92,11 @@ input[type="text"] {
 	border-radius: 0.375rem;
 }
 
-.imgsample ,
-.imgstyle {
+.imgsample, .imgstyle {
 	width: 420px;
+}
+input[type='radio']:checked+label > img {
+	border:1px solid blue;
 }
 </style>
 </head>
@@ -106,8 +111,8 @@ input[type="text"] {
 	</jsp:include>
 
 	<div id="page">
-		<input type="hidden" id="selectedmenu"> 
-		<input type="hidden" id="selecteddetail">
+		<input type="hidden" id="selectedmenu"> <input type="hidden"
+			id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
 				<div class="row">
@@ -125,22 +130,27 @@ input[type="text"] {
 									<td class="n_admin">
 										<div class="category_add">
 											<dl>
-												<dt class="category_name">페이지 명</dt>
-												<dd class="category_name">
-													<input type="text" id="inptcategory_name">
-												</dd>
-												<dt class="category_link">페이지 주소</dt>
-												<dd class="category_link">
-													<input type="text" id="inptcategory_link">
-												</dd>
-												<dt class="category_useyn">노출 여부</dt>
-												<dd class="category_useyn">
-													<select name="useyn" id="category_useyn">
-														<option value="">사용여부선택</option>
-														<option value="Y">사용</option>
-														<option value="N">미사용</option>
-													</select>
-												</dd>
+												<div style="float: left; margin-right: 1.5rem">
+													<dt class="category_name">페이지 명</dt>
+													<dd class="category_name">
+														<input type="text" id="inptcategory_name">
+													</dd>
+												</div>
+												<div style="float: left; margin-right: 1.5rem">
+													<dt class="category_link">페이지 주소</dt>
+													<dd class="category_link">
+														<input type="text" id="inptcategory_link">
+													</dd>
+												</div>
+												<div style="float: left;">
+													<dt class="category_useyn hide">노출 여부</dt>
+													<dd class="category_useyn hide">
+														<select name="useyn" id="category_useyn">
+															<option value="Y">사용</option>
+															<option value="N">미사용</option>
+														</select>
+													</dd>
+												</div>
 												<dt class="category_intrcn">페이지 문구</dt>
 												<dd class="category_intrcn">
 													<textarea id="intrcnment" name="nttCn" class="" rows="5"
@@ -148,21 +158,101 @@ input[type="text"] {
 													<ckeditor:replace replace="nttCn"
 														basePath="${pageContext.request.contextPath}/html/egovframework/com/cmm/utl/ckeditor/" />
 												</dd>
-												<dt class="category_thema hide">페이지 테마</dt>
-												<dd class="category_thema hide">
-													<div>
-														<input type="radio" id="type1" name="pagetype"
-															value="type1"> <label for="type1"> <img
-															src="images/sample/sample1.png" alt="1번" class="imgstyle">
-														</label> <input type="radio" id="type2" name="pagetype"
-															value="type2"> <label for="type2"> <img
-															src="images/sample/sample2.png" alt="2번" class="imgstyle">
-														</label>
-													</div>
+
+												<!-- 												<div style="float:left; margin-right:1.5rem">
+												<dt class="category_thema hide all">페이지 테마 일괄적용</dt>
+												<dd class="category_thema hide all">
+													<select name="useyn" id="category_useyn">
+														<option value="normal">기본</option>
+														<option value="weekness">색약자</option>
+													</select>
 												</dd>
+												</div> -->
+
 												<dt class="category_style hide">페이지 스타일</dt>
 												<dd class="category_style hide">
-													<div>
+													<div class="slideshow-container" style="float:left;">
+														<div class="mySlidesprev fade1">
+															<img class="prev_slideImg"
+																src="images/sample/sample1.png">
+														</div>
+														<div class="mySlidesprev fade1">
+															<img class="prev_slideImg"
+																src="images/sample/sample2.png">
+														</div>
+														<div class="mySlidesprev fade1">
+															<img class="prev_slideImg"
+																src="images/sample/sample3.png">
+														</div>
+														<div class="mySlidesprev fade1">
+															<img class="prev_slideImg"
+																src="images/sample/sample4.png">
+														</div>
+														<div class="mySlidesprev fade1">
+															<img class="prev_slideImg"
+																src="images/sample/sample5.png">
+														</div>
+														<div class="mySlidesprev fade1">
+															<img class="prev_slideImg"
+																src="images/sample/sample6.png">
+														</div>
+													</div>
+													<div class="slideshow-container" style="float:left;">
+														<div class="mySlides fade2">
+															<img class="main_slideImg"
+																src="images/sample/sample1.png">
+														</div>
+														<div class="mySlides fade2">
+															<img class="main_slideImg"
+																src="images/sample/sample2.png">
+														</div>
+														<div class="mySlides fade2">
+															<img class="main_slideImg"
+																src="images/sample/sample3.png">
+														</div>
+														<div class="mySlides fade2">
+															<img class="main_slideImg"
+																src="images/sample/sample4.png">
+														</div>
+														<div class="mySlides fade2">
+															<img class="main_slideImg"
+																src="images/sample/sample5.png">
+														</div>
+														<div class="mySlides fade2">
+															<img class="main_slideImg"
+																src="images/sample/sample6.png">
+														</div>
+														<a class="prev" onclick="plusSlides(-1)">❮</a> 
+														<a class="next" onclick="plusSlides(1)">❯</a>
+													</div>
+													<div class="slideshow-container" style="float:left;">
+														<div class="mySlidesnext fade3">
+															<img class="next_slideImg"
+																src="images/sample/sample1.png">
+														</div>
+														<div class="mySlidesnext fade3">
+															<img class="next_slideImg"
+																src="images/sample/sample2.png">
+														</div>
+														<div class="mySlidesnext fade3">
+															<img class="next_slideImg"
+																src="images/sample/sample3.png">
+														</div>
+														<div class="mySlidesnext fade3">
+															<img class="next_slideImg"
+																src="images/sample/sample4.png">
+														</div>
+														<div class="mySlidesnext fade3">
+															<img class="next_slideImg"
+																src="images/sample/sample5.png">
+														</div>
+														<div class="mySlidesnext fade3">
+															<img class="next_slideImg"
+																src="images/sample/sample6.png">
+														</div>
+													</div>
+
+													<!-- <div>
 														<input type="radio" id="type1" name="pagetype"
 															value="type1"> <label for="type1"> <img
 															src="images/sample/sample1.png" alt="1번"
@@ -188,8 +278,36 @@ input[type="text"] {
 															src="images/sample/sample6.png" alt="6번"
 															class="imgsample">
 														</label>
-													</div>
+													</div> -->
 												</dd>
+												
+												<div style="float: left;">
+													<div style="float: right;">
+														<dt class="category_thema hide all">페이지 테마 일괄적용</dt>
+														<dd class="category_thema hide all">
+															<select name="useyn" id="category_useyn">
+																<option value="normal">기본</option>
+																<option value="weekness">색약자</option>
+															</select>
+														</dd>
+													</div>
+													<dt class="category_thema hide">페이지 테마</dt>
+													<dd class="category_thema hide">
+														<div>
+															<input type="radio" id="type1" name="pagetype" class="hide"
+																value="type1" checked> <label for="type1"> <img
+																src="images/sample/color1.png" alt="1번"
+																class="imgstyle">
+															</label> 
+															<input type="radio" id="type2" name="pagetype" class="hide"
+																value="type2"> 
+															<label for="type2"> <img
+																src="images/sample/color2.png" alt="2번"
+																class="imgstyle">
+															</label>
+														</div>
+													</dd>
+												</div>
 											</dl>
 										</div>
 									</td>
@@ -198,9 +316,9 @@ input[type="text"] {
 						</div>
 						<div class="tbl_bottom" style="float: right;">
 							<div class="pagenation" id="pageControlMgmt"></div>
-							<a id="a_remove" href="#" class="btn_type2 _rosRestrict">초기화</a>
-							<a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
-								id="a_remove" href="#" class="btn_type3 _rosRestrict">미리보기</a>
+							<a id="a_reset" href="#" class="btn_type2 _rosRestrict">초기화</a>
+							<a id="a_save" href="#" class="btn_type1 _rosRestrict">저장</a> 
+							<a id="a_next" href="#" class="btn_type3 _rosRestrict">다음</a>
 						</div>
 					</div>
 				</div>
@@ -223,7 +341,14 @@ input[type="text"] {
 			</div>
 		</footer>
 	</div>
-
+	<form id="form4nextbtn" action="menudetail.do" method="post">
+		<input type="hidden" name="type">
+		<input type="hidden" name="intrcn">
+		<input type="hidden" name="name">
+		<input type="hidden" name="link">
+		<input type="hidden" name="useyn">
+		<input type="hidden" name="thema">
+	</form>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
@@ -263,10 +388,8 @@ input[type="text"] {
 		var inptuseyn = document.querySelector("#category_useyn");
 		var ctgrystyle = document.getElementsByClassName("category_style");
 		var ctgrythema = document.getElementsByClassName("category_thema");
+		var ctgryuseyn= document.getElementsByClassName("category_useyn");
 		var ctgryintrcn = document.getElementsByClassName("category_intrcn");
-
-		var nonedellist = [ "Home", "회사 소개", "주요사업", "그룹웨어", "회사 개요", "CI 소개",
-				"주요 연혁", "조직도", "오시는 길", "포토스토리", "pdf솔루션", "it솔루션" ];
 
 		var addhide = function() {
 			for (var j = 0; j < ctgrystyle.length; j++) {
@@ -275,12 +398,12 @@ input[type="text"] {
 			for (var j = 0; j < ctgrythema.length; j++) {
 				ctgrythema[j].classList.add("hide");
 			}
-			for (var j = 0; j < ctgryintrcn.length; j++) {
-				ctgrythema[j].classList.add("hide");
+			for (var j = 0; j < ctgryuseyn.length; j++) {
+				ctgryuseyn[j].classList.add("hide");
 			}
 			inptname.value = "";
 			inptlink.value = "";
-			inptuseyn.selectedIndex=0;
+			inptuseyn.selectedIndex = 0;
 		}
 
 		function removetds(target) {
@@ -348,10 +471,17 @@ input[type="text"] {
 					addhide();
 					console.log("5")
 				} else if (div.getAttribute("data-delable") == 0) {
+					// 삭제 가능한 페이지 ex) 새페이지 등 클릭
 					div.classList.add("tree-div-selected");
 					addhide();
 					for (var j = 0; j < ctgrystyle.length; j++) {
 						ctgrystyle[j].classList.remove("hide");
+					}
+					for (var j = 0; j < ctgrythema.length; j++) {
+						ctgrythema[j].classList.remove("hide");
+					}
+					for (var j = 0; j < ctgryuseyn.length; j++) {
+						ctgryuseyn[j].classList.remove("hide");
 					}
 					seldetail.value = span.innerText;
 					inptname.value = span.innerText;
@@ -364,6 +494,9 @@ input[type="text"] {
 					for (var j = 0; j < ctgrythema.length; j++) {
 						ctgrythema[j].classList.remove("hide");
 					}
+					for (var j = 0; j < ctgryuseyn.length; j++) {
+						ctgryuseyn[j].classList.remove("hide");
+					}
 					console.log("asd");
 					seldetail.value = span.innerText;
 					inptname.value = span.innerText;
@@ -372,10 +505,9 @@ input[type="text"] {
 				}
 			}
 		}
-		
-		
+
 		document.querySelector("#tree").addEventListener("click", clicktree);
-		
+
 		document.getElementById("btn_addcategory").onclick = function(e) {
 			console.log("add");
 			console.log("selmenu" + selmenu.value);
@@ -390,33 +522,34 @@ input[type="text"] {
 			if (selmenu.value == "") {
 				//메뉴선택 안됨 메뉴 추가해야됨
 				var i = document.createElement("i");
-				i.classList.add("menu-icon","tf-icons","bx","bx-layout");
+				i.classList.add("menu-icon", "tf-icons", "bx", "bx-layout");
 				div.append(i);
-				div.classList.add("menu-toggle","depth1");
+				div.classList.add("menu-toggle", "depth1");
 				div.setAttribute("data-delable", "0");
 				div.append(label);
 				var li = document.createElement("li");
-				li.classList.add("menu-item","ui-sortable-handle");
+				li.classList.add("menu-item", "ui-sortable-handle");
 				li.append(div);
-				console.log(this.closest("td").querySelector("ul#tree").append(li));
+				console.log(this.closest("td").querySelector("ul#tree").append(
+						li));
 				console.log(this.closest("td"));
+				var ul = document.createElement("ul");
+				ul.classList.add("menu-sub");
+				li.append(ul);
 				this.closest("td").querySelector("ul#tree").append(li);
 				console.log("메뉴선택 안됨 메뉴 추가해야됨")
 			} else {
 				// 메뉴 선택됨 세부 항목 추가하면됨
 				span.innerText = "새 페이지";
 				console.log("메뉴 선택됨 세부 항목 추가하면됨");
-				div.classList.add("menu-link","depth2");
+				div.classList.add("menu-link", "depth2");
 				div.setAttribute("data-delable", "0");
 				div.append(label);
 				var li = document.createElement("li");
 				li.classList.add("menu-item");
 				li.append(div);
-				var ul = document.createElement("ul");
-				ul.classList.add("menu-sub");
-				ul.append(li);
 				document.querySelector(".tree-div-selected").parentElement
-						.append(ul);
+						.querySelector("ul.menu-sub").append(li);
 
 			}
 		}
@@ -432,9 +565,10 @@ input[type="text"] {
 					alert("삭제 할 수 없는 메뉴 입니다.");
 				} else {
 					console.log("메뉴 삭제하면 됨");
+					console.log(selected[0].parentElement);
 					selmenu.value = "";
 					addhide();
-					selected[0].remove();
+					selected[0].parentElement.remove();
 				}
 			} else {
 				if (selected[1].getAttribute("data-delable") == 2) {
@@ -443,9 +577,10 @@ input[type="text"] {
 					alert("삭제 할 수 없는 페이지 입니다.");
 				} else {
 					console.log("항목 삭제하면 됨");
+					console.log(selected[1].parentElement);
 					selmenu.value = "";
 					addhide();
-					selected[1].remove();
+					selected[1].parentElement.remove();
 				}
 			}
 			console.log("del");
@@ -456,6 +591,79 @@ input[type="text"] {
 		$("#tree").disableSelection();
 		$(".menu-sub").sortable();
 		$(".menu-sub").disableSelection();
+
+		var slideIndex = 0;
+		showSlides(slideIndex);
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slidesprev = document.getElementsByClassName("mySlidesprev");
+			var slides = document.getElementsByClassName("mySlides");
+			var slidesnext = document.getElementsByClassName("mySlidesnext");
+			if (n > slides.length-1) {
+				slideIndex = 0;
+			}
+			if (n < 0) {
+				slideIndex = slides.length-1;
+			}
+			for (i = 0; i < slides.length; i++) {
+				slidesprev[i].style.display = "none";
+				slides[i].style.display = "none";
+				slidesnext[i].style.display = "none";
+			}
+			if(slideIndex==0){
+				slidesprev[slides.length-1].style.display = "block";
+			}else{
+				slidesprev[slideIndex-1].style.display = "block";
+			}
+			slides[slideIndex].style.display = "block";
+			if(slideIndex==slides.length-1){
+				slidesnext[0].style.display = "block";
+			}else{
+				slidesnext[slideIndex+1].style.display = "block";
+			}
+		}
+		
+		function sendnext(){
+			console.log("선택된 타입");
+			console.log(document.querySelector('div.mySlides[style="display: block;"] img').src);
+			console.log("CK에디터 내용");
+			console.log(CKEDITOR.instances.intrcnment.getData());
+			console.log("페이지 명");
+			console.log(document.querySelector("#inptcategory_name").value);
+			console.log("페이지 주소");
+			console.log(document.querySelector("#inptcategory_link").value);
+			console.log("페이지 노출 여부");
+			console.log(document.querySelector("#category_useyn").value);
+			console.log("페이지 테마");
+			console.log(document.querySelector("input[type='radio']:checked+label > img").getAttribute("src"));
+			console.log();
+			var form = document.querySelector("#form4nextbtn");
+			var inpttype4post = document.querySelector("input[name='type']")
+			var inptintrcn4post = document.querySelector("input[name='intrcn']")
+			var inptname4post = document.querySelector("input[name='name']")
+			var inptlink4post = document.querySelector("input[name='link']")
+			var inptuseyn4post = document.querySelector("input[name='useyn']")
+			var inptthema4post = document.querySelector("input[name='thema']")
+			
+			inpttype4post.value= document.querySelector('div.mySlides[style="display: block;"] img').src;
+			inptintrcn4post.value= CKEDITOR.instances.intrcnment.getData();
+			inptname4post.value= document.querySelector("#inptcategory_name").value;
+			inptlink4post.value= document.querySelector("#inptcategory_link").value;
+			inptuseyn4post.value= document.querySelector("#category_useyn").value;
+			inptthema4post.value= document.querySelector("input[type='radio']:checked+label > img").getAttribute("src");
+			
+			console.log(form);
+			form.submit();
+		}
+		document.querySelector("#a_next").addEventListener("click",sendnext);
 	</script>
 </html>
 

@@ -39,8 +39,11 @@
 .category_add *{margin:0;padding:0}
 .category_add select{border:1px solid #c2c3bd}
 .category_add dl{display:block;z-index:1;zoom:1}
+.category_add dt.category_thema.all{width:250px;}
 .category_add dt{width:110px;height:25px;padding:0;padding-top:3px;font-weight:700}
-.category_add dd{margin-top:-21px;padding:0 0 0 100px;height:20px}
+.category_add dd.category_thema.all{padding:0 0 0 180px;}
+.category_add dd{margin: -21px 0px 10px 0px;padding:0 0 0 100px;height:20px}
+.category_add dd.category_style{padding:0px !important;}
 .category_add dd.cbox{padding-top:3px;height:22px;position:relative;zoom:1}
 .category_add dd.category_name .info{padding:8px 0 0;font-size:12px;letter-spacing:-1px;color:#424242;vertical-align:middle}
 .category_add dd.category_name .info .checkbox{margin:0 4px 3px 0;vertical-align:middle}
