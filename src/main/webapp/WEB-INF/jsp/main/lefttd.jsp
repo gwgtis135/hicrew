@@ -41,7 +41,7 @@ ul.innerul li div:before {
 }
 
 ul#tree li div:hover, ul.innerul li div:hover {
-	color: #007FFF;
+	color: #ff8040;
 }
 
 ul#tree {

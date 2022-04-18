@@ -175,14 +175,14 @@ input[type="radio"] { vertical-align:text-bottom; }
 .popwTable tbody td select { padding:2px 0 3px 2px; border:1px solid #dedede; }
 .popwTable tbody td img { margin-left:7px; }
 
-.board {position:relative; width:730px; padding-top:20px; }
+.board {position:relative; /* width:730px; */ padding-top:20px; }
 .board h1, 
 .board h2 {/*float:left;*/ color:#333; font-size:16px; font-weight:600; }
 .board h1 {margin-bottom:7px; padding:0 0 1px 25px; background:url(../../../images/egovframework/com/cmm/icon/tit_icon.png) no-repeat left 0px; }
 .board h2 { margin:15px 0 10px 0; }
 .board h3 { color:#333;  font-size:14px; font-weight:600; margin:50px 0 10px 0; }
 .board h3 b { color:#2277d7; }
-.search_box {/* float:right;*/ position:relative; margin-bottom:7px; padding:13px 10px; border:1px solid #b1bbcb; border-top:3px solid #8191ac; background:#eef3fb; }
+.search_box {/* float:right;*/ position:relative; margin-bottom:7px; padding:13px 10px; border:1px solid #333; border-top:3px solid #333; background:#ffffff; }
 .search_box ul {font-size:0; text-align:right; }
 .search_box ul li {/* float:left;*/display:inline-block; margin-left:5px; font-size:11px; vertical-align:top; }
 .search_box ul li img { margin-left:7px; }
@@ -192,8 +192,8 @@ input[type="radio"] { vertical-align:text-bottom; }
 .search_box select {height:24px; /*padding:3px 3px 3px 4px;*/ border:1px solid #dedede; }
 .search_box input.s_input {width:140px; height:22px; margin-right:3px; padding-left:5px; }
 .search_box input.s_input2 {width:140px; height:22px; margin-right:3px; padding-left:5px; }
-.search_box input.s_btn { height:24px; padding:0 8px; border:none; color:#fff; background:#4688d2; border-radius:2px; cursor:pointer; }
-.search_box input.s_btn:hover { background:#7dabdf; }
+.search_box input.s_btn { height:24px; padding:0 8px; border:none; color:#fff; background:#ff8040; border-radius:2px; cursor:pointer; }
+.search_box input.s_btn:hover { background:#ff5126; }
 
 .search_box span.s_btn { display:inline-block; vertical-align:top; height:13px; font-size:12px; padding:6px 12px 5px 12px; background:#4688d2; border-radius:2px; cursor:pointer; }
 .search_box span.s_btn:hover { background:#7dabdf;}

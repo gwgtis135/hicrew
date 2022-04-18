@@ -109,22 +109,28 @@
 		<input type="hidden" id="selectedmenu"> <input type="hidden" id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
-				<div class="row">
-					<div class="row">
+				<div class="row cmmrow">
+					<div class="row ">
 						<div class="tbl board" id="noticeGrid">
 							<table>
 								<colgroup>
 									<col style="width: 220px">
+									<col style="width: 10px">
+									
 									<col style="width: auto">
 								</colgroup>
 								<tr>
 									<jsp:include page="../ccm/ccmlefttd.jsp">
 										<jsp:param name="#" value="#" />
 									</jsp:include>
+									<td>
+									</td>
 									<td class="n_admin">
 										<form name="CcmDeCodeForm" action="<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>" method="post" onSubmit="fn_egov_search_code(); return false;">
-											<div class="board">
-												<h1>사업부서 상세코드 목록</h1>
+											
+											<!-- 상세코드 테이블 start  -->
+											<div class="board hide tblccmCodeList">
+												<h1>상세코드  목록</h1>
 
 												<!-- 검색영역 -->
 												<!-- 검색조건선택 -->
@@ -141,12 +147,15 @@
 																<!-- 상세코드명 -->
 														</select></li>
 														<!-- 검색키워드 및 조회버튼 -->
-														<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" value="" /> <input type="submit" class="s_btn" value="조회" title="" /> <span class="btn_b"><a href="<c:url value='/sym/ccm/cde/RegistCcmCmmnDetailCodeView.do' />">등록</a></span></li>
+														<li>
+															<input class="s_input" name="searchKeyword" type="text" size="35" title="" value="" /> 
+															<input type="submit" class="s_btn" value="조회" title="" /> 
+														</li>
 													</ul>
 												</div>
 
 												<!-- 목록영역 -->
-												<table class="board_list" summary="">
+												<table class="board_list cmmTable" summary="">
 													<caption>사업부서 상세코드 목록</caption>
 													<colgroup>
 														<col style="width: 9%;">
@@ -156,59 +165,53 @@
 														<col style="width: 13%;">
 													</colgroup>
 													<thead>
-														<tr>
+														<!-- <tr>
 															<th>번호</th>
-															<!-- 번호 -->
+															번호
 															<th>코드ID</th>
-															<!-- 코드ID -->
+															코드ID
 															<th class="board_th_link">상세코드</th>
-															<!-- 코드 -->
+															코드
 															<th>상세코드명</th>
-															<!-- 코드명 -->
+															코드명
 															<th>사용여부</th>
-															<!-- 사용여부 -->
-														</tr>
+															사용여부
+														</tr> -->
 													</thead>
 													<tbody class="ov">
-
-														<tr>
-															<!-- <td colspan="5"><spring:message code="common.nodata.msg" /></td> -->
-														</tr>
-
-
 														<tr>
 															<td>1</td>
-															<td>COM001</td>
-															<td>REGC01</td>
-															<td><a>단일 게시판 이용등록</a></td>
+															<td> <input value="DEPT001" type="text"> </td>
+															<td> <input value="REGC01" type="text"></td>
+															<td>세종 (나이스 사업 구축)</td>
 															<td>Y</td>
 														</tr>
 														<tr>
-															<td>1</td>
-															<td>COM001</td>
+															<td>2</td>
+															<td>POSI001</td>
 															<td>REGC01</td>
-															<td><a>단일 게시판 이용등록</a></td>
+															<td>단일 게시판 이용등록</td>
 															<td>Y</td>
 														</tr>
 														<tr>
-															<td>1</td>
-															<td>COM001</td>
+															<td>3</td>
+															<td>POSI001</td>
 															<td>REGC01</td>
-															<td><a>단일 게시판 이용등록</a></td>
+															<td>단일 게시판 이용등록</td>
 															<td>Y</td>
 														</tr>
 														<tr>
-															<td>1</td>
-															<td>COM001</td>
+															<td>4</td>
+															<td>POSI001</td>
 															<td>REGC01</td>
-															<td><a>단일 게시판 이용등록</a></td>
+															<td>단일 게시판 이용등록</td>
 															<td>Y</td>
 														</tr>
 														<tr>
-															<td>1</td>
-															<td>COM001</td>
+															<td>5</td>
+															<td>POSI001</td>
 															<td>REGC01</td>
-															<td><a>단일 게시판 이용등록</a></td>
+															<td>단일 게시판 이용등록</td>
 															<td>Y</td>
 														</tr>
 
@@ -221,14 +224,90 @@
 														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
 													</ul>
 												</div>
+											</div>
+											<!-- 상세코드 테이블 end  -->
+											<!-- 공통코드 테이블 목록 start -->
+											
+												<div class="board tblcmmUpendMenu">
+												<h1>공통코드 목록</h1>
+												<!-- 검색영역 -->
+												<!-- 검색조건선택 -->
+												<div class="search_box">
+													<ul>
+														<li><select name="searchCondition" title="">
+																<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																<option selected value=''>선택하세요</option>
+																<!-- 선택하세요 -->
+																<option value="1">코드ID</option>
+																<!-- 코드ID -->
+																<option value="2">코드ID명</option>
+																<!-- 코드ID명 -->
+														</select></li>
+														<!-- 검색키워드 및 조회버튼 -->
+														<li>
+															<input class="s_input"  name="searchKeyword" type="text" size="35" title="" maxlength="155">
+															<input type="submit" class="s_btn" value="조회" title=""/> 
+														</li>
+													</ul>
+												</div>
+
+												<!-- 목록영역 -->
+												<table class="board_list cmmTable">
+												<caption>공통코드 목록</caption>
+													<colgroup>
+														<col style="width: 9%;">
+														<col style="width: 40%;">
+														<col style="width: 40%;">
+														<col style="width: 13%;">
+														<col style="width: 13%;">
+													</colgroup>
+													<tbody class="ov">
+														<tr>
+															<td class="cmmtd">1</td>
+															<td class="cmmtd"><input value="DEPT001" type="text"></td>
+															<td class="cmmtd"><input value="사업부서" type="text"></td>
+															<td class="cmmtd">
+															<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
+														</tr>
+														<tr>
+															<td class="cmmtd">2</td>
+															<td class="cmmtd"><input value="POSI001" type="text"></td>
+															<td class="cmmtd"><input value="직책" type="text"></td>
+															<td class="cmmtd">
+																<select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+																</select>	
+															</td>
+														</tr>
+													</tbody>
+												</table>
+
+												<!-- paging navigation -->
+											 	<div class="pagination">
+													<ul>
+														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
+													</ul>
+												</div>
 
 											</div>
+											<!-- 공통코드 테이블 목록 end -->
+											
 
 											<input name="codeId" type="hidden" value=""> <input name="code" type="hidden" value=""> <input name="pageIndex" type="hidden" value="<c:out value='${searchVO.pageIndex}'/>">
 										</form>
 									</td>
 								</tr>
 							</table>
+							<div class="tbl_bottom" style="float: right;">
+							<div class="pagenation" id="pageControlMgmt"></div>
+							<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()" >추가</a> <a
+								id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a> 
+						</div>
 						</div>
 					</div>
 				</div>
@@ -249,6 +328,79 @@
 			</div>
 		</footer>
 	</div>
+<script type="text/javascript">
 
+
+	function hideTbl(e){
+		var tblccmupendmenu = document.querySelector('.tblcmmUpendMenu');
+		var tblccmCode= document.querySelector('.tblccmCodeList');
+		var tblText = e.target.innerText;
+		
+		if(tblText == '공통코드관리'){
+			console.log('공통코드관리');
+			// 토글 : 있으면 없애고 없으면 붙인다.
+			// 공통코드 관리를 눌렀을땐 공통 코드 관리 테이블에서 hide 제거
+			// 동시에 상세코드 관리 테이블에 hide 추가.
+			tblccmCode.classList.add('hide');
+			tblccmupendmenu.classList.remove('hide');
+		}
+		else if(tblText == '상세코드관리'){
+			console.log('상세코드관리');
+			tblccmupendmenu.classList.add('hide');
+			tblccmCode.classList.remove('hide');
+		}
+		
+	}
+
+	function addbtn(){
+		console.log('추가');
+		
+		var select = document.createElement('select');
+		var div = document.querySelectorAll('.ov');
+		
+		/* select 박스 */
+		var optionY = document.createElement('option');
+		var optionN = document.createElement('option');
+		optionY.setAttribute('value','Y');
+		optionN.setAttribute('value','N');
+		optionY.innerText="활성화";
+		optionN.innerText="비활성화";
+		select.append(optionY);
+		select.append(optionN);
+	
+		
+		var tr= document.createElement('tr');
+		
+	for (var i = 0; i < 4; i++) {
+
+			var td = document.createElement('td');
+			td.setAttribute('class', 'cmmtd');
+			if (i == 0) {
+				td.innerHtml = i;
+			}
+			if( i ==1){
+				var input = document.createElement('input');
+				input.setAttribute('value','POSI001');
+				input.setAttribute('type','text');
+				td.append(input);
+				
+			}
+			if(i ==2){
+				var input = document.createElement('input');
+				input.setAttribute('value','직책');
+				input.setAttribute('type','text');
+				td.append(input);
+			}
+			if( i ==3){
+				td.append(select)
+			}
+			tr.append(td);
+		}//for end
+		div[1].append(tr);
+	
+	
+
+	}
+</script>
 </body>
 </html>
