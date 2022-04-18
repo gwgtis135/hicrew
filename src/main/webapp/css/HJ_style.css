@@ -1,18 +1,4 @@
 @charset "UTF-8";
-
-/* 종현 항목관리-조직도 추가,저장,삭제,미리보기 css 적용하는 중 
-.btn_type1 {
-	display: inline-block;
-	min-width: 56px;
-	height: 42px;
-	padding: 9px 12px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-	vertical-align: top;
-}
- */
 .btn_type2 {
 	display: inline-block;
 	min-width: 56px;
@@ -28,20 +14,6 @@
 div.modal>div>div>p>a.btn_type1, div.modal>div>div>p>a.btn_type2 {
 	color: white;
 }
-
-/* 항목관리-미리보기button css jonghyeon_style로 옮김 
-.btn_type3 {
-	display: inline-block;
-	min-width: 56px;
-	height: 42px;
-	padding: 9px 12px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	border: 1px solid #d3d3d3;
-	text-align: center;
-	vertical-align: top;
-} */
-
 .btn_type1+.btn_type1 {
 	margin-left: 1px;
 }

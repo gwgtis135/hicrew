@@ -82,7 +82,7 @@ div.tree-div-selected label span {
 		class="layout-menu menu-vertical menu bg-menu-theme">
 		<ul id="tree" class="menu-inner py-1 ps ps--active-y">
 			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+				<div class="menu-link depth1 menu-toggle" data-delable="1">
 					<i class="menu-icon tf-icons bx bx-layout"></i>
 					<label><span data-link="main.do">Home</span></label>
 				</div>
@@ -146,7 +146,7 @@ div.tree-div-selected label span {
 			<c:if
 				test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
 				<li class="menu-item">
-					<div class="menu-link depth1 menu-toggle depth1" data-delable="1">
+					<div class="menu-link depth1 menu-toggle" data-delable="1">
 						<i class="menu-icon tf-icons bx bx-layout"></i>
 						<label><span data-link="http://gw.hicrew.kr">그룹웨어</span></label>
 					</div>
