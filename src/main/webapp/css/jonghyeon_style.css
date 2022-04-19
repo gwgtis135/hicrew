@@ -815,6 +815,7 @@ p.toggler {
 /* 공통관리 a태그 css */
 .cmmA{
 	color:#ff8040 !important;
+	font-size: 16px;
 }
 /* 상세코드 행 높이 CSS */
 .cmmtd{
@@ -832,7 +833,24 @@ p.toggler {
 	
 }
 
-/* 공통관리 테이블 hide 클래스  css*/
-.hide{
-	display:none;
-}
+
+
+/* 페이지 관리에서 com.css 스타일 가져와서 사용하기  */
+ .menudetailSearchbox{
+    float: right;
+    position: relative;
+    margin-bottom: 7px;
+    padding: 13px 10px;
+    border: 1px solid #333;
+    border-top: 3px solid #333;
+    background: #ffffff;
+    font-weight: 400;
+    font-family: '돋움', '굴림', 'Arial', 'AppleGothic', 'sans-serif';
+    font-size: 12px;
+    color: #666;
+    height: 40px;
+    padding: 4px 0;
+    color: #333333;
+    font-weight: 400;
+} 
+
