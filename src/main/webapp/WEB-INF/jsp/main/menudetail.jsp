@@ -63,6 +63,8 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
+	
+
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -93,7 +95,6 @@
 				<div class="row photo-admin-row">
 					<div class="row">
 						<div class="tbl board">
-
 							<table>
 								<colgroup>
 									<col style="width: 220px">
@@ -103,10 +104,32 @@
 									<jsp:include page="lefttd.jsp">
 										<jsp:param name="#" value="#" />
 									</jsp:include>
+									
 									<td class="n_admin">
+									<form name="CcmDeCodeForm" action="" method="post" onSubmit="">
 										<!--주요연혁 -->
 										<div class="hide table" id="tblch">
-											<div class="row">
+										<h1>연혁 관리</h1>
+
+											<!-- 검색영역 -->
+											<!-- 검색조건선택 -->
+											<div class="menudetailSearchbox">
+												<ul>
+													<li><select name="searchCondition" title="">
+															<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+															<option selected value=''>선택하세요</option>
+															<!-- 선택하세요 -->
+															<option value="1">코드ID</option>
+															<!-- 코드ID -->
+															<option value="2">코드ID명</option>
+															<!-- 코드ID명 -->
+													</select></li>
+													<!-- 검색키워드 및 조회버튼 -->
+													<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" maxlength="155"> <input type="submit" class="s_btn" value="조회" title="" /></li>
+												</ul>
+											</div>
+
+											<!-- <div class="row">
 												<div class="col-md-2">
 													<div class="sel_box">
 														<select class="histselect form-select" name="scolumn"
@@ -120,7 +143,9 @@
 														</select>
 													</div>
 												</div>
-											</div>
+											</div> -->
+											
+											
 											<div class="histTable">
 												<!-- Hoverable Table rows -->
 												<div class="card">
