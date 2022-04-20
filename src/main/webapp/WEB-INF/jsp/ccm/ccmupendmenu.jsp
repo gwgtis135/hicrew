@@ -16,7 +16,7 @@
 *
 */
 %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
@@ -105,7 +105,7 @@
 	</jsp:include>
 
 
-	<div id="page">
+	<div class="gtco-section-overflow">
 		<input type="hidden" id="selectedmenu"> <input type="hidden" id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
@@ -116,21 +116,19 @@
 								<colgroup>
 									<col style="width: 220px">
 									<col style="width: 10px">
-									
 									<col style="width: auto">
 								</colgroup>
 								<tr>
 									<jsp:include page="../ccm/ccmlefttd.jsp">
 										<jsp:param name="#" value="#" />
 									</jsp:include>
-									<td>
-									</td>
+									<td></td>
 									<td class="n_admin">
 										<form name="CcmDeCodeForm" action="<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>" method="post" onSubmit="fn_egov_search_code(); return false;">
-											
+
 											<!-- 상세코드 테이블 start  -->
 											<div class="board hide tblccmCodeList">
-												<h1>상세코드  목록</h1>
+												<h1>상세코드 목록</h1>
 
 												<!-- 검색영역 -->
 												<!-- 검색조건선택 -->
@@ -147,10 +145,7 @@
 																<!-- 상세코드명 -->
 														</select></li>
 														<!-- 검색키워드 및 조회버튼 -->
-														<li>
-															<input class="s_input" name="searchKeyword" type="text" size="35" title="" value="" /> 
-															<input type="submit" class="s_btn" value="조회" title="" /> 
-														</li>
+														<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" value="" /> <input type="submit" class="s_btn" value="조회" title="" /></li>
 													</ul>
 												</div>
 
@@ -164,103 +159,71 @@
 														<col style="width: 20%;">
 														<col style="width: 20%;">
 													</colgroup>
-													<thead>
-														<!-- <tr>
-															<th>번호</th>
-															번호
-															<th>코드ID</th>
-															코드ID
-															<th class="board_th_link">상세코드</th>
-															코드
-															<th>상세코드명</th>
-															코드명
-															<th>사용여부</th>
-															사용여부
-														</tr> -->
-													</thead>
 													<tbody class="ov">
 														<tr>
 															<td class="cmmtd">1</td>
-															<td class="cmmtd">
-															   <select>
+															<td class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
-																</select>
-															</td>
+															</select></td>
 															<td class="cmmtd"><input value="REGC01" type="text"></td>
 															<td class="cmmtd">세종 (나이스 사업 구축)</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 														<tr>
 															<td class="cmmtd">2</td>
 															<td class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
-																</select>
-															</td>
+															</select></td>
 															<td class="cmmtd"><input value="REGC01" type="text"></td>
 															<td class="cmmtd">대구 (정보공시 2020)</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 														<tr>
 															<td class="cmmtd">3</td>
 															<td class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
-																</select>
-															</td>
+															</select></td>
 															<td class="cmmtd"><input value="REGC01" type="text"></td>
 															<td class="cmmtd">대구 (나이스 유지보수)</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 														<tr>
 															<td class="cmmtd">4</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
-																</select>
-															</td>
+															</select></td>
 															<td class="cmmtd"><input value="REGC01" type="text"></td>
 															<td class="cmmtd">대구 본사</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 														<tr>
 															<td class="cmmtd">5</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001" selected>POSI001/직급</option>
-																</select>
-															</td>
+															</select></td>
 															<td class="cmmtd"><input value="POSI01" type="text"></td>
 															<td class="cmmtd">대표</td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 													</tbody>
 												</table>
@@ -274,8 +237,8 @@
 											</div>
 											<!-- 상세코드 테이블 end  -->
 											<!-- 공통코드 테이블 목록 start -->
-											
-												<div class="board tblcmmUpendMenu">
+
+											<div class="board tblcmmUpendMenu">
 												<h1>공통코드 목록</h1>
 												<!-- 검색영역 -->
 												<!-- 검색조건선택 -->
@@ -291,16 +254,13 @@
 																<!-- 코드ID명 -->
 														</select></li>
 														<!-- 검색키워드 및 조회버튼 -->
-														<li>
-															<input class="s_input"  name="searchKeyword" type="text" size="35" title="" maxlength="155">
-															<input type="submit" class="s_btn" value="조회" title=""/> 
-														</li>
+														<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" maxlength="155"> <input type="submit" class="s_btn" value="조회" title="" /></li>
 													</ul>
 												</div>
 
 												<!-- 목록영역 -->
 												<table class="board_list cmmTable">
-												<caption>공통코드 목록</caption>
+													<caption>공통코드 목록</caption>
 													<colgroup>
 														<col style="width: 20%;">
 														<col style="width: 26%;">
@@ -312,29 +272,25 @@
 															<td class="cmmtd">1</td>
 															<td class="cmmtd"><input value="DEPT001" type="text"></td>
 															<td class="cmmtd"><input value="사업부서" type="text"></td>
-															<td class="cmmtd">
-															<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 														<tr id="Trclick">
 															<td class="cmmtd">2</td>
 															<td class="cmmtd"><input value="POSI001" type="text"></td>
 															<td class="cmmtd"><input value="직책" type="text"></td>
-															<td class="cmmtd">
-																<select>
+															<td class="cmmtd"><select>
 																	<option value="Y">활성화</option>
 																	<option value="N">비활성화</option>
-																</select>	
-															</td>
+															</select></td>
 														</tr>
 													</tbody>
 												</table>
 
 												<!-- paging navigation -->
-											 	<div class="pagination">
+												<div class="pagination">
 													<ul>
 														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
 													</ul>
@@ -342,7 +298,7 @@
 
 											</div>
 											<!-- 공통코드 테이블 목록 end -->
-											
+
 
 											<input name="codeId" type="hidden" value=""> <input name="code" type="hidden" value=""> <input name="pageIndex" type="hidden" value="<c:out value='${searchVO.pageIndex}'/>">
 										</form>
@@ -350,31 +306,31 @@
 								</tr>
 							</table>
 							<div class="tbl_bottom" style="float: right;">
-							<div class="pagenation" id="pageControlMgmt"></div>
-							<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()" >추가</a> <a
-								id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a> 
-						</div>
+								<div class="pagenation" id="pageControlMgmt"></div>
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<footer id="gtco-footer" role="contentinfo">
-			<div class="gtco-container">
-
-				<div class="row copyright">
-					<div class="col-md-12">
-						<p class="pull-left">
-							<small class="block">&copy; 대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩). 대표번호 : 070-8772-1612</small> <small class="block">COPYRIGHT©2018 BY HCSYSTEM. ALL RIGHTS RESERVED</small>
-						</p>
-					</div>
-				</div>
-
-			</div>
-		</footer>
 	</div>
-<script type="text/javascript">
+
+	<footer id="gtco-footer" role="contentinfo">
+		<div class="gtco-container">
+
+			<div class="row copyright">
+				<div class="col-md-12">
+					<p class="pull-left">
+						<small class="block">&copy; 대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩). 대표번호 : 070-8772-1612</small> <small class="block">COPYRIGHT©2018 BY HCSYSTEM. ALL RIGHTS RESERVED</small>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+	<script type="text/javascript">
 	/* 공통코드관리 상세코드관리의 추가 버튼 구분하기  */
 	var flag=0;
 

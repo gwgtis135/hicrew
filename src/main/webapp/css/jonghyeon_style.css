@@ -306,7 +306,7 @@ section.sub .sub_menu_lst li a {
 }
 /* 연혁 css */
 .table > :not(:first-child) {
-  border-top: 2px solid #d9dee3;
+/*   border-top: 2px solid #d9dee3; */
 }
 .table > tbody {
     vertical-align: inherit;
@@ -837,20 +837,74 @@ p.toggler {
 
 /* 페이지 관리에서 com.css 스타일 가져와서 사용하기  */
  .menudetailSearchbox{
-    float: right;
     position: relative;
     margin-bottom: 7px;
     padding: 13px 10px;
     border: 1px solid #333;
-    border-top: 3px solid #333;
+    border-top: 3px solid #333 !important;
     background: #ffffff;
-    font-weight: 400;
-    font-family: '돋움', '굴림', 'Arial', 'AppleGothic', 'sans-serif';
-    font-size: 12px;
-    color: #666;
-    height: 40px;
-    padding: 4px 0;
-    color: #333333;
-    font-weight: 400;
 } 
+.menudetailSearchbox ul{
+	font-size: 0;
+    text-align: right;
+}
+.menudetailSearchbox ul li{
+	display: inline-block;
+    margin-left: 5px;
+    font-size: 11px;
+    vertical-align: top;
+}
+.menudetailSearchbox select{
+	height: 24px;
+    /* padding: 3px 3px 3px 4px; */
+    border: 1px solid #dedede;
+}
+.search ul li > input[type=text]{
+	height: 22px;
+}
+.menudetailSearchbox input.s_input{
+    width: 140px;
+    height: 22px;
+    margin-right: 3px;
+    padding-left: 5px;
+}
+.input[type="password"], input[type="file"], input[type="text"]{
+    color: black;
+    text-align: center;
+}
+textarea, input[type="file"], input[type="password"], input[type="text"], input[type="date"]{
+    border: 1px solid #d2d2d2;
+    color: #727272;
+}
+.menudetailSearchbox input.s_btn{
+	height: 25px;
+    padding: 0 8px;
+    border: none;
+    color: #fff;
+    background: #ff8040;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.menudetailboard_list{
+	width: 100%;
+    table-layout: fixed;
+    border-top: 2px solid #4688d2;
+}
+.tblch h1{
+	margin-bottom: 7px;
+    padding: 0 0 1px 25px;
+    background: url(../../../images/egovframework/com/cmm/icon/tit_icon.png) no-repeat left 0px;
+}
+.menudetailboard_list tbody td{
+    text-align: center;
+    padding: 11px 5px;
+    border-bottom: 1px solid #d9d9d9;
+    word-break: break-all;
+    white-space: -moz-pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 페이지 관리에서 com.css 스타일 end */
+
+
 

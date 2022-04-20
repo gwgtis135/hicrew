@@ -16,8 +16,8 @@ public class ChController {
 	
 	@RequestMapping("ch.do")
 	public String goCh() {
-		System.out.println("연혁관리페이지 컨트롤러 호출");
-		return "ch/Ch";
+		System.out.println("연혁 관리 테스트 jsp 컨트롤러 호출");
+		return "main/Test";
 	}
 	@RequestMapping("chManage.do")
 	public String goChManage() {
