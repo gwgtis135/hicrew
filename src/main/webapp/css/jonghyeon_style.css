@@ -489,7 +489,8 @@ td.num{
    text-align: center;
    vertical-align: top;
    border-radius: 25px;
-    font-weight: 600;
+   font-weight: 600;
+   font-size: 14px;
 }
 .btn_type2 {
 	display: inline-block;
@@ -503,11 +504,13 @@ td.num{
 	vertical-align: top;
 	border-radius: 25px;
     font-weight: 600;
+    font-size: 14px;
 }
 .btn_type3 {
    display: inline-block;
    min-width: 56px;
    height: 42px;
+   font-size: 14px;
    padding: 9px 12px;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
@@ -856,6 +859,7 @@ p.toggler {
 }
 .menudetailSearchbox select{
 	height: 24px;
+	font-size: 14px;
     /* padding: 3px 3px 3px 4px; */
     border: 1px solid #dedede;
 }
@@ -867,6 +871,7 @@ p.toggler {
     height: 22px;
     margin-right: 3px;
     padding-left: 5px;
+    font-size:14px;
 }
 .input[type="password"], input[type="file"], input[type="text"]{
     color: black;
@@ -875,9 +880,11 @@ p.toggler {
 textarea, input[type="file"], input[type="password"], input[type="text"], input[type="date"]{
     border: 1px solid #d2d2d2;
     color: #727272;
+    font-size:14px;
+    text-align:center;
 }
 .menudetailSearchbox input.s_btn{
-	height: 25px;
+	height: 22px;
     padding: 0 8px;
     border: none;
     color: #fff;
@@ -904,7 +911,19 @@ textarea, input[type="file"], input[type="password"], input[type="text"], input[
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* 연혁관리 페이지 input type="text" */
+.chWidth{
+	width: 300px;
+}
 /* 페이지 관리에서 com.css 스타일 end */
 
+/* 페이지관리 연혁관리 input css */
+.menudetailboard_list tbody td select{
+   	padding: 2px 0 3px 2px;
+    border: 1px solid #dedede;
+    font-size:14px;
+}
+.
 
 
