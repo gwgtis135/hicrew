@@ -120,36 +120,57 @@
 												</div>
 												<div class="histTable">
 													<!-- Hoverable Table rows -->
-													<div class="card">
+													
 														<div class="table-responsive text-nowrap">
 															<table class="table-hover menudetailboard_list">
 																<colgroup>
+																	<col style="width: 10%">
+																	<col style="width: 15%">
 																	<col style="width: 20%">
-																	<col style="width: 20%">
-																	<col style="width: 20%">
+																	<col style="width: 5%">
 																</colgroup>
 																<tbody class="ov">
-																	<tr>
+																	<tr class="cmmtd">
 																		<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-																		<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
-																		<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
+																		<td><input class="" type="date" value="2020-01-01"></td>
+																		<td>
+																			<select>
+																				<option value="">세종(나이스 구축 사업)</option>
+																				<option>대구(나이스 유지보수 사업)</option>
+																				<option>대구(정보공시 2020)</option>
+																				<option>대구(본부)</option>
+																			</select>
+																		</td>
+																		<td></td>
 																	</tr>
-																	<tr>
+																	<tr class="cmmtd">
 																		<td class="num cmmtd"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-																		<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
-																		<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
+																		<td><input class="" type="date" value="2020-01-01"></td>
+																		<td>
+																			<select>
+																				<option value="">세종(나이스 구축 사업)</option>
+																				<option>대구(나이스 유지보수 사업)</option>
+																				<option>대구(정보공시 2020)</option>
+																				<option>대구(본부)</option>
+																			</select>
+																		</td>
 																	</tr>
-																	<tr>
+																	<tr class="cmmtd">
 																		<td class="num cmmtd"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-																		<td><input class="history-admin-input-checkbox" type="date" value="2020-01-01"></td>
-																		<td><input class="history-admin-input-text" type="text" value="세종(4세대 ))"></td>
+																		<td><input class="" type="date" value="2020-01-01"></td>
+																		<td>
+																			<select>
+																				<option value="">세종(나이스 구축 사업)</option>
+																				<option>대구(나이스 유지보수 사업)</option>
+																				<option>대구(정보공시 2020)</option>
+																				<option>대구(본부)</option>
+																			</select>
+																		</td>
 																	</tr>
 																</tbody>
 															</table>
 															
 														</div>
-													</div>
-													<!--/ Hoverable Table rows -->
 												</div>
 											</div> <!-- hideTable end -->
 										</form>
@@ -159,7 +180,10 @@
 
 						<div class="tbl_bottom" style="float: right;">
 							<div class="pagenation" id="pageControlMgmt"></div>
-							<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict emphasisButton">삭제</a> <a id="a_remove" href="#" class="btn_type3 _rosRestrict emphasisButton">미리보기</a>
+							<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a> 
+							<a id="a_remove" href="#" class="btn_type3 _rosRestrict">미리보기</a>
+							<a id="a_remove" href="#" class="btn_type1 _rosRestrict emphasisButton">저장</a> 
+							<a id="a_remove" href="#" class="btn_type1 _rosRestrict emphasisButton">삭제</a> 
 						</div>
 					</div>
 				</div>
