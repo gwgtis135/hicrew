@@ -549,8 +549,9 @@ img, svg {
    font-family:"FontAwesome";
 }
 .btn-imagefix div:before{
-   content:"\f013";
-   font-family:"FontAwesome";
+   	content: "\f0aa";
+    font-family: "FontAwesome";
+    font-style: normal;
 }
 .btn-imagesave div:before{
    content:"\f0c7";
@@ -589,7 +590,8 @@ img, svg {
    vertical-align: middle;
    cursor: pointer;
    user-select: none;
-   background-color: #0f172ba3;
+   background-color: #1d3667;
+   font-size:20px;
    border: 1px solid transparent;
    padding: .375rem .75rem;
    font-size: 2rem;
@@ -602,7 +604,7 @@ img, svg {
 }
 /* emphasis(강조) button*/
 .emphasisButton{
-   color: #FF5126 !important;    
+   color: #FF5126;    
 }
 
 /* 연혁  css*/
@@ -924,6 +926,28 @@ textarea, input[type="file"], input[type="password"], input[type="text"], input[
     border: 1px solid #dedede;
     font-size:14px;
 }
-.
+/* 돋보기 icon 적용  */
+.menudetailOrgchtIconOne:before{
+	content: "\f002";
+    font-family: "FontAwesome";
+    font-style: normal;
+}
+/* 사진 업로드 icon 적용  */
+.menudetailOrgchtIconTwo:before{
+	content: "\f0aa";
+    font-family: "FontAwesome";
+    font-style: normal;
+}
 
-
+/* 조직도 관리 직급 select  */
+.orgchtMainSelect{
+	width:90px;
+}
+/* 조직도 아이콘 div  */
+.orgchtIcon{
+	    padding: 3px 9px !important;
+}
+/* 조직도 이름 input */
+.orgchtNameInput{
+	width: 120px;
+}
