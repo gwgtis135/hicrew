@@ -555,7 +555,7 @@ html:not([dir=rtl]) .border-primary,
 html[dir=rtl] .border-primary {
   border-color: #696cff !important;
 }
-
+ 
 a {
   color: #1d3667;
 }
