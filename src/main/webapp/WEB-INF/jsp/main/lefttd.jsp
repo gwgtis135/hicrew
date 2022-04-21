@@ -28,7 +28,7 @@ ul.innerul li div:before {
 	margin-right: 0.5em;
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link.tree-div-selected:not(.menu-toggle):before{
-    background-color: orange !important;
+    background-color: #ff8040 !important;
     /*border: 3px solid #e7e7ff !important;*/
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
@@ -50,7 +50,7 @@ ul#tree {
 }
 
 div.tree-div-selected label span {
-	color: orange;
+	color: #ff8040;
 	font-weight: bold !important;
 }
 

@@ -168,10 +168,12 @@
 															</select></td>
 															<td class="cmmtd"><input value="REGC01" type="text"></td>
 															<td class="cmmtd">세종 (나이스 사업 구축)</td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
+															<td class="cmmtd">
+																<select>
+																		<option value="Y">활성화</option>
+																		<option value="N">비활성화</option>
+																</select>
+															</td>
 														</tr>
 														<tr>
 															<td class="cmmtd">2</td>

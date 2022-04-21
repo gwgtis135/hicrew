@@ -2347,7 +2347,7 @@ form label {
 }
 
 .tbl.board tbody td a {
-	line-height: 1.5rem;
+	/* line-height: 1.5rem; */
 }
 
 .tbl.board tbody td .board_link {
@@ -3313,7 +3313,7 @@ header.on.product:before {
 	height: 100%;
 	text-transform: uppercase;
 	color: #333333;
-	font-size: 2rem;
+	font-size: 18px;
 	font-weight: 700;
 }
 

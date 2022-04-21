@@ -110,6 +110,7 @@ header.on.product:before {
 	color: #333333;
 	font-size: 2rem;
 	font-weight: 700;
+    text-decoration: none;
 }
 
 .header_cont .gnb>ul>li>a>span {
