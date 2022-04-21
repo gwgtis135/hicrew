@@ -63,8 +63,6 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
-	
-
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -81,7 +79,9 @@
 		<jsp:param name="#" value="#" />
 	</jsp:include>
 	<div class="gtco-section-overflow">
-
+		
+		${Upend } <br> ${Upend.toString() } 
+		
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
 				<!-- 
@@ -93,8 +93,9 @@
 				
 				 -->
 				<div class="row photo-admin-row">
-					<div>
+					<div class="row">
 						<div class="tbl board">
+
 							<table>
 								<colgroup>
 									<col style="width: 220px">
@@ -447,12 +448,13 @@
 															
 														</div>
 												</div>
-											</div> <!-- hideTable end -->
+											</div> 
+                    <!-- hideTable end -->
 
-										<div class="hide table" id="tblhome1">
+										<div class="hide table" id="tblmain">
+											<!-- 홈화면 -->
 											<div class="slideshow-container" id="photoimage">
 												<div class="photorow g-5">
-
 													<div class="col-lg-4 col-md-6">
 														<div class="bg-light">
 															<img class="photoimg-fluid" src="images/img_bg_1.jpg"
@@ -527,6 +529,7 @@
 										</div>
 
 										<div class="hide table" id="tblcmpnyinfo">
+											<!-- 회사 개요 -->
 											<table>
 												<colgroup>
 													<col style="width: 50px">
@@ -540,24 +543,18 @@
 														<td><input type="text" size="20" value="(주)하이크루"></td>
 														<td><input type="text" size="50"
 															value="High-Technology CREW System"></td>
-														<td><input type="number" value="1"
-															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
 														<td class="num"><input class="form-check-input"
 															type="checkbox"></td>
 														<td><input type="text" size="20" value="설립일"></td>
 														<td><input type="text" size="50" value="2018년 3월 13일"></td>
-														<td><input type="number" value="2"
-															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
 														<td class="num"><input class="form-check-input"
 															type="checkbox"></td>
 														<td><input type="text" size="20" value="대표이사"></td>
 														<td><input type="text" size="50" value="이영석"></td>
-														<td><input type="number" value="3"
-															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
 														<td class="num"><input class="form-check-input"
@@ -565,8 +562,6 @@
 														<td><input type="text" size="20" value="본사주소"></td>
 														<td><input type="text" size="50"
 															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-														<td><input type="number" value="4"
-															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
 														<td class="num"><input class="form-check-input"
@@ -574,8 +569,6 @@
 														<td><input type="text" size="20" value="전화번호"></td>
 														<td><input type="text" size="50"
 															value="070-8772-1612"></td>
-														<td><input type="number" value="5"
-															style="text-align: center; width: 50px;"></td>
 													</tr>
 													<tr class="notice">
 														<td class="num"><input class="form-check-input"
@@ -583,127 +576,430 @@
 														<td><input type="text" size="20" value="사업분야"></td>
 														<td><input type="text" size="50"
 															value="System Integration(시스템 통합구축)"></td>
-														<td><input type="number" value="6"
-															style="text-align: center; width: 50px;"></td>
 													</tr>
 												</tbody>
 											</table>
 										</div>
 										<div class="hide table" id="tblCIintrcn">
-											<table>
-												<colgroup>
-													<col style="width: 50px">
-													<col style="width: auto">
-													<col style="width: 520px">
-													<col style="width: 90px">
-												</colgroup>
-												<tbody>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="(주)하이크루"></td>
-														<td><input type="text" size="50"
-															value="High-Technology CREW System"></td>
-														<td><input type="number" value="1"
-															style="text-align: center; width: 50px;"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="설립일"></td>
-														<td><input type="text" size="50" value="2018년 3월 13일"></td>
-														<td><input type="number" value="2"
-															style="text-align: center; width: 50px;"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="대표이사"></td>
-														<td><input type="text" size="50" value="이영석"></td>
-														<td><input type="number" value="3"
-															style="text-align: center; width: 50px;"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="본사주소"></td>
-														<td><input type="text" size="50"
-															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-														<td><input type="number" value="4"
-															style="text-align: center; width: 50px;"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="전화번호"></td>
-														<td><input type="text" size="50"
-															value="070-8772-1612"></td>
-														<td><input type="number" value="5"
-															style="text-align: center; width: 50px;"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="사업분야"></td>
-														<td><input type="text" size="50"
-															value="System Integration(시스템 통합구축)"></td>
-														<td><input type="number" value="6"
-															style="text-align: center; width: 50px;"></td>
-													</tr>
-												</tbody>
-											</table>
+											<!-- CI 소개 -->
+											<div class="g-4 photo-admin-card">
+												<div class="col-lg-6 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid" src="images/CI1.png" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid" src="images/CI2.png" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="hide table" id="tblpdfsolut">
+											<!-- PDF 솔루션 -->
+											<div class="g-4 photo-admin-card">
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/neis.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="학생수강신청">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2"
+																src="images/sub_business_U-sync_img3.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="U-Sync">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2"
+																src="images/sub_business_withrun_img.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="WithLearn">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/img_1.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="넥사크로플랫폼 14">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/img_2.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="엑스플랫폼 9.2">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/img_3.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="마이플랫폼">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/img_4.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="넥스업">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-3 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/img_6.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="넥사크로플랫폼 17">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="hide table" id="tblitsolut">
-											<table>
-												<colgroup>
-													<col style="width: 50px">
-													<col style="width: auto">
-												</colgroup>
-												<tbody>
-													<tr class="notice" onclick="solutmodalopen()">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td class="thumnail" data-imgName="neis.jpg">학생 수강 신청</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>U-Sync</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>WithLearn</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>넥사크로 플랫폼 14</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>엑스플랫폼 9.2</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>마이 플랫폼</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>넥스업</td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td>넥사크로플랫폼 17</td>
-													</tr>
-												</tbody>
-											</table>
+											<!-- IT 솔루션 -->
+											<div class="g-4 photo-admin-card">
+												<div class="col-lg-4 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2" src="images/img_01.JPG" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="Ez PDF Reader2.0">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2"
+																src="images/img_04.jpg" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="Ez PDF WorkFlow">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-4 col-md-6 wow fadeInUp"
+													data-wow-delay="0.1s">
+													<div class="rounded shadow overflow-hidden">
+														<div class="position-relative">
+															<img class="img-fluid2"
+																src="images/img_03.JPG" alt="">
+														</div>
+														<div class="text-center p-4 mt-3">
+															<input class="fw-bold mb-0" type="text" size="10"
+																value="Ez PDF WorkFlow(for Web)">
+															<div class="translate-middle d-flex align-items-center">
+																<a
+																	class="photo-admin-btn btn-imagedetail photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
+																	class="photo-admin-btn btn-imagesave photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a>
+															</div>
+															<input
+																class="form-check-input photo-admin-input-type-checkbox"
+																type="checkbox" value="" id="defaultCheck3" checked />
+															<!-- <h5 class="fw-bold mb-0">Full Name</h5> -->
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="hide table" id="tblphoto">
+											<!-- 포토스토리 -->
 											<div class="row g-4 photo-admin-card">
 												<div class="col-lg-3 col-md-6 wow fadeInUp"
 													data-wow-delay="0.1s" ondrop="drop(event)"
@@ -721,10 +1017,11 @@
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagedetail photo-admin-card-icon"
 																	href="#">
 																	<div></div>
-																</a> <a	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon" href="#">
-																	<div class="fa-duotone"></div>
-																</a> 
-																<a
+																</a> <a
+																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
+																	href="#">
+																	<div></div>
+																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
 																	<div></div>
@@ -756,7 +1053,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -789,7 +1086,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -822,7 +1119,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -854,7 +1151,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -886,7 +1183,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -918,7 +1215,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -950,7 +1247,7 @@
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagefix photo-admin-card-icon"
 																	href="#">
-																	<div class="fa-duotone"></div>
+																	<div></div>
 																</a> <a
 																	class="photo-admin-btn btn-square  photo-admin-card-btn-primary btn-imagesave photo-admin-card-icon"
 																	href="#">
@@ -971,8 +1268,9 @@
 
 						<div class="tbl_bottom" style="float: right;">
 							<div class="pagenation" id="pageControlMgmt"></div>
-							<a id="a_remove" href="#" class="btn_type1 _rosRestrict">추가</a> <a
-								id="a_remove" href="#" class="btn_type1 _rosRestrict">저장</a> <a
+							<a id="a_prev" href="#" class="btn_type1 _rosRestrict">이전</a>
+							<a id="a_add" href="#" class="btn_type1 _rosRestrict">추가</a> <a
+								id="a_save" href="#" class="btn_type1 _rosRestrict">저장</a> <a
 								id="a_remove" href="#"
 								class="btn_type1 _rosRestrict emphasisButton">삭제</a> <a
 								id="a_remove" href="#"
@@ -983,7 +1281,6 @@
 
 			</div>
 		</div>
-	</div>
 	</div>
 
 	<footer id="gtco-footer" role="contentinfo">
@@ -1053,12 +1350,11 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button class="close" type="button" data-dismiss="modal"
-						aria-label="Close">
-						</button>
-					<button type="button" class="close" aria-label="Close"> 
-							<span aria-hidden="true">&times;</span>
-						</button>
-					
+						aria-label="Close"></button>
+					<button type="button" class="close" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+
 					<h3 class="modal-title" id="exampleModalLabel">모달테스트</h3>
 				</div>
 				<div class="modal-body">
@@ -1098,8 +1394,8 @@
 		</div>
 	</div>
 	<!-- 모달 end -->
-	
-<!-- 	<div id="photomodal" class="modal">
+
+	<!-- 	<div id="photomodal" class="modal">
 		<div class="modal-window">
 			<div class="close-area">X</div>
 			<div class="modal-title">
@@ -1122,8 +1418,8 @@
 			</div>
 		</div>
 	</div> -->
-	
-	
+
+
 	<input class="form-check-input photo-admin-input-type-checkbox"
 		type="checkbox">
 
@@ -1210,18 +1506,13 @@
 		
 		function switchtable(value){
 			var tatbl = "tbl"+value;
-			console.log(tatbl);
 			document.getElementById(tatbl).classList.remove("hide");
-			//document.getElementById("intrcnment").value=value;
-			console.log(tatbl);
 		}
 		
 		var tables = document.querySelectorAll(".table");
 		
 		function allhide() {
-				console.log(tables);
 			for(var i=0;i<tables.length;i++){
-				console.log(tables[i]);
 				tables[i].classList.add("hide");
 			}
 		}
@@ -1236,8 +1527,6 @@
 			if (div.classList.contains("depth1")) {
 				// 첫번째 뎁스
 				seldetail.value = "";
-				var ul = div.parentElement.querySelector("ul");
-				console.log(ul);
 				removetds(depth1ul);
 				removetds(depth2ul);
 				var inneruls = document.getElementsByClassName("innerul");
@@ -1245,34 +1534,33 @@
 					// 첫뎁스 하위 ul 태그 가리기
 					inneruls[i].classList.add("hide");
 				}
-				if (ul != null) {
+				if (span.innerText != "Home") {
 					if (selmenu.value === span.innerText) {
 						// 이미 선택된 메뉴 클릭
-						selmenu.value = "";
 						console.log("1")
+						selmenu.value = "";
 					} else {
 						// 다른거 클릭
-						div.classList.add("tree-div-selected");
-						ul.classList.remove("hide");
-						selmenu.value = span.innerText;
 						console.log("2")
+						div.classList.add("tree-div-selected");
+						selmenu.value = span.innerText;
 					}
 				} else {
 					if (selmenu.value === span.innerText) {
+						console.log("3")
 						// 이미 선택된 메뉴 클릭
 						selmenu.value = "";
-						console.log("3")
 					} else {
 						// 다른거 클릭
+						console.log("4");
+						
 						div.classList.add("tree-div-selected");
 						switchtable(span.getAttribute("data-link").split(".")[0]);
 						selmenu.value = span.innerText;
-						console.log("4")
 					}
 				}
 			}
 			if (div.classList.contains("depth2")) {
-				console.log(span.getAttribute("data-link").split(".")[0]);
 				removetds(depth2ul);
 				if (seldetail.value === span.innerText) {
 					// 이미 선택된 메뉴 클릭
@@ -1281,7 +1569,6 @@
 				}  else {
 					// 다른거 클릭
 					div.classList.add("tree-div-selected");
-					console.log("asd");
 					switchtable(span.getAttribute("data-link").split(".")[0])
 					seldetail.value = span.innerText;
 					console.log("7")
@@ -1341,8 +1628,16 @@
         // 이미지 상위 오브젝트(class fadeInUp) 의 하위 div를 목적지에 추가
 /*         ev.target.appendChild(document.getElementById(fromid)); */
     }
-
+	window.onload=function(){
+		console.log("${FLAG }");
+		if("${FLAG }" == "true"){
+			loadpage();
+		}else if("${Upend }" != ""){
+			if(confirm("작업 하던 페이지를 불러오시겠습니까?")){
+				loadpage();
+			}
+		}
+	}
 	</script>
 </body>
 </html>
-
