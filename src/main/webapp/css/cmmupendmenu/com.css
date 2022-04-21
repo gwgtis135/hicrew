@@ -177,7 +177,7 @@ input[type="radio"] { vertical-align:text-bottom; }
 
 .board {position:relative; /* width:730px; */ /* padding-top:20px;  */}
 .board h1, 
-.board h2 {/*float:left;*/ color:#333; font-size:16px; font-weight:600; }
+.board h2 {/*float:left;*/ color:#333; font-size:16px; font-weight:600; } 
 .board h1 {margin-bottom:7px; padding:0 0 1px 25px; background:url(../../../images/egovframework/com/cmm/icon/tit_icon.png) no-repeat left 0px; }
 .board h2 { margin:15px 0 10px 0; }
 .board h3 { color:#333;  font-size:14px; font-weight:600; margin:50px 0 10px 0; }
