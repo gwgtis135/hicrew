@@ -55,7 +55,7 @@ a {
 }
 
 a:hover, a:active, a:focus, span:active {
-	color: #FF5126;
+	color: #ff8040;
 	outline: none;
 	text-decoration: none;
 }
@@ -2340,14 +2340,14 @@ form label {
 
 .tbl.board tbody td {
 	height: 40px;
-	padding: 10px 0;
+	padding: 4px 0;
 	color: #333333;
 	/*font-size: 1rem;*/
 	font-weight: 400;
 }
 
 .tbl.board tbody td a {
-	line-height: 1.5rem;
+	/* line-height: 1.5rem; */
 }
 
 .tbl.board tbody td .board_link {
@@ -3314,7 +3314,7 @@ header.on.product:before {
 	height: 100%;
 	text-transform: uppercase;
 	color: #333333;
-	font-size: 2rem;
+	font-size: 18px;
 	font-weight: 700;
 }
 

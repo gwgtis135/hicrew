@@ -623,7 +623,7 @@ progress {
 }
 
 .col {
-	flex: 1 0 0%
+	flex: 100%
 }
 
 .row-cols-auto>* {
@@ -4196,7 +4196,7 @@ textarea.form-control-lg {
 	word-wrap: break-word;
 	background-color: #fff;
 	background-clip: border-box;
-	border: 1px solid rgba(0, 0, 0, 0.125);
+/* 	border: 1px solid rgba(0, 0, 0, 0.125); */
 	border-radius: 2px
 }
 

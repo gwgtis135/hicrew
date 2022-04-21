@@ -105,157 +105,351 @@
 									<jsp:include page="lefttd.jsp">
 										<jsp:param name="#" value="#" />
 									</jsp:include>
+									
 									<td class="n_admin">
-										<!--주요연혁 -->
-										<div class="hide table" id="tblch">
-											<div class="row">
-												<div class="col-md-2">
-													<div class="sel_box">
-														<select class="histselect form-select" name="scolumn"
-															id="scolumn">
-															<option value="">전체기간</option>
-															<option value="2022">2022</option>
-															<option value="2021">2021</option>
-															<option value="2020">2020</option>
-															<option value="2019">2019</option>
-															<option value="2018">2018</option>
-														</select>
-													</div>
+										<form name="CcmDeCodeForm" action="" method="post" onSubmit="">
+
+											<!--주요연혁 -->
+											<div class="hide table tblch" id="tblch">
+												<h1>연혁 관리</h1>
+
+												<!-- 검색영역 -->
+												<!-- 검색조건선택 -->
+												<div class="menudetailSearchbox" title="이 레이아웃은 하단 정보를 대한 검색 정보로 구성되어 있습니다.">
+													<ul>
+														<li><select name="searchCondition" title="">
+																<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																<option selected value=''>선택하세요</option>
+																<!-- 선택하세요 -->
+																<option value="1">코드ID</option>
+																<!-- 코드ID -->
+																<option value="2">코드ID명</option>
+																<!-- 코드ID명 -->
+														</select></li>
+														<!-- 검색키워드 및 조회버튼 -->
+														<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" maxlength="155"> <input type="submit" class="s_btn" value="조회" title="" /></li>
+													</ul>
 												</div>
-											</div>
-											<div class="histTable">
-												<!-- Hoverable Table rows -->
-												<div class="card">
+												
+												<div class="histTable">
+													<!-- Hoverable Table rows -->
+
 													<div class="table-responsive text-nowrap">
-														<table class="table-hover">
+														<table class="table-hover menudetailboard_list">
 															<colgroup>
-																<col style="width: 100px">
-																<col style="width: 150px">
-																<col style="width: 300px">
+																<col style="width: 10%">
+																<col style="width: 15%">
+																<col style="width: 20%">
+																<col style="width: 5%">
 															</colgroup>
-															<tbody class="table-border-bottom-0">
-																<tr>
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox" value="" id="defaultCheck3" checked /></td>
-																	<td><input class="history-admin-input-checkbox"
-																		type="date" value="2020-01-01"></td>
-																	<td><input class="history-admin-input-text"
-																		type="text" value="세종(4세대 ))"></td>
+															<tbody class="ov">
+																<tr class="cmmtd">
+																	<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
+																	<td><input class="" type="date" value="2020-01-01"></td>
+																	<td><select>
+																			<option value="">세종(나이스 구축 사업)</option>
+																			<option>대구(나이스 유지보수 사업)</option>
+																			<option>대구(정보공시 2020)</option>
+																			<option>대구(본부)</option>
+																	</select></td>
+																	<td></td>
 																</tr>
-																<tr>
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox" value="" id="defaultCheck3" checked /></td>
-																	<td><input class="history-admin-input-checkbox"
-																		type="date" value="2020-01-01"></td>
-																	<td><input class="history-admin-input-text"
-																		type="text" value="세종(4세대 ))"></td>
+																<tr class="cmmtd">
+																	<td class="num cmmtd"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
+																	<td><input class="" type="date" value="2020-01-01"></td>
+																	<td><select>
+																			<option value="">세종(나이스 구축 사업)</option>
+																			<option>대구(나이스 유지보수 사업)</option>
+																			<option>대구(정보공시 2020)</option>
+																			<option>대구(본부)</option>
+																	</select></td>
 																</tr>
-																<tr>
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox" value="" id="defaultCheck3" checked /></td>
-																	<td><input class="history-admin-input-checkbox"
-																		type="date" value="2020-01-01"></td>
-																	<td><input class="history-admin-input-text"
-																		type="text" value="세종(4세대 ))"></td>
+																<tr class="cmmtd">
+																	<td class="num cmmtd"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
+																	<td><input class="" type="date" value="2020-01-01"></td>
+																	<td><select>
+																			<option value="">세종(나이스 구축 사업)</option>
+																			<option>대구(나이스 유지보수 사업)</option>
+																			<option>대구(정보공시 2020)</option>
+																			<option>대구(본부)</option>
+																	</select></td>
 																</tr>
 															</tbody>
 														</table>
+
 													</div>
 												</div>
-												<!--/ Hoverable Table rows -->
 											</div>
-										</div>
+										</form>
 
-										<div class="hide table" id="tblorgcht">
-											<!-- 조직도 -->
-											<div class="row">
-												<div class="col-md-2">
-													<div class="orgcht-select">
-														<select class="histselect form-select "
-															name="orgchtdeptcolumn" id="orgchtdeptcolumn">
-															<option value="">사업부서별</option>
+										<!--조직도관리 -->
+											<div class="hide table" id="tblorgcht">
+												<h1>조직도 관리</h1>
+
+												<!-- 검색영역 -->
+												<!-- 검색조건선택 -->
+												<div class="menudetailSearchbox" title="이 레이아웃은 하단 정보를 대한 검색 정보로 구성되어 있습니다.">
+													<ul>
+														<li><select name="searchCondition" title="">
+																<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+															<option selected value=''>사업부서별</option>
 															<option value="세종나이스구축">세종 나이스 구축</option>
 															<option value="대구나이스정보공시">대구나이스 정보공시</option>
 															<option value="대구유지보수">대구 유지보수</option>
 															<option value="대구본부">본부</option>
-														</select>
-
-													</div>
+														</select></li>
+													
+														<li><select name="searchCondition" title="">
+																<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																<option selected value=''>대표</option>
+																<!-- 선택하세요 -->
+																<option value="부장">부장</option>
+																<option value="차장">차장</option>
+																<option value="과장">과장</option>
+																<option value="대리">대리</option>
+																<option value="사원">사원</option>
+														</select></li>
+														<!-- 검색키워드 및 조회버튼 -->
+														<li><input class="s_input" name="searchKeyword" placeholder="이름을 검색하세요" type="text" size="35" title="" maxlength="155"> <input type="submit" class="s_btn" value="조회" title="" /></li>
+													</ul>
 												</div>
-												<div class="col-md-1"></div>
-												<div class="col-md-2">
-													<select class="histselect form-select "
-														name="orgchtclsfcolumn" id="orgchtclsfcolumn">
-														<option value="대표">대표</option>
-														<option value="부장">부장</option>
-														<option value="차장">차장</option>
-														<option value="과장">과장</option>
-														<option value="대리">대리</option>
-														<option value="사원">사원</option>
-													</select>
+												
+												<div class="histTable">
+													<!-- Hoverable Table rows -->
+													
+														<div class="table-responsive text-nowrap">
+															<table class="table-hover menudetailboard_list">
+																<colgroup>
+																	<col style="width: 3%"> <!-- 여백  -->
+																	<col style="width: 15%"> <!-- 이름  -->
+																	<col style="width: 15%"> <!-- 직급  -->
+																	<col style="width: 15%"> <!-- 부서 -->
+																	<col style="width: 5%"> <!-- 돋보기 -->
+																	<col style="width: 5%"> <!-- 이미지사진 아이콘  -->
+																	<col style="width: 10%">  <!-- 활성화 select -->
+																</colgroup>
+																<tbody class="ov">
+																	<tr class="cmmtd">
+																		<td></td>
+																		<td class="num"><input class="orgchtNameInput"   type="text" placehoder="" value="김영석"/></td>
+																		<td>
+																			<select class="orgchtMainSelect" name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																					<option selected value=''>대표</option>
+																					<!-- 선택하세요 -->
+																					<option selected value="부장">대표</option>
+																					<option value="부장">부장</option>
+																					<option value="차장">차장</option>
+																					<option value="과장">과장</option>
+																					<option value="대리">대리</option>
+																					<option value="사원">사원</option>
+																			</select>
+																		</td>
+																		<td>
+																			<select name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																				<option selected value=''>사업부서별</option>
+																				<option value="세종나이스구축">세종 나이스 구축</option>
+																				<option value="대구나이스정보공시">대구나이스 정보공시</option>
+																				<option value="대구유지보수">대구 유지보수</option>
+																				<option value="대구본부">본부</option>
+																			</select>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconOne"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconTwo"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<select>
+																				<option value="Y">활성화</option>
+																				<option value="N">비활성화</option>
+																			</select>			
+																		</td>
+																	</tr>
+																	<tr class="cmmtd">
+																		<td></td>
+																		<td><input class="orgchtNameInput"  type="text" placehoder="" value="이장수"/></td>
+																		<td>
+																			<select class="orgchtMainSelect" name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																					<option selected value=''>대표</option>
+																					<!-- 선택하세요 -->
+																					
+																					<option value="대표">부장</option>
+																					<option selected value="부장">부장</option>
+																					<option value="차장">차장</option>
+																					<option value="과장">과장</option>
+																					<option value="대리">대리</option>
+																					<option value="사원">사원</option>
+																			</select>
+																		</td>
+																		<td>
+																			<select name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																				<option selected value=''>사업부서별</option>
+																				<option value="세종나이스구축">세종 나이스 구축</option>
+																				<option value="대구나이스정보공시">대구나이스 정보공시</option>
+																				<option value="대구유지보수">대구 유지보수</option>
+																				<option value="대구본부">본부</option>
+																			</select>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconOne"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconTwo"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<select>
+																				<option value="Y">활성화</option>
+																				<option value="N">비활성화</option>
+																			</select>			
+																		</td>
+																	</tr>
+																	<tr class="cmmtd">
+																		<td></td>
+																		<td><input class="orgchtNameInput"   type="text" placehoder="" value="김동업"/></td>
+																		<td>
+																			<select class="orgchtMainSelect" name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																					<option selected value=''>대표</option>
+																					<!-- 선택하세요 -->
+																					<option value="부장">부장</option>
+																					<option selected value="차장">차장</option>
+																					<option value="과장">과장</option>
+																					<option value="대리">대리</option>
+																					<option value="사원">사원</option>
+																			</select>
+																		</td>
+																		<td>
+																			<select name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																				<option selected value=''>사업부서별</option>
+																				<option value="세종나이스구축">세종 나이스 구축</option>
+																				<option value="대구나이스정보공시">대구나이스 정보공시</option>
+																				<option value="대구유지보수">대구 유지보수</option>
+																				<option value="대구본부">본부</option>
+																			</select>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconOne"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconTwo"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<select>
+																				<option value="Y">활성화</option>
+																				<option value="N">비활성화</option>
+																			</select>			
+																		</td>
+																	</tr>
+																	
+																	<tr class="cmmtd">
+																		<td></td>
+																		<td><input class="orgchtNameInput"   type="text" placehoder="" value="이상현"/></td>
+																		<td>
+																			<select class="orgchtMainSelect" name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																					<option selected value=''>대표</option>
+																					<!-- 선택하세요 -->
+																					<option value="부장">부장</option>
+																					<option selected value="차장">차장</option>
+																					<option value="과장">과장</option>
+																					<option value="대리">대리</option>
+																					<option value="사원">사원</option>
+																			</select>
+																		</td>
+																		<td>
+																			<select name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																				<option selected value=''>사업부서별</option>
+																				<option value="세종나이스구축">세종 나이스 구축</option>
+																				<option value="대구나이스정보공시">대구나이스 정보공시</option>
+																				<option value="대구유지보수">대구 유지보수</option>
+																				<option value="대구본부">본부</option>
+																			</select>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconOne"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconTwo"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<select>
+																				<option value="Y">활성화</option>
+																				<option value="N">비활성화</option>
+																			</select>			
+																		</td>
+																	</tr>
+																	<tr class="cmmtd">
+																		<td></td>
+																		<td><input class="orgchtNameInput"   type="text" placehoder="" value="김우현"/></td>
+																		<td>
+																			<select class="orgchtMainSelect" name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																					<option selected value=''>대표</option>
+																					<!-- 선택하세요 -->
+																					<option value="부장">부장</option>
+																					<option  value="차장">차장</option>
+																					<option selected value="과장">과장</option>
+																					<option value="대리">대리</option>
+																					<option value="사원">사원</option>
+																			</select>
+																		</td>
+																		<td>
+																			<select name="searchCondition" title="">
+																					<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																				<option selected value=''>사업부서별</option>
+																				<option value="세종나이스구축">세종 나이스 구축</option>
+																				<option value="대구나이스정보공시">대구나이스 정보공시</option>
+																				<option value="대구유지보수">대구 유지보수</option>
+																				<option value="대구본부">본부</option>
+																			</select>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconOne"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<a class="photo-admin-btn orgchtIcon">
+																				<i class="menudetailOrgchtIconTwo"></i>
+																			</a>
+																		</td>
+																		<td>
+																			<select>
+																				<option value="Y">활성화</option>
+																				<option value="N">비활성화</option>
+																			</select>			
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															
+														</div>
 												</div>
-												<div class="col-md-2">
-													<label for="html5-text-input "
-														class="col-form-label fontlabel">이름</label> <input
-														class="history-admin-input-text" name="orgchtnamecolumn"
-														id="orgchtnamecolumn" type="text">
-												</div>
-												<div class="col-md-2">
-													<a href="#" id="btn_ok" class="btncommon btn_select">조회</a>
-												</div>
-											</div>
-											<div class="histTable">
-												<!-- Hoverable Table rows -->
-												<div class="card">
-													<div class="table-responsive text-nowrap">
-														<table class="table-hover">
-															<colgroup>
-																<col style="width: 50px">
-																<col style="width: auto">
-															</colgroup>
-															<tbody>
-																<tr class="notice">
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox"></td>
-																	<td onclick="orgchtmodal(event)">이영석</td>
-																	<td onclick="orgchtmodal(event)">대표</td>
-																	<td onclick="orgchtmodal(event)">세종(4세대 나이스 구축사업)</td>
-																</tr>
-																<tr class="notice">
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox"></td>
-																	<td>이장수</td>
-																	<td>부장</td>
-																	<td>대구(2022 나이스 유지보수)</td>
-																</tr>
-																<tr class="notice">
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox"></td>
-																	<td>김동업</td>
-																	<td>차장</td>
-																	<td>세종(4세대 나이스 구축사업)</td>
-																</tr>
-																<tr class="notice">
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox"></td>
-																	<td>이상현</td>
-																	<td>차장</td>
-																	<td>세종(4세대 나이스 구축사업)</td>
-																</tr>
-																<tr class="notice">
-																	<td class="num"><input class="form-check-input"
-																		type="checkbox"></td>
-																	<td>이호진</td>
-																	<td>과장</td>
-																	<td>대구(2022 정보공시사업)</td>
-																</tr>
-															</tbody>
-														</table>
-													</div>
-												</div>
-												<!--/ Hoverable Table rows -->
-											</div>
-										</div>
+											</div> 
+                    <!-- hideTable end -->
 
 										<div class="hide table" id="tblmain">
 											<!-- 홈화면 -->
@@ -1447,4 +1641,3 @@
 	</script>
 </body>
 </html>
-
