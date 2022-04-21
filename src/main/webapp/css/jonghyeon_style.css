@@ -542,7 +542,7 @@ img, svg {
    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important
 }
 .btn-imagedetail div:before{
-   content:"\f03e";
+   content:"\f00e";
    font-family:"FontAwesome";
 }
 .btn-imagefix div:before{

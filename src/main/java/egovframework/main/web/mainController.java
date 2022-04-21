@@ -3,6 +3,7 @@ package egovframework.main.web;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import egovframework.main.service.LCALSVO;
 import egovframework.main.service.MenuDetailVO;
 import egovframework.main.service.mainService;
+import egovframework.upendmenu.service.UpendMenuVO;
 
 @Controller
 public class mainController {
@@ -90,56 +92,80 @@ public class mainController {
 	public String cmpnyinfo() {
 		return "main/cmpnyinfo";
 	}
+
 	@RequestMapping("move.do()")
 	public String move() {
 		return "main/";
 	}
-	
+
 	@RequestMapping("CIintrcn.do")
 	public String CIintrcn() {
 		return "main/CIintrcn";
 	}
-	
+
 	@RequestMapping("directions.do")
 	public String recruitment() {
 		return "main/directions";
 	}
-	
+
 	@RequestMapping("photo.do")
 	public String photo() {
 		return "main/photo";
 	}
-	
+
 	@RequestMapping("pdfsolut.do")
 	public String pdfsolut() {
 		return "main/pdfsolut";
 	}
-	
+
 	@RequestMapping("itsolut.do")
 	public String itsolut() {
 		return "main/itsolut";
 	}
-	
+
 	@RequestMapping("upendmenu.do")
 	public String upendmenu() {
 		return "main/upendmenu";
 	}
-	
+
 	@RequestMapping("menudetail.do")
-	public String menudeatil() {
+	public String menudeatil(HttpServletRequest req) {
+		HttpSession hs = req.getSession();
+		hs.setAttribute("FLAG", false);
+		System.out.println("bbbbbbbbbbbbbbb");
 		return "main/menudetail";
 	}
-	
+
 	@PostMapping("menudetail.do")
-	public String menudeatil2(HttpServletRequest req,Model model) {
-		System.out.println(req.toString());
-		System.out.println(req.getParameter("link"));
-		model.addAttribute("data", req.toString());
+	public String menudeatil2(HttpServletRequest req) {
+		/* , UpendMenuVO vo) { */
+		HttpSession hs = req.getSession();
+
+		UpendMenuVO vo = new UpendMenuVO();
+		System.out.println("aaaaaaaaa");
+		hs.setAttribute("FLAG", true);
+		vo.setUpendType(Integer.parseInt(req.getParameter("UpendType")));
+		vo.setUpendIntrcn(req.getParameter("UpendIntrcn"));
+		vo.setUpendLink(req.getParameter("UpendLink"));
+		vo.setUpendName(req.getParameter("UpendName"));
+		vo.setUpendThema(Integer.parseInt(req.getParameter("UpendThema")));
+		vo.setUpendYn(req.getParameter("UpendYn"));
+		hs.setAttribute("Upend", vo);
+		System.out.println(vo.toString());
+		/*
+		 * hs.setAttribute("UpendType", req.getParameter("UpendType"));
+		 * hs.setAttribute("UpendIntrcn", req.getParameter("UpendIntrcn"));
+		 * hs.setAttribute("UpendName", req.getParameter("UpendName"));
+		 * hs.setAttribute("UpendLink", req.getParameter("UpendLink"));
+		 * hs.setAttribute("UpendYn", req.getParameter("UpendThema"));
+		 * hs.setAttribute("UpendThema", req.getParameter("UpendYn"));
+		 */
+
 		return "main/menudetail";
 	}
-		
+
 	@RequestMapping("loadNav.do")
-	public String loadnav(Model model,HttpServletRequest req) {
+	public String loadnav(Model model, HttpServletRequest req) {
 		LCALSVO vo = new LCALSVO();
 		vo.setLcalsLevel(Integer.parseInt(req.getParameter("level")));
 		System.out.println("ctrlr : ");

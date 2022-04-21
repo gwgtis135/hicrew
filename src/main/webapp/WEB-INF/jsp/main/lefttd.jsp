@@ -19,6 +19,7 @@ ul {
 */
 ul#tree li, ul.innerul li {
 	border-bottom: 1px solid #efefef;
+	width:100%;
 }
 
 ul.innerul li div:before {
@@ -28,8 +29,8 @@ ul.innerul li div:before {
 	margin-right: 0.5em;
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link.tree-div-selected:not(.menu-toggle):before{
-    background-color: orange !important;
-    /*border: 3px solid #e7e7ff !important;*/
+    /* background-color: orange !important; */
+    border: 3px solid #e7e7ff !important;
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
     content: "";
@@ -49,8 +50,9 @@ ul#tree {
 	/* border: 1px solid #6f6f65; */
 }
 
-div.tree-div-selected label span {
-	color: orange;
+div.tree-div-selected {
+	color: white;
+	background-color:orange;
 	font-weight: bold !important;
 }
 
@@ -86,6 +88,7 @@ div.tree-div-selected label span {
 					<i class="menu-icon tf-icons bx bx-layout"></i>
 					<label><span data-link="main.do">Home</span></label>
 				</div>
+				<ul class="menu-sub"></ul>
 			</li>
 			<li class="menu-item">
 				<div class="menu-link depth1 menu-toggle" data-delable="1">
@@ -113,11 +116,11 @@ div.tree-div-selected label span {
 							<label><span data-link="orgcht.do">조직도</span></label>
 						</div>
 					</li>
-					<li class="menu-item">
+<!-- 					<li class="menu-item">
 						<div class="menu-link depth2" data-delable="2">
 							<label><span data-link="directions.do">오시는 길</span></label>
 						</div>
-					</li>
+					</li> -->
 					<li class="menu-item">
 						<div class="menu-link depth2" data-delable="2">
 							<label><span data-link="photo.do">포토스토리</span></label>
@@ -222,3 +225,22 @@ div.tree-div-selected label span {
 <script src="js/lefttd/helpers.js"></script>
 <script src="js/lefttd/menu.js"></script>
 <script src="js/lefttd/main.js"></script>
+<script>
+
+function loadpage(){
+	var span = document.querySelector("span[data-link='"+"${Upend.upendLink }"+"']");
+	span.closest("div").classList.add("tree-div-selected");
+	var innerli = span.closest("li");
+	var outterli = innerli.closest("ul").closest("li");
+	outterli.classList.add("open");
+	outterli.querySelector(".depth1").classList.add("tree-div-selected");
+	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}"){
+		console.log("asd");
+		span.click();
+		console.log(span);
+		console.log("sdf");
+	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}"){
+		switchtable(span.getAttribute("data-link").split(".")[0]);
+	}
+}
+</script>

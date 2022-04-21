@@ -38,6 +38,8 @@
 <link rel="stylesheet" href="css/icomoon.css">
 <!-- Themify Icons-->
 <link rel="stylesheet" href="css/themify-icons.css">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.css">
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="css/magnific-popup.css">
 <!-- Owl Carousel  -->
@@ -96,6 +98,9 @@ input[type="text"] {
 input[type='radio']:checked+label > img {
 	border:1px solid blue;
 }
+div#cke_intrcnment {
+    margin-top: 10px;
+}
 </style>
 </head>
 <body>
@@ -108,6 +113,7 @@ input[type='radio']:checked+label > img {
 		<jsp:param name="#" value="#" />
 	</jsp:include>
 
+		${Upend } <br> ${Upend.toString() } 
 	<div id="page">
 		<input type="hidden" id="selectedmenu"> <input type="hidden"
 			id="selecteddetail">
@@ -197,31 +203,31 @@ input[type='radio']:checked+label > img {
 													</div>
 													<div class="slideshow-container" style="float:left;">
 														<div class="mySlides fade2">
-															<img class="main_slideImg"
+															<img class="main_slideImg" data-value="1"
 																src="images/sample/sample1.png">
 														</div>
 														<div class="mySlides fade2">
-															<img class="main_slideImg"
+															<img class="main_slideImg" data-value="2"
 																src="images/sample/sample2.png">
 														</div>
 														<div class="mySlides fade2">
-															<img class="main_slideImg"
+															<img class="main_slideImg" data-value="3"
 																src="images/sample/sample3.png">
 														</div>
 														<div class="mySlides fade2">
-															<img class="main_slideImg"
+															<img class="main_slideImg" data-value="4"
 																src="images/sample/sample4.png">
 														</div>
 														<div class="mySlides fade2">
-															<img class="main_slideImg"
+															<img class="main_slideImg" data-value="5"
 																src="images/sample/sample5.png">
 														</div>
 														<div class="mySlides fade2">
-															<img class="main_slideImg"
+															<img class="main_slideImg" data-value="6"
 																src="images/sample/sample6.png">
 														</div>
-														<a class="prev" onclick="plusSlides(-1)">❮</a> 
-														<a class="next" onclick="plusSlides(1)">❯</a>
+														<a id="prev" class="prev" onclick="plusSlides(-1)">❮</a> 
+														<a id="next" class="next" onclick="plusSlides(1)">❯</a>
 													</div>
 													<div class="slideshow-container" style="float:left;">
 														<div class="mySlidesnext fade3">
@@ -279,7 +285,7 @@ input[type='radio']:checked+label > img {
 													</div> -->
 												</dd>
 												
-												<div style="float: left;">
+												<div style="float: left; margin-top:10px">
 													<div style="float: right;">
 														<dt class="category_thema hide all">페이지 테마 일괄적용</dt>
 														<dd class="category_thema hide all">
@@ -293,12 +299,12 @@ input[type='radio']:checked+label > img {
 													<dd class="category_thema hide">
 														<div>
 															<input type="radio" id="type1" name="pagetype" class="hide"
-																value="type1" checked> <label for="type1"> <img
+																value="1" checked> <label for="type1"> <img
 																src="images/sample/color1.png" alt="1번"
 																class="imgstyle">
 															</label> 
 															<input type="radio" id="type2" name="pagetype" class="hide"
-																value="type2"> 
+																value="2"> 
 															<label for="type2"> <img
 																src="images/sample/color2.png" alt="2번"
 																class="imgstyle">
@@ -340,12 +346,12 @@ input[type='radio']:checked+label > img {
 		</footer>
 	</div>
 	<form id="form4nextbtn" action="menudetail.do" method="post">
-		<input type="hidden" name="type">
-		<input type="hidden" name="intrcn">
-		<input type="hidden" name="name">
-		<input type="hidden" name="link">
-		<input type="hidden" name="useyn">
-		<input type="hidden" name="thema">
+		<input type="hidden" name="UpendType">
+		<input type="hidden" name="UpendIntrcn">
+		<input type="hidden" name="UpendName">
+		<input type="hidden" name="UpendLink">
+		<input type="hidden" name="UpendYn">
+		<input type="hidden" name="UpendThema">
 	</form>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
@@ -630,38 +636,38 @@ input[type='radio']:checked+label > img {
 		}
 		
 		function sendnext(){
-			console.log("선택된 타입");
-			console.log(document.querySelector('div.mySlides[style="display: block;"] img').src);
-			console.log("CK에디터 내용");
-			console.log(CKEDITOR.instances.intrcnment.getData());
-			console.log("페이지 명");
-			console.log(document.querySelector("#inptcategory_name").value);
-			console.log("페이지 주소");
-			console.log(document.querySelector("#inptcategory_link").value);
-			console.log("페이지 노출 여부");
-			console.log(document.querySelector("#category_useyn").value);
-			console.log("페이지 테마");
-			console.log(document.querySelector("input[type='radio']:checked+label > img").getAttribute("src"));
-			console.log();
 			var form = document.querySelector("#form4nextbtn");
-			var inpttype4post = document.querySelector("input[name='type']")
-			var inptintrcn4post = document.querySelector("input[name='intrcn']")
-			var inptname4post = document.querySelector("input[name='name']")
-			var inptlink4post = document.querySelector("input[name='link']")
-			var inptuseyn4post = document.querySelector("input[name='useyn']")
-			var inptthema4post = document.querySelector("input[name='thema']")
+			var inpttype4post = document.querySelector("input[name='UpendType']")
+			var inptintrcn4post = document.querySelector("input[name='UpendIntrcn']")
+			var inptname4post = document.querySelector("input[name='UpendName']")
+			var inptlink4post = document.querySelector("input[name='UpendLink']")
+			var inptuseyn4post = document.querySelector("input[name='UpendYn']")
+			var inptthema4post = document.querySelector("input[name='UpendThema']")
 			
-			inpttype4post.value= document.querySelector('div.mySlides[style="display: block;"] img').src;
+			inpttype4post.value= document.querySelector('div.mySlides[style="display: block;"] img').getAttribute("data-value");
 			inptintrcn4post.value= CKEDITOR.instances.intrcnment.getData();
 			inptname4post.value= document.querySelector("#inptcategory_name").value;
 			inptlink4post.value= document.querySelector("#inptcategory_link").value;
 			inptuseyn4post.value= document.querySelector("#category_useyn").value;
-			inptthema4post.value= document.querySelector("input[type='radio']:checked+label > img").getAttribute("src");
+			inptthema4post.value= document.querySelector("input[type='radio']:checked").getAttribute("value");
 			
 			console.log(form);
+
 			form.submit();
+
 		}
 		document.querySelector("#a_next").addEventListener("click",sendnext);
+
+		window.onload=function(){
+			console.log("${FLAG }");
+			if("${FLAG }" == "true"){
+				loadpage();
+			}else if("${Upend }" != ""){
+				if(confirm("작업 하던 페이지를 불러오시겠습니까?")){
+					loadpage();
+				}
+			}
+		}
 	</script>
 </html>
 
