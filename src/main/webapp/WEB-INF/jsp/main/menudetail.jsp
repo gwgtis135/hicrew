@@ -1537,7 +1537,54 @@
 					// 다른거 클릭
 					div.classList.add("tree-div-selected");
 					switchtable(span.getAttribute("data-link").split(".")[0])
-					seldetail.value = span.innerText;
+					seldetail.value = span.innerText;		
+					if(span.getAttribute("data-link").split(".")[0]=="ch"){
+						console.log("3333333333333333");
+						
+						$.ajax({
+							url:'${pageContext.request.contextPath}/ChSelectAll.do',
+							contentType: "application/json",	
+							dataType : 'json',
+							async: false,
+							success: function(datas){
+								var data = JSON.parse(JSON.stringify(datas));
+								console.log(data)
+								var textstr = '2020-10-10'; 
+								for(chdata of data.chdatas){
+									
+									console.log(chdata.chYn == 'Y');
+									console.log(chdata.chYn);
+									console.log("${chdata.chFromDate}");
+									var chStr = `<tr class="cmmtd">
+												<td class="num">
+												<input class="form-check-input" type="checkbox" value="" id="defaultCheck3" `;
+												if(chdata.chYn == 'Y'){
+													chStr += `checked`;
+												}
+												chStr +=`/></td>
+												<td>
+													<input class="" type="date" value="`+chdata.chFromDate+`">
+												</td>
+												<td>
+													<select name="">
+															<option value="">세종(나이스 구축 사업)</option>
+															<option>대구(나이스 유지보수 사업)</option>
+															<option>대구(정보공시 2020)</option>
+															<option>대구(본부)</option>
+													</select>
+												</td>
+												<td></td>
+											</tr>`;
+									console.log(chdata);
+									var tbody = document.querySelector('#chhhhTable');
+									tbody.innerHTML += chStr;
+								}// for end
+							},
+							error: function(){
+								console.log('에러 발생')
+							}
+						});
+					}
 					console.log("7")
 				}
 			}

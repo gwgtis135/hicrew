@@ -74,10 +74,12 @@ div.tree-div-selected {
 <td style="vertical-align: top;">
 	<div class="list_btn">
 		<c:if
-			test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
+			test="${requestScope['javax.servlet.forward.servlet_path'] eq '/move.do/upendmenu.do'}">
 			<i class="icon-fa-circle-plus" id="btn_addcategory"></i>
 			<i class="icon-fa-circle-minus" id="btn_delcategory"></i>
 		</c:if>
+		
+		
 		<!-- <a href="#" class="btn_type1" id="btn_addcategory">추가</a> <a
 													href="#" class="btn_type1" id="btn_delcategory">삭제</a> -->
 	</div>
@@ -236,53 +238,11 @@ function loadpage(){
 	outterli.classList.add("open");
 	outterli.querySelector(".depth1").classList.add("tree-div-selected");
 	span.click();
+	//console.log('${requestScope['javax.servlet.forward.servlet_path']}')
+	
 	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}" =="true"){
 	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}" == "true"){
-		if(span.getAttribute("data-link").split(".")[0]=="ch"){
-			console.log("asdasdsad");
-			$.ajax({
-				url:'./ChSelectAll.do',
-				contentType: "application/json",	
-				dataType : 'json',
-				async: false,
-				success: function(datas){
-					var data = JSON.parse(JSON.stringify(datas));
-					console.log(data)
-					var textstr = '2020-10-10'; 
-					for(chdata of data.chdatas){
-						console.log("asdasdsad");
-						var chStr = `<tr class="cmmtd">
-									<td class="num">
-										<c:if test = '${chdata.ChYn == "Y" }'>
-											<input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked />
-										</c:if>
-										<c:if test = '${chdata.ChYn == "N" }'>
-											<input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>
-										</c:if>
-									</td>
-									<td>
-										<input class="" type="date" value="`+chdata.chFromDate+`">
-									</td>
-									<td>
-										<select name="">
-												<option value="">세종(나이스 구축 사업)</option>
-												<option>대구(나이스 유지보수 사업)</option>
-												<option>대구(정보공시 2020)</option>
-												<option>대구(본부)</option>
-										</select>
-									</td>
-									<td></td>
-								</tr>`;
-						console.log(chdata)
-						var tbody = document.querySelector('#chhhhTable');
-						tbody.innerHTML = chStr;
-					}
-				},
-				error: function(){
-					console.log('에러 발생')
-				}
-			});
-		}
+
 	}
 }
 
