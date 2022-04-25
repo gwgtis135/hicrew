@@ -78,11 +78,12 @@
 	<jsp:include page="adminTap.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
+	
 	<div class="gtco-section-overflow">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
 				<!-- 
-				<div class="row">
+				<div>
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 						<h2>상세 메뉴 관리</h2>
 					</div>
@@ -90,7 +91,7 @@
 				
 				 -->
 				<div class="row photo-admin-row">
-					<div class="row">
+					<div>
 						<div class="tbl board">
 
 							<table>
@@ -108,7 +109,6 @@
 
 											<!--주요연혁 -->
 											<div class="hide table tblch" id="tblch">
-												<h1>연혁 관리</h1>
 
 												<!-- 검색영역 -->
 												<!-- 검색조건선택 -->
@@ -131,49 +131,19 @@
 												<div class="histTable">
 													<!-- Hoverable Table rows -->
 
-													<div class="table-responsive text-nowrap">
-														<table class="table-hover menudetailboard_list">
+													<div id = "chAppendTable" class="table-responsive text-nowrap">
+														<table id="chhTable" class="table-hover menudetailboard_list">
 															<colgroup>
 																<col style="width: 10%">
 																<col style="width: 15%">
 																<col style="width: 20%">
 																<col style="width: 5%">
 															</colgroup>
-															<tbody class="ov">
-																<tr class="cmmtd">
-																	<td class="num"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-																	<td><input class="" type="date" value="2020-01-01"></td>
-																	<td><select>
-																			<option value="">세종(나이스 구축 사업)</option>
-																			<option>대구(나이스 유지보수 사업)</option>
-																			<option>대구(정보공시 2020)</option>
-																			<option>대구(본부)</option>
-																	</select></td>
-																	<td></td>
-																</tr>
-																<tr class="cmmtd">
-																	<td class="num cmmtd"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-																	<td><input class="" type="date" value="2020-01-01"></td>
-																	<td><select>
-																			<option value="">세종(나이스 구축 사업)</option>
-																			<option>대구(나이스 유지보수 사업)</option>
-																			<option>대구(정보공시 2020)</option>
-																			<option>대구(본부)</option>
-																	</select></td>
-																</tr>
-																<tr class="cmmtd">
-																	<td class="num cmmtd"><input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked /></td>
-																	<td><input class="" type="date" value="2020-01-01"></td>
-																	<td><select>
-																			<option value="">세종(나이스 구축 사업)</option>
-																			<option>대구(나이스 유지보수 사업)</option>
-																			<option>대구(정보공시 2020)</option>
-																			<option>대구(본부)</option>
-																	</select></td>
-																</tr>
+															<tbody id="chhhhTable" class="ov">
+																
+																
 															</tbody>
 														</table>
-
 													</div>
 												</div>
 											</div>
@@ -181,7 +151,6 @@
 
 										<!--조직도관리 -->
 											<div class="hide table" id="tblorgcht">
-												<h1>조직도 관리</h1>
 
 												<!-- 검색영역 -->
 												<!-- 검색조건선택 -->
@@ -1504,6 +1473,7 @@
 		function switchtable(value){
 			var tatbl = "tbl"+value;
 			document.getElementById(tatbl).classList.remove("hide");
+			console.log("스위치 테이블");
 		}
 		
 		var tables = document.querySelectorAll(".table");
@@ -1645,7 +1615,6 @@
 	        }
 	    });
 	}
-
 	</script>
 </body>
 </html>

@@ -1,85 +1,97 @@
 package egovframework.com.ch.service;
 
+
 public class ChVO {
 
-	int CH_ID;
-	int LCALS_ID;
-	String CH_TO_DATE;
-	String CH_FROM_DATE;
-	String CH_CONTENT;
-	String CH_YN;
-	int CH_LOG_ID;
-	String CH_LOG_PERFORMER;
-	String CH_LOG_DIVISION;
-	String CH_LOG_DATE;
+	int chId;
+	int lcalsId;
+	String chToDate;
+	String chFromDate;
+	String chContent;
+	String ChYn;
 	
-	public int getCH_LOG_ID() {
-		return CH_LOG_ID;
+	int ChLogId;
+	String ChLogPerformer ;
+	String ChLogDivision;
+	String ChLogDate;
+	String ChSearch; //검색조건
+	public int getChId() {
+		return chId;
 	}
-	public void setCH_LOG_ID(int cH_LOG_ID) {
-		CH_LOG_ID = cH_LOG_ID;
+	public void setChId(int chId) {
+		this.chId = chId;
 	}
-	public String getCH_LOG_PERFORMER() {
-		return CH_LOG_PERFORMER;
+	public int getLcalsId() {
+		return lcalsId;
 	}
-	public void setCH_LOG_PERFORMER(String cH_LOG_PERFORMER) {
-		CH_LOG_PERFORMER = cH_LOG_PERFORMER;
+	public void setLcalsId(int lcalsId) {
+		this.lcalsId = lcalsId;
 	}
-	public String getCH_LOG_DIVISION() {
-		return CH_LOG_DIVISION;
+	public String getChToDate() {
+		return chToDate;
 	}
-	public void setCH_LOG_DIVISION(String cH_LOG_DIVISION) {
-		CH_LOG_DIVISION = cH_LOG_DIVISION;
+	public void setChToDate(String chToDate) {
+		this.chToDate = chToDate;
 	}
-	public String getCH_LOG_DATE() {
-		return CH_LOG_DATE;
+	public String getChFromDate() {
+		return chFromDate;
 	}
-	public void setCH_LOG_DATE(String cH_LOG_DATE) {
-		CH_LOG_DATE = cH_LOG_DATE;
+	public void setChFromDate(String chFromDate) {
+		this.chFromDate = chFromDate;
 	}
-	public int getCH_ID() {
-		return CH_ID;
+	public String getChContent() {
+		return chContent;
 	}
-	public void setCH_ID(int cH_ID) {
-		CH_ID = cH_ID;
+	public void setChContent(String chContent) {
+		this.chContent = chContent;
 	}
-	public int getLCALS_ID() {
-		return LCALS_ID;
+	public String getChYn() {
+		return ChYn;
 	}
-	public void setLCALS_ID(int lCALS_ID) {
-		LCALS_ID = lCALS_ID;
+	public void setChYn(String chYn) {
+		ChYn = chYn;
 	}
-	public String getCH_FROM_DATE() {
-		return CH_FROM_DATE;
+	public int getChLogId() {
+		return ChLogId;
 	}
-	public void setCH_FROM_DATE(String cH_FROM_DATE) {
-		CH_FROM_DATE = cH_FROM_DATE;
+	public void setChLogId(int chLogId) {
+		ChLogId = chLogId;
 	}
-	public String getCH_TO_DATE() {
-		return CH_TO_DATE;
+	public String getChLogPerformer() {
+		return ChLogPerformer;
 	}
-	public void setCH_TO_DATE(String cH_TO_DATE) {
-		CH_TO_DATE = cH_TO_DATE;
+	public void setChLogPerformer(String chLogPerformer) {
+		ChLogPerformer = chLogPerformer;
 	}
-	public String getCH_CONTENT() {
-		return CH_CONTENT;
+	public String getChLogDivision() {
+		return ChLogDivision;
 	}
-	public void setCH_CONTENT(String cH_CONTENT) {
-		CH_CONTENT = cH_CONTENT;
+	public void setChLogDivision(String chLogDivision) {
+		ChLogDivision = chLogDivision;
 	}
-	public String getCH_YN() {
-		return CH_YN;
+	public String getChLogDate() {
+		return ChLogDate;
 	}
-	public void setCH_YN(String cH_YN) {
-		CH_YN = cH_YN;
+	public void setChLogDate(String chLogDate) {
+		ChLogDate = chLogDate;
+	}
+	public String getChSearch() {
+		return ChSearch;
+	}
+	public void setChSearch(String chSearch) {
+		ChSearch = chSearch;
 	}
 	@Override
 	public String toString() {
-		return "ChVO [CH_ID=" + CH_ID + ", LCALS_ID=" + LCALS_ID + ", CH_TO_DATE=" + CH_TO_DATE + ", CH_FROM_DATE="
-				+ CH_FROM_DATE + ", CH_CONTENT=" + CH_CONTENT + ", CH_YN=" + CH_YN + ", CH_LOG_ID=" + CH_LOG_ID
-				+ ", CH_LOG_PERFORMER=" + CH_LOG_PERFORMER + ", CH_LOG_DIVISION=" + CH_LOG_DIVISION + ", CH_LOG_DATE="
-				+ CH_LOG_DATE + "]";
+		return "ChVO [chId=" + chId + ", lcalsId=" + lcalsId + ", chToDate=" + chToDate + ", chFromDate=" + chFromDate
+				+ ", chContent=" + chContent + ", ChYn=" + ChYn + ", ChLogId=" + ChLogId + ", ChLogPerformer="
+				+ ChLogPerformer + ", ChLogDivision=" + ChLogDivision + ", ChLogDate=" + ChLogDate + ", ChSearch="
+				+ ChSearch + "]";
 	}
+	
+	
+	
+
 	
 	
 }
