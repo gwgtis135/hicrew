@@ -2,17 +2,17 @@ package egovframework.upendmenu.service;
 
 public class UpendMenuVO {
 
-	int upendLogId;
-	int upendId;
-	int upendThema;
-	int upendType;
-	String upendIntrcn;
-	String upendName;
-	String upendLink;
-	String upendYn;
-	String upendLogPerforMer;
-	String upendLogDivision;
-	String upendLogDate;
+	private int upendLogId;
+	private int upendId;
+	private int upendThema;
+	private int upendType;
+	private String upendIntrcn;
+	private String upendName;
+	private String upendLink;
+	private String upendYn;
+	private String upendLogPerforMer;
+	private String upendLogDivision;
+	private String upendLogDate;
 	
 	public int getUpendLogId() {
 		return upendLogId;

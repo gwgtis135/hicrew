@@ -33,30 +33,30 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 <link rel="canonical" href="http://www.hicrew.kr">
 <!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/icomoon.css">
 <!-- Themify Icons-->
-<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/themify-icons.css">
 <!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
 <!-- Owl Carousel  -->
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
 <!-- Flexslider -->
-<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/category.css">
-<link rel="stylesheet" href="css/jonghyeon_style.css">
-<link rel="stylesheet" href="css/HJ_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/HJ_style.css">
 <!-- Banner style  -->
-<link rel="stylesheet" href="css/event_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
 	<![endif]-->
 <style>
 dl, dt {
@@ -112,8 +112,6 @@ div#cke_intrcnment {
 	<jsp:include page="adminTap.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
-
-		${Upend } <br> ${Upend.toString() } 
 	<div id="page">
 		<input type="hidden" id="selectedmenu"> <input type="hidden"
 			id="selecteddetail">
@@ -178,53 +176,53 @@ div#cke_intrcnment {
 													<div class="slideshow-container" style="float:left;">
 														<div class="mySlidesprev fade1">
 															<img class="prev_slideImg"
-																src="images/sample/sample1.png">
+																src="${pageContext.request.contextPath}/images/sample/sample1.png">
 														</div>
 														<div class="mySlidesprev fade1">
 															<img class="prev_slideImg"
-																src="images/sample/sample2.png">
+																src="${pageContext.request.contextPath}/images/sample/sample2.png">
 														</div>
 														<div class="mySlidesprev fade1">
 															<img class="prev_slideImg"
-																src="images/sample/sample3.png">
+																src="${pageContext.request.contextPath}/images/sample/sample3.png">
 														</div>
 														<div class="mySlidesprev fade1">
 															<img class="prev_slideImg"
-																src="images/sample/sample4.png">
+																src="${pageContext.request.contextPath}/images/sample/sample4.png">
 														</div>
 														<div class="mySlidesprev fade1">
 															<img class="prev_slideImg"
-																src="images/sample/sample5.png">
+																src="${pageContext.request.contextPath}/images/sample/sample5.png">
 														</div>
 														<div class="mySlidesprev fade1">
 															<img class="prev_slideImg"
-																src="images/sample/sample6.png">
+																src="${pageContext.request.contextPath}/images/sample/sample6.png">
 														</div>
 													</div>
 													<div class="slideshow-container" style="float:left;">
 														<div class="mySlides fade2">
 															<img class="main_slideImg" data-value="1"
-																src="images/sample/sample1.png">
+																src="${pageContext.request.contextPath}/images/sample/sample1.png">
 														</div>
 														<div class="mySlides fade2">
 															<img class="main_slideImg" data-value="2"
-																src="images/sample/sample2.png">
+																src="${pageContext.request.contextPath}/images/sample/sample2.png">
 														</div>
 														<div class="mySlides fade2">
 															<img class="main_slideImg" data-value="3"
-																src="images/sample/sample3.png">
+																src="${pageContext.request.contextPath}/images/sample/sample3.png">
 														</div>
 														<div class="mySlides fade2">
 															<img class="main_slideImg" data-value="4"
-																src="images/sample/sample4.png">
+																src="${pageContext.request.contextPath}/images/sample/sample4.png">
 														</div>
 														<div class="mySlides fade2">
 															<img class="main_slideImg" data-value="5"
-																src="images/sample/sample5.png">
+																src="${pageContext.request.contextPath}/images/sample/sample5.png">
 														</div>
 														<div class="mySlides fade2">
 															<img class="main_slideImg" data-value="6"
-																src="images/sample/sample6.png">
+																src="${pageContext.request.contextPath}/images/sample/sample6.png">
 														</div>
 														<a id="prev" class="prev" onclick="plusSlides(-1)">❮</a> 
 														<a id="next" class="next" onclick="plusSlides(1)">❯</a>
@@ -232,54 +230,54 @@ div#cke_intrcnment {
 													<div class="slideshow-container" style="float:left;">
 														<div class="mySlidesnext fade3">
 															<img class="next_slideImg"
-																src="images/sample/sample1.png">
+																src="${pageContext.request.contextPath}/images/sample/sample1.png">
 														</div>
 														<div class="mySlidesnext fade3">
 															<img class="next_slideImg"
-																src="images/sample/sample2.png">
+																src="${pageContext.request.contextPath}/images/sample/sample2.png">
 														</div>
 														<div class="mySlidesnext fade3">
 															<img class="next_slideImg"
-																src="images/sample/sample3.png">
+																src="${pageContext.request.contextPath}/images/sample/sample3.png">
 														</div>
 														<div class="mySlidesnext fade3">
 															<img class="next_slideImg"
-																src="images/sample/sample4.png">
+																src="${pageContext.request.contextPath}/images/sample/sample4.png">
 														</div>
 														<div class="mySlidesnext fade3">
 															<img class="next_slideImg"
-																src="images/sample/sample5.png">
+																src="${pageContext.request.contextPath}/images/sample/sample5.png">
 														</div>
 														<div class="mySlidesnext fade3">
 															<img class="next_slideImg"
-																src="images/sample/sample6.png">
+																src="${pageContext.request.contextPath}/images/sample/sample6.png">
 														</div>
 													</div>
 
 													<!-- <div>
 														<input type="radio" id="type1" name="pagetype"
 															value="type1"> <label for="type1"> <img
-															src="images/sample/sample1.png" alt="1번"
+															src="${pageContext.request.contextPath}/images/sample/sample1.png" alt="1번"
 															class="imgsample">
 														</label> <input type="radio" id="type2" name="pagetype"
 															value="type2"> <label for="type2"> <img
-															src="images/sample/sample2.png" alt="2번"
+															src="${pageContext.request.contextPath}/images/sample/sample2.png" alt="2번"
 															class="imgsample">
 														</label> <input type="radio" id="type3" name="pagetype"
 															value="type3"> <label for="type3"> <img
-															src="images/sample/sample3.png" alt="3번"
+															src="${pageContext.request.contextPath}/images/sample/sample3.png" alt="3번"
 															class="imgsample">
 														</label> <input type="radio" id="type4" name="pagetype"
 															value="type4"> <label for="type4"> <img
-															src="images/sample/sample3.png" alt="4번"
+															src="${pageContext.request.contextPath}/images/sample/sample3.png" alt="4번"
 															class="imgsample">
 														</label> <input type="radio" id="type5" name="pagetype"
 															value="type5"> <label for="type5"> <img
-															src="images/sample/sample5.png" alt="5번"
+															src="${pageContext.request.contextPath}/images/sample/sample5.png" alt="5번"
 															class="imgsample">
 														</label> <input type="radio" id="type6" name="pagetype"
 															value="type6"> <label for="type6"> <img
-															src="images/sample/sample6.png" alt="6번"
+															src="${pageContext.request.contextPath}/images/sample/sample6.png" alt="6번"
 															class="imgsample">
 														</label>
 													</div> -->
@@ -300,13 +298,13 @@ div#cke_intrcnment {
 														<div>
 															<input type="radio" id="type1" name="pagetype" class="hide"
 																value="1" checked> <label for="type1"> <img
-																src="images/sample/color1.png" alt="1번"
+																src="${pageContext.request.contextPath}/images/sample/color1.png" alt="1번"
 																class="imgstyle">
 															</label> 
 															<input type="radio" id="type2" name="pagetype" class="hide"
 																value="2"> 
 															<label for="type2"> <img
-																src="images/sample/color2.png" alt="2번"
+																src="${pageContext.request.contextPath}/images/sample/color2.png" alt="2번"
 																class="imgstyle">
 															</label>
 														</div>
@@ -357,30 +355,30 @@ div#cke_intrcnment {
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 	<!-- jQuery UI -->
 	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
 	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="js/Tapcommon.js"></script>
+	<script src="${pageContext.request.contextPath}/js/main.js"></script>
+	<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+	<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
 	<!--  ck 에디터 적용 -->
 	<script type="text/javascript"
 		src="<c:url value='/html/egovframework/com/cmm/utl/ckeditor/ckeditor.js'/>"></script>
@@ -652,7 +650,8 @@ div#cke_intrcnment {
 			inptthema4post.value= document.querySelector("input[type='radio']:checked").getAttribute("value");
 			
 			console.log(form);
-
+			console.log(CKEDITOR.instances.intrcnment.getData());
+		//return 0;
 			form.submit();
 
 		}
@@ -662,7 +661,7 @@ div#cke_intrcnment {
 			console.log("${FLAG }");
 			if("${FLAG }" == "true"){
 				loadpage();
-			}else if("${Upend }" != ""){
+			}else if("${UpendFlag }" != ""){
 				if(confirm("작업 하던 페이지를 불러오시겠습니까?")){
 					loadpage();
 				}

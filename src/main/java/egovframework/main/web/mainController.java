@@ -8,8 +8,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,9 +26,21 @@ public class mainController {
 	@Autowired
 	private mainService mservice;
 
-	@RequestMapping("main.do")
-	public String goMain() {
-		return "main/index";
+	@RequestMapping("move.do/{addr}")
+	public String move(@PathVariable String addr) {
+		System.out.println(addr);
+		String[] b = addr.split("\\.");
+		String ret = "main/"+b[0];
+		if(b[0].equals("ch")) {
+			return "ch/Ch";
+		}else if(b[0].equals("orgcht")) {
+			return "orgcht/Orgcht";
+		}else if(b[0].equals("groupware")) {
+			return "main/groupware";
+		}else if(b[0].equals("ccmupendmenu")) {
+			return "ccm/ccmupendmenu";
+		}
+		return ret;
 	}
 
 	@RequestMapping("main2.do")
@@ -88,41 +102,6 @@ public class mainController {
 		return "main/Temp";
 	}
 
-	@RequestMapping("cmpnyinfo.do")
-	public String cmpnyinfo() {
-		return "main/cmpnyinfo";
-	}
-
-	@RequestMapping("move.do()")
-	public String move() {
-		return "main/";
-	}
-
-	@RequestMapping("CIintrcn.do")
-	public String CIintrcn() {
-		return "main/CIintrcn";
-	}
-
-	@RequestMapping("directions.do")
-	public String recruitment() {
-		return "main/directions";
-	}
-
-	@RequestMapping("photo.do")
-	public String photo() {
-		return "main/photo";
-	}
-
-	@RequestMapping("pdfsolut.do")
-	public String pdfsolut() {
-		return "main/pdfsolut";
-	}
-
-	@RequestMapping("itsolut.do")
-	public String itsolut() {
-		return "main/itsolut";
-	}
-
 	@RequestMapping("upendmenu.do")
 	public String upendmenu() {
 		return "main/upendmenu";
@@ -138,12 +117,12 @@ public class mainController {
 
 	@PostMapping("menudetail.do")
 	public String menudeatil2(HttpServletRequest req) {
-		/* , UpendMenuVO vo) { */
 		HttpSession hs = req.getSession();
 
 		UpendMenuVO vo = new UpendMenuVO();
 		System.out.println("aaaaaaaaa");
 		hs.setAttribute("FLAG", true);
+		hs.setAttribute("UpendFlag", true);
 		vo.setUpendType(Integer.parseInt(req.getParameter("UpendType")));
 		vo.setUpendIntrcn(req.getParameter("UpendIntrcn"));
 		vo.setUpendLink(req.getParameter("UpendLink"));

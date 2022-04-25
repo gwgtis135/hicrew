@@ -5,8 +5,8 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
-<link rel="stylesheet" href="css/lefttd/theme-default.css">
-<link rel="stylesheet" href="css/lefttd/core2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/lefttd/theme-default.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/lefttd/core2.css">
 <style>
 /*
 ul li div label {
@@ -51,9 +51,10 @@ ul#tree {
 }
 
 div.tree-div-selected {
-	color: white;
-	background-color:orange;
+	color: white !important;
+	background-color: #FF5126 !important;
 	font-weight: bold !important;
+    border-radius: 15px;
 }
 
 .icon-fa-circle-plus:before {
@@ -222,9 +223,9 @@ div.tree-div-selected {
 		</ul>
 	</div> -->
 </td>
-<script src="js/lefttd/helpers.js"></script>
-<script src="js/lefttd/menu.js"></script>
-<script src="js/lefttd/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/lefttd/helpers.js"></script>
+<script src="${pageContext.request.contextPath}/js/lefttd/menu.js"></script>
+<script src="${pageContext.request.contextPath}/js/lefttd/main.js"></script>
 <script>
 
 function loadpage(){
@@ -234,12 +235,11 @@ function loadpage(){
 	var outterli = innerli.closest("ul").closest("li");
 	outterli.classList.add("open");
 	outterli.querySelector(".depth1").classList.add("tree-div-selected");
-	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}"){
-		console.log("asd");
+	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}" == "true"){
+		var text = "${Upend.upendIntrcn }";
+		CKEDITOR.instances.intrcnment.setData(text);
 		span.click();
-		console.log(span);
-		console.log("sdf");
-	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}"){
+	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}" =="true"){
 		switchtable(span.getAttribute("data-link").split(".")[0]);
 	}
 }
