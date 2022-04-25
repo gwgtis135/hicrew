@@ -2,16 +2,22 @@ package egovframework.com.ch.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import egovframework.com.ch.service.ChService;
 import egovframework.com.ch.service.ChVO;
 
 @Service
-public class ChServiceImpl implements ChMapper {
+public class ChServiceImpl implements ChService {
 
+	@Autowired ChMapper chmapper;
+	
 	@Override
 	public List<ChVO> selectAllCh(ChVO chVO) {
-		return null;
+		List<ChVO> listvo = chmapper.selectAllCh(chVO);
+		System.out.println("서비스임플 테스트 완료 ");
+		return listvo;
 	}
 
 	@Override

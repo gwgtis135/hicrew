@@ -125,7 +125,63 @@
 									<td></td>
 									<td class="n_admin">
 										<form name="CcmDeCodeForm" action="<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>" method="post" onSubmit="fn_egov_search_code(); return false;">
+<!-- 공통코드 테이블 목록 start -->
+											<div class="board tblcmmUpendMenu">
+												<h1>공통코드 목록</h1>
+												<!-- 검색영역 -->
+												<!-- 검색조건선택 -->
+												<div class="search_box">
+													<ul>
+														<li><select name="searchCondition" title="">
+																<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
+																<option selected value=''>선택하세요</option>
+																<!-- 선택하세요 -->
+																<option value="1">코드ID</option>
+																<!-- 코드ID -->
+																<option value="2">코드ID명</option>
+																<!-- 코드ID명 -->
+														</select></li>
+														<!-- 검색키워드 및 조회버튼 -->
+														<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" maxlength="155"> <input type="submit" class="s_btn" value="조회" title="" /></li>
+													</ul>
+												</div>
 
+												<!-- 목록영역 -->
+												<table class="board_list cmmTable cmmcode">
+													<caption>공통코드 목록</caption>
+													<colgroup>
+														<col style="width: 20%;">
+														<col style="width: 26%;">
+														<col style="width: 26%;">
+														<col style="width: 26%;">
+													</colgroup>
+													<tbody class="ov">
+														<tr id="Trclick" class="trclick">
+															<td class="cmmtd">1</td>
+															<td class="cmmtd"><input id="cmmCode" value="DEPT001" type="text"></td>
+															<td class="cmmtd"><input value="사업부서" type="text"></td>
+															<td class="cmmtd"><select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+															</select></td>
+														</tr>
+														<tr id="Trclick" class="trclick">
+															<td class="cmmtd">2</td>
+															<td class="cmmtd"><input id="cmmCode" value="POSI001" type="text"></td>
+															<td class="cmmtd"><input value="직책" type="text"></td>
+															<td class="cmmtd"><select>
+																	<option value="Y">활성화</option>
+																	<option value="N">비활성화</option>
+															</select></td>
+														</tr>
+													</tbody>
+												</table>
+												<div class="tbl_bottom" style="float: right;">
+													<div class="pagenation" id="pageControlMgmt"></div>
+													<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
+												</div>
+											</div>
+											<!-- 공통코드 테이블 목록 end -->
 											<!-- 상세코드 테이블 start  -->
 											<div class="board hide tblccmCodeList">
 												<h1>상세코드 목록</h1>
@@ -149,8 +205,34 @@
 													</ul>
 												</div>
 
+												
 												<!-- 목록영역 -->
 												<table class="board_list cmmTable" summary="">
+													<caption>사업부서 상세코드 목록</caption>
+													<colgroup>
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+														<col style="width: 20%;">
+													</colgroup>
+													<tbody class="ov detailTobdy">
+														<!-- append  -->
+													</tbody>
+												</table>
+
+												<!-- paging navigation -->
+												<div class="pagination">
+													<ul>
+														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
+													</ul>
+												</div>
+											</div>
+											<!-- 상세코드 테이블 end  -->
+											
+											<!--  hidden table 상세코드 정보를 담고 있음  -->
+											<!-- 목록영역 -->
+												<table class="board_list detailTable" summary="">
 													<caption>사업부서 상세코드 목록</caption>
 													<colgroup>
 														<col style="width: 20%;">
@@ -162,7 +244,7 @@
 													<tbody class="ov">
 														<tr>
 															<td class="cmmtd">1</td>
-															<td class="cmmtd"><select>
+															<td id="detailcode" class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
 															</select></td>
@@ -177,7 +259,7 @@
 														</tr>
 														<tr>
 															<td class="cmmtd">2</td>
-															<td class="cmmtd"><select>
+															<td id="detailcode" class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
 															</select></td>
@@ -190,7 +272,7 @@
 														</tr>
 														<tr>
 															<td class="cmmtd">3</td>
-															<td class="cmmtd"><select>
+															<td id="detailcode" class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
 															</select></td>
@@ -203,7 +285,7 @@
 														</tr>
 														<tr>
 															<td class="cmmtd">4</td>
-															<td class="cmmtd"><select>
+															<td id="detailcode" class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001">POSI001/직급</option>
 															</select></td>
@@ -216,7 +298,7 @@
 														</tr>
 														<tr>
 															<td class="cmmtd">5</td>
-															<td class="cmmtd"><select>
+															<td id="detailcode" class="cmmtd"><select>
 																	<option value="DEPT001">DEPT001/사업부서</option>
 																	<option value="POSI001" selected>POSI001/직급</option>
 															</select></td>
@@ -230,77 +312,6 @@
 													</tbody>
 												</table>
 
-												<!-- paging navigation -->
-												<div class="pagination">
-													<ul>
-														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
-													</ul>
-												</div>
-											</div>
-											<!-- 상세코드 테이블 end  -->
-											<!-- 공통코드 테이블 목록 start -->
-
-											<div class="board tblcmmUpendMenu">
-												<h1>공통코드 목록</h1>
-												<!-- 검색영역 -->
-												<!-- 검색조건선택 -->
-												<div class="search_box">
-													<ul>
-														<li><select name="searchCondition" title="">
-																<%-- <option <c:if test="${searchVO.searchCondition == ''}">selected="selected"</c:if>><spring:message code="input.select" /></option><!-- 선택하세요 --> --%>
-																<option selected value=''>선택하세요</option>
-																<!-- 선택하세요 -->
-																<option value="1">코드ID</option>
-																<!-- 코드ID -->
-																<option value="2">코드ID명</option>
-																<!-- 코드ID명 -->
-														</select></li>
-														<!-- 검색키워드 및 조회버튼 -->
-														<li><input class="s_input" name="searchKeyword" type="text" size="35" title="" maxlength="155"> <input type="submit" class="s_btn" value="조회" title="" /></li>
-													</ul>
-												</div>
-
-												<!-- 목록영역 -->
-												<table class="board_list cmmTable">
-													<caption>공통코드 목록</caption>
-													<colgroup>
-														<col style="width: 20%;">
-														<col style="width: 26%;">
-														<col style="width: 26%;">
-														<col style="width: 26%;">
-													</colgroup>
-													<tbody class="ov">
-														<tr id="Trclick">
-															<td class="cmmtd">1</td>
-															<td class="cmmtd"><input value="DEPT001" type="text"></td>
-															<td class="cmmtd"><input value="사업부서" type="text"></td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-														<tr id="Trclick">
-															<td class="cmmtd">2</td>
-															<td class="cmmtd"><input value="POSI001" type="text"></td>
-															<td class="cmmtd"><input value="직책" type="text"></td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<!-- paging navigation -->
-												<div class="pagination">
-													<ul>
-														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
-													</ul>
-												</div>
-
-											</div>
-											<!-- 공통코드 테이블 목록 end -->
-
 
 											<input name="codeId" type="hidden" value=""> <input name="code" type="hidden" value=""> <input name="pageIndex" type="hidden" value="<c:out value='${searchVO.pageIndex}'/>">
 										</form>
@@ -309,7 +320,8 @@
 							</table>
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> 
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
 							</div>
 						</div>
 					</div>
@@ -339,7 +351,7 @@
 	function hideTbl(e){
 		var tblccmupendmenu = document.querySelector('.tblcmmUpendMenu');
 		var tblccmCode= document.querySelector('.tblccmCodeList');
-		var tblText = e.target.innerText;
+		var tblText = e;
 		
 		if(tblText == '공통코드관리'){
 			console.log('공통코드관리');
@@ -354,10 +366,10 @@
 		}
 		else if(tblText == '상세코드관리'){
 			flag =1;
-			console.log('falg 변수 값 ')
-			console.log(flag)
-			console.log('상세코드관리');
-			tblccmupendmenu.classList.add('hide');
+// 			console.log('falg 변수 값 ')
+// 			console.log(flag)
+// 			console.log('상세코드관리');
+			//tblccmupendmenu.classList.add('hide');
 			tblccmCode.classList.remove('hide');
 		}
 		
@@ -366,8 +378,6 @@
 	
 
 	function addbtn() {
-		console.log('falg 변수 값 ')
-		console.log(flag)
 		if (flag == 0) {
 
 			var select = document.createElement('select');
@@ -438,8 +448,8 @@
 			var ccmDetailLastTr = ccmDetailfirstTbody.lastElementChild;
 			var ccmDetailFirstTd = ccmDetailLastTr.firstElementChild;
 			var ccmDetailnum = ccmDetailFirstTd.innerText;
-			console.log('ccmDetailnum 출력')
-			console.log(ccmDetailnum)
+// 			console.log('ccmDetailnum 출력')
+// 			console.log(ccmDetailnum)
 
 			
 			/* 사업부서, 직급 select */
@@ -517,7 +527,28 @@
 	}//addbtn end
 	
 	/* tr이벤트  */
-	docu
+	
+	document.querySelector('.cmmcode').addEventListener('click',function(ev){
+		
+		var tar = ev.target.closest("tr") ? ev.target.closest("tr") : ev.target; //ev.target 클릭한  tr 
+// 		console.log(tar.querySelector('#cmmcode').firstChild.value)
+		var value = tar.querySelector('#cmmCode').value; //클릭한 공통코드의 값 가져오기
+		
+		var ov = document.querySelectorAll('.ov')[1]; //상세코드 table tr
+		console.log()
+		//var ovValue = ov.children[0].children[1].firstChild.value;
+			
+		for(i=0; i<ov.childElementCount;i++){
+			if(value == ov.querySelectorAll('#detailcode')[i].firstChild.value){
+				//console.log(value)
+				//console.log(ov.children[i].children[2].firstChild.value)
+				//console.log(ov.children[i]);	
+				console.log(ov.querySelectorAll('#detailcode')[i].closest("tr"))
+				
+			}	
+		}
+		hideTbl('상세코드관리'); //상세코드 테이블 띄우기
+	})
 </script>
 </body>
 </html>
