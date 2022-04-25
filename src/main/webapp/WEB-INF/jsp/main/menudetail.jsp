@@ -35,37 +35,37 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 <link rel="canonical" href="http://www.hicrew.kr">
 <!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/icomoon.css">
 <!-- Themify Icons-->
-<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/themify-icons.css">
 <!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
 <!-- Owl Carousel  -->
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
 <!-- Flexslider -->
-<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/HJ_style.css">
-<link rel="stylesheet" href="css/nice-select.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/HJ_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/nice-select.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="css/jonghyeon_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
 <!-- Banner style  -->
-<link rel="stylesheet" href="css/event_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 <!-- Banner style  -->
-<link rel="stylesheet" href="css/bootstrapcard.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrapcard.min.css">
 <!-- fontawesome  -->
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
 	<![endif]-->
 </head>
 <body>
@@ -80,10 +80,6 @@
 	</jsp:include>
 	
 	<div class="gtco-section-overflow">
-		
-	${chdatas}<br>
-		${Upend } <br> ${Upend.toString() } 
-		
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
 				<!-- 
@@ -427,7 +423,7 @@
 												<div class="photorow g-5">
 													<div class="col-lg-4 col-md-6">
 														<div class="bg-light">
-															<img class="photoimg-fluid" src="images/img_bg_1.jpg"
+															<img class="photoimg-fluid" src="${pageContext.request.contextPath}/images/img_bg_1.jpg"
 																alt="">
 															<div class="p-4">
 																<div class="d-flex justify-content-between mb-4">
@@ -443,7 +439,7 @@
 
 													<div class="col-lg-4 col-md-6">
 														<div class="bg-light">
-															<img class="photoimg-fluid" src="images/img_bg_2.jpg"
+															<img class="photoimg-fluid" src="${pageContext.request.contextPath}/images/img_bg_2.jpg"
 																alt="">
 															<div class="p-4">
 																<div
@@ -458,7 +454,7 @@
 
 													<div class="col-lg-4 col-md-6">
 														<div class="bg-light">
-															<img class="photoimg-fluid" src="images/img_bg_3.jpg"
+															<img class="photoimg-fluid" src="${pageContext.request.contextPath}/images/img_bg_3.jpg"
 																alt="">
 															<div class="p-4">
 																<div
@@ -557,7 +553,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid" src="images/CI1.png" alt="">
+															<img class="img-fluid" src="${pageContext.request.contextPath}/images/CI1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<div class="translate-middle d-flex align-items-center">
@@ -586,7 +582,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid" src="images/CI2.png" alt="">
+															<img class="img-fluid" src="${pageContext.request.contextPath}/images/CI2.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<div class="translate-middle d-flex align-items-center">
@@ -620,7 +616,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/neis.jpg" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/neis.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -652,7 +648,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid2"
-																src="images/sub_business_U-sync_img3.jpg" alt="">
+																src="${pageContext.request.contextPath}/images/sub_business_U-sync_img3.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -684,7 +680,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid2"
-																src="images/sub_business_withrun_img.jpg" alt="">
+																src="${pageContext.request.contextPath}/images/sub_business_withrun_img.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -715,7 +711,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/img_1.jpg" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/img_1.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -746,7 +742,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/img_2.jpg" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/img_2.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -777,7 +773,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/img_3.jpg" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/img_3.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -808,7 +804,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/img_4.jpg" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/img_4.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -839,7 +835,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/img_6.jpg" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/img_6.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -875,7 +871,7 @@
 													data-wow-delay="0.1s">
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
-															<img class="img-fluid2" src="images/img_01.JPG" alt="">
+															<img class="img-fluid2" src="${pageContext.request.contextPath}/images/img_01.JPG" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -907,7 +903,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid2"
-																src="images/img_04.jpg" alt="">
+																src="${pageContext.request.contextPath}/images/img_04.jpg" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -939,7 +935,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid2"
-																src="images/img_03.JPG" alt="">
+																src="${pageContext.request.contextPath}/images/img_03.JPG" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -977,7 +973,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img ondrag="drag(event)" class="img-fluid"
-																src="images/Crews/resizestory1_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1010,7 +1006,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img ondrag="drag(event)" class="img-fluid"
-																src="images/Crews/resizestory2_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory2_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1043,7 +1039,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img ondrag="drag(event)" class="img-fluid"
-																src="images/Crews/resizestory3_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory3_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1076,7 +1072,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img ondrag="drag(event)" class="img-fluid"
-																src="images/Crews/resizestory4_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory4_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1108,7 +1104,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid"
-																src="images/Crews/resizestory1_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1140,7 +1136,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid"
-																src="images/Crews/resizestory1_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1172,7 +1168,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid"
-																src="images/Crews/resizestory1_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1204,7 +1200,7 @@
 													<div class="rounded shadow overflow-hidden">
 														<div class="position-relative">
 															<img class="img-fluid"
-																src="images/Crews/resizestory1_1.png" alt="">
+																src="${pageContext.request.contextPath}/images/Crews/resizestory1_1.png" alt="">
 														</div>
 														<div class="text-center p-4 mt-3">
 															<input class="fw-bold mb-0" type="text" size="10"
@@ -1243,7 +1239,7 @@
 								id="a_save" href="#" class="btn_type1 _rosRestrict">저장</a> <a
 								id="a_remove" href="#"
 								class="btn_type1 _rosRestrict emphasisButton">삭제</a> <a
-								id="a_remove" href="#"
+								id="a_preview" href="#"
 								class="btn_type3 _rosRestrict emphasisButton">미리보기</a>
 						</div>
 					</div>
@@ -1394,29 +1390,29 @@
 		type="checkbox">
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
 	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
 	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
 	<!-- Main -->
-	<script src="js/main.js"></script>
-	<script src="js/jquery.nice-select.js"></script>
+	<script src="${pageContext.request.contextPath}/js/main.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.nice-select.js"></script>
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="js/Tapcommon.js"></script>
+	<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+	<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
 	<script>
 	var selmenu = document.querySelector("#selectedmenu");
 	var seldetail = document.querySelector("#selecteddetail");
@@ -1600,92 +1596,25 @@
 /*         ev.target.appendChild(document.getElementById(fromid)); */
     }
 	window.onload=function(){
-		console.log("${FLAG }");
 		if("${FLAG }" == "true"){
 			loadpage();
-		}else{
+		}else if("${UpendFlag }" == "true"){
 			if(confirm("작업 하던 페이지를 불러오시겠습니까?")){
 				loadpage();
 			}
 		}
 	}
-
-		/* function action(){
-			location.href="./ChSelectAll.do";
-		}
-		action(); */
 	
-	/*  $.ajax({
-			type:'POST',
-			url:'./ChSelectAll.do',
-			//contentType: "application/json",		
-			dataType: 'json',
-			async: false,
-			success: function(datas){
-				console.log(datas)
-				var chTable = document.querySelector('#chAppendTable');
-				
-					let chStr = `<table id="chhTable" class="table-hover menudetailboard_list">
-						<colgroup>
-							<col style="width: 10%">
-							<col style="width: 15%">
-							<col style="width: 20%">
-							<col style="width: 5%">
-						</colgroup>
-						<tbody id="chhhhTable" class="ov">
-
-							<tr class="cmmtd">
-								<td class="num"><input class="form-check-input" type="checkbox"
-									value="" id="defaultCheck3" checked /></td>
-								<td><input class="" type="date" value="2020-01-01"></td>
-								<td><select name="">
-										<option value="">세종(나이스 구축 사업)</option>
-										<option>대구(나이스 유지보수 사업)</option>
-										<option>대구(정보공시 2020)</option>
-										<option>대구(본부)</option>
-								</select></td>
-								<td></td>
-							</tr>
-							<tr class="cmmtd">
-								<td class="num cmmtd"><input class="form-check-input"
-									type="checkbox" value="" id="defaultCheck3" checked /></td>
-								<td><input class="" type="date" value="2020-01-01"></td>
-								<td><select>
-										<option value="">세종(나이스 구축 사업)</option>
-										<option>대구(나이스 유지보수 사업)</option>
-										<option>대구(정보공시 2020)</option>
-										<option>대구(본부)</option>
-								</select></td>
-							</tr>
-							<tr class="cmmtd">
-								<td class="num cmmtd"><input class="form-check-input"
-									type="checkbox" value="" id="defaultCheck3" checked /></td>
-								<td><input class="" type="date" value="2020-01-01"></td>
-								<td><select>
-										<option value="">세종(나이스 구축 사업)</option>
-										<option>대구(나이스 유지보수 사업)</option>
-										<option>대구(정보공시 2020)</option>
-										<option>대구(본부)</option>
-								</select></td>
-							</tr>
-						</tbody>
-					</table>`;
-					
-					document.querySelector('#chAppendTable').innerHTML = chStr;
-			},
-			error: function(){
-				console.log('에러 발생')
-			}
-			
-		}).done(function(datas){
-			
-		}) 
-		
-		
-		
-		console.log('아작스 후')	 */
+	var alink = document.querySelectorAll("a");
 	
-
+	for(var i = 0;i<alink.length;i++){
+	    alink[i].addEventListener("click",function(e){
+	        if(confirm("페이지 이동시 작업중인 데이터가 모두 초기화 됩니다. 이동하시겠습니까?")){
+	        }else{
+	            e.preventDefault();
+	        }
+	    });
+	}
 	</script>
 </body>
 </html>

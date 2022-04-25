@@ -10,52 +10,52 @@
 		<div class="inner">
 			<div class="header_cont">
 				<div class="logo">
-					<a href="main.do"> <img style="width: 80%;"
-						src="images/logo.png" alt="(주)하이크루">
+					<a href="${pageContext.request.contextPath}/move.do/main.do"> <img style="width: 80%;"
+						src="${pageContext.request.contextPath}/images/logo.png" alt="(주)하이크루">
 					</a>
 				</div>
 				<nav class="gnb" id="Gnb">
 					<ul>
-						<li class="active"><a href="main.do" data-nav-section="home">
+						<li class="active"><a href="${pageContext.request.contextPath}/move.do/main.do" data-nav-section="home">
 								<span>Home</span>
 						</a></li>
-						<li><a href="cmpnyinfo.do"> <span>회사소개</span>
+						<li><a href="${pageContext.request.contextPath}/move.do/cmpnyinfo.do"> <span>회사소개</span>
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul>
-									<li><a href="cmpnyinfo.do">회사개요</a></li>
-									<li><a href="CIintrcn.do">CI소개</a></li>
-									<li><a href="ch.do">회사연혁</a></li>
-									<li><a href="orgcht.do">조직도</a></li>
-									<li><a href="directions.do">오시는길</a></li>
-									<li><a href="photo.do">포토스토리</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/cmpnyinfo.do">회사개요</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/CIintrcn.do">CI소개</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/ch.do">회사연혁</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/orgcht.do">조직도</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/directions.do">오시는길</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/photo.do">포토스토리</a></li>
 								</ul>
 							</div></li>
-						<li><a href="pdfsolut.do"> <span>주요사업</span>
+						<li><a href="${pageContext.request.contextPath}/move.do/pdfsolut.do"> <span>주요사업</span>
 						</a> <span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul class='ul_solut'>
-									<li><a href="pdfsolut.do">PDF솔루션</a></li>
-									<li><a href="itsolut.do">IT솔루션</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/pdfsolut.do">PDF솔루션</a></li>
+									<li><a href="${pageContext.request.contextPath}/move.do/itsolut.do">IT솔루션</a></li>
 								</ul>
 							</div></li>
-						<li><a href="groupware.do" class="external"> <span>그룹웨어</span>
+						<li><a href="${pageContext.request.contextPath}/move.do/groupware.do" class="external"> <span>그룹웨어</span>
 						</a></li>
 						<li>
-							<a href="upendmenu.do"> 
+							<a href="${pageContext.request.contextPath}/move.do/upendmenu.do"> 
 								<span>관리자 페이지</span>
 							</a> 
 							<span class="depth1_arrow"></span>
 							<div class="depth_wrap">
 								<ul class="ul_upendmenu">
 									<li>
-										<a href="upendmenu.do">메뉴 관리</a>
+										<a href="${pageContext.request.contextPath}/move.do/upendmenu.do">메뉴 관리</a>
 									</li>
 									<li>
-										<a href="menudetail.do">페이지 관리</a>
+										<a href="${pageContext.request.contextPath}/move.do/menudetail.do">페이지 관리</a>
 									</li>
 									<li>
-										<a href="ccmupendmenu.do">공통 코드 관리</a>
+										<a href="${pageContext.request.contextPath}/move.do/ccmupendmenu.do">공통 코드 관리</a>
 									</li>
 								</ul>
 							</div>

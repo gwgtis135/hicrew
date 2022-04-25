@@ -23,8 +23,8 @@ ul, li {
 
 				<ul class="sub_menu_lst">
 
-					<li class=""><a href="pdfsolut.do">PDF 솔루션</a></li>
-					<li><a href="itsolut.do">IT솔루션</a></li>
+					<li class=""><a href="${pageContext.request.contextPath}/move.do/pdfsolut.do">PDF 솔루션</a></li>
+					<li><a href="${pageContext.request.contextPath}/move.do/itsolut.do">IT솔루션</a></li>
 				</ul>
 			</div>
 		</div>

@@ -32,54 +32,54 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 <link rel="canonical" href="http://www.hicrew.kr">
 <!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/icomoon.css">
 <!-- Themify Icons-->
-<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/themify-icons.css">
 <!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
 <!-- Owl Carousel  -->
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
 <!-- Flexslider -->
-<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="css/jonghyeon_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
 <!-- Banner style  -->
-<link rel="stylesheet" href="css/event_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 
 <!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
 	<![endif]-->
 <!-- jQuery -->
-<script src="js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
-<script src="js/jquery.easing.1.3.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <!-- Waypoints -->
-<script src="js/jquery.waypoints.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
 <!-- Carousel -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 <!-- countTo -->
-<script src="js/jquery.countTo.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
 <!-- Flexslider -->
-<script src="js/jquery.flexslider-min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
 <!-- Magnific Popup -->
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/magnific-popup-options.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
 <!-- Main -->
-<script src="js/main.js"></script>
-<script src="js/scripts.js"></script>
-<script src="js/Tapcommon.js"></script>
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
 </head>
 <body>
 
@@ -111,7 +111,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/neis.jpg" alt="Image" class="img-responsive">
+								<img src="${pageContext.request.contextPath}/images/neis.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
 								<h2>학생수강신청</h2>
@@ -129,7 +129,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/sub_business_U-sync_img3.jpg" alt="Image"
+								<img src="${pageContext.request.contextPath}/images/sub_business_U-sync_img3.jpg" alt="Image"
 									class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
@@ -147,7 +147,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/sub_business_withrun_img.jpg" alt="Image"
+								<img src="${pageContext.request.contextPath}/images/sub_business_withrun_img.jpg" alt="Image"
 									class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
@@ -166,7 +166,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/img_1.jpg" alt="Image" class="img-responsive">
+								<img src="${pageContext.request.contextPath}/images/img_1.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
 								<h2>Unified JavaScript Framework 기반의 가장 빠른 OSMU 솔루션</h2>
@@ -185,7 +185,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/img_2.jpg" alt="Image" class="img-responsive">
+								<img src="${pageContext.request.contextPath}/images/img_2.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
 								<h2>비교될 수 없는 개발 편의성으로 최고의 생산성 제공</h2>
@@ -204,7 +204,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/img_3.jpg" alt="Image" class="img-responsive">
+								<img src="${pageContext.request.contextPath}/images/img_3.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
 								<h2>웹 환경의 한계를 넘는 높은 수준의 성능과 기능 제공</h2>
@@ -223,7 +223,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/img_4.jpg" alt="Image" class="img-responsive">
+								<img src="${pageContext.request.contextPath}/images/img_4.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
 								<h2>상상 그 이상의 편리함! 최고의 개발환경 제공</h2>
@@ -240,7 +240,7 @@
 								<div class="overlay">
 									<i class="ti-plus"></i>
 								</div>
-								<img src="images/img_6.jpg" alt="Image" class="img-responsive">
+								<img src="${pageContext.request.contextPath}/images/img_6.jpg" alt="Image" class="img-responsive">
 							</figure>
 							<div class="gtco-text text-left">
 								<h2>사용자 경험의 현재와 미래를 잇는 Real OSMU 솔루션</h2>

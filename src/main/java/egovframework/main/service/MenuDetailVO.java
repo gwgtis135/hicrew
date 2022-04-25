@@ -3,18 +3,19 @@ package egovframework.main.service;
 import java.util.Arrays;
 
 public class MenuDetailVO {
-	int menuLogId;
-	int menuId;
-	int lcalsId;
-	String menuName;
-	byte[] menuFile;
-	String menuEventn;
-	String menuLink;
-	String menuContent;
-	String menuYn;
-	String menuLogPerformer;
-	String menuLogDivision;
-	String menuLogDate;
+	private int menuLogId;
+	private int menuId;
+	private int lcalsId;
+	private String menuName;
+	private byte[] menuFile;
+	private String menuEventn;
+	private String menuLink;
+	private String menuContent;
+	private String menuYn;
+	private String menuLogPerformer;
+	private String menuLogDivision;
+	private String menuLogDate;
+	// 위에서부터 로그id, 메뉴id, 대분류id, 이미지 이름, 이미지, 이미지 확장자, 링크, 내용, 사용유무, 로그 발생자, 로그 종류, 로그 날짜
 	public int getMenuLogId() {
 		return menuLogId;
 	}

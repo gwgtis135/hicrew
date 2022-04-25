@@ -23,12 +23,12 @@ ul, li {
 
 				<ul class="sub_menu_lst">
 
-					<li class=""><a href="cmpnyinfo.do">회사개요</a></li>
-					<li><a href="CIintrcn.do">CI소개</a></li>
-					<li><a href="ch.do">회사 연혁</a></li>
-					<li><a href="orgcht.do">조직도</a></li>
-					<li><a href="directions.do">오시는길</a></li>
-					<li><a href="photo.do">포토스토리</a></li>
+					<li class=""><a href="${pageContext.request.contextPath}/move.do/cmpnyinfo.do">회사개요</a></li>
+					<li><a href="${pageContext.request.contextPath}/move.do/CIintrcn.do">CI소개</a></li>
+					<li><a href="${pageContext.request.contextPath}/move.do/ch.do">회사 연혁</a></li>
+					<li><a href="${pageContext.request.contextPath}/move.do/orgcht.do">조직도</a></li>
+					<li><a href="${pageContext.request.contextPath}/move.do/directions.do">오시는길</a></li>
+					<li><a href="${pageContext.request.contextPath}/move.do/photo.do">포토스토리</a></li>
 				</ul>
 			</div>
 		</div>
