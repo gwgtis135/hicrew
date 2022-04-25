@@ -343,7 +343,7 @@ div#cke_intrcnment {
 			</div>
 		</footer>
 	</div>
-	<form id="form4nextbtn" action="menudetail.do" method="post">
+	<form id="form4nextbtn" action="${pageContext.request.contextPath}/menudetail.do" method="post">
 		<input type="hidden" name="UpendType">
 		<input type="hidden" name="UpendIntrcn">
 		<input type="hidden" name="UpendName">
