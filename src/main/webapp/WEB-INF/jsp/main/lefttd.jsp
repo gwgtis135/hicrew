@@ -234,13 +234,55 @@ function loadpage(){
 	var outterli = innerli.closest("ul").closest("li");
 	outterli.classList.add("open");
 	outterli.querySelector(".depth1").classList.add("tree-div-selected");
-	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}"){
-		console.log("asd");
-		span.click();
-		console.log(span);
-		console.log("sdf");
-	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}"){
-		switchtable(span.getAttribute("data-link").split(".")[0]);
+	span.click();
+	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}" =="true"){
+	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}" == "true"){
+		if(span.getAttribute("data-link").split(".")[0]=="ch"){
+			console.log("asdasdsad");
+			$.ajax({
+				url:'./ChSelectAll.do',
+				contentType: "application/json",	
+				dataType : 'json',
+				async: false,
+				success: function(datas){
+					var data = JSON.parse(JSON.stringify(datas));
+					console.log(data)
+					var textstr = '2020-10-10'; 
+					for(chdata of data.chdatas){
+						console.log("asdasdsad");
+						var chStr = `<tr class="cmmtd">
+									<td class="num">
+										<c:if test = '${chdata.ChYn == "Y" }'>
+											<input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked />
+										</c:if>
+										<c:if test = '${chdata.ChYn == "N" }'>
+											<input class="form-check-input" type="checkbox" value="" id="defaultCheck3"/>
+										</c:if>
+									</td>
+									<td>
+										<input class="" type="date" value="`+chdata.chFromDate+`">
+									</td>
+									<td>
+										<select name="">
+												<option value="">세종(나이스 구축 사업)</option>
+												<option>대구(나이스 유지보수 사업)</option>
+												<option>대구(정보공시 2020)</option>
+												<option>대구(본부)</option>
+										</select>
+									</td>
+									<td></td>
+								</tr>`;
+						console.log(chdata)
+						var tbody = document.querySelector('#chhhhTable');
+						tbody.innerHTML = chStr;
+					}
+				},
+				error: function(){
+					console.log('에러 발생')
+				}
+			});
+		}
 	}
 }
+
 </script>

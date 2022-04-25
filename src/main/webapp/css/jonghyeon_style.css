@@ -951,3 +951,11 @@ textarea, input[type="file"], input[type="password"], input[type="text"], input[
 .orgchtNameInput{
 	width: 120px;
 }
+/* 페이지관리 td n_admin padding*/
+.n_admin{
+    padding-top: 30px !important;
+    padding-left: 30px !important;
+}
+.tblccmCodeList{
+	margin-top: 60px;
+}

@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="egovframework.com.ch.service.impl.ChMapper">
 
-<select id="selectAllCh" resultType="egovframework.com.ch.service.ChVO">
-	SELECT * FROM CompanyHistory
+<select id="selectAllCh" resultType="egovframework.com.ch.service.ChVO" parameterType="egovframework.com.ch.service.ChVO">
+	SELECT CH_ID,LCALS_ID, CH_TO_DATE, CH_FROM_DATE, CH_CONTENT, CH_YN FROM CompanyHistory
 </select>
 <select id="selectCh">
 
@@ -21,3 +21,4 @@
 
 </insert>
 </mapper>
+
