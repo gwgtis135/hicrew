@@ -959,3 +959,14 @@ textarea, input[type="file"], input[type="password"], input[type="text"], input[
 .tblccmCodeList{
 	margin-top: 60px;
 }
+.userDefineInput{
+	width: 100px;
+}
+.ov input[readonly="readonly"] {
+     background-color: red;
+ }
+ 
+ #detailcode>input{
+ 	text-align: center;
+    width: 90px;
+ }

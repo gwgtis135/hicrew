@@ -1556,12 +1556,9 @@
 									console.log(chdata.chYn);
 									console.log("${chdata.chFromDate}");
 									var chStr = `<tr class="cmmtd">
-												<td class="num">
-												<input class="form-check-input" type="checkbox" value="" id="defaultCheck3" `;
-												if(chdata.chYn == 'Y'){
-													chStr += `checked`;
-												}
-												chStr +=`/></td>
+													<td class="num">
+													<input class="form-check-input" type="checkbox" value="" id="defaultCheck3" `;
+									chStr +=`/></td>
 												<td>
 													<input class="" type="date" value="`+chdata.chFromDate+`">
 												</td>
