@@ -5,8 +5,8 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
-<link rel="stylesheet" href="css/lefttd/theme-default.css">
-<link rel="stylesheet" href="css/lefttd/core2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/lefttd/theme-default.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/lefttd/core2.css">
 <style>
 /*
 ul li div label {
