@@ -970,6 +970,11 @@ textarea, input[type="file"], input[type="password"], input[type="text"], input[
  	text-align: center;
     width: 90px;
  }
-.detailCodeName{
-	width
+ /* 코드관리 페이지 상세코드 dc_name값 input */
+.detailCodeName input{
+	width:380px;
 }
+.chooseTr{
+	background: #ff5126;
+}
+

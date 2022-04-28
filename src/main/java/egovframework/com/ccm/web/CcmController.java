@@ -1,6 +1,8 @@
 package egovframework.com.ccm.web;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,7 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import egovframework.com.ccm.service.CcmService;
@@ -52,15 +59,21 @@ public class CcmController {
 	}
 	
 // 상세코드 조회 
-	@RequestMapping("detailcodeSelectAll.do")
-	public ModelAndView DetailCodeSelectAll(Model model, DetailCodeVO dvo) {
-		ModelAndView mv = new ModelAndView("jsonView");
+	@PostMapping(value="detailcodeSelectAll.do")
+	public ModelAndView DetailCodeSelectAll(@RequestParam(required = false, value = "ajaxstr[]") List<String> arr){
+		ModelAndView mv = new ModelAndView("");
+		mv.setViewName("jsonView");
 		
+		System.out.println("commandMap 출력");
+		System.out.println("commandMap 출력");
+		System.out.println(arr.get(1));
+		
+		DetailCodeVO dvo = new DetailCodeVO();
 		List<DetailCodeVO> list = ccmservice.selectAllDetail(dvo);
-		mv.addObject("DeailCodedatas",list);
-		System.out.println("상세코드 list 출력");
-		System.out.println(list);
 		
+		 mv.addObject("DeailCodedatas",list); System.out.println("상세코드 list 출력");
+		  System.out.println(list);
+		 		
 		return mv;
 	}	
 
