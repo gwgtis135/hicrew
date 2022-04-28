@@ -191,12 +191,12 @@
 												<table class="board_list cmmTable" summary="">
 													<caption>사업부서 상세코드 목록</caption>
 													<colgroup>
-														<col style="width: 5%;">
+														<%-- <col style="width: 5%;">
 														<col style="width: 10%;">
 														<col style="width: 20%;">
 														<col style="width: 25%;">
 														<col style="width: 10%;">
-														<col style="width: 10%;">
+														<col style="width: 10%;"> --%>
 													</colgroup>
 													<tbody class="ov detailTobdy">
 														<!-- append  -->
@@ -213,10 +213,9 @@
 													<caption>사업부서 상세코드 목록</caption>
 													<colgroup>
 														<col style="width: 5%;">
-														<col style="width: 10%;">
 														<col style="width: 20%;">
-														<col style="width: 25%;">
-														<col style="width: 15%;">
+														<col style="width: 40%;">	<!-- 상세페이지가 없기 때문에 db 내용을 한눈에 보이게 하기 위해서  40%  -->
+														<col style="width: 10%;">
 														<col style="width: 10%;">
 													</colgroup>
 													<tbody class="ov detailTbody">
@@ -263,10 +262,12 @@
 
 	<script type="text/javascript">
 	/* 공통코드관리 상세코드관리의 추가 버튼 구분하기  */
+	let ccmClickFlag = 0;
 	var flag=0;
 	var cmmnCode;	// 클릭한 공통코드 담을 변수
 	var cmmdata;
 	var  i = 1;
+	
 	function hideTbl(e){
 		var tblccmupendmenu = document.querySelector('.tblcmmUpendMenu');
 		var tblccmCode= document.querySelector('.tblccmCodeList');
@@ -445,6 +446,8 @@
 		}
 	}//addbtn end
 	
+
+	
 	/* tr이벤트  */
 	
 	document.querySelector('.cmmcode').addEventListener('click',function(ev){
@@ -453,8 +456,17 @@
 // 		console.log(tar.querySelector('#cmmcode').firstChild.value)
 		var value = tar.querySelector('#cmmCode').value; //클릭한 공통코드의 값 가져오기
 		document.querySelector("#ccCode").value=tar.querySelector('#cmmCode').value;
-		console.log('value 출력')
-		console.log(value)
+		
+		let cmmtbody = document.querySelector('.ov')
+		let cmmtr = cmmtbody.querySelectorAll('tr');
+		for( tr of cmmtr){
+			if(tar == tr){
+				tar.classList.add('chooseTr')
+			}
+			else{
+				tr.classList.remove('chooseTr');
+			}
+		}
 		cmmnCode = value;
 		cmmdata = {ccCode:value};
 		console.log('data출력');
@@ -475,7 +487,6 @@
 					i = i+1;
 					var detailStr = `<tr>
 										<td class="cmmtd">`+i+`</td>
-										<td id="detailcode" class="cmmtd"><input value="`+detaildata.ccCode+`" readonly> </td>
 										<td class="cmmtd"><input value="`+detaildata.dcCode+`" type="text"></td>
 										<td class="cmmtd detailCodeName"><input value="`+detaildata.dcName+`" type="text"></td>
 										<td class="cmmtd"><input class="userDefineInput" value="`+detaildata.dcUserdefinecol+`" type="text"></td>
@@ -488,8 +499,8 @@
 									</tr>` 
 					
 					detailTbody.innerHTML += detailStr;
-					
 					console.log(detaildata);
+				
 				}
 			},
 			error:function(){
@@ -542,10 +553,13 @@
 										>비활성화</option>
 								</select></td>
 							</tr>
-							`;
+							`; 
 						
 						var tbody = document.querySelector('.ov');
 						tbody.innerHTML += cmmStr;
+						
+						/* ccCode.push(ccmdata.ccCode);
+						console.log(ccCode) */
 			
 			}//for end
 		},
@@ -553,17 +567,29 @@
 			console.log('공통코드 에러 발생')
 		}
 	});
+	
+	
+	var ccCode =["DEPT","POSI"];
+	console.log('ccCode 출력')
+	console.log(ccCode)
+	//cc = JSON.parse(JSON.stringify(c))
+	console.log('cc 출력')
 	/* 상세코드 조회  */
 	$.ajax({
+		//method:"POST",
 		url:'${pageContext.request.contextPath}/detailcodeSelectAll.do',
-		contentType: "application/json",	
-		dataType : 'json',
+		data:{"ajaxstr":ccCode},
+		dataType:'json',
+		
+		//contentType: "application/x-www-form-urlencoded; charset=UTF-8;",
 		success: function(datas){
 			var data = JSON.parse(JSON.stringify(datas));
+			console.log('success')
 			console.log(data.DeailCodedatas)
 		},
-		error:function(){
+		error:function(request, error){
 			console.log('상세코드 에러 발생')
+			alert("code"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 		}
 	});
 

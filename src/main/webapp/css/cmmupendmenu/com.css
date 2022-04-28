@@ -224,7 +224,7 @@ padding-bottom :12px;
 .board_list thead th,
 .board_list tbody th { color:#222 ; font-size:13px; font-weight:400; background:#f4f4f4; padding:12px 0; border-bottom:1px solid #d9d9d9; }
 .board_list tbody tr.odd {  }
-.board_list tbody.ov tr:hover { background:#f9f9f9; }
+.board_list tbody.ov tr:hover { /* background:#f9f9f9; */ }
 .board_list tbody th { text-align:left; padding-left:14px; }
 .board_list tbody th.vtop { vertical-align:top; }
 .board_list tbody th span.pilsu { color:#d0270b; font-weight:500; margin-left:3px; }
