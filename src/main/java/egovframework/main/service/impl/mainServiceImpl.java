@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import egovframework.main.service.LCALSVO;
-import egovframework.main.service.MenuDetailVO;
 import egovframework.main.service.mainMapper;
 import egovframework.main.service.mainService;
+import egovframework.menudetail.service.MenuDetailVO;
 
 @Service
 public class mainServiceImpl implements mainService {

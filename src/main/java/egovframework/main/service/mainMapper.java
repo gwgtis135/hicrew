@@ -2,6 +2,7 @@ package egovframework.main.service;
 
 import java.util.List;
 
+import egovframework.menudetail.service.MenuDetailVO;
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 
 @Mapper("mainMapper")

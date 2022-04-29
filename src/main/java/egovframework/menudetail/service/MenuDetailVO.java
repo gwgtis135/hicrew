@@ -1,11 +1,12 @@
-package egovframework.main.service;
+package egovframework.menudetail.service;
 
 import java.util.Arrays;
 
 public class MenuDetailVO {
 	private int menuLogId;
 	private int menuId;
-	private int lcalsId;
+	private int UpendId;
+	private String UpendName;
 	private String menuName;
 	private byte[] menuFile;
 	private String menuEventn;
@@ -16,6 +17,15 @@ public class MenuDetailVO {
 	private String menuLogDivision;
 	private String menuLogDate;
 	// 위에서부터 로그id, 메뉴id, 대분류id, 이미지 이름, 이미지, 이미지 확장자, 링크, 내용, 사용유무, 로그 발생자, 로그 종류, 로그 날짜
+
+	@Override
+	public String toString() {
+		return "MenuDetailVO [menuLogId=" + menuLogId + ", menuId=" + menuId + ", UpendId=" + UpendId + ", UpendName="
+				+ UpendName + ", menuName=" + menuName + ", menuFile=" + Arrays.toString(menuFile) + ", menuEventn="
+				+ menuEventn + ", menuLink=" + menuLink + ", menuContent=" + menuContent + ", menuYn=" + menuYn
+				+ ", menuLogPerformer=" + menuLogPerformer + ", menuLogDivision=" + menuLogDivision + ", menuLogDate="
+				+ menuLogDate + "]";
+	}
 	public int getMenuLogId() {
 		return menuLogId;
 	}
@@ -28,11 +38,17 @@ public class MenuDetailVO {
 	public void setMenuId(int menuId) {
 		this.menuId = menuId;
 	}
-	public int getLcalsId() {
-		return lcalsId;
+	public int getUpendId() {
+		return UpendId;
 	}
-	public void setLcalsId(int lcalsId) {
-		this.lcalsId = lcalsId;
+	public void setUpendId(int upendId) {
+		UpendId = upendId;
+	}
+	public String getUpendName() {
+		return UpendName;
+	}
+	public void setUpendName(String upendName) {
+		UpendName = upendName;
 	}
 	public String getMenuName() {
 		return menuName;
@@ -88,12 +104,4 @@ public class MenuDetailVO {
 	public void setMenuLogDate(String menuLogDate) {
 		this.menuLogDate = menuLogDate;
 	}
-	@Override
-	public String toString() {
-		return "MenuDetailVO [menuLogId=" + menuLogId + ", menuId=" + menuId + ", lcalsId=" + lcalsId + ", menuName="
-				+ menuName + ", menuFile=" + Arrays.toString(menuFile) + ", menuEventn=" + menuEventn + ", menuLink="
-				+ menuLink + ", menuContent=" + menuContent + ", menuYn=" + menuYn + ", menuLogPerformer="
-				+ menuLogPerformer + ", menuLogDivision=" + menuLogDivision + ", menuLogDate=" + menuLogDate + "]";
-	}
-	
 }

@@ -11,13 +11,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import egovframework.main.service.LCALSVO;
-import egovframework.main.service.MenuDetailVO;
 import egovframework.main.service.mainService;
+import egovframework.menudetail.service.MenuDetailVO;
 import egovframework.upendmenu.service.UpendMenuVO;
 
 @Controller
@@ -25,7 +24,7 @@ public class mainController {
 
 	@Autowired
 	private mainService mservice;
-
+	
 	@RequestMapping("move.do/{addr}")
 	public String move(@PathVariable String addr,HttpServletRequest req) {
 		HttpSession hs = req.getSession();
@@ -67,30 +66,6 @@ public class mainController {
 		System.out.printf("name : %s, intrcn: %s, level : %s", vo.getLcalsName(), vo.getLcalsIntrcn(),
 				vo.getLcalsLevel());
 		mservice.insertLCALS(vo);
-		return "redirect:Temp.do";
-	}
-
-	@RequestMapping("insertMenu.do")
-	public String insertMenu() {
-		return "main/insertmenu";
-	}
-
-	@RequestMapping("Menuinsert.do")
-	public String Menuinsert(MultipartHttpServletRequest req) {
-		try {
-			MenuDetailVO vo = new MenuDetailVO();
-			vo.setLcalsId(Integer.parseInt(req.getParameter("LCALS_ID")));
-			vo.setMenuContent(req.getParameter("MENU_CONTENT"));
-			vo.setMenuLink(req.getParameter("MENU_LINK"));
-			vo.setMenuFile(req.getFile("MENU_FILE").getBytes());
-			System.out.println(req.getParameterMap());
-			System.out.println("asd");
-			System.out.println(vo.toString());
-			System.out.printf("name : %s, content : %s \n", vo.getMenuName(), vo.getMenuContent());
-			mservice.insertMD(vo);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		return "redirect:Temp.do";
 	}
 

@@ -503,45 +503,6 @@
 													<col style="width: 90px">
 												</colgroup>
 												<tbody>
-													<tr class="notice">
-														<td class="num"><input type="checkbox"></td>
-														<td><input type="text" size="20" value="(주)하이크루"></td>
-														<td><input type="text" size="50"
-															value="High-Technology CREW System"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="설립일"></td>
-														<td><input type="text" size="50" value="2018년 3월 13일"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="대표이사"></td>
-														<td><input type="text" size="50" value="이영석"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="본사주소"></td>
-														<td><input type="text" size="50"
-															value="대구광역시 동구 첨단로 30 305호(신서동, 이노빌딩)"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="전화번호"></td>
-														<td><input type="text" size="50"
-															value="070-8772-1612"></td>
-													</tr>
-													<tr class="notice">
-														<td class="num"><input class="form-check-input"
-															type="checkbox"></td>
-														<td><input type="text" size="20" value="사업분야"></td>
-														<td><input type="text" size="50"
-															value="System Integration(시스템 통합구축)"></td>
-													</tr>
 												</tbody>
 											</table>
 										</div>
@@ -1472,6 +1433,11 @@
 		function switchtable(value){
 			var tatbl = "tbl"+value;
 			document.getElementById(tatbl).classList.remove("hide");
+			switch(value){
+				case 'cmpnyinfo' :
+					loadcmpnyinfo();
+					break;
+			}
 			console.log("스위치 테이블");
 		}
 		
@@ -1586,8 +1552,33 @@
 			}
 		}
 		document.querySelector("#tree").addEventListener("click", clicktree);
-		
-
+	function loadcmpnyinfo(){
+		$.ajax({
+			url:'${pageContext.request.contextPath}/loadmd.do',
+			contentType: "application/json",
+			dataType : 'json',
+			async: false,
+			success: function(datas){
+				var data = JSON.parse(JSON.stringify(datas));
+				var name = document.querySelector("div.depth2.tree-div-selected > label > span").innerText;
+				var table = document.querySelector("div#tblcmpnyinfo>table");
+				for(md of data.md){
+					if(md.upendName == name)
+					var tr = `
+						<tr class="notice">
+						<td class="num"><input type="checkbox"></td>
+						<td><input type="text" size="20" value="`+md.menuName+`"></td>
+						<td><input type="text" size="50"
+							value="`+md.menuContent+`"></td>
+					</tr>`;
+					table.innerHTML += tr;
+				}
+			},
+			error: function(){
+				console.log('에러 발생');
+			}
+		})
+	}
 		function imgswitch(ta){
 			var phototbl = document.getElementById("phototable");
 			var photoimg = document.getElementById("photoimage");
@@ -1639,6 +1630,7 @@
 /*         ev.target.appendChild(document.getElementById(fromid)); */
     }
 	window.onload=function(){
+		loadlefttd();
 		if("${FLAG }" == "true"){
 			loadpage();
 		}else if("${UpendFlag }" == "true"){

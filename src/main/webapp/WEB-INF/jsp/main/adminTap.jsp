@@ -15,10 +15,10 @@ ul, li {
 		<div class="sub_top">
 			<div class="inner">
 				<div class="sub_top_title">
-				<c:if test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
+				<c:if test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do' || requestScope['javax.servlet.forward.servlet_path'] eq '/move.do/upendmenu.do'}">
 					<h2>메뉴 관리</h2>
 				</c:if>
-				<c:if test="${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}">
+				<c:if test="${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do' || requestScope['javax.servlet.forward.servlet_path'] eq '/move.do/menudetail.do'}">
 					<h2>페이지 관리</h2>
 				</c:if>
 				</div>

@@ -6,6 +6,7 @@ public class UpendMenuVO {
 	private int upendId;
 	private int upendThema;
 	private int upendType;
+	private int upendUpendMenu;
 	private String upendIntrcn;
 	private String upendName;
 	private String upendLink;
@@ -13,7 +14,14 @@ public class UpendMenuVO {
 	private String upendLogPerforMer;
 	private String upendLogDivision;
 	private String upendLogDate;
-	
+	@Override
+	public String toString() {
+		return "UpendMenuVO [upendLogId=" + upendLogId + ", upendId=" + upendId + ", upendThema=" + upendThema
+				+ ", upendType=" + upendType + ", upendUpendMenu=" + upendUpendMenu + ", upendIntrcn=" + upendIntrcn
+				+ ", upendName=" + upendName + ", upendLink=" + upendLink + ", upendYn=" + upendYn
+				+ ", upendLogPerforMer=" + upendLogPerforMer + ", upendLogDivision=" + upendLogDivision
+				+ ", upendLogDate=" + upendLogDate + "]";
+	}
 	public int getUpendLogId() {
 		return upendLogId;
 	}
@@ -26,11 +34,23 @@ public class UpendMenuVO {
 	public void setUpendId(int upendId) {
 		this.upendId = upendId;
 	}
+	public int getUpendThema() {
+		return upendThema;
+	}
+	public void setUpendThema(int upendThema) {
+		this.upendThema = upendThema;
+	}
 	public int getUpendType() {
 		return upendType;
 	}
 	public void setUpendType(int upendType) {
 		this.upendType = upendType;
+	}
+	public int getUpendUpendMenu() {
+		return upendUpendMenu;
+	}
+	public void setUpendUpendMenu(int upendUpendMenu) {
+		this.upendUpendMenu = upendUpendMenu;
 	}
 	public String getUpendIntrcn() {
 		return upendIntrcn;
@@ -56,12 +76,6 @@ public class UpendMenuVO {
 	public void setUpendYn(String upendYn) {
 		this.upendYn = upendYn;
 	}
-	public int getUpendThema() {
-		return upendThema;
-	}
-	public void setUpendThema(int upendThema) {
-		this.upendThema = upendThema;
-	}
 	public String getUpendLogPerforMer() {
 		return upendLogPerforMer;
 	}
@@ -80,12 +94,5 @@ public class UpendMenuVO {
 	public void setUpendLogDate(String upendLogDate) {
 		this.upendLogDate = upendLogDate;
 	}
-
-	@Override
-	public String toString() {
-		return "UpendMenuVO [upendLogId=" + upendLogId + ", upendId=" + upendId + ", upendType=" + upendType
-				+ ", upendIntrcn=" + upendIntrcn + ", upendName=" + upendName + ", upendLink=" + upendLink
-				+ ", upendYn=" + upendYn + ", upendThema=" + upendThema + ", upendLogPerforMer=" + upendLogPerforMer
-				+ ", upendLogDivision=" + upendLogDivision + ", upendLogDate=" + upendLogDate + "]";
-	}
+	
 }

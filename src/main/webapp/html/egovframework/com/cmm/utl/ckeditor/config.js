@@ -13,6 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
 	//config.shiftEnterMode = CKEDITOR.ENTER_P;
 	config.autoGrow_minHeight=300;
 	config.autoGrow_maxHeight=300;
+	config.allowedContent = true;
 	config.enterMode = CKEDITOR.ENTER_BR;
 	config.toolbar = [
         ['Font', 'FontSize'],

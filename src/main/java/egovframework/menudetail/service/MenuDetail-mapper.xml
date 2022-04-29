@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.menudetail.service.MenuDetailMapper">
+	<select id="selectMD" resultType="egovframework.menudetail.service.MenuDetailVO">
+select Menu_id,Upend_name,Menu_Name,Menu_File,Menu_Eventn,Menu_Link,Menu_Content,Menu_Yn 
+from menudetail md
+left join UpendMenu um
+on um.upend_id = md.upend_id
+	</select>
+</mapper>
