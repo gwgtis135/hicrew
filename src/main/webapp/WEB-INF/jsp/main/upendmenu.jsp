@@ -56,14 +56,9 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/flexslider.css">
 <!-- Theme style  -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/style.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/category.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/HJ_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom.css">
 <!-- Banner style  -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/event_style.css">
@@ -353,13 +348,13 @@ div#cke_intrcnment {
 			</div>
 		</footer>
 	</div>
-	<form id="form4nextbtn"
-		action="${pageContext.request.contextPath}/menudetail.do"
-		method="post">
-		<input type="hidden" name="UpendType"> <input type="hidden"
-			name="UpendIntrcn"> <input type="hidden" name="UpendName">
-		<input type="hidden" name="UpendLink"> <input type="hidden"
-			name="UpendYn"> <input type="hidden" name="UpendThema">
+	<form id="form4nextbtn" action="${pageContext.request.contextPath}/menudetail.do" method="post">
+		<input type="hidden" name="UpendType">
+		<input type="hidden" name="UpendIntrcn">
+		<input type="hidden" name="UpendName">
+		<input type="hidden" name="UpendLink">
+		<input type="hidden" name="UpendYn">
+		<input type="hidden" name="UpendThema">
 	</form>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

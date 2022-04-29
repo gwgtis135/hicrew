@@ -1,18 +1,13 @@
 
 <%
 	/**
-* @Class Name : EgovCcmCmmnDetailCodeList.jsp
+* @Class Name : CcmDetailCodeList.jsp
 * @Description : 공통상세코드 목록 화면
 * @Modification Information
 * @
 * @  수정일             수정자                   수정내용
 * @ -------    --------    ---------------------------
-* @ 2009.02.01   박정규              최초 생성
-*   2017.08.31   이정은              표준프레임워크 v3.7 개선
-*  @author 공통서비스팀
-*  @since 2009.02.01
-*  @version 1.0
-*  @see
+* @ 2022.04.15  박종현              최초 생성
 *
 */
 %>
@@ -31,80 +26,44 @@
 <title>공통코드관리</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <%-- <link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/com/com.css' />"> --%>
-<link rel="stylesheet" href="css/cmmupendmenu/com.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/cmmupendmenu/com.css">
 
 <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 <link rel="canonical" href="http://www.hicrew.kr">
 <!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/icomoon.css">
 <!-- Themify Icons-->
-<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/themify-icons.css">
 <!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
 <!-- Owl Carousel  -->
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
 <!-- Flexslider -->
-<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/category.css">
-<link rel="stylesheet" href="css/jonghyeon_style.css">
-<link rel="stylesheet" href="css/HJ_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom.css">
 <!-- Banner style  -->
-<link rel="stylesheet" href="css/event_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 
 
 <script type="text/javascript">
-	/*********************************************************
-	 * 초기화
-	 ******************************************************** */
-	function fn_egov_init() {
-		// 첫 입력란에 포커스..
-		document.CcmDeCodeForm.searchCondition.focus();
-	}
-
-	/*********************************************************
-	 * 페이징 처리 함수
-	 ******************************************************** */
-	function fn_egov_select_linkPage(pageNo) {
-		document.CcmDeCodeForm.pageIndex.value = pageNo;
-		document.CcmDeCodeForm.action = "<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>";
-		document.CcmDeCodeForm.submit();
-	}
-	/*********************************************************
-	 * 조회 처리 함수
-	 ******************************************************** */
-	function fn_egov_search_code() {
-		document.CcmDeCodeForm.pageIndex.value = 1;
-		document.CcmDeCodeForm.submit();
-	}
-	/* ********************************************************
-	 * 상세회면 처리 함수
-	 ******************************************************** */
-	function fn_egov_inquire_codedetail(codeId, code) {
-		// 사이트 키값(siteId) 셋팅.
-		document.CcmDeCodeForm.codeId.value = codeId;
-		document.CcmDeCodeForm.code.value = code;
-		document.CcmDeCodeForm.action = "<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeDetail.do'/>";
-		document.CcmDeCodeForm.submit();
-	}
+	
 </script>
 </head>
-<body onload="fn_egov_init()">
-
+<body>
 	<jsp:include page="../main/nav.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
 	<jsp:include page="../main/adminTap.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
-
-
 	<div class="gtco-section-overflow">
 		<input type="hidden" id="selectedmenu"> <input type="hidden" id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
@@ -115,17 +74,15 @@
 							<table>
 								<colgroup>
 									<col style="width: 220px">
-									<col style="width: 10px">
 									<col style="width: auto">
 								</colgroup>
 								<tr>
 									<jsp:include page="../ccm/ccmlefttd.jsp">
 										<jsp:param name="#" value="#" />
 									</jsp:include>
-									<td></td>
 									<td class="n_admin">
 										<form name="CcmDeCodeForm" action="<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>" method="post" onSubmit="fn_egov_search_code(); return false;">
-<!-- 공통코드 테이블 목록 start -->
+											<!-- 공통코드 테이블 목록 start -->
 											<div class="board tblcmmUpendMenu">
 												<h1>공통코드 목록</h1>
 												<!-- 검색영역 -->
@@ -150,30 +107,14 @@
 												<table class="board_list cmmTable cmmcode">
 													<caption>공통코드 목록</caption>
 													<colgroup>
-														<col style="width: 20%;">
-														<col style="width: 26%;">
-														<col style="width: 26%;">
-														<col style="width: 26%;">
+														<col style="width: 5%;">
+														<col style="width: 25%;">
+														<col style="width: 25%;">
+														<col style="width: 25%;">
+														<col style="width: 15%;">
 													</colgroup>
 													<tbody class="ov">
-														<tr id="Trclick" class="trclick">
-															<td class="cmmtd">1</td>
-															<td class="cmmtd"><input id="cmmCode" value="DEPT001" type="text"></td>
-															<td class="cmmtd"><input value="사업부서" type="text"></td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-														<tr id="Trclick" class="trclick">
-															<td class="cmmtd">2</td>
-															<td class="cmmtd"><input id="cmmCode" value="POSI001" type="text"></td>
-															<td class="cmmtd"><input value="직책" type="text"></td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
+
 													</tbody>
 												</table>
 												<div class="tbl_bottom" style="float: right;">
@@ -205,112 +146,43 @@
 													</ul>
 												</div>
 
-												
+
 												<!-- 목록영역 -->
 												<table class="board_list cmmTable" summary="">
 													<caption>사업부서 상세코드 목록</caption>
 													<colgroup>
+														<%-- <col style="width: 5%;">
+														<col style="width: 10%;">
 														<col style="width: 20%;">
-														<col style="width: 20%;">
-														<col style="width: 20%;">
-														<col style="width: 20%;">
-														<col style="width: 20%;">
+														<col style="width: 25%;">
+														<col style="width: 10%;">
+														<col style="width: 10%;"> --%>
 													</colgroup>
 													<tbody class="ov detailTobdy">
 														<!-- append  -->
 													</tbody>
 												</table>
 
-												<!-- paging navigation -->
-												<div class="pagination">
-													<ul>
-														<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="fn_egov_select_linkPage" />
-													</ul>
-												</div>
+
 											</div>
 											<!-- 상세코드 테이블 end  -->
-											
+
 											<!--  hidden table 상세코드 정보를 담고 있음  -->
 											<!-- 목록영역 -->
-												<table class="board_list detailTable" summary="">
-													<caption>사업부서 상세코드 목록</caption>
-													<colgroup>
-														<col style="width: 20%;">
-														<col style="width: 20%;">
-														<col style="width: 20%;">
-														<col style="width: 20%;">
-														<col style="width: 20%;">
-													</colgroup>
-													<tbody class="ov">
-														<tr>
-															<td class="cmmtd">1</td>
-															<td id="detailcode" class="cmmtd"><select>
-																	<option value="DEPT001">DEPT001/사업부서</option>
-																	<option value="POSI001">POSI001/직급</option>
-															</select></td>
-															<td class="cmmtd"><input value="REGC01" type="text"></td>
-															<td class="cmmtd">세종 (나이스 사업 구축)</td>
-															<td class="cmmtd">
-																<select>
-																		<option value="Y">활성화</option>
-																		<option value="N">비활성화</option>
-																</select>
-															</td>
-														</tr>
-														<tr>
-															<td class="cmmtd">2</td>
-															<td id="detailcode" class="cmmtd"><select>
-																	<option value="DEPT001">DEPT001/사업부서</option>
-																	<option value="POSI001">POSI001/직급</option>
-															</select></td>
-															<td class="cmmtd"><input value="REGC01" type="text"></td>
-															<td class="cmmtd">대구 (정보공시 2020)</td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-														<tr>
-															<td class="cmmtd">3</td>
-															<td id="detailcode" class="cmmtd"><select>
-																	<option value="DEPT001">DEPT001/사업부서</option>
-																	<option value="POSI001">POSI001/직급</option>
-															</select></td>
-															<td class="cmmtd"><input value="REGC01" type="text"></td>
-															<td class="cmmtd">대구 (나이스 유지보수)</td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-														<tr>
-															<td class="cmmtd">4</td>
-															<td id="detailcode" class="cmmtd"><select>
-																	<option value="DEPT001">DEPT001/사업부서</option>
-																	<option value="POSI001">POSI001/직급</option>
-															</select></td>
-															<td class="cmmtd"><input value="REGC01" type="text"></td>
-															<td class="cmmtd">대구 본사</td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-														<tr>
-															<td class="cmmtd">5</td>
-															<td id="detailcode" class="cmmtd"><select>
-																	<option value="DEPT001">DEPT001/사업부서</option>
-																	<option value="POSI001" selected>POSI001/직급</option>
-															</select></td>
-															<td class="cmmtd"><input value="POSI01" type="text"></td>
-															<td class="cmmtd">대표</td>
-															<td class="cmmtd"><select>
-																	<option value="Y">활성화</option>
-																	<option value="N">비활성화</option>
-															</select></td>
-														</tr>
-													</tbody>
-												</table>
+											<table class="board_list detailTable" summary="">
+												<caption>사업부서 상세코드 목록</caption>
+												<colgroup>
+													<col style="width: 5%;">
+													<col style="width: 20%;">
+													<col style="width: 40%;">
+													<!-- 상세페이지가 없기 때문에 db 내용을 한눈에 보이게 하기 위해서  40%  -->
+													<col style="width: 10%;">
+													<col style="width: 10%;">
+												</colgroup>
+												<tbody class="ov detailTbody">
+
+												</tbody>
+											</table>
 
 
 											<input name="codeId" type="hidden" value=""> <input name="code" type="hidden" value=""> <input name="pageIndex" type="hidden" value="<c:out value='${searchVO.pageIndex}'/>">
@@ -320,8 +192,7 @@
 							</table>
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> 
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
 							</div>
 						</div>
 					</div>
@@ -343,11 +214,20 @@
 
 		</div>
 	</footer>
+	<form method="post" action='${pageContext.request.contextPath}/detailcodeSelectChose.do'>
+		<input type="hidden" name="ccCode" id="ccCode">
+	</form>
+	<!-- jQuery -->
+	<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 
 	<script type="text/javascript">
 	/* 공통코드관리 상세코드관리의 추가 버튼 구분하기  */
+	let ccmClickFlag = 0;
 	var flag=0;
-
+	var cmmnCode;	// 클릭한 공통코드 담을 변수
+	var cmmdata;
+	var  i = 1;
+	
 	function hideTbl(e){
 		var tblccmupendmenu = document.querySelector('.tblcmmUpendMenu');
 		var tblccmCode= document.querySelector('.tblccmCodeList');
@@ -526,13 +406,67 @@
 		}
 	}//addbtn end
 	
+
+	
 	/* tr이벤트  */
 	
 	document.querySelector('.cmmcode').addEventListener('click',function(ev){
-		
+		$('.detailTbody').empty();
 		var tar = ev.target.closest("tr") ? ev.target.closest("tr") : ev.target; //ev.target 클릭한  tr 
 // 		console.log(tar.querySelector('#cmmcode').firstChild.value)
 		var value = tar.querySelector('#cmmCode').value; //클릭한 공통코드의 값 가져오기
+		document.querySelector("#ccCode").value=tar.querySelector('#cmmCode').value;
+		
+		let cmmtbody = document.querySelector('.ov')
+		let cmmtr = cmmtbody.querySelectorAll('tr');
+		for( tr of cmmtr){
+			if(tar == tr){
+				tar.classList.add('chooseTr')
+			}
+			else{
+				tr.classList.remove('chooseTr');
+			}
+		}
+		cmmnCode = value;
+		cmmdata = {ccCode:value};
+		console.log('data출력');
+		
+		var detailTbody = document.querySelector('.detailTbody');
+		
+		/* 클릭시 상세코드 조회  */
+		$.ajax({
+			url:'${pageContext.request.contextPath}/detailcodeSelectChose.do',
+			method:'get',
+			data: {'ccCode':value},
+			dataType:'json',
+			contentType: "application/json",	
+			success: function(datas){
+				//var detaildata = JSON.parse(JSON.stringify(datas));
+				console.log(datas.choseDetaildata);
+				for(detaildata of datas.choseDetaildata){
+					i = i+1;
+					var detailStr = `<tr>
+										<td class="cmmtd">`+i+`</td>
+										<td class="cmmtd"><input value="`+detaildata.dcCode+`" type="text"></td>
+										<td class="cmmtd detailCodeName"><input value="`+detaildata.dcName+`" type="text"></td>
+										<td class="cmmtd"><input class="userDefineInput" value="`+detaildata.dcUserdefinecol+`" type="text"></td>
+										<td class="cmmtd">
+											<select>
+													<option value="Y">활성화</option>
+													<option value="N">비활성화</option>
+											</select>
+										</td>
+									</tr>` 
+					
+					detailTbody.innerHTML += detailStr;
+					console.log(detaildata);
+				
+				}
+			},
+			error:function(){
+				console.log('상세코드 에러 발생')
+			}
+		});
 		
 		var ov = document.querySelectorAll('.ov')[1]; //상세코드 table tr
 		console.log()
@@ -549,6 +483,74 @@
 		}
 		hideTbl('상세코드관리'); //상세코드 테이블 띄우기
 	})
+	/* 공통코드 조회  */
+	$.ajax({
+		url:'${pageContext.request.contextPath}/ccmSelectAll.do',
+		contentType: "application/json",	
+		dataType : 'json',
+		success: function(datas){
+			console.log(datas.Ccmdatas)
+			
+			for(ccmdata of datas.Ccmdatas){
+			
+				var cmmStr =`<tr id="Trclick" class="trclick">
+								<td class="cmmtd">`+ccmdata.ccId+`</td>
+								<td class="cmmtd"><input id="cmmCode" value="`+ccmdata.ccCode+`" type="text" readonly/></td>
+								<td class="cmmtd"><input value="`+ccmdata.ccName+`" type="text"></td>
+								<td class="cmmtd"><input value="`+ccmdata.ccUserdefine+`" type="text"></td>
+								
+								<td class="cmmtd"><select>
+										<option value="Y"`; 
+										if(ccmdata.ccYn == 'Y'){
+											cmmStr += `selected`;
+										}
+								cmmStr +=	`>활성화</option>
+										<option value="N"`;
+										if(ccmdata.ccYn == 'N'){
+											cmmStr += `selected`;
+										}
+								cmmStr +=`
+										>비활성화</option>
+								</select></td>
+							</tr>
+							`; 
+						
+						var tbody = document.querySelector('.ov');
+						tbody.innerHTML += cmmStr;
+						
+						/* ccCode.push(ccmdata.ccCode);
+						console.log(ccCode) */
+			
+			}//for end
+		},
+		error:function(){
+			console.log('공통코드 에러 발생')
+		}
+	});
+	
+	
+	var ccCode =["DEPT","POSI"];
+	console.log('ccCode 출력')
+	console.log(ccCode)
+	//cc = JSON.parse(JSON.stringify(c))
+	console.log('cc 출력')
+	/* 상세코드 조회  */
+	$.ajax({
+		method:"POST",
+		url:'${pageContext.request.contextPath}/detailcodeSelectAll.do',
+		data:{"ajaxstr":ccCode},
+		dataType:'json',
+		success: function(datas){
+			var data = JSON.parse(JSON.stringify(datas));
+			console.log('success')
+			console.log(data.DeailCodedatas)
+		},
+		error:function(request, error){
+			console.log('상세코드 에러 발생')
+			alert("code"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+		}
+	});
+
 </script>
 </body>
 </html>

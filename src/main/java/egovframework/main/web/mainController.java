@@ -26,7 +26,9 @@ public class mainController {
 	private mainService mservice;
 	
 	@RequestMapping("move.do/{addr}")
-	public String move(@PathVariable String addr) {
+	public String move(@PathVariable String addr,HttpServletRequest req) {
+		HttpSession hs = req.getSession();
+		hs.invalidate();
 		System.out.println(addr);
 		String[] b = addr.split("\\.");
 		String ret = "main/"+b[0];

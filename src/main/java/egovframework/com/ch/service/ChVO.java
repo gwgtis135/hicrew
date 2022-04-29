@@ -8,13 +8,15 @@ public class ChVO {
 	String chToDate;
 	String chFromDate;
 	String chContent;
-	String ChYn;
+	String chYn;
 	
 	int ChLogId;
 	String ChLogPerformer ;
 	String ChLogDivision;
 	String ChLogDate;
 	String ChSearch; //검색조건
+	
+	
 	public int getChId() {
 		return chId;
 	}
@@ -46,10 +48,10 @@ public class ChVO {
 		this.chContent = chContent;
 	}
 	public String getChYn() {
-		return ChYn;
+		return chYn;
 	}
 	public void setChYn(String chYn) {
-		ChYn = chYn;
+		this.chYn = chYn;
 	}
 	public int getChLogId() {
 		return ChLogId;
@@ -81,13 +83,7 @@ public class ChVO {
 	public void setChSearch(String chSearch) {
 		ChSearch = chSearch;
 	}
-	@Override
-	public String toString() {
-		return "ChVO [chId=" + chId + ", lcalsId=" + lcalsId + ", chToDate=" + chToDate + ", chFromDate=" + chFromDate
-				+ ", chContent=" + chContent + ", ChYn=" + ChYn + ", ChLogId=" + ChLogId + ", ChLogPerformer="
-				+ ChLogPerformer + ", ChLogDivision=" + ChLogDivision + ", ChLogDate=" + ChLogDate + ", ChSearch="
-				+ ChSearch + "]";
-	}
+	
 	
 	
 	
