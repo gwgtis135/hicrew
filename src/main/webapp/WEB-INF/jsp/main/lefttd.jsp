@@ -5,8 +5,10 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
 	rel="stylesheet" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/lefttd/theme-default.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/lefttd/core2.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/lefttd/theme-default.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/lefttd/core2.css">
 <style>
 /*
 ul li div label {
@@ -19,7 +21,7 @@ ul {
 */
 ul#tree li, ul.innerul li {
 	border-bottom: 1px solid #efefef;
-	width:100%;
+	width: 100%;
 }
 
 ul.innerul li div:before {
@@ -28,17 +30,20 @@ ul.innerul li div:before {
 	margin-left: -1.0em;
 	margin-right: 0.5em;
 }
-.bg-menu-theme .menu-sub > .menu-item > .menu-link.tree-div-selected:not(.menu-toggle):before{
-    /* background-color: orange !important; */
-    border: 3px solid #e7e7ff !important;
+
+.bg-menu-theme .menu-sub>.menu-item>.menu-link.tree-div-selected:not(.menu-toggle):before
+	{
+	/* background-color: orange !important; */
+	border: 3px solid #e7e7ff !important;
 }
-.bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
-    content: "";
-    position: absolute;
-    left: 1.4375rem;
-    width: 0.375rem;
-    height: 0.375rem;
-    border-radius: 50%;
+
+.bg-menu-theme .menu-sub>.menu-item>.menu-link:before {
+	content: "";
+	position: absolute;
+	left: 1.4375rem;
+	width: 0.375rem;
+	height: 0.375rem;
+	border-radius: 50%;
 }
 
 ul#tree li div:hover, ul.innerul li div:hover {
@@ -54,7 +59,7 @@ div.tree-div-selected {
 	color: white !important;
 	background-color: #FF5126 !important;
 	font-weight: bold !important;
-    border-radius: 15px;
+	border-radius: 15px;
 }
 
 .icon-fa-circle-plus:before {
@@ -74,7 +79,7 @@ div.tree-div-selected {
 <td style="vertical-align: top;">
 	<div class="list_btn">
 		<c:if
-			test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
+			test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do' || requestScope['javax.servlet.forward.servlet_path'] eq '/move.do/upendmenu.do'}">
 			<i class="icon-fa-circle-plus" id="btn_addcategory"></i>
 			<i class="icon-fa-circle-minus" id="btn_delcategory"></i>
 		</c:if>
@@ -84,150 +89,62 @@ div.tree-div-selected {
 	<div id="layout-menu"
 		class="layout-menu menu-vertical menu bg-menu-theme">
 		<ul id="tree" class="menu-inner py-1 ps ps--active-y">
-			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle" data-delable="1">
-					<i class="menu-icon tf-icons bx bx-layout"></i>
-					<label><span data-link="main.do">Home</span></label>
-				</div>
-				<ul class="menu-sub"></ul>
-			</li>
-			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle" data-delable="1">
-					<i class="menu-icon tf-icons bx bx-layout"></i>
-					<label><span>회사 소개</span></label>
-				</div>
-				<ul class="menu-sub">
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="cmpnyinfo.do">회사 개요</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="CIintrcn.do">CI 소개</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="ch.do">주요 연혁</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="orgcht.do">조직도</span></label>
-						</div>
-					</li>
-<!-- 					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="directions.do">오시는 길</span></label>
-						</div>
-					</li> -->
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="photo.do">포토스토리</span></label>
-						</div>
-					</li>
-				</ul>
-			</li>
-			<li class="menu-item">
-				<div class="menu-link depth1 menu-toggle" data-delable="1">
-					<i class="menu-icon tf-icons bx bx-layout"></i>
-					<label><span>주요사업</span></label>
-				</div>
-				<ul class="menu-sub">
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="pdfsolut.do">pdf솔루션</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2" data-delable="2">
-							<label><span data-link="itsolut.do">it솔루션</span></label>
-						</div>
-					</li>
-				</ul>
-			</li>
-			<c:if
-				test="${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}">
-				<li class="menu-item">
-					<div class="menu-link depth1 menu-toggle" data-delable="1">
-						<i class="menu-icon tf-icons bx bx-layout"></i>
-						<label><span data-link="http://gw.hicrew.kr">그룹웨어</span></label>
-					</div>
-				</li>
-			</c:if>
 		</ul>
-	</div><!-- 
-	<div id="layout-menu"
-		class="layout-menu menu-vertical menu bg-menu-theme">
-		<ul id="tree2" class="menu-inner py-1 ps ps--active-y">
-			Layouts
-			<li class="menu-item" style="">
-				<div class="menu-link depth1 menu-toggle">
-					<i class="menu-icon tf-icons bx bx-layout"></i> <label><span>회사
-							소개</span></label>
-				</div>
-
-				<ul class="menu-sub">
-					<li class="menu-item active">
-						<div class="menu-link depth2">
-							<label><span data-link="">회사 개요</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">CI 소개</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">주요 연혁</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">조직도</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">오시는 길</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">포토 스토리</span></label>
-						</div>
-					</li>
-				</ul>
-			</li>
-			<li class="menu-item" style="">
-				<div class="menu-link depth1 menu-toggle">
-					<i class="menu-icon tf-icons bx bx-layout"></i> <label><span>주요
-							사업</span></label>
-				</div>
-
-				<ul class="menu-sub">
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">pdf 솔루션</span></label>
-						</div>
-					</li>
-					<li class="menu-item">
-						<div class="menu-link depth2">
-							<label><span data-link="">it 솔루션</span></label>
-						</div>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div> -->
+	</div>
 </td>
 <script src="${pageContext.request.contextPath}/js/lefttd/helpers.js"></script>
 <script src="${pageContext.request.contextPath}/js/lefttd/menu.js"></script>
 <script src="${pageContext.request.contextPath}/js/lefttd/main.js"></script>
 <script>
-
+function loadlefttd(){
+	$.ajax({
+		url:'${pageContext.request.contextPath}/loadupend.do',
+		contentType: "application/json",
+		dataType : 'json',
+		async: false,
+		success: function(datas){
+			var data = JSON.parse(JSON.stringify(datas));
+			var outterul = document.querySelector("ul#tree");
+			for(upend of data.upendlist){
+				if(upend.upendName == "Home" || upend.upendName == "그룹웨어"){
+					var outterli = `<li class="menu-item">
+						<div class="menu-link depth1 menu-toggle" data-delable="1">
+							<i class="menu-icon tf-icons bx bx-layout"></i>
+							<label><span data-link="main.do">`+upend.upendName+`</span></label>
+						</div>
+					</li>`;
+					outterul.innerHTML +=(outterli);
+				}else if(upend.upendName == "관리자 페이지" || upend.upendName == "오시는길" || upend.upendUpendMenu==5){
+					console.log("필터됨");
+				}else if(upend.upendUpendMenu==0){
+					var outterli = `<li class="menu-item">
+						<div class="menu-link depth1 menu-toggle" data-delable="1">
+							<i class="menu-icon tf-icons bx bx-layout"></i>
+							<label><span data-link="main.do">`+upend.upendName+`</span></label>
+						</div>
+						<ul class="menu-sub" id="upend`+upend.upendId+`"></ul>
+					</li>`;
+					outterul.innerHTML +=(outterli);
+				}else{
+					session = window.sessionStorage;
+					session.setItem(upend.upendName,upend.upendIntrcn);
+					console.log("ul#upend"+upend.upendUpendMenu);
+					console.log("ul#upend"+upend.upendName);
+					var innerul = document.querySelector("ul#upend"+upend.upendUpendMenu);
+					var innerli =`<li class="menu-item">
+									<div class="menu-link depth2" data-delable="2">
+										<label><span data-link="`+upend.upendLink+`">`+upend.upendName+`</span></label>
+									</div>
+								</li>`;
+					innerul.innerHTML +=innerli;
+				}
+			}
+		},
+		error: function(){
+			console.log('에러 발생');
+		}
+	})
+}
 function loadpage(){
 	var span = document.querySelector("span[data-link='"+"${Upend.upendLink }"+"']");
 	span.closest("div").classList.add("tree-div-selected");
@@ -237,7 +154,7 @@ function loadpage(){
 	outterli.querySelector(".depth1").classList.add("tree-div-selected");
 	span.click();
 	if("${requestScope['javax.servlet.forward.servlet_path'] eq '/upendmenu.do'}" =="true"){
-	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq '/menudetail.do'}" == "true"){
+	}else if("${requestScope['javax.servlet.forward.servlet_path'] eq 'move.do/menudetail.do'}" == "true"){
 		if(span.getAttribute("data-link").split(".")[0]=="ch"){
 			console.log("asdasdsad");
 			$.ajax({
@@ -247,10 +164,7 @@ function loadpage(){
 				async: false,
 				success: function(datas){
 					var data = JSON.parse(JSON.stringify(datas));
-					console.log(data)
-					var textstr = '2020-10-10'; 
 					for(chdata of data.chdatas){
-						console.log("asdasdsad");
 						var chStr = `<tr class="cmmtd">
 									<td class="num">
 										<c:if test = '${chdata.ChYn == "Y" }'>
@@ -273,7 +187,6 @@ function loadpage(){
 									</td>
 									<td></td>
 								</tr>`;
-						console.log(chdata)
 						var tbody = document.querySelector('#chhhhTable');
 						tbody.innerHTML = chStr;
 					}

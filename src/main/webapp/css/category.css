@@ -70,7 +70,7 @@
 .category_add dt img{vertical-align:top;margin:-1px 0 0 -1px}
 .category_add dd .t_amount{font-size:11px;color:#8e8e8e;padding-left:3px}
 .category_add dd .inp{width:285px;margin:0;padding:2px 0 3px 3px;border:1px solid #c4c4c4;color:#000;font-size:12px}
-.category_add dd label{letter-spacing:-1px;margin:0 10px 0 0!important}
+.category_add dd label{display: inline;letter-spacing:-1px;margin:0 10px 0 0!important}
 .category_add dd .checkbox{margin:0 2px 3px 0;width:13px;height:13px;vertical-align:middle}
 .category_add dd .checkbox1{margin:0 2px 3px 0}
 .category_add dd .checkbox2{margin-right:0}

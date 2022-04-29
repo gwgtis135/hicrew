@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="egovframework.upendmenu.service.UpendMenuMapper">
+	<select id="selectAllum"
+		resultType="egovframework.upendmenu.service.UpendMenuVO">
+		select
+		um1.upend_id
+		,um1.upend_name
+		,um1.upend_intrcn
+		,if(um1.upend_Link is null, um2.upend_Link,um1.upend_Link) upend_Link
+		,um1.upend_upendmenu
+		,um1.upend_thema
+		,um1.upend_type
+		,um1.upend_yn
+		from UpendMenu um1
+		left join (select upend_upendmenu,upend_Link from upendmenu group by
+		Upend_UpendMenu) um2
+		on um1.upend_id = um2.upend_upendmenu;
+	</select>
+</mapper>

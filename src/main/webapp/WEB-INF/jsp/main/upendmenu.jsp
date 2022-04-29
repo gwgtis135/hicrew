@@ -33,27 +33,40 @@
 <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet"> -->
 <link rel="canonical" href="http://www.hicrew.kr">
 <!-- Animate.css -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/animate.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/animate.css">
 <!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/icomoon.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/icomoon.css">
 <!-- Themify Icons-->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/themify-icons.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/themify-icons.css">
 <!-- Bootstrap  -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/bootstrap.css">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/magnific-popup.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/magnific-popup.css">
 <!-- Owl Carousel  -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/owl.carousel.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
 <!-- Flexslider -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/flexslider.css">
 <!-- Theme style  -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/HJ_style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/category.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/HJ_style.css">
 <!-- Banner style  -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/event_style.css">
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
@@ -93,13 +106,15 @@ input[type="text"] {
 }
 
 .imgsample, .imgstyle {
-	width: 420px;
+	width: 48%;
 }
-input[type='radio']:checked+label > img {
-	border:1px solid blue;
+
+input[type='radio']:checked+label>img {
+	border: 1px solid blue;
 }
+
 div#cke_intrcnment {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 </style>
 </head>
@@ -117,51 +132,49 @@ div#cke_intrcnment {
 			id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
 			<div class="gtco-container">
-				<div class="row">
-					<div class="row">
-						<div class="tbl board" id="noticeGrid">
-							<table>
-								<colgroup>
-									<col style="width: 220px">
-									<col style="width: auto">
-								</colgroup>
-								<tr>
-									<jsp:include page="lefttd.jsp">
-										<jsp:param name="#" value="#" />
-									</jsp:include>
-									<td class="n_admin">
-										<div class="category_add">
-											<dl>
-												<div style="float: left; margin-right: 1.5rem">
-													<dt class="category_name">페이지 명</dt>
-													<dd class="category_name">
-														<input type="text" id="inptcategory_name">
-													</dd>
-												</div>
-												<div style="float: left; margin-right: 1.5rem">
-													<dt class="category_link">페이지 주소</dt>
-													<dd class="category_link">
-														<input type="text" id="inptcategory_link">
-													</dd>
-												</div>
-												<div style="float: left;">
-													<dt class="category_useyn hide">노출 여부</dt>
-													<dd class="category_useyn hide">
-														<select name="useyn" id="category_useyn">
-															<option value="Y">사용</option>
-															<option value="N">미사용</option>
-														</select>
-													</dd>
-												</div>
-												<dt class="category_intrcn">페이지 문구</dt>
-												<dd class="category_intrcn">
-													<textarea id="intrcnment" name="nttCn" class="" rows="5"
-														cols="118" style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
-													<ckeditor:replace replace="nttCn"
-														basePath="${pageContext.request.contextPath}/html/egovframework/com/cmm/utl/ckeditor/" />
-												</dd>
+				<div class="tbl board" id="noticeGrid">
+					<table>
+						<colgroup>
+							<col style="width: 220px">
+							<col style="width: auto">
+						</colgroup>
+						<tr>
+							<jsp:include page="lefttd.jsp">
+								<jsp:param name="#" value="#" />
+							</jsp:include>
+							<td class="n_admin">
+								<div class="category_add">
+									<dl>
+										<div style="float: left; margin-right: 1.5rem">
+											<dt class="category_name">페이지 명</dt>
+											<dd class="category_name">
+												<input type="text" id="inptcategory_name">
+											</dd>
+										</div>
+										<div style="float: left; margin-right: 1.5rem">
+											<dt class="category_link">페이지 주소</dt>
+											<dd class="category_link">
+												<input type="text" id="inptcategory_link">
+											</dd>
+										</div>
+										<div style="float: left;">
+											<dt class="category_useyn hide">노출 여부</dt>
+											<dd class="category_useyn hide">
+												<select name="useyn" id="category_useyn">
+													<option value="Y">사용</option>
+													<option value="N">미사용</option>
+												</select>
+											</dd>
+										</div>
+										<dt class="category_intrcn">페이지 문구</dt>
+										<dd class="category_intrcn">
+											<textarea id="intrcnment" name="nttCn" class="" rows="5"
+												cols="118" style="resize: none;" placeholder="소개문구를 적어주세요"></textarea>
+											<ckeditor:replace replace="nttCn"
+												basePath="${pageContext.request.contextPath}/html/egovframework/com/cmm/utl/ckeditor/" />
+										</dd>
 
-												<!-- 												<div style="float:left; margin-right:1.5rem">
+										<!-- 												<div style="float:left; margin-right:1.5rem">
 												<dt class="category_thema hide all">페이지 테마 일괄적용</dt>
 												<dd class="category_thema hide all">
 													<select name="useyn" id="category_useyn">
@@ -171,90 +184,90 @@ div#cke_intrcnment {
 												</dd>
 												</div> -->
 
-												<dt class="category_style hide">페이지 스타일</dt>
-												<dd class="category_style hide">
-													<div class="slideshow-container" style="float:left;">
-														<div class="mySlidesprev fade1">
-															<img class="prev_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample1.png">
-														</div>
-														<div class="mySlidesprev fade1">
-															<img class="prev_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample2.png">
-														</div>
-														<div class="mySlidesprev fade1">
-															<img class="prev_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample3.png">
-														</div>
-														<div class="mySlidesprev fade1">
-															<img class="prev_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample4.png">
-														</div>
-														<div class="mySlidesprev fade1">
-															<img class="prev_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample5.png">
-														</div>
-														<div class="mySlidesprev fade1">
-															<img class="prev_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample6.png">
-														</div>
-													</div>
-													<div class="slideshow-container" style="float:left;">
-														<div class="mySlides fade2">
-															<img class="main_slideImg" data-value="1"
-																src="${pageContext.request.contextPath}/images/sample/sample1.png">
-														</div>
-														<div class="mySlides fade2">
-															<img class="main_slideImg" data-value="2"
-																src="${pageContext.request.contextPath}/images/sample/sample2.png">
-														</div>
-														<div class="mySlides fade2">
-															<img class="main_slideImg" data-value="3"
-																src="${pageContext.request.contextPath}/images/sample/sample3.png">
-														</div>
-														<div class="mySlides fade2">
-															<img class="main_slideImg" data-value="4"
-																src="${pageContext.request.contextPath}/images/sample/sample4.png">
-														</div>
-														<div class="mySlides fade2">
-															<img class="main_slideImg" data-value="5"
-																src="${pageContext.request.contextPath}/images/sample/sample5.png">
-														</div>
-														<div class="mySlides fade2">
-															<img class="main_slideImg" data-value="6"
-																src="${pageContext.request.contextPath}/images/sample/sample6.png">
-														</div>
-														<a id="prev" class="prev" onclick="plusSlides(-1)">❮</a> 
-														<a id="next" class="next" onclick="plusSlides(1)">❯</a>
-													</div>
-													<div class="slideshow-container" style="float:left;">
-														<div class="mySlidesnext fade3">
-															<img class="next_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample1.png">
-														</div>
-														<div class="mySlidesnext fade3">
-															<img class="next_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample2.png">
-														</div>
-														<div class="mySlidesnext fade3">
-															<img class="next_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample3.png">
-														</div>
-														<div class="mySlidesnext fade3">
-															<img class="next_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample4.png">
-														</div>
-														<div class="mySlidesnext fade3">
-															<img class="next_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample5.png">
-														</div>
-														<div class="mySlidesnext fade3">
-															<img class="next_slideImg"
-																src="${pageContext.request.contextPath}/images/sample/sample6.png">
-														</div>
-													</div>
+										<dt class="category_style hide">페이지 스타일</dt>
+										<dd class="category_style hide">
+											<div class="slideshow-container" style="float: left;">
+												<div class="mySlidesprev fade1">
+													<img class="prev_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample1.png">
+												</div>
+												<div class="mySlidesprev fade1">
+													<img class="prev_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample2.png">
+												</div>
+												<div class="mySlidesprev fade1">
+													<img class="prev_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample3.png">
+												</div>
+												<div class="mySlidesprev fade1">
+													<img class="prev_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample4.png">
+												</div>
+												<div class="mySlidesprev fade1">
+													<img class="prev_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample5.png">
+												</div>
+												<div class="mySlidesprev fade1">
+													<img class="prev_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample6.png">
+												</div>
+											</div>
+											<div class="slideshow-container" style="float: left;">
+												<div class="mySlides fade2">
+													<img class="main_slideImg" data-value="1"
+														src="${pageContext.request.contextPath}/images/sample/sample1.png">
+												</div>
+												<div class="mySlides fade2">
+													<img class="main_slideImg" data-value="2"
+														src="${pageContext.request.contextPath}/images/sample/sample2.png">
+												</div>
+												<div class="mySlides fade2">
+													<img class="main_slideImg" data-value="3"
+														src="${pageContext.request.contextPath}/images/sample/sample3.png">
+												</div>
+												<div class="mySlides fade2">
+													<img class="main_slideImg" data-value="4"
+														src="${pageContext.request.contextPath}/images/sample/sample4.png">
+												</div>
+												<div class="mySlides fade2">
+													<img class="main_slideImg" data-value="5"
+														src="${pageContext.request.contextPath}/images/sample/sample5.png">
+												</div>
+												<div class="mySlides fade2">
+													<img class="main_slideImg" data-value="6"
+														src="${pageContext.request.contextPath}/images/sample/sample6.png">
+												</div>
+												<a id="prev" class="prev" onclick="plusSlides(-1)">❮</a> <a
+													id="next" class="next" onclick="plusSlides(1)">❯</a>
+											</div>
+											<div class="slideshow-container" style="float: left;">
+												<div class="mySlidesnext fade3">
+													<img class="next_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample1.png">
+												</div>
+												<div class="mySlidesnext fade3">
+													<img class="next_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample2.png">
+												</div>
+												<div class="mySlidesnext fade3">
+													<img class="next_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample3.png">
+												</div>
+												<div class="mySlidesnext fade3">
+													<img class="next_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample4.png">
+												</div>
+												<div class="mySlidesnext fade3">
+													<img class="next_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample5.png">
+												</div>
+												<div class="mySlidesnext fade3">
+													<img class="next_slideImg"
+														src="${pageContext.request.contextPath}/images/sample/sample6.png">
+												</div>
+											</div>
 
-													<!-- <div>
+											<!-- <div>
 														<input type="radio" id="type1" name="pagetype"
 															value="type1"> <label for="type1"> <img
 															src="${pageContext.request.contextPath}/images/sample/sample1.png" alt="1번"
@@ -281,48 +294,45 @@ div#cke_intrcnment {
 															class="imgsample">
 														</label>
 													</div> -->
+										</dd>
+
+										<div style="float: left; margin-top: 10px">
+											<div style="float: right;">
+												<dt class="category_thema hide all">페이지 테마 일괄적용</dt>
+												<dd class="category_thema hide all">
+													<select name="useyn" id="category_useyn">
+														<option value="normal">기본</option>
+														<option value="weekness">색약자</option>
+													</select>
 												</dd>
-												
-												<div style="float: left; margin-top:10px">
-													<div style="float: right;">
-														<dt class="category_thema hide all">페이지 테마 일괄적용</dt>
-														<dd class="category_thema hide all">
-															<select name="useyn" id="category_useyn">
-																<option value="normal">기본</option>
-																<option value="weekness">색약자</option>
-															</select>
-														</dd>
-													</div>
-													<dt class="category_thema hide">페이지 테마</dt>
-													<dd class="category_thema hide">
-														<div>
-															<input type="radio" id="type1" name="pagetype" class="hide"
-																value="1" checked> <label for="type1"> <img
-																src="${pageContext.request.contextPath}/images/sample/color1.png" alt="1번"
-																class="imgstyle">
-															</label> 
-															<input type="radio" id="type2" name="pagetype" class="hide"
-																value="2"> 
-															<label for="type2"> <img
-																src="${pageContext.request.contextPath}/images/sample/color2.png" alt="2번"
-																class="imgstyle">
-															</label>
-														</div>
-													</dd>
+											</div>
+											<dt class="category_thema hide">페이지 테마</dt>
+											<dd class="category_thema hide">
+												<div>
+													<input type="radio" id="type1" name="pagetype" class="hide"
+														value="1" checked> <label for="type1"> <img
+														src="${pageContext.request.contextPath}/images/sample/color1.png"
+														alt="1번" class="imgstyle">
+													</label> <input type="radio" id="type2" name="pagetype"
+														class="hide" value="2"> <label for="type2">
+														<img
+														src="${pageContext.request.contextPath}/images/sample/color2.png"
+														alt="2번" class="imgstyle">
+													</label>
 												</div>
-											</dl>
+											</dd>
 										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-						<div class="tbl_bottom" style="float: right;">
-							<div class="pagenation" id="pageControlMgmt"></div>
-							<a id="a_reset" href="#" class="btn_type2 _rosRestrict">초기화</a>
-							<a id="a_save" href="#" class="btn_type1 _rosRestrict">저장</a> 
-							<a id="a_next" href="#" class="btn_type3 _rosRestrict">다음</a>
-						</div>
-					</div>
+									</dl>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tbl_bottom" style="float: right;">
+					<div class="pagenation" id="pageControlMgmt"></div>
+					<a id="a_reset" href="#" class="btn_type2 _rosRestrict">초기화</a> <a
+						id="a_save" href="#" class="btn_type1 _rosRestrict">저장</a> <a
+						id="a_next" href="#" class="btn_type3 _rosRestrict">다음</a>
 				</div>
 			</div>
 		</div>
@@ -343,13 +353,13 @@ div#cke_intrcnment {
 			</div>
 		</footer>
 	</div>
-	<form id="form4nextbtn" action="menudetail.do" method="post">
-		<input type="hidden" name="UpendType">
-		<input type="hidden" name="UpendIntrcn">
-		<input type="hidden" name="UpendName">
-		<input type="hidden" name="UpendLink">
-		<input type="hidden" name="UpendYn">
-		<input type="hidden" name="UpendThema">
+	<form id="form4nextbtn"
+		action="${pageContext.request.contextPath}/menudetail.do"
+		method="post">
+		<input type="hidden" name="UpendType"> <input type="hidden"
+			name="UpendIntrcn"> <input type="hidden" name="UpendName">
+		<input type="hidden" name="UpendLink"> <input type="hidden"
+			name="UpendYn"> <input type="hidden" name="UpendThema">
 	</form>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
@@ -359,26 +369,32 @@ div#cke_intrcnment {
 	<!-- jQuery UI -->
 	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<!-- jQuery Easing -->
-	<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
 	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
 	<!-- Carousel -->
 	<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 	<!-- countTo -->
 	<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
-	<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
 	<!-- Magnific Popup -->
-	<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="${pageContext.request.contextPath}/js/main.js"></script>
 	<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
 	<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
 	<!-- Modernizr JS -->
-	<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
 	<!--  ck 에디터 적용 -->
 	<script type="text/javascript"
 		src="<c:url value='/html/egovframework/com/cmm/utl/ckeditor/ckeditor.js'/>"></script>
@@ -390,7 +406,7 @@ div#cke_intrcnment {
 		var inptuseyn = document.querySelector("#category_useyn");
 		var ctgrystyle = document.getElementsByClassName("category_style");
 		var ctgrythema = document.getElementsByClassName("category_thema");
-		var ctgryuseyn= document.getElementsByClassName("category_useyn");
+		var ctgryuseyn = document.getElementsByClassName("category_useyn");
 		var ctgryintrcn = document.getElementsByClassName("category_intrcn");
 
 		var addhide = function() {
@@ -454,18 +470,21 @@ div#cke_intrcnment {
 					} else {
 						addhide();
 						// 다른거 클릭
+						sel = document.querySelector(".tree-div-selected");
+						for(li of event.target.closest("ul").querySelectorAll("li")){
+							li.classList.remove("open");
+						}
 						div.classList.add("tree-div-selected");
 						selmenu.value = span.innerText;
 						inptname.value = span.innerText;
 						inptlink.value = span.getAttribute("data-link");
+						CKEDITOR.instances.intrcnment.setData("");
 						console.log("4")
 					}
 				}
 			}
 			if (div.classList.contains("depth2")) {
-				console.log(span.getAttribute("data-link"));
-				console.log(span);
-				console.log(div);
+				session = window.sessionStorage;
 				removetds(depth2ul);
 				if (seldetail.value === span.innerText) {
 					// 이미 선택된 메뉴 클릭
@@ -503,6 +522,8 @@ div#cke_intrcnment {
 					seldetail.value = span.innerText;
 					inptname.value = span.innerText;
 					inptlink.value = span.getAttribute("data-link");
+					console.log(session.getItem(span.innerText));
+					CKEDITOR.instances.intrcnment.setData(session.getItem(span.innerText));
 					console.log("7")
 				}
 			}
@@ -589,8 +610,10 @@ div#cke_intrcnment {
 		}
 
 		// D&D
+		console.log("d&d");
 		$("#tree").sortable();
 		$("#tree").disableSelection();
+		console.log("d&d");
 		$(".menu-sub").sortable();
 		$(".menu-sub").disableSelection();
 
@@ -609,60 +632,70 @@ div#cke_intrcnment {
 			var slidesprev = document.getElementsByClassName("mySlidesprev");
 			var slides = document.getElementsByClassName("mySlides");
 			var slidesnext = document.getElementsByClassName("mySlidesnext");
-			if (n > slides.length-1) {
+			if (n > slides.length - 1) {
 				slideIndex = 0;
 			}
 			if (n < 0) {
-				slideIndex = slides.length-1;
+				slideIndex = slides.length - 1;
 			}
 			for (i = 0; i < slides.length; i++) {
 				slidesprev[i].style.display = "none";
 				slides[i].style.display = "none";
 				slidesnext[i].style.display = "none";
 			}
-			if(slideIndex==0){
-				slidesprev[slides.length-1].style.display = "block";
-			}else{
-				slidesprev[slideIndex-1].style.display = "block";
+			if (slideIndex == 0) {
+				slidesprev[slides.length - 1].style.display = "block";
+			} else {
+				slidesprev[slideIndex - 1].style.display = "block";
 			}
 			slides[slideIndex].style.display = "block";
-			if(slideIndex==slides.length-1){
+			if (slideIndex == slides.length - 1) {
 				slidesnext[0].style.display = "block";
-			}else{
-				slidesnext[slideIndex+1].style.display = "block";
+			} else {
+				slidesnext[slideIndex + 1].style.display = "block";
 			}
 		}
-		
-		function sendnext(){
+
+		function sendnext() {
 			var form = document.querySelector("#form4nextbtn");
-			var inpttype4post = document.querySelector("input[name='UpendType']")
-			var inptintrcn4post = document.querySelector("input[name='UpendIntrcn']")
-			var inptname4post = document.querySelector("input[name='UpendName']")
-			var inptlink4post = document.querySelector("input[name='UpendLink']")
-			var inptuseyn4post = document.querySelector("input[name='UpendYn']")
-			var inptthema4post = document.querySelector("input[name='UpendThema']")
-			
-			inpttype4post.value= document.querySelector('div.mySlides[style="display: block;"] img').getAttribute("data-value");
-			inptintrcn4post.value= CKEDITOR.instances.intrcnment.getData();
-			inptname4post.value= document.querySelector("#inptcategory_name").value;
-			inptlink4post.value= document.querySelector("#inptcategory_link").value;
-			inptuseyn4post.value= document.querySelector("#category_useyn").value;
-			inptthema4post.value= document.querySelector("input[type='radio']:checked").getAttribute("value");
-			
+			var inpttype4post = document
+					.querySelector("input[name='UpendType']")
+			var inptintrcn4post = document
+					.querySelector("input[name='UpendIntrcn']")
+			var inptname4post = document
+					.querySelector("input[name='UpendName']")
+			var inptlink4post = document
+					.querySelector("input[name='UpendLink']")
+			var inptuseyn4post = document
+					.querySelector("input[name='UpendYn']")
+			var inptthema4post = document
+					.querySelector("input[name='UpendThema']")
+
+			inpttype4post.value = document.querySelector(
+					'div.mySlides[style="display: block;"] img').getAttribute(
+					"data-value");
+			inptintrcn4post.value = CKEDITOR.instances.intrcnment.getData();
+			inptname4post.value = document.querySelector("#inptcategory_name").value;
+			inptlink4post.value = document.querySelector("#inptcategory_link").value;
+			inptuseyn4post.value = document.querySelector("#category_useyn").value;
+			inptthema4post.value = document.querySelector(
+					"input[type='radio']:checked").getAttribute("value");
+
 			console.log(form);
 			console.log(CKEDITOR.instances.intrcnment.getData());
-		//return 0;
+			//return 0;
 			form.submit();
 
 		}
-		document.querySelector("#a_next").addEventListener("click",sendnext);
+		document.querySelector("#a_next").addEventListener("click", sendnext);
 
-		window.onload=function(){
+		window.onload = function() {
+			loadlefttd();
 			console.log("${FLAG }");
-			if("${FLAG }" == "true"){
+			if ("${FLAG }" == "true") {
 				loadpage();
-			}else if("${UpendFlag }" != ""){
-				if(confirm("작업 하던 페이지를 불러오시겠습니까?")){
+			} else if ("${UpendFlag }" != "") {
+				if (confirm("작업 하던 페이지를 불러오시겠습니까?")) {
 					loadpage();
 				}
 			}
