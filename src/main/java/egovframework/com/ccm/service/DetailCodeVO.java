@@ -1,5 +1,8 @@
 package egovframework.com.ccm.service;
-
+/*
+ * 상세코드 vo 
+ * 작성자 : 박종현 
+*/
 public class DetailCodeVO {
 
 	int dcId;

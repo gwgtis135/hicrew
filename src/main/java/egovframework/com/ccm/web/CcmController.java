@@ -60,16 +60,18 @@ public class CcmController {
 	
 // 상세코드 조회 
 	@PostMapping(value="detailcodeSelectAll.do")
-	public ModelAndView DetailCodeSelectAll(@RequestParam(required = false, value = "ajaxstr[]") List<String> arr){
+	public ModelAndView DetailCodeSelectAll(@RequestParam(required = false, value = "ajaxstr[]") List<String> list){
 		ModelAndView mv = new ModelAndView("");
 		mv.setViewName("jsonView");
 		
 		System.out.println("commandMap 출력");
 		System.out.println("commandMap 출력");
-		System.out.println(arr.get(1));
-		
-		DetailCodeVO dvo = new DetailCodeVO();
-		List<DetailCodeVO> list = ccmservice.selectAllDetail(dvo);
+		DetailCodeVO dvoa = new DetailCodeVO();
+		DetailCodeVO dvob = new DetailCodeVO();
+		for(int i =0; i< list.size();i++) {
+			System.out.println(list.get(i));
+		}
+		//List<DetailCodeVO> lista = ccmservice.selectAllDetail(dvo);
 		
 		 mv.addObject("DeailCodedatas",list); System.out.println("상세코드 list 출력");
 		  System.out.println(list);

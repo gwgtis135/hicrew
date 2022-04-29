@@ -1,18 +1,13 @@
 
 <%
 	/**
-* @Class Name : EgovCcmCmmnDetailCodeList.jsp
+* @Class Name : CcmDetailCodeList.jsp
 * @Description : 공통상세코드 목록 화면
 * @Modification Information
 * @
 * @  수정일             수정자                   수정내용
 * @ -------    --------    ---------------------------
-* @ 2009.02.01   박정규              최초 생성
-*   2017.08.31   이정은              표준프레임워크 v3.7 개선
-*  @author 공통서비스팀
-*  @since 2009.02.01
-*  @version 1.0
-*  @see
+* @ 2022.04.15  박종현              최초 생성
 *
 */
 %>
@@ -53,46 +48,13 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/HJ_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 
 
 <script type="text/javascript">
-	/*********************************************************
-	 * 초기화
-	 ******************************************************** */
-	function fn_egov_init() {
-		// 첫 입력란에 포커스..
-		document.CcmDeCodeForm.searchCondition.focus();
-	}
-
-	/*********************************************************
-	 * 페이징 처리 함수
-	 ******************************************************** */
-	function fn_egov_select_linkPage(pageNo) {
-		document.CcmDeCodeForm.pageIndex.value = pageNo;
-		document.CcmDeCodeForm.action = "<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>";
-		document.CcmDeCodeForm.submit();
-	}
-	/*********************************************************
-	 * 조회 처리 함수
-	 ******************************************************** */
-	function fn_egov_search_code() {
-		document.CcmDeCodeForm.pageIndex.value = 1;
-		document.CcmDeCodeForm.submit();
-	}
-	/* ********************************************************
-	 * 상세회면 처리 함수
-	 ******************************************************** */
-	function fn_egov_inquire_codedetail(codeId, code) {
-		// 사이트 키값(siteId) 셋팅.
-		document.CcmDeCodeForm.codeId.value = codeId;
-		document.CcmDeCodeForm.code.value = code;
-		document.CcmDeCodeForm.action = "<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeDetail.do'/>";
-		document.CcmDeCodeForm.submit();
-	}
+	
 </script>
 </head>
 <body>
@@ -102,8 +64,6 @@
 	<jsp:include page="../main/adminTap.jsp">
 		<jsp:param name="#" value="#" />
 	</jsp:include>
-
-
 	<div class="gtco-section-overflow">
 		<input type="hidden" id="selectedmenu"> <input type="hidden" id="selecteddetail">
 		<div class="gtco-section" id="gtco-services" data-section="services">
@@ -122,7 +82,7 @@
 									</jsp:include>
 									<td class="n_admin">
 										<form name="CcmDeCodeForm" action="<c:url value='/sym/ccm/cde/SelectCcmCmmnDetailCodeList.do'/>" method="post" onSubmit="fn_egov_search_code(); return false;">
-<!-- 공통코드 테이블 목록 start -->
+											<!-- 공통코드 테이블 목록 start -->
 											<div class="board tblcmmUpendMenu">
 												<h1>공통코드 목록</h1>
 												<!-- 검색영역 -->
@@ -154,7 +114,7 @@
 														<col style="width: 15%;">
 													</colgroup>
 													<tbody class="ov">
-														
+
 													</tbody>
 												</table>
 												<div class="tbl_bottom" style="float: right;">
@@ -186,7 +146,7 @@
 													</ul>
 												</div>
 
-												
+
 												<!-- 목록영역 -->
 												<table class="board_list cmmTable" summary="">
 													<caption>사업부서 상세코드 목록</caption>
@@ -203,25 +163,26 @@
 													</tbody>
 												</table>
 
-										
+
 											</div>
 											<!-- 상세코드 테이블 end  -->
-											
+
 											<!--  hidden table 상세코드 정보를 담고 있음  -->
 											<!-- 목록영역 -->
-												<table class="board_list detailTable" summary="">
-													<caption>사업부서 상세코드 목록</caption>
-													<colgroup>
-														<col style="width: 5%;">
-														<col style="width: 20%;">
-														<col style="width: 40%;">	<!-- 상세페이지가 없기 때문에 db 내용을 한눈에 보이게 하기 위해서  40%  -->
-														<col style="width: 10%;">
-														<col style="width: 10%;">
-													</colgroup>
-													<tbody class="ov detailTbody">
-														
-													</tbody>
-												</table>
+											<table class="board_list detailTable" summary="">
+												<caption>사업부서 상세코드 목록</caption>
+												<colgroup>
+													<col style="width: 5%;">
+													<col style="width: 20%;">
+													<col style="width: 40%;">
+													<!-- 상세페이지가 없기 때문에 db 내용을 한눈에 보이게 하기 위해서  40%  -->
+													<col style="width: 10%;">
+													<col style="width: 10%;">
+												</colgroup>
+												<tbody class="ov detailTbody">
+
+												</tbody>
+											</table>
 
 
 											<input name="codeId" type="hidden" value=""> <input name="code" type="hidden" value=""> <input name="pageIndex" type="hidden" value="<c:out value='${searchVO.pageIndex}'/>">
@@ -231,8 +192,7 @@
 							</table>
 							<div class="tbl_bottom" style="float: right;">
 								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> 
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
 							</div>
 						</div>
 					</div>
@@ -576,12 +536,10 @@
 	console.log('cc 출력')
 	/* 상세코드 조회  */
 	$.ajax({
-		//method:"POST",
+		method:"POST",
 		url:'${pageContext.request.contextPath}/detailcodeSelectAll.do',
 		data:{"ajaxstr":ccCode},
 		dataType:'json',
-		
-		//contentType: "application/x-www-form-urlencoded; charset=UTF-8;",
 		success: function(datas){
 			var data = JSON.parse(JSON.stringify(datas));
 			console.log('success')

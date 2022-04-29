@@ -1,6 +1,17 @@
 @charset "UTF-8";
-/* 박종현*/
-/* content 부분  */
+
+/*
+  Css Name : custom.css
+  Description : 하이크루 기존 CSS 스타일 위에 수정 하기 위한 CSS 
+  Modification Information
+      수정일        			수정자         
+   ----------     --------    
+   2022.4.7			박종현
+   2022.4.8			박형진			
+*/
+
+
+
 #gtco-features, #gtco-features-2, #gtco-products, #gtco-subscribe,
    #gtco-faq, .gtco-section {
    padding: 1.02rem 0 0 0;
@@ -70,7 +81,7 @@ section.sub .sub_menu_lst li a {
 }
 /* 하단 메뉴 hover */
 .header_cont .gnb .depth_wrap ul li a:hover {
-   text-decoration: underline;
+	color:#ff8040;
 }
 
 
@@ -977,4 +988,363 @@ textarea, input[type="file"], input[type="password"], input[type="text"], input[
 .chooseTr{
 	background: #ff5126;
 }
+
+
+.btn_type2 {
+	display: inline-block;
+	min-width: 56px;
+	height: 42px;
+	padding: 9px 12px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d3d3d3;
+	text-align: center;
+	vertical-align: top;
+}
+div.modal>div>div>p>a.btn_type1, div.modal>div>div>p>a.btn_type2 {
+	color: white;
+}
+.btn_type1+.btn_type1 {
+	margin-left: 1px;
+}
+
+td div.list_btn a.btn_type1 {
+    display: inline-block;
+    min-width: 0px;
+    width: 40px;
+    padding: 1px;
+    height: 20px;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    vertical-align: top;
+    font-size: small;
+}
+#intrcnment{
+	margin:0px 0px 6px 0px;
+}
+
+div.tbl_top div.inner {
+	width:100%;
+	height: 100%;
+}
+div.depth_wrap2 ul{
+	background:darkgray;
+	padding:0px 40px 0px 40px;
+}
+header.on:before {
+	top: 60px;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	background-color: #fff;
+	-webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	content: "";
+}
+
+header.on.product:before {
+	height: 420px;
+}
+
+.header_cont {
+	height: 60px;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+	*zoom: 1;
+}
+
+.header_cont:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.header_cont .logo {
+	float: left;
+	line-height: 60px;
+}
+
+.header_cont .gnb {
+	float: left;
+	width: 680px;
+	margin-left: 155px;
+}
+
+.header_cont .gnb>ul {
+	font-size: 0;
+	*zoom: 1;
+}
+
+.header_cont .gnb>ul:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.header_cont .gnb>ul>li {
+	min-width: calc(100%/ 5);
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	text-align: center;
+	line-height: 60px;
+}
+
+.header_cont .gnb>ul>li>a {
+	display: block;
+	height: 100%;
+	text-transform: uppercase;
+	color: #333333;
+	font-size: 2rem;
+	font-weight: 700;
+    text-decoration: none;
+}
+
+.header_cont .gnb>ul>li>a>span {
+	position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+
+.header_cont .gnb>ul>li>a>span:before {
+	background-color: #ff8000;
+	bottom: -17px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	content: "";
+	display: none;
+}
+
+.header_cont .gnb>ul>li:hover .depth_wrap2 {
+	display: block;
+}
+
+.header_cont .gnb>ul>li:hover a span:before {
+	display: block;
+}
+
+.header_cont .gnb>ul>li.on a span:before {
+	display: block;
+}
+
+.header_cont .gnb .depth_wrap2 {
+	line-height: normal;
+	display: none;
+	background-color: #ffffff;
+	position: absolute;
+	width: 100%;
+	top: 60px;
+	left: 0;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 0;
+	*zoom: 1;
+}
+
+.header_cont .gnb .depth_wrap2:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box {
+	text-align: left;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box>a {
+	white-space: nowrap;
+	display: block;
+	word-break: normal;
+	word-wrap: normal;
+	margin-bottom: 20px;
+	color: #333;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box>a:hover {
+	/*text-decoration: underline;*/
+	
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box>a.no_link {
+	cursor: default;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box>a.no_link:hover {
+	text-decoration: none;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box+.depth_box {
+	margin-left: 110px;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box dl {
+	display: block;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box dl+dl {
+	margin-left: 0;
+	margin-top: 20px;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box dl dt {
+	margin-bottom: 15px;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box dl dd {
+	line-height: 20px;
+}
+
+.header_cont .gnb .depth_wrap2 .depth_box dl dd a {
+	font-size: 0.9375rem;
+}
+
+.header_cont .gnb .depth_wrap2 dl {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+.header_cont .gnb .depth_wrap2 dl+dl {
+	margin-left: 100px;
+}
+
+.header_cont .gnb .depth_wrap2 dl dt {
+	text-align: left;
+	line-height: normal;
+	margin-bottom: 0;
+	color: #333;
+	font-size: 0.9375rem;
+	font-weight: 400;
+}
+
+.header_cont .gnb .depth_wrap2 dl dt a {
+	margin-bottom: 0;
+	color: #333;
+	font-size: 0.9375rem;
+	font-weight: 400;
+}
+
+.header_cont .gnb .depth_wrap2 dl dt a:hover {
+	/*text-decoration: underline;*/
+	
+}
+
+.header_cont .gnb .depth_wrap2 dl dd {
+	line-height: 28px;
+	text-align: left;
+}
+
+.header_cont .gnb .depth_wrap2 dl dd a {
+	padding-left: 10px;
+	position: relative;
+	color: #666;
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+
+.header_cont .gnb .depth_wrap2 dl dd a:before {
+	width: 4px;
+	height: 1px;
+	background-color: #666;
+	position: absolute;
+	left: 0;
+	top: 12px;
+	display: block;
+	content: "";
+}
+
+.header_cont .gnb .depth_wrap2 dl dd a:hover {
+	/* text-decoration: underline; */
+	
+}
+
+.header_cont .gnb .depth_wrap2 ul {
+	line-height: normal;
+	display: inline-block;
+	text-align: center;
+}
+
+.header_cont .gnb .depth_wrap2 ul li {
+	line-height: normal;
+	display: inline-block;
+}
+
+.header_cont .gnb .depth_wrap2 ul li+li {
+	margin-left: 60px;
+}
+
+/* 하단 메뉴 */
+.header_cont .gnb .depth_wrap2 ul li a {
+	color: white;
+	font-size: 20px;
+	font-weight: 400;
+}
+/* 하단 메뉴 hover */
+.header_cont .gnb .depth_wrap2 ul li a:hover {
+	text-decoration: underline;
+}
+
+.header_cont .gnb .btn_m_menu_close {
+	display: none;
+}
+
+.header_cont header.header_btn {
+	margin-top: 13px;
+	float: right;
+}
+
+.header_cont header.header_btn .btn_contact {
+	display: inline-block;
+	vertical-align: middle;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 17px;
+	padding: 0 15px;
+	margin-right: 40px;
+	color: #fff;
+	font-size: 0.9375rem;
+	font-weight: 300;
+	background: -webkit-gradient(linear, right top, left top, from(#0d6bae),
+		to(#f45a4c));
+	background: -o-linear-gradient(right, #0d6bae 0%, #f45a4c 100%);
+	background: linear-gradient(-90deg, #0d6bae 0%, #f45a4c 100%);
+}
+
+.header_cont header.header_btn .btn_contact:hover {
+	/* text-decoration: underline; */
+	
+}
+
+.header_cont header.header_btn .btn_allmenu, .header_cont header.header_btn .m_header_btn
+	{
+	vertical-align: middle;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	z-index: 100;
+}
+
+.header_cont header.header_btn .btn_allmenu span, .header_cont header.header_btn .m_header_btn span
+	{
+	display: block;
+	text-indent: -9999em;
+}
+
+.header_cont header.header_btn .m_header_btn {
+	display: none;
+}
+
+
 

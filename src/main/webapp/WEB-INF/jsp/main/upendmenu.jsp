@@ -50,8 +50,7 @@
 <!-- Theme style  -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/category.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/jonghyeon_style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/HJ_style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom.css">
 <!-- Banner style  -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 <!-- FOR IE9 below -->
