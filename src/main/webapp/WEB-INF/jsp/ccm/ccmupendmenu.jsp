@@ -191,8 +191,8 @@
 								</tr>
 							</table>
 							<div class="tbl_bottom" style="float: right;">
-								<div class="pagenation" id="pageControlMgmt"></div>
-								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> <a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>
+								<div id="detailDiv"></div>
+								
 							</div>
 						</div>
 					</div>
@@ -460,7 +460,11 @@
 					
 					detailTbody.innerHTML += detailStr;
 					console.log(detaildata);
-				
+					
+					var cmmDiv = document.querySelector('#detailDiv');
+					var aStr = `<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA" onclick="addbtn()">추가</a> 
+								<a id="a_remove" href="#" class="btn_type1 _rosRestrict cmmA">저장</a>`;
+					cmmDiv.innerHTML = aStr;
 				}
 			},
 			error:function(){
