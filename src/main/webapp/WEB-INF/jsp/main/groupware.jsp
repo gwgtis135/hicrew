@@ -55,7 +55,10 @@
 	
 </head>
 <body>
+<!-- 
+그룹웨어 로그인이 안됨
 
+ -->
 
 	<jsp:include page="../main/nav.jsp">
 		<jsp:param name="#" value="#" />
@@ -71,6 +74,7 @@
 	</div>
 	
 	<script type="text/javascript">
+			console.log('gourl함수 실행 완료')
 		function gourl(){
 			console.log('gourl함수 실행 완료')
 			var iframe = document.getElementById('groupIframe');

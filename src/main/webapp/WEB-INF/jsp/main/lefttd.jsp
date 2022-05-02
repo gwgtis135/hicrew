@@ -99,6 +99,11 @@ div.tree-div-selected {
 <script src="${pageContext.request.contextPath}/js/lefttd/main.js"></script>
 <script>
 function loadlefttd(){
+	/*
+	* 상단 메뉴 목록 요청받아서
+	* ul,li, ul,li 에 담아주기
+	* 그룹웨어랑 홈은 수정할 수 없는 형식으로 바꿔야함.
+	*/
 	$.ajax({
 		url:'${pageContext.request.contextPath}/loadupend.do',
 		contentType: "application/json",
