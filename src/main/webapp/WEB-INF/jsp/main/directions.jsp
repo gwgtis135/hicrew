@@ -53,36 +53,8 @@
 <!-- Banner style  -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 
-<!-- Modernizr JS -->
-<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
-	<![endif]-->
-<!-- jQuery -->
-<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
-<!-- Carousel -->
-<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
-<!-- countTo -->
-<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
-<!-- Flexslider -->
-<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
-<!-- Magnific Popup -->
-<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
-<!-- Main -->
-<script src="${pageContext.request.contextPath}/js/main.js"></script>
-<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
-<script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
-<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
 </head>
-<body onload="initialize()">
+<body>
 
 		<div class="gtco-loader"></div>
 
@@ -95,7 +67,7 @@
 		</jsp:include>
 
 	<div id="page">
-		<div class="gtco-section" id="gtco-contact" data-section="contact">
+		<div class="gtco-section" id="gtco-contact">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
@@ -107,9 +79,9 @@
 				</div>
 				<div class="row">
 
-					<div id="map_view" class="col-md-12"
-						style="width: 100%; height: 350px;"></div>
+				<div id="map_view" class="col-md-12" style="width:100%; height:350px;">
 				</div>
+			</div>		
 			</div>
 		</div>
 
@@ -146,57 +118,72 @@
 	</div>
 
 
-	<script>
-		var stockholm = new google.maps.LatLng(35.878816, 128.730657);
-		var parliament = new google.maps.LatLng(35.878816, 128.730657);
-		var marker;
-		var map;
+<!-- Modernizr JS -->
+<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
+	<![endif]-->
+<!-- jQuery -->
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
+<!-- Flexslider -->
+<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
+<!-- Magnific Popup -->
+<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
+<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+<script	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaJn5dOYYIsz2VCh0P45LwOmVTfXOau8A&language=en&sensor=false"></script>
 
-		function initialize() {
-			var mapOptions = {
-				zoom : 15,
-				mapTypeId : google.maps.MapTypeId.ROADMAP,
-				center : stockholm
-			};
+<script>
+/*
+ *  .map_view 에다가 지정된 위치 띄우기
+ *  추후에 db에 있는 주소 값 구글 좌표로 바꿔서 
+ *  stockholm 이랑 parliament 바꿔주기
+ */
+	var stockholm = new google.maps.LatLng(35.878816, 128.730657);
+	var parliament = new google.maps.LatLng(35.878816, 128.730657);
+	var marker;
+	var map;
 
-			map = new google.maps.Map(document.getElementById("map_view"),
-					mapOptions);
+	function toggleBounce() {
 
-			marker = new google.maps.Marker({
-				map : map,
-				draggable : true,
-				animation : google.maps.Animation.DROP,
-				position : parliament
-			});
-			google.maps.event.addListener(marker, 'click', toggleBounce);
+		if (marker.getAnimation() != null) {
+			marker.setAnimation(null);
+		} else {
+			marker.setAnimation(google.maps.Animation.BOUNCE);
 		}
+	}		
 
-		function toggleBounce() {
+	var mapOptions = {
+		zoom : 15,
+		mapTypeId : google.maps.MapTypeId.ROADMAP,
+		center : stockholm
+	};
+	map = new google.maps.Map(document.getElementById("map_view"),
+			mapOptions);
 
-			if (marker.getAnimation() != null) {
-				marker.setAnimation(null);
-			} else {
-				marker.setAnimation(google.maps.Animation.BOUNCE);
-			}
-		}
-		
-		console.log('common.js 실행11111111111')
-		var url = location.href;
-		console.log(url)
-		
-		var submenulist = document.querySelectorAll(".sub_menu_lst > li");
-		console.log(submenulist)
-		for(i in submenulist){
-			console.log(submenulist[i])
-			var hreflink = submenulist[i].children[0].getAttribute("href");
-			console.log(hreflink);
-			if (url.indexOf(hreflink) != -1) {
-				submenulist[i].classList.add("on");
-			}
-		}
-		
-	</script>
-	<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+	marker = new google.maps.Marker({
+		map : map,
+		draggable : true,
+		animation : google.maps.Animation.DROP,
+		position : parliament
+	});
+	google.maps.event.addListener(marker, 'click', toggleBounce);
+
+</script>
 	
 </body>
 </html>
