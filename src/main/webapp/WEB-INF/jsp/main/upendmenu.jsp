@@ -114,7 +114,9 @@ div#cke_intrcnment {
 </style>
 </head>
 <body>
-
+<!-- lefttd.jsp 의 드래그 앤 드랍 기능이 제이쿼리 UI 로 되어있는데
+	 그대로 가서 현재 모습을 배열에 담아 그 배열을 통해 관리 하거나 아니면 자체적으로 다시 쓰거나 ...
+   -->
 	<div class="gtco-loader"></div>
 	<jsp:include page="nav.jsp">
 		<jsp:param name="#" value="#" />
@@ -403,7 +405,10 @@ div#cke_intrcnment {
 		var ctgrythema = document.getElementsByClassName("category_thema");
 		var ctgryuseyn = document.getElementsByClassName("category_useyn");
 		var ctgryintrcn = document.getElementsByClassName("category_intrcn");
-
+		/*
+		*  인풋 태그 및 히든태그들, 테마나 스타일 등을 포함함
+		*  현재 선택된 메뉴나 해당 메뉴의 페이지 스타일을 지정하는데 쓰임
+		*/
 		var addhide = function() {
 			for (var j = 0; j < ctgrystyle.length; j++) {
 				ctgrystyle[j].classList.add("hide");
@@ -418,12 +423,16 @@ div#cke_intrcnment {
 			inptlink.value = "";
 			inptuseyn.selectedIndex = 0;
 		}
+		// 스타일,테마,사용유무 등을 화면에서 모두 지움. 
+		// 페이지를 새로 선택할때 호출
 
 		function removetds(target) {
 			for (var i = 0; i < target.length; i++) {
 				target[i].classList.remove("tree-div-selected");
 			}
 		}
+		// 페이지 선택 취소.
+		
 		function clicktree(event) {
 			var span = event.target.querySelector("span") ? event.target
 					.querySelector("span") : event.target;
@@ -523,8 +532,15 @@ div#cke_intrcnment {
 				}
 			}
 		}
-
 		document.querySelector("#tree").addEventListener("click", clicktree);
+		/* 좌측메뉴 클릭 이벤트.
+		*  클릭한 대상의 span 태그까지 접근해서 타겟으로 잡음.
+		*  첫번째 뎁스(회사 소개, 주요 사업, 그룹웨어 등 상단 메뉴 위에 나오는 선택지들)
+		*  일땐 해당 뎁스에 선택 클래스를 넣어주고 재선택, 다른거 선택시에 따른 이벤트가 걸려있음.
+		*  두번쨰 뎁스(회사개요,ci소개,조직도,연혁 등)
+		*  일땐 해당 뎁스에 선택클래스를 넣어주고 해당 페이지의 정보를 띄워줌
+		*  그 외에도 재선택, 다른거 선택에 따른 이벤트.
+		*/
 
 		document.getElementById("btn_addcategory").onclick = function(e) {
 			console.log("add");
@@ -571,6 +587,11 @@ div#cke_intrcnment {
 
 			}
 		}
+		/* 추가버튼 이벤트
+		*  현재 선택된 뎁스가 첫번째 뎁스(회사 소개, 주요 사업, 그룹웨어 등 상단 메뉴 위에 나오는 선택지들)
+		*  일땐 해당 뎁스에 하위뎁스로 추가해줌.
+		*  선택된게 없을땐 상위뎁스를 추가.
+		*/
 		document.getElementById("btn_delcategory").onclick = function(e) {
 			var selected = document.querySelectorAll(".tree-div-selected");
 			if (!selected[0]) {
@@ -603,6 +624,12 @@ div#cke_intrcnment {
 			}
 			console.log("del");
 		}
+		/* 삭제 이벤트
+		*  현재 선택된 페이지가 삭제 가능한페이지인지 아닌지를 data-delable 속성을 통해 판별
+		*  1 = 삭제 불가능한 상위뎁스.
+		*  2 = 삭제 불가능한 하위뎁스.
+		*  data-delable 속성은 초기값은 1 또는 2 추가된 값은 0 으로 넣음 
+		*/
 
 		// D&D
 		console.log("d&d");
@@ -611,7 +638,10 @@ div#cke_intrcnment {
 		console.log("d&d");
 		$(".menu-sub").sortable();
 		$(".menu-sub").disableSelection();
-
+		/* jquery ui 를 통한 드래그앤 드랍. 
+		*  어째서인지 하위뎁스에서는 먹히지 않는중 ...
+		*/
+		
 		var slideIndex = 0;
 		showSlides(slideIndex);
 		function plusSlides(n) {
@@ -650,6 +680,9 @@ div#cke_intrcnment {
 				slidesnext[slideIndex + 1].style.display = "block";
 			}
 		}
+		/* 페이지 스타일에서 좌우 버튼에 대한 이벤트
+		*  
+		*/
 
 		function sendnext() {
 			var form = document.querySelector("#form4nextbtn");
@@ -683,6 +716,10 @@ div#cke_intrcnment {
 
 		}
 		document.querySelector("#a_next").addEventListener("click", sendnext);
+		/* 다음버튼 이벤트
+		*  현재 작업중인 페이지에 대해 다음 버튼울 눌러 해당 페이지의 상세 내용을 설정할 수 있게 해줌  
+		*  ex) 회사 개요에서 다음 버튼을 누르면 회사 개요 디테일 수정 페이지로 이어짐.
+		*/
 
 		window.onload = function() {
 			loadlefttd();
@@ -695,6 +732,9 @@ div#cke_intrcnment {
 				}
 			}
 		}
+		/* 이전버튼 이벤트
+		*  상세페이지 관리에서 이전버튼을 통해 넘어올 경우 편집중이던 페이지를 이어서 편집할껀지 선택지로 줌.
+		*/
 	</script>
 </html>
 

@@ -20,7 +20,7 @@ ul, li {
 		</div>
 		<div class="sub_menu">
 			<div class="inner">
-
+	<!-- 현재페이지 url 읽어서 상황에 맞는 페이지 명 띄워주는거임. -->
 				<ul class="sub_menu_lst">
 
 					<li class=""><a href="${pageContext.request.contextPath}/move.do/pdfsolut.do">PDF 솔루션</a></li>

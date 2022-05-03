@@ -55,7 +55,7 @@
 
 </head>
 <body>
-
+<!-- DB값 가져와서 뿌려주면됨 -->
 	<div class="gtco-loader"></div>
 	
 		<jsp:include page="nav.jsp">
