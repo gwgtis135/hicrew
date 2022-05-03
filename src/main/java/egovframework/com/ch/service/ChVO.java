@@ -4,30 +4,28 @@ package egovframework.com.ch.service;
 public class ChVO {
 
 	int chId;
-	int lcalsId;
+	int upendId; //메뉴관리
 	String chToDate;
-	String chFromDate;
-	String chContent;
-	String chYn;
+	String chDept; 
+	String chYn; 
+	String dcId; //상세코드 ID
 	
 	int ChLogId;
 	String ChLogPerformer ;
 	String ChLogDivision;
 	String ChLogDate;
 	String ChSearch; //검색조건
-	
-	
 	public int getChId() {
 		return chId;
 	}
 	public void setChId(int chId) {
 		this.chId = chId;
 	}
-	public int getLcalsId() {
-		return lcalsId;
+	public int getUpendId() {
+		return upendId;
 	}
-	public void setLcalsId(int lcalsId) {
-		this.lcalsId = lcalsId;
+	public void setUpendId(int upendId) {
+		this.upendId = upendId;
 	}
 	public String getChToDate() {
 		return chToDate;
@@ -35,23 +33,23 @@ public class ChVO {
 	public void setChToDate(String chToDate) {
 		this.chToDate = chToDate;
 	}
-	public String getChFromDate() {
-		return chFromDate;
+	public String getChDept() {
+		return chDept;
 	}
-	public void setChFromDate(String chFromDate) {
-		this.chFromDate = chFromDate;
-	}
-	public String getChContent() {
-		return chContent;
-	}
-	public void setChContent(String chContent) {
-		this.chContent = chContent;
+	public void setChDept(String chDept) {
+		this.chDept = chDept;
 	}
 	public String getChYn() {
 		return chYn;
 	}
 	public void setChYn(String chYn) {
 		this.chYn = chYn;
+	}
+	public String getDcId() {
+		return dcId;
+	}
+	public void setDcId(String dcId) {
+		this.dcId = dcId;
 	}
 	public int getChLogId() {
 		return ChLogId;
@@ -84,10 +82,6 @@ public class ChVO {
 		ChSearch = chSearch;
 	}
 	
-	
-	
-	
-
 	
 	
 }

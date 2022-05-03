@@ -127,7 +127,7 @@
 													</ul>
 												</div>
 												
-												<div class="histTable">
+												<div class="histTable chImg">
 													<!-- Hoverable Table rows -->
 
 													<div id = "chAppendTable" class="table-responsive text-nowrap">
@@ -418,8 +418,10 @@
 
 										<div class="hide table" id="tblmain">
 											<!-- 홈화면 -->
+												<img src="${pageContext.request.contextPath}/images/Error.jpg"/>
 											<div class="slideshow-container" id="photoimage">
-												<div class="photorow g-5">
+								
+						<%-- 						<div class="photorow g-5">
 													<div class="col-lg-4 col-md-6">
 														<div class="bg-light">
 															<img class="photoimg-fluid" src="${pageContext.request.contextPath}/images/img_bg_1.jpg"
@@ -489,7 +491,8 @@
 															</ul>
 														</nav>
 													</div>
-												</div>
+												</div> --%>
+												
 											</div>
 										</div>
 
@@ -1520,7 +1523,7 @@
 									console.log(chdata.chYn == 'Y');
 									console.log(chdata.chYn);
 									console.log("${chdata.chFromDate}");
-									var chStr = `<tr class="cmmtd">
+									/* var chStr = `<tr class="cmmtd">
 													<td class="num">
 													<input class="form-check-input" type="checkbox" value="" id="defaultCheck3" `;
 									chStr +=`/></td>
@@ -1539,11 +1542,17 @@
 											</tr>`;
 									console.log(chdata);
 									var tbody = document.querySelector('#chhhhTable');
-									tbody.innerHTML += chStr;
+									tbody.innerHTML += chStr; */
 								}// for end
 							},
 							error: function(){
 								console.log('에러 발생')
+								console.log('공사중')
+								var chDiv = document.querySelector('.histTable');
+								var chImg = document.createElement('img');
+								chImg.src = '${pageContext.request.contextPath}/images/Error.jpg'
+								chDiv.appendChild(chImg);
+								
 							}
 						});
 					}

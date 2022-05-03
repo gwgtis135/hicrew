@@ -231,13 +231,9 @@
 	function hideTbl(e){
 		var tblccmupendmenu = document.querySelector('.tblcmmUpendMenu');
 		var tblccmCode= document.querySelector('.tblccmCodeList');
-		var tblText = e;
+		var tblText = e.target.innerText;
 		
 		if(tblText == '공통코드관리'){
-			console.log('공통코드관리');
-			flag = 0;
-			console.log('falg 변수 값 ')
-			console.log(flag)
 			// 토글 : 있으면 없애고 없으면 붙인다.
 			// 공통코드 관리를 눌렀을땐 공통 코드 관리 테이블에서 hide 제거
 			// 동시에 상세코드 관리 테이블에 hide 추가.
@@ -245,12 +241,13 @@
 			tblccmupendmenu.classList.remove('hide');
 		}
 		else if(tblText == '상세코드관리'){
-			flag =1;
-// 			console.log('falg 변수 값 ')
-// 			console.log(flag)
-// 			console.log('상세코드관리');
-			//tblccmupendmenu.classList.add('hide');
+			$(".tblccmCodeList").empty();
+			tblccmupendmenu.classList.add('hide');
 			tblccmCode.classList.remove('hide');
+			var ccmDiv = document.querySelector('.tblccmCodeList');
+			var chImg = document.createElement('img');
+			chImg.src = '${pageContext.request.contextPath}/images/Error.jpg'
+			ccmDiv.appendChild(chImg);
 		}
 		
 	}
@@ -315,7 +312,6 @@
 		
 		/* 상세코드 추가 버튼 */
 		else if(flag == 1){
-			console.log('상세코드관리 페이지  클릭버튼')
 			var ccmDetailTbody = document.querySelectorAll('.ov')[0];
 			var ccmDetailTr = document.createElement('tr');
 			var ccmDetailSelect = document.createElement('select');
@@ -328,9 +324,6 @@
 			var ccmDetailLastTr = ccmDetailfirstTbody.lastElementChild;
 			var ccmDetailFirstTd = ccmDetailLastTr.firstElementChild;
 			var ccmDetailnum = ccmDetailFirstTd.innerText;
-// 			console.log('ccmDetailnum 출력')
-// 			console.log(ccmDetailnum)
-
 			
 			/* 사업부서, 직급 select */
 			for(i=0; i<2; i++){
@@ -406,10 +399,7 @@
 		}
 	}//addbtn end
 	
-
-	
 	/* tr이벤트  */
-	
 	document.querySelector('.cmmcode').addEventListener('click',function(ev){
 		$('.detailTbody').empty();
 		var tar = ev.target.closest("tr") ? ev.target.closest("tr") : ev.target; //ev.target 클릭한  tr 
@@ -473,14 +463,8 @@
 		});
 		
 		var ov = document.querySelectorAll('.ov')[1]; //상세코드 table tr
-		console.log()
-		//var ovValue = ov.children[0].children[1].firstChild.value;
-			
 		for(i=0; i<ov.childElementCount;i++){
 			if(value == ov.querySelectorAll('#detailcode')[i].firstChild.value){
-				//console.log(value)
-				//console.log(ov.children[i].children[2].firstChild.value)
-				//console.log(ov.children[i]);	
 				console.log(ov.querySelectorAll('#detailcode')[i].closest("tr"))
 				
 			}	
@@ -521,10 +505,6 @@
 						
 						var tbody = document.querySelector('.ov');
 						tbody.innerHTML += cmmStr;
-						
-						/* ccCode.push(ccmdata.ccCode);
-						console.log(ccCode) */
-			
 			}//for end
 		},
 		error:function(){
