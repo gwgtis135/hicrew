@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +9,7 @@
 		<div class="inner">
 			<div class="header_cont">
 				<div class="logo">
-					<a href="${pageContext.request.contextPath}/move.do/main.do"> <img style="width: 80%;"
-						src="${pageContext.request.contextPath}/images/logo.png" alt="(주)하이크루">
+					<a href="${pageContext.request.contextPath}/move.do/main.do"> <img style="width: 80%;" src="${pageContext.request.contextPath}/images/logo.png" alt="(주)하이크루">
 					</a>
 				</div>
 				<nav class="gnb" id="Gnb">
@@ -24,7 +22,7 @@
 	</header>
 	<!-- jQuery -->
 	<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script>
+	<script>
 	console.log("this is nav");
 	$.ajax({
 		url:'${pageContext.request.contextPath}/loadupend.do',
