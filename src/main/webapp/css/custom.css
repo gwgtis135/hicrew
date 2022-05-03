@@ -1529,5 +1529,8 @@ a {
 	color: #444;
 	text-align: right;
 }
-
+.chImg{
+    text-align: center;
+    width: auto;
+}
 

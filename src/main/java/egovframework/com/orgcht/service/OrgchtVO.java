@@ -4,9 +4,9 @@ public class OrgchtVO {
 
 
 	int ORGCHT_ID;
-	int LCALS_ID;
 	String ORGCHT_NAME;
 	String ORGCHT_CLSF;
+	String ORGCHT_DEPT;
 	String ORGCHT_IMAGE_NAME;
 	byte ORGCHT_IMAGE_FILE;
 	int ORGCHT_P_ID;
@@ -16,17 +16,12 @@ public class OrgchtVO {
 	String ORGCHT_LOG_PERFORMER;
 	String ORGCHT_LOG_DIVISION;
 	String ORGCHT_LOG_DATE;
+	int UPEND_ID;
 	public int getORGCHT_ID() {
 		return ORGCHT_ID;
 	}
 	public void setORGCHT_ID(int oRGCHT_ID) {
 		ORGCHT_ID = oRGCHT_ID;
-	}
-	public int getLCALS_ID() {
-		return LCALS_ID;
-	}
-	public void setLCALS_ID(int lCALS_ID) {
-		LCALS_ID = lCALS_ID;
 	}
 	public String getORGCHT_NAME() {
 		return ORGCHT_NAME;
@@ -39,6 +34,12 @@ public class OrgchtVO {
 	}
 	public void setORGCHT_CLSF(String oRGCHT_CLSF) {
 		ORGCHT_CLSF = oRGCHT_CLSF;
+	}
+	public String getORGCHT_DEPT() {
+		return ORGCHT_DEPT;
+	}
+	public void setORGCHT_DEPT(String oRGCHT_DEPT) {
+		ORGCHT_DEPT = oRGCHT_DEPT;
 	}
 	public String getORGCHT_IMAGE_NAME() {
 		return ORGCHT_IMAGE_NAME;
@@ -94,13 +95,11 @@ public class OrgchtVO {
 	public void setORGCHT_LOG_DATE(String oRGCHT_LOG_DATE) {
 		ORGCHT_LOG_DATE = oRGCHT_LOG_DATE;
 	}
-	@Override
-	public String toString() {
-		return "OrgchtVO [ORGCHT_ID=" + ORGCHT_ID + ", LCALS_ID=" + LCALS_ID + ", ORGCHT_NAME=" + ORGCHT_NAME
-				+ ", ORGCHT_CLSF=" + ORGCHT_CLSF + ", ORGCHT_IMAGE_NAME=" + ORGCHT_IMAGE_NAME + ", ORGCHT_IMAGE_FILE="
-				+ ORGCHT_IMAGE_FILE + ", ORGCHT_P_ID=" + ORGCHT_P_ID + ", ORGCHT_LEVEL=" + ORGCHT_LEVEL + ", ORGCHT_YN="
-				+ ORGCHT_YN + ", ORGCHT_LOG_ID=" + ORGCHT_LOG_ID + ", ORGCHT_LOG_PERFORMER=" + ORGCHT_LOG_PERFORMER
-				+ ", ORGCHT_LOG_DIVISION=" + ORGCHT_LOG_DIVISION + ", ORGCHT_LOG_DATE=" + ORGCHT_LOG_DATE + "]";
+	public int getUPEND_ID() {
+		return UPEND_ID;
+	}
+	public void setUPEND_ID(int uPEND_ID) {
+		UPEND_ID = uPEND_ID;
 	}
 	
 	

@@ -3,7 +3,7 @@
 <mapper namespace="egovframework.com.ch.service.impl.ChMapper">
 
 <select id="selectAllCh" resultType="egovframework.com.ch.service.ChVO" parameterType="egovframework.com.ch.service.ChVO">
-	SELECT CH_ID,LCALS_ID, CH_TO_DATE, CH_FROM_DATE, CH_CONTENT, CH_YN FROM CompanyHistory
+	SELECT CH_ID,upend_Id, CH_TO_DATE, CH_DEPT, CH_YN, DC_ID FROM CompanyHistory
 </select>
 <select id="selectCh">
 
