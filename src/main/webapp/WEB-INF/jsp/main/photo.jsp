@@ -55,7 +55,7 @@
 
 </head>
 <body>
-
+<!--  이미지 비랍처리해서 DB 저장하려다가 끝남. 이거부터 해야함 ... -->
 	<div class="gtco-loader"></div>
 	<jsp:include page="../main/nav.jsp" >
 		<jsp:param name="#" value="#"/>

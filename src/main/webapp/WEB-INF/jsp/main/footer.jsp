@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-
+<!--  주소랑 연락처 DB에 있는거 가져와서 쓸수 있게끔 바꿔주기 -->
 <footer id="gtco-footer" role="contentinfo">
 			<div class="gtco-container">
 

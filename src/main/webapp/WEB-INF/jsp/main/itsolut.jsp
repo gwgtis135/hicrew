@@ -53,36 +53,9 @@
 <!-- Banner style  -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/event_style.css">
 
-<!-- Modernizr JS -->
-<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
-	<![endif]-->
-<!-- jQuery -->
-<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
-<!-- Carousel -->
-<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
-<!-- countTo -->
-<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
-<!-- Flexslider -->
-<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
-<!-- Magnific Popup -->
-<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
-<!-- Main -->
-<script src="${pageContext.request.contextPath}/js/main.js"></script>
-<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
-<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
 </head>
 <body>
-
+<!-- pdf 솔루션이랑 it 솔루션은 하나의 파일로 합칠수 있을꺼 같음. 추후 진행 예정 -->
 	<div class="gtco-loader"></div>
 
 	<jsp:include page="nav.jsp">
@@ -284,6 +257,34 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+	
+<!-- Modernizr JS -->
+<script src="${pageContext.request.contextPath}/js/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="${pageContext.request.contextPath}/js/respond.min.js"></script>
+	<![endif]-->
+<!-- jQuery -->
+<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="${pageContext.request.contextPath}/js/jquery.countTo.js"></script>
+<!-- Flexslider -->
+<script src="${pageContext.request.contextPath}/js/jquery.flexslider-min.js"></script>
+<!-- Magnific Popup -->
+<script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/magnific-popup-options.js"></script>
+<!-- Main -->
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+<script src="${pageContext.request.contextPath}/js/Tapcommon.js"></script>
 </body>
 </html>
 
